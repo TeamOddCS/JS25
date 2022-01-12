@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 60389475}
   - component: {fileID: 60389474}
   m_Layer: 5
-  m_Name: Text
+  m_Name: "\uC120\uD0DD\uC9C01"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -261,12 +261,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 130
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 0
+    m_MaxSize: 200
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -376,6 +376,8 @@ GameObject:
   - component: {fileID: 425775859}
   - component: {fileID: 425775858}
   - component: {fileID: 425775857}
+  - component: {fileID: 425775864}
+  - component: {fileID: 425775863}
   - component: {fileID: 425775856}
   - component: {fileID: 425775862}
   m_Layer: 5
@@ -421,6 +423,41 @@ MonoBehaviour:
       \n\uB6F0\uC5B4\uC904 \uC218 \uC788\uC5B4?\r\n\uC5EC\uD589 \uAC00\uC57C\uD574\uC11C
       \uADF8\uB798~\r"
     _name: "\uAE40\uB2E8\uC9DD"
+  - _dialouge: 
+    _name: 
+  - _dialouge: "\uADF8\uB798 \uBB50, \uC804\uBD80\uD130 \uAC00\uACE0\uC2F6\uC5B4
+      \uD588\uC73C\uB2C8\uAE50..\r\n\uC774\uBC88 \uD55C\uBC88\uB9CC \uD574\uC8FC\uB294\uAC70\uB2E4."
+    _name: "\uCD5C\uC54C\uBC14"
+  - _dialouge: " \uC5ED\uC2DC..!! \uB108\uBC16\uC5D0 \uC5C6\uB2E4 \uCE5C\uAD6C\uC57C
+      \u3160\u3160 \uACE0\uB9C8\uC6CC!\r\n\uC190\uB2D8 \uC5C6\uB294 \uAC1C\uAFC0
+      \uC54C\uBC14\uC57C."
+    _name: "\uAE40\uB2E8\uC9DD"
+  - _dialouge: "\uC77C\uC740 \uB0B4\uC77C\uBD80\uD130 \uB098\uAC00\uBA74 \uB3FC.
+      \uC704\uCE58\uB294.. "
+    _name: "\uAE40\uB2E8\uC9DD"
+  - _dialouge: "\uC5B4\uB518\uC9C0 \uC54C\uC544.\r\n\uAC71\uC815\uB9D0\uACE0, \uC798
+      \uB2E4\uB140\uC640\uB77C"
+    _name: "\uCD5C\uC54C\uBC14"
+  - _dialouge: "\uB418\uACA0\uB0D0? \uC2EB\uC5B4 \uC0C8\uAE84\r\n\uC5EC\uD589 \uAC08
+      \uAC83 \uAC19\uC73C\uBA74 \uBBF8\uB9AC \uAD6C\uD588\uC5B4\uC57C\uC9C0\r"
+    _name: "\uCD5C\uC54C\uBC14"
+  - _dialouge: "\uC544 \uC65C\u3160\u3160 \uB0B4 \uC8FC\uBCC0\uC5D0 \uD3B8\uC758\uC810
+      \uC54C\uBC14 \uD574\uBCF8 \uC560 \uB108\r\n\uBC16\uC5D0 \uC5C6\uB2E8 \uB9D0\uC774\uC57C..\r"
+    _name: "\uAE40\uB2E8\uC9DD"
+  - _dialouge: "\uD55C\uBC88\uB9CC \uBD80\uD0C1\uD560\uAC8C, \uC751??"
+    _name: "\uAE40\uB2E8\uC9DD"
+  - _dialouge: "\uD574\uC904\uAC8C.\r\n\uB300\uC2E0 \uAC14\uB2E4\uC640\uC11C \uC18C\uACE0\uAE30
+      \uC0AC\uB77C."
+    _name: "\uCD5C\uC54C\uBC14"
+  - _dialouge: "\uB2F9\uC5F0\uD558\uC9C0!! \uC5EC\uD589 \uC798 \uB2E4\uB140\uC62C\uAC8C.\r\n\uC5F0\uB77D
+      \uB9E4\uC77C \uD560 \uAC70\uB2C8\uAE4C \uD5C8\uD2BC \uC0DD\uAC01 \uD558\uC9C0
+      \uB9D0\uAD6C.\r"
+    _name: "\uAE40\uB2E8\uC9DD"
+  - _dialouge: "\uADF8\uB7FC \uC77C\uC8FC\uC77C\uB3D9\uC548 \uC218\uACE0\uD574\uC918~"
+    _name: "\uAE40\uB2E8\uC9DD"
+  - _dialouge: "\uB04A\uC5C8\uB124. \r\n\uB0B4\uC77C \uC77C\uAC00\uC57C\uD558\uB2C8\uAE4C
+      \uC774\uB9CC \uC790\uC57C\uACA0\uB2E4."
+    _name: 
 --- !u!114 &425775857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,6 +565,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499e60ee66dc6fa42b429c33e96f5c7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &425775863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425775855}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a4460d7fcc5c0479aedb5f95fac6c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: {fileID: 1027691261}
+  _dialouge: {fileID: 42171054}
+  _choice1: {fileID: 60389474}
+  _choice2: {fileID: 1651602386}
+  btn1: {fileID: 1622568127}
+  btn2: {fileID: 1068759737}
+--- !u!114 &425775864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425775855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7149470e7b4d994894c7b500059052e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choicebtn1: {fileID: 1622568127}
+  choicebtn2: {fileID: 1068759737}
+  txt_choice1: {fileID: 60389474}
+  txt_choice2: {fileID: 1651602386}
+  choice:
+  - _choice: 
 --- !u!1 &474488321
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,7 +730,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &962781925
 Transform:
   m_ObjectHideFlags: 0
@@ -765,6 +838,7 @@ GameObject:
   - component: {fileID: 1068759739}
   - component: {fileID: 1068759738}
   - component: {fileID: 1068759737}
+  - component: {fileID: 1068759740}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 2"
   m_TagString: Untagged
@@ -835,7 +909,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1068759738}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1068759740}
+        m_TargetAssemblyTypeName: Choice, Assembly-CSharp
+        m_MethodName: NextChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1068759738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,6 +960,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068759735}
   m_CullTransparentMesh: 1
+--- !u!114 &1068759740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068759735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7149470e7b4d994894c7b500059052e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choicebtn1: {fileID: 1622568127}
+  choicebtn2: {fileID: 1068759737}
+  txt_choice1: {fileID: 60389474}
+  txt_choice2: {fileID: 1651602386}
+  choice:
+  - _choice: 
+  - _choice: "\uC2EB\uC5B4"
 --- !u!1 &1622568125
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,6 +991,8 @@ GameObject:
   - component: {fileID: 1622568129}
   - component: {fileID: 1622568128}
   - component: {fileID: 1622568127}
+  - component: {fileID: 1622568131}
+  - component: {fileID: 1622568130}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 1"
   m_TagString: Untagged
@@ -956,7 +1063,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1622568128}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1622568130}
+        m_TargetAssemblyTypeName: Choice, Assembly-CSharp
+        m_MethodName: NextChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1622568128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,6 +1114,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622568125}
   m_CullTransparentMesh: 1
+--- !u!114 &1622568130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622568125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7149470e7b4d994894c7b500059052e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choicebtn1: {fileID: 1622568127}
+  choicebtn2: {fileID: 1068759737}
+  txt_choice1: {fileID: 60389474}
+  txt_choice2: {fileID: 1651602386}
+  choice:
+  - _choice: 
+  - _choice: "\uC54C\uACA0\uC5B4"
+--- !u!114 &1622568131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622568125}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a4460d7fcc5c0479aedb5f95fac6c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: {fileID: 0}
+  _dialouge: {fileID: 0}
+  _choice1: {fileID: 0}
+  _choice2: {fileID: 0}
+  btn1: {fileID: 0}
+  btn2: {fileID: 0}
 --- !u!1 &1642593929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1229,7 @@ GameObject:
   - component: {fileID: 1651602387}
   - component: {fileID: 1651602386}
   m_Layer: 5
-  m_Name: Text
+  m_Name: "\uC120\uD0DD\uC9C02"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1111,7 +1267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1120,12 +1276,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 130
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 1
+    m_MaxSize: 130
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

@@ -15,9 +15,9 @@ public class Dialouge : MonoBehaviour
 {
     [SerializeField] private Text txt_dialouge; //대화내용 담는 객체
     [SerializeField] private Text txt_name;// 이름 담는 객체
-
-    private bool isDialouge = false;
-    private int count = 0;
+   
+    public static bool isDialouge = false;
+    public static int count = 0;
     [SerializeField] private dialouge[] dialouge;
     
     // Start is called before the first frame update
@@ -32,10 +32,14 @@ public class Dialouge : MonoBehaviour
     }
     public void NextDialouge()//대화내용 넘기는 함수
     {
+        txt_dialouge.gameObject.SetActive(true);
+        txt_name.gameObject.SetActive(true);
         txt_name.text = dialouge[count]._name;
         txt_dialouge.text = dialouge[count]._dialouge;
         count++;
     }
+
+    
     private void HideDialouge()//대화가 끝났으면 대화내용 숨기는 함수
     {
         txt_name.gameObject.SetActive(false);
@@ -44,7 +48,7 @@ public class Dialouge : MonoBehaviour
     }
     private void Start()
     {
-        ShowDialouge();
+        ShowDialouge();        
     }
     // Update is called once per frame
     void Update()
@@ -54,10 +58,14 @@ public class Dialouge : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 if (count < dialouge.Length)
+                {
                     NextDialouge();
+                }
                 else
                     HideDialouge();
             }
-        }   
+        }
+        else
+            HideDialouge();
     }
 }
