@@ -8,6 +8,7 @@ public class choice
 {
     [TextArea]
     public string _choice;
+    public string _choice2;
   
 }
 
@@ -26,7 +27,7 @@ public class Choice : MonoBehaviour
         count = 0;
         
         txt_choice1.text = choice[count]._choice;
-        txt_choice2.text = choice[count]._choice;
+        txt_choice2.text = choice[count]._choice2;
 
     }
     public void NextChoice(int cnt)

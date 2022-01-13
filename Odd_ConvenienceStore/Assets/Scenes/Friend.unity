@@ -577,12 +577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a4460d7fcc5c0479aedb5f95fac6c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: {fileID: 1027691261}
-  _dialouge: {fileID: 42171054}
-  _choice1: {fileID: 60389474}
-  _choice2: {fileID: 1651602386}
-  btn1: {fileID: 1622568127}
-  btn2: {fileID: 1068759737}
 --- !u!114 &425775864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,7 +594,10 @@ MonoBehaviour:
   txt_choice1: {fileID: 60389474}
   txt_choice2: {fileID: 1651602386}
   choice:
+  - _choice: "\uC54C\uACA0\uC5B4"
+    _choice2: "\uC2EB\uC5B4"
   - _choice: 
+    _choice2: 
 --- !u!1 &474488321
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,8 +974,8 @@ MonoBehaviour:
   txt_choice1: {fileID: 60389474}
   txt_choice2: {fileID: 1651602386}
   choice:
-  - _choice: 
-  - _choice: "\uC2EB\uC5B4"
+  - _choice: "\uC54C\uACA0\uC5B4"
+    _choice2: "\uC2EB\uC5B4"
 --- !u!1 &1622568125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,8 +1128,10 @@ MonoBehaviour:
   txt_choice1: {fileID: 60389474}
   txt_choice2: {fileID: 1651602386}
   choice:
-  - _choice: 
   - _choice: "\uC54C\uACA0\uC5B4"
+    _choice2: "\uC2EB\uC5B4"
+  - _choice: "\uC54C\uACA0\uC5B4"
+    _choice2: 
 --- !u!114 &1622568131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,12 +1144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a4460d7fcc5c0479aedb5f95fac6c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: {fileID: 0}
-  _dialouge: {fileID: 0}
-  _choice1: {fileID: 0}
-  _choice2: {fileID: 0}
-  btn1: {fileID: 0}
-  btn2: {fileID: 0}
 --- !u!1 &1642593929
 GameObject:
   m_ObjectHideFlags: 0
