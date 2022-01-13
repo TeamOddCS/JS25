@@ -54,7 +54,7 @@ public class Choice : MonoBehaviour
     }
     public void CallChoice()
     {
-        if (Dialouge.count == 8)
+        if (Dialouge.count == 9)
         {
             ShowChoice();
         }
