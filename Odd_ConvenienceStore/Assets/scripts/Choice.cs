@@ -19,13 +19,12 @@ public class Choice : MonoBehaviour
     [SerializeField] private Text txt_choice1;
     [SerializeField] private Text txt_choice2;
     
-    private int count = 1;
+    private int count = 0;
     [SerializeField] private choice[] choice;
     public void ShowChoice()//
     {       
         ChoiceOn();
-        count = 0;
-        
+        count = 0;  
         txt_choice1.text = choice[count]._choice;
         txt_choice2.text = choice[count]._choice2;
 

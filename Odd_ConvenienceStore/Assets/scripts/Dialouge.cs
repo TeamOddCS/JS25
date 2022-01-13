@@ -35,8 +35,12 @@ public class Dialouge : MonoBehaviour
         txt_dialouge.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
         txt_name.text = dialouge[count]._name;
-        txt_dialouge.text = dialouge[count]._dialouge;
+        txt_dialouge.text = dialouge[count]._dialouge;       
         count++;
+        if (count == 13)
+        {
+            count += 4;
+        }
     }
 
     
