@@ -378,7 +378,6 @@ GameObject:
   - component: {fileID: 425775857}
   - component: {fileID: 425775864}
   - component: {fileID: 425775863}
-  - component: {fileID: 425775856}
   - component: {fileID: 425775862}
   m_Layer: 5
   m_Name: Canvas
@@ -387,77 +386,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &425775856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425775855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55681b0665606fe46a602cb2b7d81746, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  txt_dialouge: {fileID: 42171054}
-  txt_name: {fileID: 1027691261}
-  dialouge:
-  - _dialouge: "\uC5B4\uD734, \uBC94\uC368 \uBC24\uC774\uB124.\r\n\uD55C\uAC83\uB3C4
-      \uC5C6\uB294\uB370."
-    _name: "\uCD5C\uC54C\uBC14"
-  - _dialouge: "\u266A \u266C \u266A \u266A"
-    _name: 
-  - _dialouge: "\uB204\uAD70\uAC00\uD55C\uD14C \uC804\uD654\uAC00 \uC654\uB2E4."
-    _name: 
-  - _dialouge: "\uC5EC\uBCF4\uC138\uC694"
-    _name: "\uCD5C\uC54C\uBC14"
-  - _dialouge: "\uC57C \uBC14\uC058\uB0D0?\r\n\uB098 \uB108\uD55C\uD14C \uBD80\uD0C1\uD560
-      \uAC8C \uC788\uB294\uB370.."
-    _name: "\uAE40\uB2E8\uC9DD"
-  - _dialouge: "\uAC11\uC790\uAE30 \uC804\uD654\uD558\uB354\uB2C8, \n\uD558\uB294
-      \uB9D0 \uD558\uACE0\uB294."
-    _name: "\uCD5C\uC54C\uBC14"
-  - _dialouge: "\uBB34\uC2A8 \uBD80\uD0C1\uC778\uB370?"
-    _name: "\uCD5C\uC54C\uBC14"
-  - _dialouge: "\uC774\uBC88\uC8FC\uB9CC \uD3B8\uC758\uC810 \uC54C\uBC14 \uB300\uD0C0
-      \n\uB6F0\uC5B4\uC904 \uC218 \uC788\uC5B4?\r\n\uC5EC\uD589 \uAC00\uC57C\uD574\uC11C
-      \uADF8\uB798~\r"
-    _name: "\uAE40\uB2E8\uC9DD"
-  - _dialouge: 
-    _name: 
-  - _dialouge: "\uADF8\uB798 \uBB50, \uC804\uBD80\uD130 \uAC00\uACE0\uC2F6\uC5B4
-      \uD588\uC73C\uB2C8\uAE50..\r\n\uC774\uBC88 \uD55C\uBC88\uB9CC \uD574\uC8FC\uB294\uAC70\uB2E4."
-    _name: "\uCD5C\uC54C\uBC14"
-  - _dialouge: " \uC5ED\uC2DC..!! \uB108\uBC16\uC5D0 \uC5C6\uB2E4 \uCE5C\uAD6C\uC57C
-      \u3160\u3160 \uACE0\uB9C8\uC6CC!\r\n\uC190\uB2D8 \uC5C6\uB294 \uAC1C\uAFC0
-      \uC54C\uBC14\uC57C."
-    _name: "\uAE40\uB2E8\uC9DD"
-  - _dialouge: "\uC77C\uC740 \uB0B4\uC77C\uBD80\uD130 \uB098\uAC00\uBA74 \uB3FC.
-      \uC704\uCE58\uB294.. "
-    _name: "\uAE40\uB2E8\uC9DD"
-  - _dialouge: "\uC5B4\uB518\uC9C0 \uC54C\uC544.\r\n\uAC71\uC815\uB9D0\uACE0, \uC798
-      \uB2E4\uB140\uC640\uB77C"
-    _name: "\uCD5C\uC54C\uBC14"
-  - _dialouge: "\uB418\uACA0\uB0D0? \uC2EB\uC5B4 \uC0C8\uAE84\r\n\uC5EC\uD589 \uAC08
-      \uAC83 \uAC19\uC73C\uBA74 \uBBF8\uB9AC \uAD6C\uD588\uC5B4\uC57C\uC9C0\r"
-    _name: "\uCD5C\uC54C\uBC14"
-  - _dialouge: "\uC544 \uC65C\u3160\u3160 \uB0B4 \uC8FC\uBCC0\uC5D0 \uD3B8\uC758\uC810
-      \uC54C\uBC14 \uD574\uBCF8 \uC560 \uB108\r\n\uBC16\uC5D0 \uC5C6\uB2E8 \uB9D0\uC774\uC57C..\r"
-    _name: "\uAE40\uB2E8\uC9DD"
-  - _dialouge: "\uD55C\uBC88\uB9CC \uBD80\uD0C1\uD560\uAC8C, \uC751??"
-    _name: "\uAE40\uB2E8\uC9DD"
-  - _dialouge: "\uD574\uC904\uAC8C.\r\n\uB300\uC2E0 \uAC14\uB2E4\uC640\uC11C \uC18C\uACE0\uAE30
-      \uC0AC\uB77C."
-    _name: "\uCD5C\uC54C\uBC14"
-  - _dialouge: "\uB2F9\uC5F0\uD558\uC9C0!! \uC5EC\uD589 \uC798 \uB2E4\uB140\uC62C\uAC8C.\r\n\uC5F0\uB77D
-      \uB9E4\uC77C \uD560 \uAC70\uB2C8\uAE4C \uD5C8\uD2BC \uC0DD\uAC01 \uD558\uC9C0
-      \uB9D0\uAD6C.\r"
-    _name: "\uAE40\uB2E8\uC9DD"
-  - _dialouge: "\uADF8\uB7FC \uC77C\uC8FC\uC77C\uB3D9\uC548 \uC218\uACE0\uD574\uC918~"
-    _name: "\uAE40\uB2E8\uC9DD"
-  - _dialouge: "\uB04A\uC5C8\uB124. \r\n\uB0B4\uC77C \uC77C\uAC00\uC57C\uD558\uB2C8\uAE4C
-      \uC774\uB9CC \uC790\uC57C\uACA0\uB2E4."
-    _name: 
 --- !u!114 &425775857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,11 +500,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425775855}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a4460d7fcc5c0479aedb5f95fac6c9, type: 3}
+  m_Script: {fileID: 11500000, guid: c4ce32de2e24f5748b267d2657ca7862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txt_dialogue: {fileID: 42171054}
+  txt_name: {fileID: 1027691261}
 --- !u!114 &425775864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,7 +918,6 @@ GameObject:
   - component: {fileID: 1622568129}
   - component: {fileID: 1622568128}
   - component: {fileID: 1622568127}
-  - component: {fileID: 1622568131}
   - component: {fileID: 1622568130}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 1"
@@ -1068,7 +997,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1132,18 +1061,6 @@ MonoBehaviour:
     _choice2: "\uC2EB\uC5B4"
   - _choice: "\uC54C\uACA0\uC5B4"
     _choice2: 
---- !u!114 &1622568131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622568125}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a4460d7fcc5c0479aedb5f95fac6c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1642593929
 GameObject:
   m_ObjectHideFlags: 0

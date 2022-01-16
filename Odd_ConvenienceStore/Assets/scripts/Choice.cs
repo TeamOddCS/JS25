@@ -9,7 +9,6 @@ public class choice
     [TextArea]
     public string _choice;
     public string _choice2;
-  
 }
 
 public class Choice : MonoBehaviour
@@ -21,23 +20,22 @@ public class Choice : MonoBehaviour
     
     private int count = 0;
     [SerializeField] private choice[] choice;
-    public void ShowChoice()//
+    public void ShowChoice()
     {       
         ChoiceOn();
         count = 0;  
         txt_choice1.text = choice[count]._choice;
         txt_choice2.text = choice[count]._choice2;
-
     }
     public void NextChoice(int cnt)
     {          
         count++;
-        Dialouge.count += cnt;
+        Dialogue.count += cnt;
         ChoiceOff();
     }
     public void ChoiceOn()
     {
-        Dialouge.isDialouge = false;
+        Dialogue.isDialogue = false;
         choicebtn1.gameObject.SetActive(true);
         choicebtn2.gameObject.SetActive(true);
         txt_choice1.gameObject.SetActive(true);
@@ -45,7 +43,7 @@ public class Choice : MonoBehaviour
     }
     public void ChoiceOff()
     {
-        Dialouge.isDialouge = true;
+        Dialogue.isDialogue = true;
         choicebtn1.gameObject.SetActive(false);
         choicebtn2.gameObject.SetActive(false);
         txt_choice1.gameObject.SetActive(false);
@@ -53,7 +51,7 @@ public class Choice : MonoBehaviour
     }
     public void CallChoice()
     {
-        if (Dialouge.count == 9)
+        if (Dialogue.count == 9)
         {
             ShowChoice();
         }
@@ -62,10 +60,9 @@ public class Choice : MonoBehaviour
     private void Start()
     {
         ChoiceOff();
-       
     }
     private void Update()
-    {       
-            CallChoice();   
+    {
+        CallChoice();
     }
 }
