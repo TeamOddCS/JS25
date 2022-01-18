@@ -1,21 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class CheckUserData : MonoBehaviour
+public class Day1_JinSang : MonoBehaviour
 {
-    public static Text 이름확인용;
-    public static Text 난이도확인용;
     // Start is called before the first frame update
     void Start()
     {
         
-    }
-
-    public void Awake()
-    {
-
     }
 
     // Update is called once per frame
@@ -23,4 +16,6 @@ public class CheckUserData : MonoBehaviour
     {
         
     }
+
+
 }

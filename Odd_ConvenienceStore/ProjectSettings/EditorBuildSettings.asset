@@ -14,4 +14,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Friend.unity
     guid: ac641f869a782234fa104a4462a9f11e
+  - enabled: 1
+    path: Assets/Scenes/JinSang2/JinSang2_0.unity
+    guid: c8b8d95e05e58e24399355ba95ee0736
+  - enabled: 1
+    path: Assets/Scenes/JinSang2/JinSang2_1.unity
+    guid: 6e753054f0f01e1468bd8e9872dccf92
+  - enabled: 1
+    path: Assets/Scenes/JinSang4/JinSang4_0.unity
+    guid: 4ced1ef9899dcf744ae8d8e437c9aee7
+  - enabled: 1
+    path: Assets/Scenes/JinSang4/JinSang4_1.unity
+    guid: d250c351cadfdb8408028026895dd9d4
+  - enabled: 1
+    path: Assets/Scenes/JinSang6/JinSang6_0.unity
+    guid: a9a5700a38a96c047b537df84df11816
+  - enabled: 1
+    path: Assets/Scenes/JinSang6/JinSang6_1.unity
+    guid: 7caf8da1a2aeb924ebfb01ff8ac14375
   m_configObjects: {}
