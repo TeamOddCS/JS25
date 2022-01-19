@@ -17,25 +17,78 @@ public class Choice : MonoBehaviour
     [SerializeField] private Button choicebtn2;
     [SerializeField] private Text txt_choice1;
     [SerializeField] private Text txt_choice2;
-    
-    private int count = 0;
+
+    public static int count = 0;
     [SerializeField] private choice[] choice;
     public void ShowChoice()
-    {       
+    {
         ChoiceOn();
-        count = 0;  
         txt_choice1.text = choice[count]._choice;
         txt_choice2.text = choice[count]._choice2;
     }
-    public void NextChoice(int cnt)
-    {          
-        count++;
-        Dialogue.count += cnt;
+    public void NextChoice1()
+    {
+        count++;     
+        /*if (Dialogue.count == 9)
+        {
+            Dialogue.count++;
+        }
+        if (CSDialogue.count == 7)
+        {
+            CSDialogue.count++;
+        }
+        if (CSDialogue.count == 31)
+        {
+            CSDialogue.count++;
+        }
+        if (CSDialogue.count == 46)
+        {
+            CSDialogue.count++;
+        }
+        if (CSDialogue.count == 61)
+        {
+            CSDialogue.count++;
+        }
+        if (CSDialogue.count == 67)
+        {
+            CSDialogue.count++;
+        }*/
         ChoiceOff();
+    }
+    public void NextChoice2()
+    {
+        count++;
+        if (Dialogue.count == 9)
+        {
+            Dialogue.count += 4;
+        }
+        if (CSDialogue.count == 7)
+        {
+            CSDialogue.count += 6;
+        }
+        if (CSDialogue.count == 31)
+        {
+            CSDialogue.count += 3;
+        }
+        if (CSDialogue.count == 46)
+        {
+            CSDialogue.count += 2;
+        }
+        if (CSDialogue.count == 61)
+        {
+            CSDialogue.count += 2;
+        }
+        if (CSDialogue.count == 67)
+        {
+            CSDialogue.count += 4;
+        }
+        ChoiceOff();
+
     }
     public void ChoiceOn()
     {
         Dialogue.isDialogue = false;
+        CSDialogue.isDialogue = false;
         choicebtn1.gameObject.SetActive(true);
         choicebtn2.gameObject.SetActive(true);
         txt_choice1.gameObject.SetActive(true);
@@ -44,6 +97,7 @@ public class Choice : MonoBehaviour
     public void ChoiceOff()
     {
         Dialogue.isDialogue = true;
+        CSDialogue.isDialogue = true;
         choicebtn1.gameObject.SetActive(false);
         choicebtn2.gameObject.SetActive(false);
         txt_choice1.gameObject.SetActive(false);
@@ -52,6 +106,26 @@ public class Choice : MonoBehaviour
     public void CallChoice()
     {
         if (Dialogue.count == 9)
+        {
+            ShowChoice();
+        }
+        if (CSDialogue.count == 7)
+        {
+            ShowChoice();
+        }
+        if (CSDialogue.count == 31)
+        {
+            ShowChoice();
+        }
+        if (CSDialogue.count == 46)
+        {
+            ShowChoice();
+        }
+        if (CSDialogue.count == 61)
+        {
+            ShowChoice();
+        }
+        if (CSDialogue.count == 67)
         {
             ShowChoice();
         }
