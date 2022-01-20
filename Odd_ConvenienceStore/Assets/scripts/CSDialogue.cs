@@ -20,10 +20,11 @@ public class CSDialogue : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         count = 0;
         isDialogue = true;
-        Nextdialogue();
+        
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
+        count++;
         Debug.Log(count);
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
@@ -31,7 +32,7 @@ public class CSDialogue : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
-        count++;
+       
 
     }
 
