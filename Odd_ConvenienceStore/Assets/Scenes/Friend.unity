@@ -930,7 +930,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1068759740}
         m_TargetAssemblyTypeName: Choice, Assembly-CSharp
-        m_MethodName: NextChoice
+        m_MethodName: NextChoice2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1083,7 +1083,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1622568130}
         m_TargetAssemblyTypeName: Choice, Assembly-CSharp
-        m_MethodName: NextChoice
+        m_MethodName: NextChoice1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

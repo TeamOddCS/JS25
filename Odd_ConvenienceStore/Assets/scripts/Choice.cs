@@ -33,23 +33,23 @@ public class Choice : MonoBehaviour
         {
             Dialogue.count ++;
         }
-        if (CSDialogue.count == 6)
-        {
-            CSDialogue.count ++;
-        }
-        if (CSDialogue.count == 30)
+        if (CSDialogue.count == 7)
         {
             CSDialogue.count++;
         }
-        if (CSDialogue.count == 45)
+        if (CSDialogue.count == 31)
         {
             CSDialogue.count++;
         }
-        if (CSDialogue.count == 60)
+        if (CSDialogue.count == 46)
         {
             CSDialogue.count++;
         }
-        if (CSDialogue.count == 66)
+        if (CSDialogue.count == 61)
+        {
+            CSDialogue.count++;
+        }
+        if (CSDialogue.count == 67)
         {
             CSDialogue.count++;
         }
@@ -63,23 +63,23 @@ public class Choice : MonoBehaviour
         {
             Dialogue.count += 4;
         }
-        if (CSDialogue.count == 6)
+        if (CSDialogue.count == 7)
         {
             CSDialogue.count += 6;
         }
-        if (CSDialogue.count == 30)
+        if (CSDialogue.count == 31)
         {
             CSDialogue.count += 3;
         }
-        if (CSDialogue.count == 45)
+        if (CSDialogue.count == 46)
         {
             CSDialogue.count += 2;
         }
-        if (CSDialogue.count == 60)
+        if (CSDialogue.count == 61)
         {
             CSDialogue.count += 2;
         }
-        if (CSDialogue.count == 66)
+        if (CSDialogue.count == 67)
         {
             CSDialogue.count += 4;
         }
@@ -110,23 +110,23 @@ public class Choice : MonoBehaviour
         {
             ShowChoice();
         }
-        if (CSDialogue.count == 6)
+        if (CSDialogue.count == 7)
         {
             ShowChoice();
         }
-        if (CSDialogue.count == 30)
+        if (CSDialogue.count == 31)
         {
             ShowChoice();
         }
-        if (CSDialogue.count == 45)
+        if (CSDialogue.count == 46)
         {
             ShowChoice();
         }
-        if (CSDialogue.count == 60)
+        if (CSDialogue.count == 61)
         {
             ShowChoice();
         }
-        if (CSDialogue.count == 66)
+        if (CSDialogue.count == 67)
         {
             ShowChoice();
         }
