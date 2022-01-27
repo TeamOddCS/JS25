@@ -3,30 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CSDialogue : MonoBehaviour
+public class UnoDialogue : MonoBehaviour
 {
-    [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
-    [SerializeField] private Text txt_name;// 이름 담는 객체 
+    void Reset()
+    {
+        txt_dialogue = null;
+        txt_name = null;
+
+    }
+    [SerializeField] private Text txt_dialogue; 
+    [SerializeField] private Text txt_name;
     public static bool isDialogue = false;
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
 
-
-
-    public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
+    public void Showdialogue()
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
         count = 0;
         isDialogue = true;
-        //Nextdialogue();
-
 
     }
-    public void Nextdialogue()//대화내용 넘기는 함수
+    public void Nextdialogue()
     {
-        
+        count++;
         Debug.Log(count);
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
@@ -34,20 +36,22 @@ public class CSDialogue : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
-        count++;
+
 
     }
 
 
-    private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
+    private void Hidedialogue()
     {
         txt_name.gameObject.SetActive(false);
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
     }
+
     private void Start()
     {
-        data = CSVReader.Read("Day1-3");
+
+        data = CSVReader.Read("Day1-1");
         Showdialogue();
     }
     // Update is called once per frame
@@ -60,26 +64,42 @@ public class CSDialogue : MonoBehaviour
                 if (count < data.Count)
                 {
                     Nextdialogue();
-                    if (count == 12)
+
+                    if (count == 27)
                     {
-                        count += 4;
+                        count += 1;
                     }
-                    if (count == 34)
+                    if (count == 30)
                     {
-                        count += 3;
+                        count += 11;
                     }
-                    if (count == 48)
+                    if (count == 32)
                     {
                         count += 2;
                     }
-                    if (count == 63)
+                    if (count == 38)
                     {
                         count += 3;
                     }
-                    
-                    if (count == 70)
+
+                    if (count == 40)
                     {
-                        count += 5;
+                        count += 1;
+                    }
+                    //if(count == 50) GameObject.Find("Canvas").transform.FindChild(" 1").gameObject.SetActive(true);
+                    //if(count == 50) GameObject.Find("Canvas").transform.FindChild("2").gameObject.SetActive(true);
+                    //if(count == 50) GameObject.Find("Canvas").transform.FindChild(" 3").gameObject.SetActive(true);
+                    if (count == 73)
+                    {
+                        count += 1;
+                    }
+                    if (count == 76)
+                    {
+                        count += 3;
+                    }
+                    if (count == 81)
+                    {
+                        count += 3;
                     }
                 }
                 else

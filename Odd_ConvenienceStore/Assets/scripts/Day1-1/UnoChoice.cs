@@ -4,22 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class choice
+public class UNoChoice
 {
     [TextArea]
     public string _choice;
     public string _choice2;
 }
 
-public class Choice : MonoBehaviour
+public class UnoChoice : MonoBehaviour
 {
+
     [SerializeField] private Button choicebtn1;
     [SerializeField] private Button choicebtn2;
     [SerializeField] private Text txt_choice1;
     [SerializeField] private Text txt_choice2;
 
+
     public static int count = 0;
-    [SerializeField] private choice[] choice;
+    [SerializeField] private UNoChoice[] choice;
     public void ShowChoice()
     {
         ChoiceOn();
@@ -29,67 +31,58 @@ public class Choice : MonoBehaviour
     public void NextChoice1()
     {
         count++;
-        if (Dialogue.count == 9)
+        if (UnoDialogue.count == 23)
         {
-            Dialogue.count ++;
+            UnoDialogue.count++;
         }
-        if (CSDialogue.count == 7)
+        if (UnoDialogue.count == 28)
         {
-            CSDialogue.count++;
+            UnoDialogue.count++;
         }
-        if (CSDialogue.count == 31)
+        if (UnoDialogue.count == 65)
         {
-            CSDialogue.count++;
+            UnoDialogue.count++;
         }
-        if (CSDialogue.count == 46)
+        if (UnoDialogue.count == 74)
         {
-            CSDialogue.count++;
+            UnoDialogue.count++;
         }
-        if (CSDialogue.count == 61)
+        if (UnoDialogue.count == 79)
         {
-            CSDialogue.count++;
+            UnoDialogue.count++;
         }
-        if (CSDialogue.count == 67)
-        {
-            CSDialogue.count++;
-        }
-
         ChoiceOff();
     }
     public void NextChoice2()
     {
         count++;
-        if (Dialogue.count == 9)
+        if (UnoDialogue.count == 23)
         {
-            Dialogue.count += 4;
+            UnoDialogue.count += 4;
         }
-        if (CSDialogue.count == 7)
+        if (UnoDialogue.count == 28)
         {
-            CSDialogue.count += 6;
+            UnoDialogue.count++;
         }
-        if (CSDialogue.count == 31)
+        if (UnoDialogue.count == 65)
         {
-            CSDialogue.count += 3;
+            UnoDialogue.count += 4;
         }
-        if (CSDialogue.count == 46)
+        if (UnoDialogue.count == 74)
         {
-            CSDialogue.count += 2;
+            UnoDialogue.count += 2;
         }
-        if (CSDialogue.count == 61)
+        if (UnoDialogue.count == 79)
         {
-            CSDialogue.count += 2;
-        }
-        if (CSDialogue.count == 67)
-        {
-            CSDialogue.count += 4;
+            UnoDialogue.count += 2;
         }
         ChoiceOff();
 
     }
     public void ChoiceOn()
     {
-        Dialogue.isDialogue = false;
-        CSDialogue.isDialogue = false;
+
+        UnoDialogue.isDialogue = false;
         choicebtn1.gameObject.SetActive(true);
         choicebtn2.gameObject.SetActive(true);
         txt_choice1.gameObject.SetActive(true);
@@ -97,8 +90,8 @@ public class Choice : MonoBehaviour
     }
     public void ChoiceOff()
     {
-        Dialogue.isDialogue = true;
-        CSDialogue.isDialogue = true;
+
+        UnoDialogue.isDialogue = true;
         choicebtn1.gameObject.SetActive(false);
         choicebtn2.gameObject.SetActive(false);
         txt_choice1.gameObject.SetActive(false);
@@ -106,27 +99,24 @@ public class Choice : MonoBehaviour
     }
     public void CallChoice()
     {
-        if (Dialogue.count == 9)
+
+        if (UnoDialogue.count == 23)
         {
             ShowChoice();
         }
-        if (CSDialogue.count == 7)
+        if (UnoDialogue.count == 28)
         {
             ShowChoice();
         }
-        if (CSDialogue.count == 31)
+        if (UnoDialogue.count == 65)
         {
             ShowChoice();
         }
-        if (CSDialogue.count == 46)
+        if (UnoDialogue.count == 74)
         {
             ShowChoice();
         }
-        if (CSDialogue.count == 61)
-        {
-            ShowChoice();
-        }
-        if (CSDialogue.count == 67)
+        if (UnoDialogue.count == 79)
         {
             ShowChoice();
         }

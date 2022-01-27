@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CSDialogue : MonoBehaviour
+public class DreiDialogue : MonoBehaviour
 {
     [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
     [SerializeField] private Text txt_name;// 이름 담는 객체 
@@ -26,7 +26,7 @@ public class CSDialogue : MonoBehaviour
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
-        
+
         Debug.Log(count);
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
@@ -47,7 +47,7 @@ public class CSDialogue : MonoBehaviour
     }
     private void Start()
     {
-        data = CSVReader.Read("Day1-3");
+        data = CSVReader.Read("Day2-친구");
         Showdialogue();
     }
     // Update is called once per frame
@@ -60,27 +60,11 @@ public class CSDialogue : MonoBehaviour
                 if (count < data.Count)
                 {
                     Nextdialogue();
-                    if (count == 12)
-                    {
-                        count += 4;
-                    }
-                    if (count == 34)
+                    if (count == 7)
                     {
                         count += 3;
                     }
-                    if (count == 48)
-                    {
-                        count += 2;
-                    }
-                    if (count == 63)
-                    {
-                        count += 3;
-                    }
-                    
-                    if (count == 70)
-                    {
-                        count += 5;
-                    }
+                  
                 }
                 else
                 {

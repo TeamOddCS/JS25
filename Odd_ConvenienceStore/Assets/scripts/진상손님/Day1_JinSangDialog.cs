@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CSDialogue : MonoBehaviour
+public class Day1_JinSangDialog : MonoBehaviour
 {
     [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
     [SerializeField] private Text txt_name;// 이름 담는 객체 
@@ -21,12 +21,11 @@ public class CSDialogue : MonoBehaviour
         count = 0;
         isDialogue = true;
         //Nextdialogue();
-
-
     }
+
     public void Nextdialogue()//대화내용 넘기는 함수
     {
-        
+
         Debug.Log(count);
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
@@ -47,7 +46,7 @@ public class CSDialogue : MonoBehaviour
     }
     private void Start()
     {
-        data = CSVReader.Read("Day1-3");
+        data = CSVReader.Read("JinSang2-1");
         Showdialogue();
     }
     // Update is called once per frame
@@ -60,26 +59,25 @@ public class CSDialogue : MonoBehaviour
                 if (count < data.Count)
                 {
                     Nextdialogue();
-                    if (count == 12)
-                    {
-                        count += 4;
-                    }
-                    if (count == 34)
-                    {
-                        count += 3;
-                    }
-                    if (count == 48)
-                    {
+                    if (count == 10)
+                    {//A. 가져다준다. ok
                         count += 2;
                     }
-                    if (count == 63)
-                    {
-                        count += 3;
+                    if (count == 19)
+                    { //C. 제가 뭘요. ok
+                        count += 12;
                     }
-                    
-                    if (count == 70)
-                    {
-                        count += 5;
+                    if(count == 21)
+                    { //D.오해입니다. ok
+                        count += 2;
+                    }
+                    if (count == 25)
+                    {//E.죄송합니다. 하지만.. ok
+                        count += 6; 
+                    }
+                    if (count == 36)
+                    {// A.죄송합니다. ok
+                        count += 2;
                     }
                 }
                 else
