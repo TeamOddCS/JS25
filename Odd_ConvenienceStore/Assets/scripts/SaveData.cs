@@ -23,6 +23,8 @@ public class SaveData : MonoBehaviour
     public static int JinSang4visit = 0;
     public static int JinSang6visit = 0;
 
+    public static int JinSang6Day1 = 0;
+
     // Start is called before the first frame update
 
     [Serializable]
@@ -33,6 +35,7 @@ public class SaveData : MonoBehaviour
         public int JinSang2visit_; //진상 방문 횟수
         public int JinSang4visit_;
         public int JinSang6visit_;
+        public int JinSang6Day1_; //진상6 첫 방문에서의 선택
     }
 
     public static void Saves()
@@ -48,6 +51,7 @@ public class SaveData : MonoBehaviour
         data.JinSang2visit_ = JinSang2visit;
         data.JinSang4visit_ = JinSang4visit;
         data.JinSang6visit_ = JinSang6visit;
+        data.JinSang6Day1_ = JinSang6Day1;
 
         //B직렬화 & 파일 저장
         bf.Serialize(file, data);
@@ -71,6 +75,7 @@ public class SaveData : MonoBehaviour
                 JinSang2visit = data.JinSang2visit_;
                 JinSang4visit = data.JinSang4visit_;
                 JinSang6visit = data.JinSang6visit_;
+                JinSang6Day1 = data.JinSang6Day1_;
             }
             Check_Loads_Files = true;
             file.Close();
