@@ -117,6 +117,7 @@ public class JS3choice : MonoBehaviour
             JinSang3_1.count+=8;
         }
     }
+
     private void js3_2()
     {
         if (JinSang3_2.count == 10)//ABº±≈√¡ˆ
