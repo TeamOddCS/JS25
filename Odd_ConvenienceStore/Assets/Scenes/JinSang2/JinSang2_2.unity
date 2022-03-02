@@ -550,8 +550,6 @@ MonoBehaviour:
   choice:
   - _choice: "\uBE44\uCF1C\uB2EC\uB77C\uACE0 \uD55C\uB2E4."
     _choice2: "\uBE44\uC881\uC9C0\uB9CC \uACC4\uC0B0\uD574\uC900\uB2E4."
-    _choice3: 
-    _choice4: 
 --- !u!114 &107783853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,7 +1091,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c7729f883a66cfa4fba5be8c67231d7b, type: 3}
     m_FontSize: 100
     m_FontStyle: 1
     m_BestFit: 0
@@ -1322,7 +1320,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c7729f883a66cfa4fba5be8c67231d7b, type: 3}
     m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
@@ -1401,7 +1399,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c7729f883a66cfa4fba5be8c67231d7b, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 1
@@ -1621,7 +1619,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c7729f883a66cfa4fba5be8c67231d7b, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 1
@@ -1924,8 +1922,6 @@ MonoBehaviour:
   choice:
   - _choice: "\uBE44\uCF1C\uB2EC\uB77C\uACE0 \uD55C\uB2E4."
     _choice2: "\uBE44\uC881\uC9C0\uB9CC \uACC4\uC0B0\uD574\uC900\uB2E4."
-    _choice3: 
-    _choice4: 
 --- !u!1 &1996385090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2079,8 +2075,6 @@ MonoBehaviour:
   choice:
   - _choice: "\uBE44\uCF1C\uB2EC\uB77C\uACE0 \uD55C\uB2E4."
     _choice2: "\uBE44\uC881\uC9C0\uB9CC \uACC4\uC0B0\uD574\uC900\uB2E4."
-    _choice3: 
-    _choice4: 
 --- !u!1 &2014750713
 GameObject:
   m_ObjectHideFlags: 0
