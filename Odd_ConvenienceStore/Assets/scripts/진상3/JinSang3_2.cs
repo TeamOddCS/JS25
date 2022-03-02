@@ -57,12 +57,12 @@ public class JinSang3_2 : MonoBehaviour
                 if (count < data.Count)
                 {
                     Nextdialogue();
-                    if (count == 22)
+                    if (count == 26)
                     {
                         fade.Fade();
                         Hidedialogue();
                     }
-                    if (count == 28)
+                    if (count == 33)
                     {
                         fade.Fade();
                         Hidedialogue();

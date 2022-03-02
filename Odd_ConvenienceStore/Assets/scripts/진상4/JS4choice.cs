@@ -46,61 +46,61 @@ public class JS4choice : MonoBehaviour
     }
     private void js4_1_1()//진상4 1일차 첫번째 선택지
     {
-        if (JinSang4_1.count == 7)
+        if (JinSang4_1.count == 9)
         {
             JinSang4_1.count++;
             count++;
         }
-        if (JinSang4_1.count == 16)
+        if (JinSang4_1.count == 19)
         {
             JinSang4_1.count++;
         }
-        if (JinSang4_1.count == 31)
+        if (JinSang4_1.count == 37)
         {
             JinSang4_1.count++;
         }
     }
     private void js4_1_2()//진상4 1일차 두번째 선택지
     {
-        if (JinSang4_1.count == 7)
+        if (JinSang4_1.count == 9)
+        {
+            JinSang4_1.count += 6;
+        }
+        if (JinSang4_1.count == 19)
         {
             JinSang4_1.count += 5;
         }
-        if (JinSang4_1.count == 16)
-        {
-            JinSang4_1.count += 4;
-        }
-        if (JinSang4_1.count == 31)
+        if (JinSang4_1.count == 37)
         {
             JinSang4_1.count += 4;
         }
     }
     private void js4_1()
     {
-        if (JinSang4_1.count == 7)
+        if (JinSang4_1.count == 9)
         {
             ShowChoice();
         }
-        if (JinSang4_1.count == 16)
+        if (JinSang4_1.count == 19)
         {
             ShowChoice();
         }
-        if (JinSang4_1.count == 31)
+        if (JinSang4_1.count == 37)
         {
             ShowChoice();
         }
     }
     private void js4_2()
     {
-        if (JinSang4_2.count == 6)
+        if (JinSang4_2.count == 8)
         {
             ShowChoice();
         }
-        if (JinSang4_2.count == 21)
+        if (JinSang4_2.count == 17)
         {
             ShowChoice();
         }
-        if (JinSang4_2.count == 38)
+        if (JinSang4_2.count == 54)
         {
             ShowChoice();
         }
@@ -108,15 +108,15 @@ public class JS4choice : MonoBehaviour
     private void js4_2_1()
     {
         
-        if (JinSang4_2.count == 6)
+        if (JinSang4_2.count == 8)
         {
             JinSang4_2.count++;
         }
-        if (JinSang4_2.count == 21)
+        if (JinSang4_2.count == 17)
         {
             JinSang4_2.count++;
         }
-        if (JinSang4_2.count == 38)
+        if (JinSang4_2.count == 54)
         {
             JinSang4_2.count++;
         }
@@ -125,28 +125,28 @@ public class JS4choice : MonoBehaviour
     private void js4_2_2()
     {
        
-        if (JinSang4_2.count == 6)
+        if (JinSang4_2.count == 8)
         {
-            JinSang4_2.count += 7;
+            JinSang4_2.count += 35;
             count++;
         }
-        if (JinSang4_2.count == 21)
+        if (JinSang4_2.count == 17)
         {
-            JinSang4_2.count += 11;
+            JinSang4_2.count += 18;
         }
-        if (JinSang4_2.count == 38)
+        if (JinSang4_2.count == 54)
         {
-            JinSang4_2.count += 10;
+            JinSang4_2.count += 12;
         }
 
     }
     private void js4_3()
     {
-        if (JinSang4_3.count == 26)
+        if (JinSang4_3.count == 34)
         {
             ShowChoice();
         }
-        if (JinSang4_3.count == 36)
+        if (JinSang4_3.count == 47)
         {
             ShowChoice();
         }
@@ -155,11 +155,11 @@ public class JS4choice : MonoBehaviour
     private void js4_3_1()
     {
         
-        if (JinSang4_3.count == 26)
+        if (JinSang4_3.count == 34)
         {
             JinSang4_3.count++;
         }
-        if (JinSang4_3.count == 36)
+        if (JinSang4_3.count == 47)
         {
             JinSang4_3.count++;
         }
@@ -168,27 +168,27 @@ public class JS4choice : MonoBehaviour
     private void js4_3_2()
     {
        
-        if (JinSang4_3.count == 26)
+        if (JinSang4_3.count == 34)
         {
-            JinSang4_3.count += 4;
+            JinSang4_3.count += 6;
             
         }
-        if (JinSang4_3.count == 36)
+        if (JinSang4_3.count == 47)
         {
-            JinSang4_3.count += 7;
+            JinSang4_3.count += 10;
         }
     }
     private void js4_4()
     {
-        if (JinSang4_4.count == 15)
+        if (JinSang4_4.count == 18)
         {
             ShowChoice();
         }
-        if (JinSang4_4.count == 27)
+        if (JinSang4_4.count == 33)
         {
             ShowChoice();
         }
-        if (JinSang4_4.count == 37)
+        if (JinSang4_4.count == 44)
         {
             ShowChoice();
         }
@@ -197,15 +197,15 @@ public class JS4choice : MonoBehaviour
     private void js4_4_1()
     {
 
-        if (JinSang4_4.count == 15)
+        if (JinSang4_4.count == 18)
         {
-            JinSang4_4.count+=3;
+            JinSang4_4.count+=5;
         }
-        if (JinSang4_4.count == 27)
+        if (JinSang4_4.count == 33)
         {
             JinSang4_4.count++;
         }
-        if (JinSang4_4.count == 37)
+        if (JinSang4_4.count == 44)
         {
             JinSang4_4.count++;
         }
@@ -214,17 +214,17 @@ public class JS4choice : MonoBehaviour
     private void js4_4_2()
     {
 
-        if (JinSang4_4.count == 15)
+        if (JinSang4_4.count == 18)
         {
             JinSang4_4.count++;
         }
-        if (JinSang4_4.count == 27)
+        if (JinSang4_4.count == 33)
         {
-            JinSang4_4.count+=28;
+            JinSang4_4.count+=33;
         }
-        if (JinSang4_4.count == 37)
+        if (JinSang4_4.count == 44)
         {
-            JinSang4_4.count+=5;
+            JinSang4_4.count+=6;
         }
     }
     public void ChoiceOn()

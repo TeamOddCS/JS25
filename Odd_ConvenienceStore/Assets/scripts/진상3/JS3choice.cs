@@ -73,80 +73,80 @@ public class JS3choice : MonoBehaviour
     }
     private void js3_1()
     {
-        if (JinSang3_1.count == 10)//AB선택지
+        if (JinSang3_1.count == 12)//AB선택지
         {
             ShowChoice();
         }
-        if (JinSang3_1.count == 16)//CD선택지
+        if (JinSang3_1.count == 19)//CD선택지
         {
             ShowChoice();
         }
-        if (JinSang3_1.count == 34)//EF선택지
+        if (JinSang3_1.count == 44)//EF선택지
         {
             ShowChoice();
         }
     }
     private void js3_1_1()
     {
-        if (JinSang3_1.count == 10)//AB선택지
+        if (JinSang3_1.count == 12)//AB선택지
         {
             JinSang3_1.count++;
         }
-        if (JinSang3_1.count == 16)//CD선택지
+        if (JinSang3_1.count == 19)//CD선택지
         {
             JinSang3_1.count++;
         }
-        if (JinSang3_1.count == 34)//EF선택지
+        if (JinSang3_1.count == 44)//EF선택지
         {
             JinSang3_1.count++;
         }
     }
     private void js3_1_2()
     {
-        if (JinSang3_1.count == 10)//AB선택지
+        if (JinSang3_1.count == 12)//AB선택지
         {
-            JinSang3_1.count+=18;
+            JinSang3_1.count+=24;
             count++;
         }
-        if (JinSang3_1.count == 16)//CD선택지
-        {
-            JinSang3_1.count+=6;
-        }
-        if (JinSang3_1.count == 34)//EF선택지
+        if (JinSang3_1.count == 19)//CD선택지
         {
             JinSang3_1.count+=8;
+        }
+        if (JinSang3_1.count == 44)//EF선택지
+        {
+            JinSang3_1.count+=9;
         }
     }
 
     private void js3_2()
     {
-        if (JinSang3_2.count == 10)//AB선택지
+        if (JinSang3_2.count == 11)//AB선택지
         {
             ShowChoice();
         }
-        if (JinSang3_2.count == 16)//CD선택지
+        if (JinSang3_2.count == 20)//CD선택지
         {
             ShowChoice();
         }
     }
     private void js3_2_1()
     {
-        if (JinSang3_2.count == 10)//AB선택지
+        if (JinSang3_2.count == 11)//AB선택지
         {
             JinSang3_2.count++;
         }
-        if (JinSang3_2.count == 16)//CD선택지
+        if (JinSang3_2.count == 20)//CD선택지
         {
             JinSang3_2.count++;
         }
     }
     private void js3_2_2()
     {
-        if (JinSang3_2.count == 10)//AB선택지
+        if (JinSang3_2.count == 11)//AB선택지
         {
-            JinSang3_2.count += 18;
+            JinSang3_2.count += 22;
         }
-        if (JinSang3_2.count == 16)//CD선택지
+        if (JinSang3_2.count == 20)//CD선택지
         {
             JinSang3_2.count += 6;
         }
@@ -154,35 +154,35 @@ public class JS3choice : MonoBehaviour
 
     private void js3_3()
     {
-        if (JinSang3_3.count == 9)//AB선택지
+        if (JinSang3_3.count == 11)//AB선택지
         {
             ShowChoice();
         }
-        if (JinSang3_3.count == 19)//CD선택지
+        if (JinSang3_3.count == 23)//CD선택지
         {
             ShowChoice();
         }
     }
     private void js3_3_1()
     {
-        if (JinSang3_3.count == 9)//AB선택지
+        if (JinSang3_3.count ==11)//AB선택지
         {
             JinSang3_3.count++;
         }
-        if (JinSang3_3.count == 19)//CD선택지
+        if (JinSang3_3.count == 23)//CD선택지
         {
             JinSang3_3.count++;
         }
     }
     private void js3_3_2()
     {
-        if (JinSang3_3.count == 9)//AB선택지
+        if (JinSang3_3.count ==11)//AB선택지
         {
             JinSang3_3.count+=6;
         }
-        if (JinSang3_3.count == 19)//CD선택지
+        if (JinSang3_3.count == 23)//CD선택지
         {
-            JinSang3_3.count+=5;
+            JinSang3_3.count+=6;
         }
     }
 

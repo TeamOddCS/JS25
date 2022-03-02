@@ -57,23 +57,15 @@ public class JinSang4_2 : MonoBehaviour
                 if (count < data.Count)
                 {
                     Nextdialogue();
-                    if (count == 12)
+                    if (count == 35)
                     {
-                        count += 9;
+                        count += 39;
                     }
-                    if (count == 20)
+                    if (count == 42)
                     {
-                        count += 18;
+                        count += 34;
                     }
-                    if (count == 31)
-                    {
-                        count += 25;
-                    }
-                    if (count == 37)
-                    {
-                        count += 19;
-                    }
-                    if (count == 48)
+                    if (count == 66)
                     {
                         count += 8;
                     }
