@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 10433186}
   - component: {fileID: 10433185}
   - component: {fileID: 10433184}
-  - component: {fileID: 10433187}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 1"
   m_TagString: Untagged
@@ -207,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 10433187}
+      - m_Target: {fileID: 1834535974}
         m_TargetAssemblyTypeName: JinSang6Choice2, Assembly-CSharp
         m_MethodName: NextChoice1
         m_Mode: 1
@@ -257,29 +256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10433182}
   m_CullTransparentMesh: 1
---- !u!114 &10433187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10433182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc75a7d0fa247394d905105a905547b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choicebtn1: {fileID: 10433184}
-  choicebtn2: {fileID: 2066284168}
-  txt_choice1: {fileID: 1563452884}
-  txt_choice2: {fileID: 1216696453}
-  choice:
-  - _choice: "\uB2F4\uBC30\uB97C \uD310\uB2E4. "
-    _choice2: "\uC2E0\uBD84\uC99D\uC744 \uC694\uAD6C\uD55C\uB2E4."
-  - _choice: "\uC751 \uC548\uB3FC"
-    _choice2: "\uC774\uBC88\uB9CC\uC774\uB2E4 "
-  - _choice: "\uBE44\uAD74\uD558\uAC8C"
-    _choice2: "\uAC15\uD558\uAC8C"
 --- !u!1 &129472008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,7 +1762,6 @@ GameObject:
   - component: {fileID: 2066284170}
   - component: {fileID: 2066284169}
   - component: {fileID: 2066284168}
-  - component: {fileID: 2066284171}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 2"
   m_TagString: Untagged
@@ -1858,7 +1833,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2066284171}
+      - m_Target: {fileID: 1834535974}
         m_TargetAssemblyTypeName: JinSang6Choice2, Assembly-CSharp
         m_MethodName: NextChoice2
         m_Mode: 1
@@ -1908,29 +1883,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066284166}
   m_CullTransparentMesh: 1
---- !u!114 &2066284171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066284166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc75a7d0fa247394d905105a905547b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choicebtn1: {fileID: 10433184}
-  choicebtn2: {fileID: 2066284168}
-  txt_choice1: {fileID: 1563452884}
-  txt_choice2: {fileID: 1216696453}
-  choice:
-  - _choice: "\uB2F4\uBC30\uB97C \uD310\uB2E4. "
-    _choice2: "\uC2E0\uBD84\uC99D\uC744 \uC694\uAD6C\uD55C\uB2E4."
-  - _choice: "\uC751 \uC548\uB3FC"
-    _choice2: "\uC774\uBC88\uB9CC\uC774\uB2E4 "
-  - _choice: "\uBE44\uAD74\uD558\uAC8C"
-    _choice2: "\uAC15\uD558\uAC8C"
 --- !u!1 &2133900671
 GameObject:
   m_ObjectHideFlags: 0

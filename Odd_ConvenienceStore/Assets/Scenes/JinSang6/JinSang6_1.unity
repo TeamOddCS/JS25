@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 10433186}
   - component: {fileID: 10433185}
   - component: {fileID: 10433184}
-  - component: {fileID: 10433187}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 1"
   m_TagString: Untagged
@@ -207,8 +206,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 10433187}
-        m_TargetAssemblyTypeName: JinSang6Choice, Assembly-CSharp
+      - m_Target: {fileID: 1834535974}
+        m_TargetAssemblyTypeName: JinSang6Choice1, Assembly-CSharp
         m_MethodName: NextChoice1
         m_Mode: 1
         m_Arguments:
@@ -257,27 +256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10433182}
   m_CullTransparentMesh: 1
---- !u!114 &10433187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10433182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7bebb1ff05cc19419e0ef2ebe327c92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choicebtn1: {fileID: 10433184}
-  choicebtn2: {fileID: 2066284168}
-  txt_choice1: {fileID: 1563452884}
-  txt_choice2: {fileID: 1216696453}
-  choice:
-  - _choice: "\uC2E0\uBD84\uC99D\uC744 \uAC80\uC0AC\uD55C\uB2E4."
-    _choice2: "\uAC80\uC0AC\uD558\uC9C0 \uC54A\uB294\uB2E4."
-  - _choice: "\uC804 \uAE30\uC5B5\uC774 \uC548\uB098\uC694."
-    _choice2: "\uC815\uB9D0\uC774\uC5D0\uC694?"
 --- !u!1 &129472008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,7 +1760,6 @@ GameObject:
   - component: {fileID: 2066284170}
   - component: {fileID: 2066284169}
   - component: {fileID: 2066284168}
-  - component: {fileID: 2066284171}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 2"
   m_TagString: Untagged
@@ -1854,8 +1831,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2066284171}
-        m_TargetAssemblyTypeName: JinSang6Choice, Assembly-CSharp
+      - m_Target: {fileID: 1834535974}
+        m_TargetAssemblyTypeName: JinSang6Choice1, Assembly-CSharp
         m_MethodName: NextChoice2
         m_Mode: 1
         m_Arguments:
@@ -1904,27 +1881,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066284166}
   m_CullTransparentMesh: 1
---- !u!114 &2066284171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066284166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7bebb1ff05cc19419e0ef2ebe327c92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choicebtn1: {fileID: 10433184}
-  choicebtn2: {fileID: 2066284168}
-  txt_choice1: {fileID: 1563452884}
-  txt_choice2: {fileID: 1216696453}
-  choice:
-  - _choice: "\uC2E0\uBD84\uC99D\uC744 \uAC80\uC0AC\uD55C\uB2E4."
-    _choice2: "\uAC80\uC0AC\uD558\uC9C0 \uC54A\uB294\uB2E4."
-  - _choice: "\uC804 \uAE30\uC5B5\uC774 \uC548\uB098\uC694."
-    _choice2: "\uC815\uB9D0\uC774\uC5D0\uC694?"
 --- !u!1 &2133900671
 GameObject:
   m_ObjectHideFlags: 0
