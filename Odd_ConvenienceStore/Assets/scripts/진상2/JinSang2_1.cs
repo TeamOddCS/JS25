@@ -12,8 +12,6 @@ public class JinSang2_1 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
 
-
-
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -25,7 +23,6 @@ public class JinSang2_1 : MonoBehaviour
 
     public void Nextdialogue()//대화내용 넘기는 함수
     {
-
         Debug.Log(count);
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
@@ -34,9 +31,7 @@ public class JinSang2_1 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
         count++;
-
     }
-
 
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {
@@ -59,25 +54,21 @@ public class JinSang2_1 : MonoBehaviour
                 if (count < data.Count)
                 {
                     Nextdialogue();
-                    if (count == 15)
-                    {//A. 가져다준다.
-                        count += 4;
+                    if (count == 25)
+                    {// 제가뭘요
+                        count += 28;
                     }
-                    if (count == 29)
-                    { //C. 제가 뭘요.
-                        count += 17;
+                    if (count == 32)
+                    { // 오해입니다.
+                        count += 21;
                     }
-                    if(count == 33)
-                    { //D.오해입니다.
-                        count += 3;
+                    if(count == 46)
+                    { // 죄송합니다. 하지만
+                        count += 7;
                     }
-                    if (count == 39)
-                    {//오해입니다. 죄송합니다 끝나고
-                        count += 7; 
-                    }
-                    if (count == 53)
-                    {
-                        count += 2;
+                    if (count == 60)
+                    {// 죄송합니다.
+                        count += 2; 
                     }
                 }
                 else

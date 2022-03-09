@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class day2_JinSangChoice
+public class day3_JinSangChoice
 {
     [TextArea]
     public string _choice;
     public string _choice2;
 }
-public class JS2_2choice : MonoBehaviour
-    {
+public class JS2_3_C : MonoBehaviour
+{
     [SerializeField] private Button choicebtn1;
     [SerializeField] private Button choicebtn2;
     [SerializeField] private Text txt_choice1;
@@ -19,7 +19,7 @@ public class JS2_2choice : MonoBehaviour
 
 
     public static int count = 0;
-    [SerializeField] private day2_JinSangChoice[] choice;
+    [SerializeField] private day3_JinSangChoice[] choice;
     public void ShowChoice()
     {
         ChoiceOn();
@@ -30,27 +30,47 @@ public class JS2_2choice : MonoBehaviour
     public void NextChoice1()
     {
         count++;
-        if (JinSang2_2.count == 22)
+        if (JinSang2_3.count == 7)
         {
-            JinSang2_2.count++;
+            JinSang2_3.count++;
         }
 
+        if(JinSang2_3.count == 14)
+        {
+            JinSang2_3.count++;
+        }
+
+        if (JinSang2_3.count == 33)
+        {
+            JinSang2_3.count++;
+        }
         ChoiceOff();
     }
 
     public void NextChoice2()
     {
         count++;
-        if (JinSang2_2.count == 22)
+        if (JinSang2_3.count == 7)
         {
-            JinSang2_2.count += 10;
+            count++;
+            JinSang2_3.count += 21;
+        }
+
+        if (JinSang2_3.count == 14)
+        {
+            JinSang2_3.count += 9;
+        }
+
+        if (JinSang2_3.count == 33)
+        {
+            JinSang2_3.count += 7;
         }
         ChoiceOff();
     }
 
     public void ChoiceOn()
     {
-        JinSang2_2.isDialogue = false;
+        JinSang2_3.isDialogue = false;
         choicebtn1.gameObject.SetActive(true);
         choicebtn2.gameObject.SetActive(true);
         txt_choice1.gameObject.SetActive(true);
@@ -59,7 +79,7 @@ public class JS2_2choice : MonoBehaviour
 
     public void ChoiceOff()
     {
-        JinSang2_2.isDialogue = true;
+        JinSang2_3.isDialogue = true;
         choicebtn1.gameObject.SetActive(false);
         choicebtn2.gameObject.SetActive(false);
         txt_choice1.gameObject.SetActive(false);
@@ -68,7 +88,17 @@ public class JS2_2choice : MonoBehaviour
 
     public void CallChoice()
     {
-        if (JinSang2_2.count == 22)
+        if (JinSang2_3.count == 7)
+        {
+            ShowChoice();
+        }
+
+        if (JinSang2_3.count == 14)
+        {
+            ShowChoice();
+        }
+
+        if (JinSang2_3.count == 33)
         {
             ShowChoice();
         }
