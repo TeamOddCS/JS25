@@ -365,7 +365,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 218259813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc4a6dc389b809f4c93c928a609675b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5da6eef4ee753d84ba8e7f5fccaa1a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   choicebtn1: {fileID: 218259818}
@@ -373,7 +373,7 @@ MonoBehaviour:
   txt_choice1: {fileID: 2081698414}
   txt_choice2: {fileID: 166835889}
   choice:
-  - _choice: "\uBC18\uB9D0\uD558\uC9C0 \uB9D0\uC544\uC8FC\uC138\uC694."
+  - _choice: "\uBC18\uB9D0\uD558\uC9C0 \uB9D0\uC544\uC8FC\uC138\uC694.\t"
     _choice2: "\uC5B4\uB5A4\uAC70 \uB4DC\uB9B4\uAE4C\uC694?"
   - _choice: "\uC5B4\uCA54\uD2F0\uBE44"
     _choice2: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4."
@@ -381,7 +381,7 @@ MonoBehaviour:
     _choice2: "\uC5D0\uC384 \uB77C\uC774\uD2B8 \uB9DE\uC8E0?"
   - _choice: "\uB3D9\uC548\uC774\uC2DC\uB124\uC694."
     _choice2: "TMI, \uBA48\uCDB0!"
-  - _choice: "\uBD09\uD22C\uAC12\uC744 \uBC1B\uB294\uB2E4."
+  - _choice: "\uBD09\uD22C \uAC12\uC744 \uBC1B\uB294\uB2E4."
     _choice2: "\uBD09\uD22C \uAC12\uC744 \uBC1B\uC9C0 \uC54A\uB294\uB2E4."
   - _choice: "\uC2EB\uC740\uB370\uC694."
     _choice2: "\uADF8\uB7EC\uC8E0, \uBB50"
@@ -467,8 +467,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 218259815}
-        m_TargetAssemblyTypeName: UnoChoice, Assembly-CSharp
+      - m_Target: {fileID: 1520224177}
+        m_TargetAssemblyTypeName: Day1_1_C, Assembly-CSharp
         m_MethodName: NextChoice1
         m_Mode: 1
         m_Arguments:
@@ -518,7 +518,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 56fd15d732acd234ca5faf17e3572f96, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1508790293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc4a6dc389b809f4c93c928a609675b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5da6eef4ee753d84ba8e7f5fccaa1a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   choicebtn1: {fileID: 218259818}
@@ -1251,7 +1251,7 @@ MonoBehaviour:
   txt_choice1: {fileID: 2081698414}
   txt_choice2: {fileID: 166835889}
   choice:
-  - _choice: "\uBC18\uB9D0\uD558\uC9C0 \uB9D0\uC544\uC8FC\uC138\uC694."
+  - _choice: "\uBC18\uB9D0\uD558\uC9C0 \uB9D0\uC544\uC8FC\uC138\uC694.\t"
     _choice2: "\uC5B4\uB5A4\uAC70 \uB4DC\uB9B4\uAE4C\uC694?"
   - _choice: "\uC5B4\uCA54\uD2F0\uBE44"
     _choice2: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4."
@@ -1261,7 +1261,7 @@ MonoBehaviour:
     _choice2: "TMI, \uBA48\uCDB0!"
   - _choice: "\uBD09\uD22C \uAC12\uC744 \uBC1B\uB294\uB2E4."
     _choice2: "\uBD09\uD22C \uAC12\uC744 \uBC1B\uC9C0 \uC54A\uB294\uB2E4."
-  - _choice: "\uC2EB\uC740\uB370\uC694.\t"
+  - _choice: "\uC2EB\uC740\uB370\uC694."
     _choice2: "\uADF8\uB7EC\uC8E0, \uBB50"
 --- !u!114 &1508790296
 MonoBehaviour:
@@ -1345,8 +1345,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1508790295}
-        m_TargetAssemblyTypeName: UnoChoice, Assembly-CSharp
+      - m_Target: {fileID: 1520224177}
+        m_TargetAssemblyTypeName: Day1_1_C, Assembly-CSharp
         m_MethodName: NextChoice2
         m_Mode: 1
         m_Arguments:
@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1520224175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc4a6dc389b809f4c93c928a609675b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5da6eef4ee753d84ba8e7f5fccaa1a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   choicebtn1: {fileID: 218259818}
@@ -1411,8 +1411,8 @@ MonoBehaviour:
   txt_choice1: {fileID: 2081698414}
   txt_choice2: {fileID: 166835889}
   choice:
-  - _choice: "\uBC18\uB9D0\uD558\uC9C0 \uB9D0\uC544\uC8FC\uC138\uC694."
-    _choice2: "\uB135! \uB2F4\uBC30 \uC5B4\uB5A4\uAC70 \uB4DC\uB9B4\uAE4C\uC694?"
+  - _choice: "\uBC18\uB9D0\uD558\uC9C0 \uB9D0\uC544\uC8FC\uC138\uC694.\t"
+    _choice2: "\uC5B4\uB5A4\uAC70 \uB4DC\uB9B4\uAE4C\uC694?"
   - _choice: "\uC5B4\uCA54\uD2F0\uBE44"
     _choice2: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4."
   - _choice: "\uBC1C\uC74C \uC880.."
@@ -1444,11 +1444,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1520224175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daf7db25f868be349bc6d99032db3b23, type: 3}
+  m_Script: {fileID: 11500000, guid: 3381d2bfb6e78ca468f8ccf382067d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt_dialogue: {fileID: 1575341642}
   txt_name: {fileID: 296475245}
+  txt_dialogue: {fileID: 1575341642}
   fade: {fileID: 1520224176}
 --- !u!114 &1520224180
 MonoBehaviour:

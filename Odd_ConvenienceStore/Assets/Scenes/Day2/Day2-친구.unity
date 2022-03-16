@@ -172,7 +172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 23356357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9485c4f02b305274fb24e98e16524e14, type: 3}
+  m_Script: {fileID: 11500000, guid: 1795ffc0e06247947bd0ef1d8e438beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   choicebtn1: {fileID: 2130046559}
@@ -180,8 +180,8 @@ MonoBehaviour:
   txt_choice1: {fileID: 560650500}
   txt_choice2: {fileID: 266958816}
   choice:
-  - _choice: "\uBC84\uD2F8\uB9CC \uD588\uC5B4"
-    _choice2: "\uB9D0\uD574 \uBB50\uD574"
+  - _choice: "\uBC84\uD2F8\uB9CC \uD588\uC5B4\t"
+    _choice2: "\uB9D0\uD574 \uBB50\uD574 "
 --- !u!114 &23356360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,8 +226,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 23356359}
-        m_TargetAssemblyTypeName: EineChoice, Assembly-CSharp
+      - m_Target: {fileID: 81910542}
+        m_TargetAssemblyTypeName: Day2_F_C, Assembly-CSharp
         m_MethodName: NextChoice2
         m_Mode: 1
         m_Arguments:
@@ -384,11 +384,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 81910540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 536281b99c13fb5409c5379d40fff1ba, type: 3}
+  m_Script: {fileID: 11500000, guid: e3d900a1fb8154b40aa11fa55b1b1a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt_dialogue: {fileID: 433900783}
   txt_name: {fileID: 253333205}
+  txt_dialogue: {fileID: 433900783}
   fade: {fileID: 81910543}
 --- !u!114 &81910542
 MonoBehaviour:
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 81910540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55758912df776c8488dd38416f9df8a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1795ffc0e06247947bd0ef1d8e438beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   choicebtn1: {fileID: 2130046559}
@@ -407,7 +407,7 @@ MonoBehaviour:
   txt_choice1: {fileID: 560650500}
   txt_choice2: {fileID: 266958816}
   choice:
-  - _choice: "\uBC84\uD2F8\uB9CC \uD588\uC5B4"
+  - _choice: "\uBC84\uD2F8\uB9CC \uD588\uC5B4\t"
     _choice2: "\uB9D0\uD574 \uBB50\uD574 "
 --- !u!114 &81910543
 MonoBehaviour:
@@ -588,7 +588,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 56fd15d732acd234ca5faf17e3572f96, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -1977,8 +1977,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2130046560}
-        m_TargetAssemblyTypeName: EineChoice, Assembly-CSharp
+      - m_Target: {fileID: 81910542}
+        m_TargetAssemblyTypeName: Day2_F_C, Assembly-CSharp
         m_MethodName: NextChoice1
         m_Mode: 1
         m_Arguments:
@@ -1998,7 +1998,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2130046558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9485c4f02b305274fb24e98e16524e14, type: 3}
+  m_Script: {fileID: 11500000, guid: 1795ffc0e06247947bd0ef1d8e438beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   choicebtn1: {fileID: 2130046559}
@@ -2006,8 +2006,8 @@ MonoBehaviour:
   txt_choice1: {fileID: 560650500}
   txt_choice2: {fileID: 266958816}
   choice:
-  - _choice: "\uBC84\uD2F8\uB9CC \uD588\uC5B4"
-    _choice2: "\uB9D0\uD574 \uBB50\uD574"
+  - _choice: "\uBC84\uD2F8\uB9CC \uD588\uC5B4\t"
+    _choice2: "\uB9D0\uD574 \uBB50\uD574 "
 --- !u!114 &2130046561
 MonoBehaviour:
   m_ObjectHideFlags: 0

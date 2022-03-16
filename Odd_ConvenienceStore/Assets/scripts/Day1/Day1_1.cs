@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EineDialogue : MonoBehaviour
+public class Day1_1 : MonoBehaviour
 {
-    [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
     [SerializeField] private Text txt_name;// 이름 담는 객체 
+    [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
     public static bool isDialogue = false;
     public static int count = 0;
     private List<Dictionary<string, object>> data;
@@ -20,13 +20,10 @@ public class EineDialogue : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         count = 0;
         isDialogue = true;
-        //Nextdialogue();
-
-
+        Nextdialogue();
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
-
         Debug.Log(count);
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
@@ -35,7 +32,6 @@ public class EineDialogue : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
         count++;
-
     }
 
 
@@ -45,9 +41,57 @@ public class EineDialogue : MonoBehaviour
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
     }
+    private void day1_1_JD()//첫번째 선택지를 골랐을 경우 선택지 대화를 다본후 다음 대화로 넘어가는 함수
+    {
+        if (count < data.Count)
+        {
+            Nextdialogue();
+
+            if (count == 45)
+            {
+                count += 64 - 45;
+            }
+
+            if (count == 48)
+            {
+                count += 64 - 48;
+            }
+            if (count == 58)
+            {
+                count += 64 - 58;
+            }
+            if (count == 62)
+            {
+                count += 64 - 62;
+            }
+            if (count == 101)
+            {
+                count += 105 - 101;
+            }
+            if (count == 105)
+            {
+                count += 105 - 105;
+            }
+            if (count == 111)
+            {
+                count += 115 - 111;
+            }
+          
+            if (count == 125)
+            {
+                fade.Fade();
+                Hidedialogue();
+            }
+        }
+        else
+        {
+            fade.Fade();
+            Hidedialogue();
+        }
+    }
     private void Start()
     {
-        data = CSVReader.Read("Day2-1");
+        data = CSVReader.Read("Day1-1");
         Showdialogue();
     }
     // Update is called once per frame
@@ -57,37 +101,7 @@ public class EineDialogue : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
-                {
-                    Nextdialogue();
-                    if (count == 12)
-                    {
-                        count += 4;
-                    }
-                    if (count == 34)
-                    {
-                        count += 3;
-                    }
-                    if (count == 48)
-                    {
-                        count += 2;
-                    }
-                    if (count == 63)
-                    {
-                        count += 3;
-                    }
-
-                    if (count == 70)
-                    {
-                        count += 5;
-                    }
-                }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                }
-
+                day1_1_JD();
             }
         }
         else

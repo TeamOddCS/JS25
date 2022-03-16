@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DreiDialogue : MonoBehaviour
+public class Day2_F : MonoBehaviour
 {
-    [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
     [SerializeField] private Text txt_name;// 이름 담는 객체 
+    [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
     public static bool isDialogue = false;
     public static int count = 0;
     private List<Dictionary<string, object>> data;
@@ -20,13 +20,10 @@ public class DreiDialogue : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         count = 0;
         isDialogue = true;
-        //Nextdialogue();
-
-
+        Nextdialogue();
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
-
         Debug.Log(count);
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
@@ -35,7 +32,6 @@ public class DreiDialogue : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
         count++;
-
     }
 
 
@@ -45,9 +41,33 @@ public class DreiDialogue : MonoBehaviour
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
     }
+    private void day2_F_JD()//첫번째 선택지를 골랐을 경우 선택지 대화를 다본후 다음 대화로 넘어가는 함수
+    {
+        if (count < data.Count)
+        {
+            Nextdialogue();
+
+            if (count == 11)
+            {
+                count += 14 - 11;
+            }
+
+     
+            if (count == 21)
+            {
+                fade.Fade();
+                Hidedialogue();
+            }
+        }
+        else
+        {
+            fade.Fade();
+            Hidedialogue();
+        }
+    }
     private void Start()
     {
-        data = CSVReader.Read("Day2-친구");
+        data = CSVReader.Read("Day2-F");
         Showdialogue();
     }
     // Update is called once per frame
@@ -57,21 +77,7 @@ public class DreiDialogue : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
-                {
-                    Nextdialogue();
-                    if (count == 7)
-                    {
-                        count += 3;
-                    }
-                  
-                }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                }
-
+                day2_F_JD();
             }
         }
         else
