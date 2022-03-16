@@ -32,6 +32,8 @@ public class Day3_F : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
+
+        //ÀÌ¹ÌÁö Test
         if (data[count]["Name"].ToString().Equals("ÃÖ¾Ë¹Ù"))
             test_who_is = 0;
         else if (data[count]["Name"].ToString().Equals("±è´ÜÂ¦"))
@@ -55,7 +57,6 @@ public class Day3_F : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (isDialogue)
         {
             if (Input.GetMouseButtonUp(0))
