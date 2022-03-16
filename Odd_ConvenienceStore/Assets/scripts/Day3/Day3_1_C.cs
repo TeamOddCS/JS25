@@ -104,26 +104,26 @@ public class Day3_1_C : MonoBehaviour
         {//왜 이러세요
             Day3_1.count += 10;
         }
-        if (Day3_1.count == 108)
-        {//일단 기다린다.
-            Day3_1.count += ;
-        }
-        if (Day3_1.count == 122)
-        {//걸었는데요
-            Day3_1.count += ;
-        }
-        if (Day3_1.count == 134)
-        {//담배를 준다.
-            Day3_1.count += ;
-        }
-        if (Day3_1.count == 142)
-        {//예 알겠습니다.
-            Day3_1.count += ;
-        }
-        if (Day3_1.count == 152)
-        {//4500원입니다.
-            Day3_1.count += ;
-        }
+        //if (Day3_1.count == 108)
+        //{//일단 기다린다.
+        //    Day3_1.count += ;
+        //}
+        //if (Day3_1.count == 122)
+        //{//걸었는데요
+        //    Day3_1.count += ;
+        //}
+        //if (Day3_1.count == 134)
+        //{//담배를 준다.
+        //    Day3_1.count += ;
+        //}
+        //if (Day3_1.count == 142)
+        //{//예 알겠습니다.
+        //    Day3_1.count += ;
+        //}
+        //if (Day3_1.count == 152)
+        //{//4500원입니다.
+        //    Day3_1.count += ;
+        //}
 
         ChoiceOff();
     }

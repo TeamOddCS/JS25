@@ -11,7 +11,7 @@ public class js3choice
     public string _choice2;
 }
 
-public class JS3choice : MonoBehaviour
+public class JS3_C : MonoBehaviour
 {
     [SerializeField] private Button choicebtn1;
     [SerializeField] private Button choicebtn2;

@@ -10,7 +10,7 @@ public class js4choice
     public string _choice;
     public string _choice2;
 }
-public class JS4choice : MonoBehaviour
+public class JS4_C : MonoBehaviour
 {
     [SerializeField] private Button choicebtn1;
     [SerializeField] private Button choicebtn2;
