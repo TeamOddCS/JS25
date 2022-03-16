@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Day3_3 : MonoBehaviour
+public class Day3_F : MonoBehaviour
 {
     [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
     [SerializeField] private Text txt_name;// 이름 담는 객체 
@@ -11,6 +11,8 @@ public class Day3_3 : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
+
+    public static int test_who_is = 0;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -30,6 +32,13 @@ public class Day3_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
+
+        //이미지 Test
+        if (data[count]["Name"].ToString().Equals("최알바"))
+            test_who_is = 0;
+        else if (data[count]["Name"].ToString().Equals("김단짝"))
+            test_who_is = 1;
+
         count++;
     }
 
@@ -41,9 +50,10 @@ public class Day3_3 : MonoBehaviour
     }
     private void Start()
     {
-        data = CSVReader.Read("Day3-3");
+        data = CSVReader.Read("Day3-친구");
         Showdialogue();
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -54,41 +64,9 @@ public class Day3_3 : MonoBehaviour
                 if (count < data.Count)
                 {
                     Nextdialogue();
-                    if (count == 9)
-                    {//역시.. 그런가요?
-                        count += 3;
-                    }
-                    if (count == 29)
-                    {//안녕히 계세요
-                        count += 9;
-                    }
-                    if (count == 55)
-                    {//나한테 줬다 하면 별말 안할겨
-                        count += 7;
-                    }
-                    if (count == 71)
-                    {//이 조그만 거 하나 주기 어렵나?
+                    if (count == 13)
+                    {//아 뭐래 아니거든;;
                         count += 6;
-                    }
-                    if (count == 96)
-                    {//닦기도 싫다.. 
-                        count += 23;
-                    }
-                    if (count == 107)
-                    {//…안녕히 가세요.
-                        count += 11;
-                    }
-                    if (count == 134)
-                    {//…흠, 잘 된 일일지도.
-                        count += 7;
-                    }
-                    if (count == 149)
-                    {//이곳에 와서야 깨닫다니.
-                        count += 6;
-                    }
-                    if (count == 160)
-                    {//무례를 범했군ㅡ
-                        count += 5;
                     }
                 }
                 else

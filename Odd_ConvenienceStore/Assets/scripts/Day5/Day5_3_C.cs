@@ -11,7 +11,7 @@ public class day5choice
     public string _choice2;
 }
 
-public class Day5_C : MonoBehaviour
+public class Day5_3_C : MonoBehaviour
 {
     [SerializeField] private Button choicebtn1;
     [SerializeField] private Button choicebtn2;
@@ -59,19 +59,19 @@ public class Day5_C : MonoBehaviour
     }
     private void day5_3()
     {
-        if (Day5_3.count == 10)//일반3 첫번째 AB선택지
+        if (Day5_3.count == 10)//일반4 첫번째 AB선택지
         {
             ShowChoice();
         }
-        if (Day5_3.count == 33)//일반3 두번째 AB선택지
+        if (Day5_3.count == 33)//일반7 첫번째 AB선택지
         {
             ShowChoice();
         }
-        if (Day5_3.count == 57)//일반5 첫번째 AB선택지
+        if (Day5_3.count == 57)//일반7 두번째 AB선택지
         {
             ShowChoice();
         }
-        if (Day5_3.count == 81)//진상2 첫번째 AB선택지
+        if (Day5_3.count == 81)//일반7 세번째 AB선택지
         {
             ShowChoice();
         }
@@ -79,19 +79,19 @@ public class Day5_C : MonoBehaviour
     }
     private void day5_3_1()
     {
-        if (Day5_3.count == 10)//일반3 AB선택지
+        if (Day5_3.count == 10)//일반4 AB선택지
         {
             Day5_3.count++;
         }
-        if (Day5_3.count == 33)//일반3 두번째 A선택지
+        if (Day5_3.count == 33)//일반7 첫번째 A선택지
         {
             Day5_3.count++;
         }
-        if (Day5_3.count == 57)//일반5 첫번째 A선택지
+        if (Day5_3.count == 57)//일반7 두번째 A선택지
         {
             Day5_3.count++;
         }
-        if (Day5_3.count == 81)//진상2 첫번째 A선택지
+        if (Day5_3.count == 81)//일반7 세번째 A선택지
         {
             Day5_3.count++;
         }
@@ -100,19 +100,19 @@ public class Day5_C : MonoBehaviour
     }
     private void day5_3_2()
     {
-        if (Day5_3.count == 10)//일반3 AB선택지
+        if (Day5_3.count == 10)//일반4 AB선택지
         {
             Day5_3.count += 6;
         }
-        if (Day5_3.count == 33)//일반3 두번째 B선택지
+        if (Day5_3.count == 33)//일반7 첫번째 B선택지
         {
             Day5_3.count += 12;
         }
-        if (Day5_3.count == 57)//일반5 첫번째 B선택지
+        if (Day5_3.count == 57)//일반7 두번째 B선택지
         {
             Day5_3.count += 9;
         }
-        if (Day5_3.count == 81)//진상2 첫번째 B선택지
+        if (Day5_3.count == 81)//일반7 세번째 B선택지
         {
             Day5_3.count += 4;
         }
