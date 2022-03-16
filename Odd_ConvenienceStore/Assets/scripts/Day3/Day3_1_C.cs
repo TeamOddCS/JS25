@@ -40,6 +40,7 @@ public class Day3_1_C : MonoBehaviour
         }
         if (Day3_1.count == 38)
         {
+            count++;
             Day3_1.count++;
         }
         if (Day3_1.count == 52)
@@ -48,6 +49,7 @@ public class Day3_1_C : MonoBehaviour
         }
         if (Day3_1.count == 61)
         {
+            count++;
             Day3_1.count++;
         }
         if (Day3_1.count == 79)
@@ -56,6 +58,7 @@ public class Day3_1_C : MonoBehaviour
         }
         if (Day3_1.count == 108)
         {
+            count++;
             Day3_1.count++;
         }
         if (Day3_1.count == 122)
@@ -86,6 +89,7 @@ public class Day3_1_C : MonoBehaviour
         }
         if (Day3_1.count == 33)
         {//돈을 버세요
+            count++;
             Day3_1.count += 13;
         }
         if (Day3_1.count == 38)
@@ -104,7 +108,7 @@ public class Day3_1_C : MonoBehaviour
         {//왜 이러세요
             Day3_1.count += 10;
         }
-        //if (Day3_1.count == 108)
+        if (Day3_1.count == 108)
         {//일단 기다린다.
             Day3_1.count += 6;
         }
@@ -114,6 +118,7 @@ public class Day3_1_C : MonoBehaviour
         }
         if (Day3_1.count == 134)
         {//담배를 준다.
+            count++;
             Day3_1.count += 12;
         }
         if (Day3_1.count == 142)
@@ -148,7 +153,47 @@ public class Day3_1_C : MonoBehaviour
 
     public void CallChoice()
     {
-        if (Day3_1.count == 7)
+        if (Day3_1.count == 23)
+        {
+            ShowChoice();
+        }
+        if (Day3_1.count == 33)
+        {
+            ShowChoice();
+        }
+        if (Day3_1.count == 38)
+        {
+            ShowChoice();
+        }
+        if (Day3_1.count == 52)
+        {
+            ShowChoice();
+        }
+        if (Day3_1.count == 61)
+        {
+            ShowChoice();
+        }
+        if (Day3_1.count == 79)
+        {
+            ShowChoice();
+        }
+        if (Day3_1.count == 108)
+        {
+            ShowChoice();
+        }
+        if (Day3_1.count == 122)
+        {
+            ShowChoice();
+        }
+        if (Day3_1.count == 134)
+        {
+            ShowChoice();
+        }
+        if (Day3_1.count == 142)
+        {
+            ShowChoice();
+        }
+        if (Day3_1.count == 152)
         {
             ShowChoice();
         }
