@@ -12,6 +12,8 @@ public class Day3_F : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
 
+    public static int test_who_is = 0;
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -30,6 +32,11 @@ public class Day3_F : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
+        if (data[count]["Name"].ToString().Equals("최알바"))
+            test_who_is = 0;
+        else if (data[count]["Name"].ToString().Equals("김단짝"))
+            test_who_is = 1;
+
         count++;
     }
 
@@ -44,9 +51,11 @@ public class Day3_F : MonoBehaviour
         data = CSVReader.Read("Day3-친구");
         Showdialogue();
     }
+
     // Update is called once per frame
     void Update()
     {
+        
         if (isDialogue)
         {
             if (Input.GetMouseButtonUp(0))
