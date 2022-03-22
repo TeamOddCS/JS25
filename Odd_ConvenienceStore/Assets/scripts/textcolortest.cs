@@ -37,7 +37,7 @@ public class textcolortest : MonoBehaviour
     }
     public void TextColorChange()
     {
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#0000ff>");//파란색
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#0000ff>");//파란색 
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓟ", "<color=#3D00A1>");//보라색
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓨ", "<color=#ffff00>");//노란색
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
