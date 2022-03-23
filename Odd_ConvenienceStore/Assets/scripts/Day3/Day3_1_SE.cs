@@ -64,6 +64,7 @@ public class Day3_1_SE : MonoBehaviour
         {
             start = true;
             Day3_1.isDialogue = false;
+            Day3_1.count++;
             startScript();
         }
 
