@@ -62,39 +62,39 @@ public class Day3_3 : MonoBehaviour
                 if (count < data.Count)
                 {
                     Nextdialogue();
-                    if (count == 9)
+                    if (count == 11)
                     {//역시.. 그런가요?
                         count += 3;
                     }
-                    if (count == 29)
+                    if (count == 31)
                     {//안녕히 계세요
                         count += 9;
                     }
-                    if (count == 55)
+                    if (count == 57)
                     {//나한테 줬다 하면 별말 안할겨
                         count += 7;
                     }
-                    if (count == 71)
+                    if (count == 73)
                     {//이 조그만 거 하나 주기 어렵나?
                         count += 6;
                     }
-                    if (count == 96)
+                    if (count == 98)
                     {//닦기도 싫다.. 
                         count += 23;
                     }
-                    if (count == 107)
+                    if (count == 109)
                     {//…안녕히 가세요.
                         count += 11;
                     }
-                    if (count == 134)
+                    if (count == 136)
                     {//…흠, 잘 된 일일지도.
                         count += 7;
                     }
-                    if (count == 149)
+                    if (count == 151)
                     {//이곳에 와서야 깨닫다니.
                         count += 6;
                     }
-                    if (count == 160)
+                    if (count == 162)
                     {//무례를 범했군ㅡ
                         count += 5;
                     }

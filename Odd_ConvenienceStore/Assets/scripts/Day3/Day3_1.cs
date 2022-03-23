@@ -62,35 +62,35 @@ public class Day3_1 : MonoBehaviour
                 if (count < data.Count)
                 {
                     Nextdialogue();
-                    if (count == 27)
+                    if (count == 29)
                     {//형편이 좋지 않은 것 뿐입니다.
                         count += 3;
                     }
-                    if(count == 42)
+                    if(count == 44)
                     {//3일째 굶고 있습니다.
                         count += 18;
                     }
-                    if (count == 46)
+                    if (count == 48)
                     {//수입이 생기면 바로 갚겠습니다.
                         count += 14;
                     }
-                    if (count == 56)
+                    if (count == 58)
                     {//직업이라고 할 순 없지만, 제가 할 수 있는 건 그것밖에 없어요.
                         count += 4;
                     }
-                    if (count == 69)
+                    if (count == 71)
                     {//언젠간… 갚겠지?
                         count += 30;
                     }
-                    if (count == 89)
+                    if (count == 91)
                     {//정리하느라 땀 좀 뺄 것 같다..
                         count += 10;
                     }
-                    if (count == 114)
+                    if (count == 116)
                     {//말보루 블랙민트 하나요.
                         count += 19;
                     }
-                    if (count == 127)
+                    if (count == 129)
                     {//말보루 블랙민트 하나요.(뭐드릴까요 다음)
                         count += 6;
                     }
