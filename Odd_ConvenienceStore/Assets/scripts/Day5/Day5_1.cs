@@ -20,6 +20,14 @@ public class Day5_1 : MonoBehaviour
         isDialogue = true;
         //Nextdialogue();
     }
+    public void TextColorChange()
+    {
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#2782cc>");//파란색 "중요한부분"
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//초록색 (생명력 +) 
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
+    }
+
     public void Nextdialogue()//대화내용 넘기는 함수
     {
         Debug.Log(count);
@@ -28,6 +36,7 @@ public class Day5_1 : MonoBehaviour
         txt_name.text = data[count]["Name"].ToString();
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
+        TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         count++;
     }
