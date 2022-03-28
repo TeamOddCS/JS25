@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 [System.Serializable]
-public class day5choice
+public class day7_1_c
 {
     [TextArea]
     public string _choice;
     public string _choice2;
 }
 
-public class Day5_3_C : MonoBehaviour
+public class Day7_1_C : MonoBehaviour
 {
     [SerializeField] private Button choicebtn1;
     [SerializeField] private Button choicebtn2;
@@ -19,7 +18,7 @@ public class Day5_3_C : MonoBehaviour
     [SerializeField] private Text txt_choice2;
 
     public static int count = 0;
-    [SerializeField] private day5choice[] choice;
+    [SerializeField] private day7_1_c[] choice;
     public void ShowChoice()
     {
         ChoiceOn();
@@ -29,20 +28,19 @@ public class Day5_3_C : MonoBehaviour
     public void NextChoice1()
     {
         count++;
-        day5_3_1();
+        day7_1_1();
         ChoiceOff();
     }
     public void NextChoice2()
     {
         count++;
-        day5_3_2();     
+        day7_1_2();
         ChoiceOff();
 
     }
     public void ChoiceOn()
     {
-        Day5_3.isDialogue = false;
-        Day5_F.isDialogue = false;
+        Day7_1.isDialogue = false;      
         choicebtn1.gameObject.SetActive(true);
         choicebtn2.gameObject.SetActive(true);
         txt_choice1.gameObject.SetActive(true);
@@ -50,82 +48,81 @@ public class Day5_3_C : MonoBehaviour
     }
     public void ChoiceOff()
     {
-        Day5_3.isDialogue = true;
-        Day5_F.isDialogue = true;
+        Day7_1.isDialogue = true;    
         choicebtn1.gameObject.SetActive(false);
         choicebtn2.gameObject.SetActive(false);
         txt_choice1.gameObject.SetActive(false);
         txt_choice2.gameObject.SetActive(false);
     }
-    private void day5_3()
+    private void day7_1()
     {
-        if (Day5_3.count == 10)//일반4 첫번째 AB선택지
+        if (Day7_1.count == 14)//일반4 첫번째 AB선택지
         {
             ShowChoice();
         }
-        if (Day5_3.count == 33)//일반7 첫번째 AB선택지
+        if (Day7_1.count == 23)//일반7 첫번째 AB선택지
         {
             ShowChoice();
         }
-        if (Day5_3.count == 57)//일반7 두번째 AB선택지
+        if (Day7_1.count == 66)//일반7 두번째 AB선택지
         {
             ShowChoice();
         }
-        if (Day5_3.count == 81)//일반7 세번째 AB선택지
+        if (Day7_1.count == 79)//일반7 세번째 AB선택지
         {
             ShowChoice();
         }
-        
-    }
-    private void day5_3_1()
-    {
-        if (Day5_3.count == 10)//일반4 AB선택지
-        {
-            Day5_3.count++;
-        }
-        if (Day5_3.count == 33)//일반7 첫번째 A선택지
-        {
-            Day5_3.count++;
-        }
-        if (Day5_3.count == 57)//일반7 두번째 A선택지
-        {
-            Day5_3.count++;
-        }
-        if (Day5_3.count == 81)//일반7 세번째 A선택지
-        {
-            Day5_3.count++;
-        }
-        
 
     }
-    private void day5_3_2()
+    private void day7_1_1()
     {
-        if (Day5_3.count == 10)//일반4 AB선택지
+        if (Day7_1.count == 14)//일반4 AB선택지
         {
-            Day5_3.count += 6;
+            Day7_1.count++;
         }
-        if (Day5_3.count == 33)//일반7 첫번째 B선택지
+        if (Day7_1.count == 23)//일반7 첫번째 A선택지
         {
-            Day5_3.count += 12;
+            Day7_1.count++;
         }
-        if (Day5_3.count == 57)//일반7 두번째 B선택지
+        if (Day7_1.count == 66)//일반7 두번째 A선택지
         {
-            Day5_3.count += 9;
+            Day7_1.count++;
         }
-        if (Day5_3.count == 81)//일반7 세번째 B선택지
+        if (Day7_1.count == 79)//일반7 세번째 A선택지
         {
-            Day5_3.count += 4;
+            Day7_1.count++;
         }
-        
+
+
+    }
+    private void day7_1_2()
+    {
+        if (Day7_1.count == 14)//일반4 AB선택지
+        {
+            Day7_1.count += 4;
+        }
+        if (Day7_1.count == 23)//일반7 첫번째 B선택지
+        {
+            Day7_1.count += 17;
+        }
+        if (Day7_1.count == 66)//일반7 두번째 B선택지
+        {
+            Day7_1.count += 8;
+        }
+        if (Day7_1.count == 79)//일반7 세번째 B선택지
+        {
+            Day7_1.count += 10;
+        }
+
     }
 
-   
-    
-    
+
+
+
     public void CallChoice()
     {
-        day5_3();
-      
+        day7_1();
+
     }
     private void Start()
     {

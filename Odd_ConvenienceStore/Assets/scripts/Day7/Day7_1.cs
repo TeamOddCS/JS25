@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Day5_3 : MonoBehaviour
+public class Day7_1 : MonoBehaviour
 {
-    [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
     [SerializeField] private Text txt_name;// 이름 담는 객체 
+    [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
     public static bool isDialogue = false;
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
+
+
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -29,8 +31,9 @@ public class Day5_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
-        txt_dialogue.text = data[count]["Script"].ToString();      
+        txt_dialogue.text = data[count]["Script"].ToString();
         count++;
+
     }
     public void TextColorChange()
     {
@@ -40,6 +43,7 @@ public class Day5_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
     }
 
+
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {
         txt_name.gameObject.SetActive(false);
@@ -48,7 +52,7 @@ public class Day5_3 : MonoBehaviour
     }
     private void Start()
     {
-        data = CSVReader.Read("Day5-3");
+        data = CSVReader.Read("Day7-1");
         Showdialogue();
     }
     // Update is called once per frame
@@ -61,21 +65,21 @@ public class Day5_3 : MonoBehaviour
                 if (count < data.Count)
                 {
                     Nextdialogue();
-                    if (count == 16)
-                    {
-                        count += 9;
-                    }
-                    if (count == 45)
-                    {
-                        count += 11;
-                    }
-                    if (count == 66)
-                    {
-                        count += 7;
-                    }
-                    if (count == 85)
+                    if (count == 18)
                     {
                         count += 3;
+                    }
+                    if (count == 40)
+                    {
+                        count += 13;
+                    }
+                    if (count == 74)
+                    {
+                        count += 4;
+                    }
+                    if (count == 89)
+                    {
+                        count += 13;
                     }
                 }
                 else
@@ -83,6 +87,7 @@ public class Day5_3 : MonoBehaviour
                     fade.Fade();
                     Hidedialogue();
                 }
+
             }
         }
         else
