@@ -3,24 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Day4_2 : MonoBehaviour 
-{ 
-    [SerializeField] private Text txt_name;// 이름 담는 객체 
+public class JinSang7_2 : MonoBehaviour
+{
     [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
+    [SerializeField] private Text txt_name;// 이름 담는 객체 
     public static bool isDialogue = false;
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
-    
-    
-    
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
         count = 0;
         isDialogue = true;
-        Nextdialogue();
+        //Nextdialogue();
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -49,33 +47,14 @@ public class Day4_2 : MonoBehaviour
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
     }
-    private void day4_2_JD()//첫번째 선택지를 골랐을 경우 선택지 대화를 다본후 다음 대화로 넘어가는 함수
-    {
-        if (count < data.Count)
-        {
-            Nextdialogue();
-            
-            if (count == 11)
-            {
-                count += 16 - 11;
-            }
 
-            if (count == 28)
-            {
-                count += 36 - 28;
-            }
-        }
-        else
-        {
-            fade.Fade();
-            Hidedialogue();
-        }
-    }
     private void Start()
     {
-        data = CSVReader.Read("Day4-2");
+        SaveData.Loads();
+        data = CSVReader.Read("진상7-2");
         Showdialogue();
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -83,7 +62,23 @@ public class Day4_2 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                day4_2_JD();  
+                if (count < data.Count)
+                {
+                    Nextdialogue();
+                    if (count == 30)
+                    {
+                        count += 52 - 30;
+                    }
+                    if (count == 47)
+                    {
+                        count += 51 - 47;
+                    }
+                }
+                else
+                {
+                    fade.Fade();
+                    Hidedialogue();
+                }
             }
         }
         else
