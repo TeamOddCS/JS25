@@ -12,7 +12,7 @@ public class Day1_1 : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
-
+    public int health = 0;
 
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
@@ -56,10 +56,7 @@ public class Day1_1 : MonoBehaviour
         if (count < data.Count)
         {
             Nextdialogue();
-            if (count == 3)
-            {
-                GameControlScript.health -= 1;
-            }
+            
 
             if (count == 45)
             {
@@ -90,7 +87,11 @@ public class Day1_1 : MonoBehaviour
             {
                 count += 115 - 111;
             }
-          
+            if (count == 102)
+            {
+                //health -= 1;            
+            }
+
             if (count == 125)
             {
                 fade.Fade();
@@ -101,11 +102,17 @@ public class Day1_1 : MonoBehaviour
         {
             fade.Fade();
             Hidedialogue();
+            GameControlScript.SaveHealth();
+            /*SaveData.health = health;
+            SaveData.Saves();*/
             SceneManager.LoadScene("Day2-1");
         }
     }
     private void Start()
     {
+        /*SaveData.DoLoadData = true;
+        SaveData.Loads();
+        health = SaveData.health;*/
         data = CSVReader.Read("Day1-1");
         Showdialogue();
     }

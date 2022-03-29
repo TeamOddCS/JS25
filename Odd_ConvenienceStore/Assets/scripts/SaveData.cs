@@ -38,7 +38,7 @@ public class SaveData : MonoBehaviour
         public int JinSang4visit_;
         public int JinSang6visit_;
         public int JinSang6Day1_; //진상6 첫 방문에서의 선택
-
+      
         public int health_;
     }
 

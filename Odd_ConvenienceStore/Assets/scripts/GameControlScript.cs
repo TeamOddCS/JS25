@@ -10,14 +10,21 @@ public class GameControlScript : MonoBehaviour
     public static int health;
     public void Start()
     {
-       heart1.gameObject.SetActive(false);
+        SaveData.DoLoadData = true;
+        SaveData.Loads();
+        health = SaveData.health;
+
+        heart1.gameObject.SetActive(false);
         heart2.gameObject.SetActive(false); 
         heart3.gameObject.SetActive(false); 
         gameOver.gameObject.SetActive(false);
     }
+
     void healthbar() 
     {
-        health = 3;
+        SaveData.health = 3 ;
+        SaveData.Saves();
+
         heart1.gameObject.SetActive(true);
         heart2.gameObject.SetActive(true);
         heart3.gameObject.SetActive(true);
@@ -28,14 +35,24 @@ public class GameControlScript : MonoBehaviour
         if(Day1_1.count == 74 && start == false)
         {
             start = true;
-
             healthbar();
         }
+
+        else if(Day1_1.count ==  80){
+            Debug.Log("123123");
+            health--;
+        }
     }
-    public void Update()
+
+    public static void SaveHealth()
     {
         SaveData.Loads();
-         health = SaveData.health;
+        SaveData.health = health;
+        SaveData.Saves();
+    }
+    
+    public void Update()
+    {
 
         if (health > 3)
             health = 3;
@@ -44,12 +61,6 @@ public class GameControlScript : MonoBehaviour
 
             switch (health)
             {
-                case 3:
-                    heart1.gameObject.SetActive(true);
-                    heart2.gameObject.SetActive(true);
-                    heart3.gameObject.SetActive(true);
-
-                    break;
                 case 2:
                     heart1.gameObject.SetActive(true);
                     heart2.gameObject.SetActive(true);
@@ -78,7 +89,7 @@ public class GameControlScript : MonoBehaviour
     public void HealthReSet()
     {
         SaveData.Loads();
-        health = 3;
+        SaveData.health = 3;
         heart1.gameObject.SetActive(true);
         heart2.gameObject.SetActive(true);
         heart3.gameObject.SetActive(true);

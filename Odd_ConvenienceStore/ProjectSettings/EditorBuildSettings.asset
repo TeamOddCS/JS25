@@ -26,10 +26,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JinSang4/JinSang4_1.unity
     guid: d250c351cadfdb8408028026895dd9d4
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Day2/Day2-1.unity
+    guid: ce300502d69079d47b91dd093dbdc0f4
+  - enabled: 1
+    path: Assets/Scenes/Day2/Day2-3.unity
+    guid: 8cc4c89c660e53c47904bbc3f6075b3b
   - enabled: 1
     path: Assets/Scenes/JinSang6/JinSang6_1.unity
-    guid: a9a5700a38a96c047b537df84df11816
-  - enabled: 1
-    path: Assets/Scenes/JinSang6/JinSang6_2.unity
     guid: 7caf8da1a2aeb924ebfb01ff8ac14375
+  - enabled: 1
+    path: Assets/Scenes/Day1/Day1-1.unity
+    guid: f58eabf3c8e02174b81e549ebc95dc3d
   m_configObjects: {}
