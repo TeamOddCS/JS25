@@ -207,7 +207,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1834535974}
-        m_TargetAssemblyTypeName: JinSang6Choice1, Assembly-CSharp
+        m_TargetAssemblyTypeName: JinSang6C1, Assembly-CSharp
         m_MethodName: NextChoice1
         m_Mode: 1
         m_Arguments:
@@ -322,7 +322,7 @@ MonoBehaviour:
     m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 0
+    m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
@@ -1455,8 +1455,8 @@ GameObject:
   - component: {fileID: 1834535969}
   - component: {fileID: 1834535967}
   - component: {fileID: 1834535976}
-  - component: {fileID: 1834535975}
   - component: {fileID: 1834535968}
+  - component: {fileID: 1834535975}
   - component: {fileID: 1834535974}
   m_Layer: 5
   m_Name: Canvas
@@ -1832,7 +1832,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1834535974}
-        m_TargetAssemblyTypeName: JinSang6Choice1, Assembly-CSharp
+        m_TargetAssemblyTypeName: JinSang6C1, Assembly-CSharp
         m_MethodName: NextChoice2
         m_Mode: 1
         m_Arguments:

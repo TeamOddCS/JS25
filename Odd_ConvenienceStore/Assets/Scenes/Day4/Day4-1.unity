@@ -170,7 +170,7 @@ MonoBehaviour:
     m_MaxSize: 80
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 0
+    m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -1038,7 +1038,6 @@ GameObject:
   - component: {fileID: 974919116}
   - component: {fileID: 974919121}
   - component: {fileID: 974919119}
-  - component: {fileID: 974919126}
   m_Layer: 5
   m_Name: 'Canvas '
   m_TagString: Untagged
@@ -1227,31 +1226,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &974919126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974919115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb0dd6de79bdcf489a88a8e811cfe0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explainImg: {fileID: 887040589}
-  right: {fileID: 1808730106}
-  left: {fileID: 1502062645}
-  finishBtn: {fileID: 1213760913}
-  explainText: {fileID: 667767540}
-  page: 0
-  start: 0
-  content:
-  - content 1
-  - content 2
-  - content 3
-  - content 4
-  - content 5
 --- !u!1 &1004537478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,7 +1815,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974919126}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShowExplain, Assembly-CSharp
         m_MethodName: finish
         m_Mode: 1
@@ -2091,7 +2065,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974919126}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShowExplain, Assembly-CSharp
         m_MethodName: leftBtn
         m_Mode: 1
@@ -2256,7 +2230,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 974919126}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShowExplain, Assembly-CSharp
         m_MethodName: rightBtn
         m_Mode: 1

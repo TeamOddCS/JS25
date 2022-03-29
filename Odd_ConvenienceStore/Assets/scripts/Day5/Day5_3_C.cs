@@ -19,7 +19,7 @@ public class Day5_3_C : MonoBehaviour
     [SerializeField] private Text txt_choice2;
 
     public static int count = 0;
-    [SerializeField] private js4choice[] choice;
+    [SerializeField] private day5choice[] choice;
     public void ShowChoice()
     {
         ChoiceOn();
