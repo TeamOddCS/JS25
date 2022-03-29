@@ -22,6 +22,8 @@ public class SaveData : MonoBehaviour
     public static int JinSang2visit = 0;
     public static int JinSang4visit = 0;
     public static int JinSang6visit = 0;
+    public static int health = 3;
+   
 
     public static int JinSang6Day1 = 0;
 
@@ -36,6 +38,8 @@ public class SaveData : MonoBehaviour
         public int JinSang4visit_;
         public int JinSang6visit_;
         public int JinSang6Day1_; //진상6 첫 방문에서의 선택
+
+        public int health_;
     }
 
     public static void Saves()
@@ -51,6 +55,8 @@ public class SaveData : MonoBehaviour
         data.JinSang2visit_ = JinSang2visit;
         data.JinSang4visit_ = JinSang4visit;
         data.JinSang6visit_ = JinSang6visit;
+        data.health_ = health;
+
         data.JinSang6Day1_ = JinSang6Day1;
 
         //B직렬화 & 파일 저장
@@ -76,6 +82,8 @@ public class SaveData : MonoBehaviour
                 JinSang4visit = data.JinSang4visit_;
                 JinSang6visit = data.JinSang6visit_;
                 JinSang6Day1 = data.JinSang6Day1_;
+                data.health_ = health;
+
             }
             Check_Loads_Files = true;
             file.Close();
@@ -83,6 +91,8 @@ public class SaveData : MonoBehaviour
             Check_Loads_Files = false;
         }
     }
+  
+
 
     private void Awake()
     {

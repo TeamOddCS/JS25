@@ -156,12 +156,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 155192208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb8deb9a92033d4eb9f4599ea9d551b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e737ea9965478b40bfbf9d72a65100b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt_dialogue: {fileID: 0}
-  txt_name: {fileID: 0}
-  fade: {fileID: 0}
+  choicebtn1: {fileID: 1214089127}
+  choicebtn2: {fileID: 2087990961}
+  txt_choice1: {fileID: 1624470450}
+  txt_choice2: {fileID: 1206700398}
+  choice:
+  - _choice: "\uC54C\uC544\uC11C \uBD09\uD22C\uC5D0 \uB123\uB294\uB2E4."
+    _choice2: "\uC190\uB2D8\uD55C\uD14C \uBA3C\uC800 \uBB3C\uC5B4\uBCF8\uB2E4."
+  - _choice: "\uC190\uB2D8\uC5D0\uAC8C \uCE5C\uADFC\uD558\uAC8C \uB9D0\uC744 \uAC74\uB2E4."
+    _choice2: "\uB2F4\uBC30\uB098 \uC8FC\uACE0 \uBE68\uB9AC \uBCF4\uB0B8\uB2E4."
+  - _choice: "\uC2E0\uBD84\uC99D\uC744 \uC694\uAD6C\uD55C\uB2E4."
+    _choice2: "\uB2F4\uBC30\uB97C \uC900\uB2E4."
+  - _choice: "\uC0AC\uC9C4\uC774\uB77C\uB3C4 \uBCF4\uC5EC\uC8FC\uC138\uC694."
+    _choice2: "\uC544\uB1E8, \uC548\uD314\uAC8C\uC694."
+  - _choice: "\uCDA9\uACE0 \uD6C4 \uAC70\uC808\uD55C\uB2E4."
+    _choice2: "\uADC0\uCC2E\uC73C\uB2C8 \uADF8\uB0E5 \uC900\uB2E4."
 --- !u!114 &155192210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,14 +183,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 155192208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6706c57747d7cd94ab6e24b41dbb9e94, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f8574b3c7e107143a837c2d66bc161c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choicebtn1: {fileID: 0}
-  choicebtn2: {fileID: 0}
-  txt_choice1: {fileID: 0}
-  txt_choice2: {fileID: 0}
-  choice: []
+  txt_name: {fileID: 766237922}
+  txt_dialogue: {fileID: 781026930}
+  fade: {fileID: 155192211}
 --- !u!114 &155192211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,7 +1067,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214089122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc4a6dc389b809f4c93c928a609675b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e737ea9965478b40bfbf9d72a65100b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   choicebtn1: {fileID: 1214089127}
@@ -1065,18 +1075,16 @@ MonoBehaviour:
   txt_choice1: {fileID: 1624470450}
   txt_choice2: {fileID: 1206700398}
   choice:
-  - _choice: "\uBC18\uB9D0\uD558\uC9C0 \uB9D0\uC544\uC8FC\uC138\uC694."
-    _choice2: "\uC5B4\uB5A4\uAC70 \uB4DC\uB9B4\uAE4C\uC694?"
-  - _choice: "\uC5B4\uCA54\uD2F0\uBE44"
-    _choice2: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4."
-  - _choice: "\uBC1C\uC74C \uC880.."
-    _choice2: "\uC5D0\uC384 \uB77C\uC774\uD2B8 \uB9DE\uC8E0?"
-  - _choice: "\uB3D9\uC548\uC774\uC2DC\uB124\uC694."
-    _choice2: "TMI, \uBA48\uCDB0!"
-  - _choice: "\uBD09\uD22C\uAC12\uC744 \uBC1B\uB294\uB2E4."
-    _choice2: "\uBD09\uD22C \uAC12\uC744 \uBC1B\uC9C0 \uC54A\uB294\uB2E4."
-  - _choice: "\uC2EB\uC740\uB370\uC694."
-    _choice2: "\uADF8\uB7EC\uC8E0, \uBB50"
+  - _choice: "\uC54C\uC544\uC11C \uBD09\uD22C\uC5D0 \uB123\uB294\uB2E4."
+    _choice2: "\uC190\uB2D8\uD55C\uD14C \uBA3C\uC800 \uBB3C\uC5B4\uBCF8\uB2E4."
+  - _choice: "\uC190\uB2D8\uC5D0\uAC8C \uCE5C\uADFC\uD558\uAC8C \uB9D0\uC744 \uAC74\uB2E4."
+    _choice2: "\uB2F4\uBC30\uB098 \uC8FC\uACE0 \uBE68\uB9AC \uBCF4\uB0B8\uB2E4."
+  - _choice: "\uC2E0\uBD84\uC99D\uC744 \uC694\uAD6C\uD55C\uB2E4."
+    _choice2: "\uB2F4\uBC30\uB97C \uC900\uB2E4."
+  - _choice: "\uC0AC\uC9C4\uC774\uB77C\uB3C4 \uBCF4\uC5EC\uC8FC\uC138\uC694."
+    _choice2: "\uC544\uB1E8, \uC548\uD314\uAC8C\uC694."
+  - _choice: "\uCDA9\uACE0 \uD6C4 \uAC70\uC808\uD55C\uB2E4."
+    _choice2: "\uADC0\uCC2E\uC73C\uB2C8 \uADF8\uB0E5 \uC900\uB2E4."
 --- !u!114 &1214089125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1160,7 +1168,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1214089124}
-        m_TargetAssemblyTypeName: UnoChoice, Assembly-CSharp
+        m_TargetAssemblyTypeName: Day2_3_C, Assembly-CSharp
         m_MethodName: NextChoice1
         m_Mode: 1
         m_Arguments:
@@ -1847,7 +1855,7 @@ GameObject:
   - component: {fileID: 2087990960}
   - component: {fileID: 2087990959}
   - component: {fileID: 2087990961}
-  - component: {fileID: 2087990958}
+  - component: {fileID: 2087990962}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 2"
   m_TagString: Untagged
@@ -1875,35 +1883,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -913.8}
   m_SizeDelta: {x: 1110, y: 285}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2087990958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087990956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc4a6dc389b809f4c93c928a609675b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choicebtn1: {fileID: 1214089127}
-  choicebtn2: {fileID: 2087990961}
-  txt_choice1: {fileID: 1624470450}
-  txt_choice2: {fileID: 1206700398}
-  choice:
-  - _choice: "\uBC18\uB9D0\uD558\uC9C0 \uB9D0\uC544\uC8FC\uC138\uC694."
-    _choice2: "\uC5B4\uB5A4\uAC70 \uB4DC\uB9B4\uAE4C\uC694?"
-  - _choice: "\uC5B4\uCA54\uD2F0\uBE44"
-    _choice2: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4."
-  - _choice: "\uBC1C\uC74C \uC880.."
-    _choice2: "\uC5D0\uC384 \uB77C\uC774\uD2B8 \uB9DE\uC8E0?"
-  - _choice: "\uB3D9\uC548\uC774\uC2DC\uB124\uC694."
-    _choice2: "TMI, \uBA48\uCDB0!"
-  - _choice: "\uBD09\uD22C \uAC12\uC744 \uBC1B\uB294\uB2E4."
-    _choice2: "\uBD09\uD22C \uAC12\uC744 \uBC1B\uC9C0 \uC54A\uB294\uB2E4."
-  - _choice: "\uC2EB\uC740\uB370\uC694.\t"
-    _choice2: "\uADF8\uB7EC\uC8E0, \uBB50"
 --- !u!114 &2087990959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1986,8 +1965,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2087990958}
-        m_TargetAssemblyTypeName: UnoChoice, Assembly-CSharp
+      - m_Target: {fileID: 2087990962}
+        m_TargetAssemblyTypeName: Day2_3_C, Assembly-CSharp
         m_MethodName: NextChoice2
         m_Mode: 1
         m_Arguments:
@@ -1998,6 +1977,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2087990962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087990956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e737ea9965478b40bfbf9d72a65100b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choicebtn1: {fileID: 1214089127}
+  choicebtn2: {fileID: 2087990961}
+  txt_choice1: {fileID: 1624470450}
+  txt_choice2: {fileID: 1206700398}
+  choice:
+  - _choice: "\uC54C\uC544\uC11C \uBD09\uD22C\uC5D0 \uB123\uB294\uB2E4."
+    _choice2: "\uC190\uB2D8\uD55C\uD14C \uBA3C\uC800 \uBB3C\uC5B4\uBCF8\uB2E4."
+  - _choice: "\uC190\uB2D8\uC5D0\uAC8C \uCE5C\uADFC\uD558\uAC8C \uB9D0\uC744 \uAC74\uB2E4."
+    _choice2: "\uB2F4\uBC30\uB098 \uC8FC\uACE0 \uBE68\uB9AC \uBCF4\uB0B8\uB2E4."
+  - _choice: "\uC2E0\uBD84\uC99D\uC744 \uC694\uAD6C\uD55C\uB2E4."
+    _choice2: "\uB2F4\uBC30\uB97C \uC900\uB2E4."
+  - _choice: "\uC0AC\uC9C4\uC774\uB77C\uB3C4 \uBCF4\uC5EC\uC8FC\uC138\uC694."
+    _choice2: "\uC544\uB1E8, \uC548\uD314\uAC8C\uC694."
+  - _choice: "\uCDA9\uACE0 \uD6C4 \uAC70\uC808\uD55C\uB2E4."
+    _choice2: "\uADC0\uCC2E\uC73C\uB2C8 \uADF8\uB0E5 \uC900\uB2E4."
 --- !u!1 &2126969978
 GameObject:
   m_ObjectHideFlags: 0
