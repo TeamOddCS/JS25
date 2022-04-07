@@ -111,6 +111,11 @@ public class Day1_1 : MonoBehaviour
             SceneManager.LoadScene("Day2-1");
         }
     }
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
+    }
+
     private void Start()
     {
         data = CSVReader.Read("Day1-1");

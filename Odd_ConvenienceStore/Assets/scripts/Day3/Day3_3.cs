@@ -55,11 +55,11 @@ public class Day3_3 : MonoBehaviour
     }
     private void Start()
     {
-        SaveData.Loads();
+        //SaveData.Loads();
         data = CSVReader.Read("Day3-3");
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
-        Debug.Log(SaveData.health);
+        //Debug.Log(SaveData.health);
     }
 
     private void day3_3_JD()

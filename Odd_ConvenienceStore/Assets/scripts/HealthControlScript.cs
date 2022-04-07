@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class HealthControlScript : MonoBehaviour
 {
     public GameObject heart1, heart2, heart3, gameOver;
-    private int health;
+    private static int health;
     public Blink blink;
 
     public void Start()
@@ -80,21 +80,18 @@ public class HealthControlScript : MonoBehaviour
 
     public void Update()
     {
-        if (Day1_1.count == 75)
-        {
-            StartCoroutine(BlinkGameObject(heart1, 5, 10));
-        }
-        if (Day1_1.count == 75)
-        {
-            StartCoroutine(BlinkGameObject(heart2, 5, 10));
-        }
-        if (Day1_1.count == 75)
-        {
-            StartCoroutine(BlinkGameObject(heart3, 5, 10));
-        }
-        
-        
-
+        //if (Day1_1.count == 75)
+        //{
+         //   StartCoroutine(BlinkGameObject(heart1, 5, 10));
+        //}
+       //if (Day1_1.count == 75)
+       // {
+         //   StartCoroutine(BlinkGameObject(heart2, 5, 10));
+      //  }
+      //  if (Day1_1.count == 75)
+      //  {
+      //      StartCoroutine(BlinkGameObject(heart3, 5, 10));
+      //  } 
     }
     public IEnumerator BlinkGameObject(GameObject gameObject, int numBlinks, float seconds)
     {
