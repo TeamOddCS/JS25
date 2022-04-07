@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class HealthControlScript : MonoBehaviour
 {
     public GameObject heart1, heart2, heart3, gameOver;
-    public int health;
+    private int health;
 
     public void Start()
     {
-        health = SaveData.health;
+       
     }
 
     public void hide_healthbar()
@@ -45,8 +45,10 @@ public class HealthControlScript : MonoBehaviour
 
     public void Show_Health()
     {
-        SaveData.Loads();
-        health = SaveData.health;
+        //SaveData.Loads();
+        //health = SaveData.health;
+        //Debug.Log(SaveData.health);
+
         switch (health)
         {
             case 3:
@@ -90,6 +92,7 @@ public class HealthControlScript : MonoBehaviour
     public void Awake()
     {
         SaveData.DoLoadData = true;
+        health = SaveData.health;
         DontDestroyOnLoad(gameObject);
     }
 }  //game control 에 넣고 그안에 스크립트에 하트 1 2 3 게임오버를 넣어줌 

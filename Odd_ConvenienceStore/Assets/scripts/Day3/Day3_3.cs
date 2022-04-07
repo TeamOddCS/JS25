@@ -48,9 +48,14 @@ public class Day3_3 : MonoBehaviour
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
     }
-    private void Start()
+
+    public void Awake()
     {
         SaveData.DoLoadData = true;
+    }
+    private void Start()
+    {
+        SaveData.Loads();
         data = CSVReader.Read("Day3-3");
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
