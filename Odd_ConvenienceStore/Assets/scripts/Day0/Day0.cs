@@ -53,6 +53,7 @@ public class Day0 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Day0");
+        SaveData.DoChangeData = true;
         Showdialogue();
     }
     // Update is called once per frame

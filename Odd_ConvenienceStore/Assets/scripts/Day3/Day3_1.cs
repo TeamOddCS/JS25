@@ -53,7 +53,7 @@ public class Day3_1 : MonoBehaviour
     {
         data = CSVReader.Read("Day3-1");
         Debug.Log("showhealth");
-        HealthControlScript.GetComponent<HealthControlScript>().show_healthbar();
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
 

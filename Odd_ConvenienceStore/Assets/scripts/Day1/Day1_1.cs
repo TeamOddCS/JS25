@@ -79,7 +79,7 @@ public class Day1_1 : MonoBehaviour
             if(count == 76)
             {
                 Debug.Log("showhealth");
-                HealthControlScript.GetComponent<HealthControlScript>().show_healthbar();
+                HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
             }
             if (count == 101)
             {

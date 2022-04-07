@@ -6,19 +6,11 @@ using UnityEngine.SceneManagement;
 public class HealthControlScript : MonoBehaviour
 {
     public GameObject heart1, heart2, heart3, gameOver;
+    public int health;
+
     public void Start()
     {
-        SaveData.DoLoadData = true;
-        SaveData.Loads();
-    }
-
-    public void show_healthbar() 
-    {
-        HealthReSet(); //(우선은 임시로 넣어줌. 나중에 없애고 초기에 보여줄때 따로 호출에서 사용)
-        heart1.gameObject.SetActive(true);
-        heart2.gameObject.SetActive(true);
-        heart3.gameObject.SetActive(true);
-        gameOver.gameObject.SetActive(false);
+        health = SaveData.health;
     }
 
     public void hide_healthbar()
@@ -32,39 +24,45 @@ public class HealthControlScript : MonoBehaviour
     public void health_decrease()
     {
         SaveData.Loads();
-        if(SaveData.health > 0)
-            SaveData.health--;
+        if (health > 0)
+            health--;
+        SaveData.health = health;
         SaveData.Saves();
 
-        Update_Show_Health();
+        Show_Health();
     }
 
     public void health_increase()
     {
         SaveData.Loads();
-        if(SaveData.health < 3)
-            SaveData.health++;
+        if (health < 3)
+            health++;
+        SaveData.health = health;
         SaveData.Saves();
 
-        Update_Show_Health();
+        Show_Health();
     }
 
-    void Update_Show_Health()
+    public void Show_Health()
     {
         SaveData.Loads();
-        switch (SaveData.health)
+        health = SaveData.health;
+        switch (health)
         {
+            case 3:
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                heart3.gameObject.SetActive(true);
+                break;
             case 2:
                 heart1.gameObject.SetActive(true);
                 heart2.gameObject.SetActive(true);
                 heart3.gameObject.SetActive(false);
-
                 break;
             case 1:
                 heart1.gameObject.SetActive(true);
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
-
                 break;
             case 0:
                 heart1.gameObject.SetActive(false);
@@ -84,12 +82,14 @@ public class HealthControlScript : MonoBehaviour
     public void HealthReSet()
     {
         SaveData.Loads();
-        SaveData.health = 3;
+        health = 3;
+        SaveData.health = health;
         SaveData.Saves();
     }
 
     public void Awake()
     {
+        SaveData.DoLoadData = true;
         DontDestroyOnLoad(gameObject);
     }
 }  //game control 에 넣고 그안에 스크립트에 하트 1 2 3 게임오버를 넣어줌 

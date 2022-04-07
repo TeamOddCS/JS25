@@ -12,6 +12,7 @@ public class Day3_3 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
 
+    public GameObject HealthControlScript;
     public void TextColorChange()
     {
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#2782cc>");//파란색 "중요한부분"
@@ -49,9 +50,86 @@ public class Day3_3 : MonoBehaviour
     }
     private void Start()
     {
+        SaveData.DoLoadData = true;
         data = CSVReader.Read("Day3-3");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
+        Debug.Log(SaveData.health);
     }
+
+    private void day3_3_JD()
+    {
+        if (count < data.Count)
+        {
+            Nextdialogue();
+            if (count == 9)
+            {//역시.. 그런가요?
+                count += 3;
+            }
+            if (count == 29)
+            {//안녕히 계세요
+                count += 9;
+            }
+            if (count == 55)
+            {//나한테 줬다 하면 별말 안할겨
+                count += 7;
+            }
+            if (count == 71)
+            {//이 조그만 거 하나 주기 어렵나?
+                count += 6;
+            }
+            if (count == 96)
+            {//닦기도 싫다.. 
+                count += 23;
+            }
+            if (count == 107)
+            {//…안녕히 가세요.
+                count += 11;
+            }
+            if (count == 134)
+            {//…흠, 잘 된 일일지도.
+                count += 7;
+            }
+            if (count == 149)
+            {//이곳에 와서야 깨닫다니.
+                count += 6;
+            }
+            if (count == 160)
+            {//무례를 범했군ㅡ
+                count += 5;
+            }
+        }
+        else
+        {
+            fade.Fade();
+            Hidedialogue();
+        }
+    }
+
+    private void day3_3_HC()
+    {
+        if (count == 24)
+        {//이 우유는 선생님 드세요ㅎㅎ
+            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
+        }
+        if (count == 25)
+        {//신경써주신 게 너무 감사해서요
+            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
+        }
+        if (count == 95)
+        {//진상 5(남)는 바닥에 가래침을 뱉고서
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 108)
+        {//터보 라이터 드릴게요.
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if(count == 109)
+        {//저도 제 돈에서 까는거에요..
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -59,51 +137,8 @@ public class Day3_3 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
-                {
-                    Nextdialogue();
-                    if (count == 9)
-                    {//역시.. 그런가요?
-                        count += 3;
-                    }
-                    if (count == 29)
-                    {//안녕히 계세요
-                        count += 9;
-                    }
-                    if (count == 55)
-                    {//나한테 줬다 하면 별말 안할겨
-                        count += 7;
-                    }
-                    if (count == 71)
-                    {//이 조그만 거 하나 주기 어렵나?
-                        count += 6;
-                    }
-                    if (count == 96)
-                    {//닦기도 싫다.. 
-                        count += 23;
-                    }
-                    if (count == 107)
-                    {//…안녕히 가세요.
-                        count += 11;
-                    }
-                    if (count == 134)
-                    {//…흠, 잘 된 일일지도.
-                        count += 7;
-                    }
-                    if (count == 149)
-                    {//이곳에 와서야 깨닫다니.
-                        count += 6;
-                    }
-                    if (count == 160)
-                    {//무례를 범했군ㅡ
-                        count += 5;
-                    }
-                }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                }
+                day3_3_JD();
+                day3_3_HC();
             }
         }
         else
