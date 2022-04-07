@@ -55,11 +55,9 @@ public class Day3_3 : MonoBehaviour
     }
     private void Start()
     {
-        //SaveData.Loads();
         data = CSVReader.Read("Day3-3");
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
-        //Debug.Log(SaveData.health);
     }
 
     private void day3_3_JD()
@@ -113,20 +111,12 @@ public class Day3_3 : MonoBehaviour
 
     private void day3_3_HC()
     {
-        if (count == 24)
-        {//이 우유는 선생님 드세요ㅎㅎ
-            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
-        }
         if (count == 25)
         {//신경써주신 게 너무 감사해서요
             HealthControlScript.GetComponent<HealthControlScript>().health_increase();
         }
         if (count == 95)
         {//진상 5(남)는 바닥에 가래침을 뱉고서
-            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-        }
-        if (count == 108)
-        {//터보 라이터 드릴게요.
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
         if(count == 109)

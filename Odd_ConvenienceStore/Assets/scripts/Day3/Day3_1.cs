@@ -49,6 +49,11 @@ public class Day3_1 : MonoBehaviour
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
     }
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
+    }
+
     private void Start()
     {
         data = CSVReader.Read("Day3-1");
