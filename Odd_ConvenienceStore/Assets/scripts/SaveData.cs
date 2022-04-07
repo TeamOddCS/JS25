@@ -82,7 +82,7 @@ public class SaveData : MonoBehaviour
                 JinSang4visit = data.JinSang4visit_;
                 JinSang6visit = data.JinSang6visit_;
                 JinSang6Day1 = data.JinSang6Day1_;
-                data.health_ = health;
+                health = data.health_;
 
             }
             Check_Loads_Files = true;
