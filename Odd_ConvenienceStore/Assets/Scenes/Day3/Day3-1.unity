@@ -1477,6 +1477,7 @@ MonoBehaviour:
   txt_dialogue: {fileID: 414976415}
   txt_name: {fileID: 1330116059}
   fade: {fileID: 1034099001}
+  HealthControlScript: {fileID: 1822585197}
 --- !u!114 &1034099003
 MonoBehaviour:
   m_ObjectHideFlags: 0

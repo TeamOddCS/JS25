@@ -14,6 +14,7 @@ public class Day1_1 : MonoBehaviour
     public FadeInOut fade;
     public int health = 0;
 
+    public GameObject HealthControlScript;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -57,7 +58,6 @@ public class Day1_1 : MonoBehaviour
         {
             Nextdialogue();
             
-
             if (count == 45)
             {
                 count += 64 - 45;
@@ -74,6 +74,12 @@ public class Day1_1 : MonoBehaviour
             if (count == 62)
             {
                 count += 64 - 62;
+            }
+
+            if(count == 76)
+            {
+                Debug.Log("showhealth");
+                HealthControlScript.GetComponent<HealthControlScript>().show_healthbar();
             }
             if (count == 101)
             {
@@ -102,20 +108,15 @@ public class Day1_1 : MonoBehaviour
         {
             fade.Fade();
             Hidedialogue();
-            GameControlScript.SaveHealth();
-            /*SaveData.health = health;
-            SaveData.Saves();*/
             SceneManager.LoadScene("Day2-1");
         }
     }
     private void Start()
     {
-        /*SaveData.DoLoadData = true;
-        SaveData.Loads();
-        health = SaveData.health;*/
         data = CSVReader.Read("Day1-1");
         Showdialogue();
-    }
+        HealthControlScript.GetComponent<HealthControlScript>().hide_healthbar();
+}
     // Update is called once per frame
     void Update()
     {
