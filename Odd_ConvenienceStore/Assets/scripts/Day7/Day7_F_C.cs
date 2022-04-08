@@ -56,24 +56,24 @@ public class Day7_F_C : MonoBehaviour
     }
     private void day7_F()
     {
-        if (Day7_F.count == 10)
+        if (Day7_F.count == 13)
         {
             ShowChoice();
         }
     }
     private void day7_F_1()
     {
-        if (Day7_F.count == 10)
+        if (Day7_F.count == 13)
         {
             Day7_F.count++;
         }
     }
     private void day7_F_2()
     {
-        if (Day7_F.count == 10)
+        if (Day7_F.count == 13)
         {
 
-            Day7_F.count += 29 - 10;
+            Day7_F.count += 23 - 13;
         }
     }
 

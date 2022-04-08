@@ -12,8 +12,6 @@ public class Day7_F : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
 
-
-
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -47,28 +45,9 @@ public class Day7_F : MonoBehaviour
         {
             Nextdialogue();
 
-            if (count == 20)
+            if (count == 23)
             {
-                count += 46 - 20;
-            }
-            if (count == 27)
-            {
-                count += 46 - 27;
-            }
-            if (count == 42)
-            {
-                count += 46 - 42;
-            }
-            if (count == 45)
-            {
-                count += 46 - 45;
-            }
-
-
-            if (count == 50)
-            {
-                fade.Fade();
-                Hidedialogue();
+                count += 32 - 23;
             }
         }
         else
