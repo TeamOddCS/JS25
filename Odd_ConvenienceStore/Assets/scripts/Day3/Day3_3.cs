@@ -117,10 +117,12 @@ public class Day3_3 : MonoBehaviour
         }
         if (count == 95)
         {//진상 5(남)는 바닥에 가래침을 뱉고서
+            SaveData.JSName = "JS5";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
         if(count == 109)
         {//저도 제 돈에서 까는거에요..
+            SaveData.JSName = "JS5";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
     }

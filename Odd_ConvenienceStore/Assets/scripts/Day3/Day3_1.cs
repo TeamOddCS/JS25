@@ -115,25 +115,31 @@ public class Day3_1 : MonoBehaviour
         {
             if (count == 65)
             { //외상해드릴게요.
+                SaveData.JSName = "JS3";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
             }
             if (count == 70)
             {//진상3은 가벼운 발걸음으로 나간다.
+                SaveData.JSName = "JS3";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+
             }
 
             if (count == 87)
             {//진상 3은 매대에서 껌을 한웅큼 집어 바닥에 흩뿌린다.
+                SaveData.JSName = "JS3";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
             }
 
             if (count == 134)
             {//좀 못들은 걸로 꼽은..ㅋㅋ ㅆㅂ
+                SaveData.JSName = "JS7";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
             }
 
             if (count == 158)
             {//몰라. 직원분이 나한테 개지랄하잖어
+                SaveData.JSName = "JS7";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
             }
         }
