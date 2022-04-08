@@ -68,10 +68,31 @@ public class Day3_1_SE : MonoBehaviour
             startScript();
         }
 
-        if (page == content.Length - 1)
-            finishBtn.SetActive(true);
+        if (!start)
+        {
+            right.SetActive(false);
+            left.SetActive(false);
+        }
 
-        if(finisibtnCheck == 1)
+        else if (page == content.Length - 1)
+        {
+            finishBtn.SetActive(true);
+            right.SetActive(false);
+        }
+
+        else if (page == 0)
+        {
+            left.SetActive(false);
+        }
+
+        else
+        {
+            right.SetActive(true);
+            left.SetActive(true);
+            finishBtn.SetActive(false);
+        }
+
+        if (finisibtnCheck == 1)
             finishBtn.SetActive(false);
     }
 }

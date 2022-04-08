@@ -68,8 +68,30 @@ public class Day1_1_SE : MonoBehaviour
             startScript();
         }
 
-        if (page == content.Length - 1)
+        if(!start)
+        {
+            right.SetActive(false);
+            left.SetActive(false);
+        }
+
+        else if (page == content.Length - 1)
+        {
             finishBtn.SetActive(true);
+            right.SetActive(false);
+        }
+
+        else if (page == 0)
+        {
+            left.SetActive(false);
+        }
+
+        else
+        {
+            right.SetActive(true);
+            left.SetActive(true);
+            finishBtn.SetActive(false);
+        }
+
 
         if (finisibtnCheck == 1)
             finishBtn.SetActive(false);

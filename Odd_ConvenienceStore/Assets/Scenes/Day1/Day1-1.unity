@@ -866,7 +866,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1520224185}
         m_TargetAssemblyTypeName: Day1_1_SE, Assembly-CSharp
-        m_MethodName: leftBtn
+        m_MethodName: rightBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -931,7 +931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: 486}
+  m_AnchoredPosition: {x: 441, y: 486}
   m_SizeDelta: {x: 180, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &455929660
@@ -1730,7 +1730,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1520224185}
         m_TargetAssemblyTypeName: Day1_1_SE, Assembly-CSharp
-        m_MethodName: rightBtn
+        m_MethodName: leftBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1795,7 +1795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 441, y: 486}
+  m_AnchoredPosition: {x: -260, y: 486}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1398104679
