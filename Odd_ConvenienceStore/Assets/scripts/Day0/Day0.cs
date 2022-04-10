@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Day0 : MonoBehaviour
@@ -12,13 +13,11 @@ public class Day0 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
 
-
-
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
         Nextdialogue();
     }
@@ -53,9 +52,17 @@ public class Day0 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Day0");
-        SaveData.DoChangeData = true;
         Showdialogue();
     }
+
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
+        SaveData.TempScene = "Day0";
+        count = SaveData.TempCount;
+        SaveData.Saves();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -75,8 +82,10 @@ public class Day0 : MonoBehaviour
                 {
                     fade.Fade();
                     Hidedialogue();
+                    count = 0;
                 }
-
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
         }
         else

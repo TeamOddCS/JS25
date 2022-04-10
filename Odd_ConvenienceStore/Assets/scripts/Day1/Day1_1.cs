@@ -20,7 +20,7 @@ public class Day1_1 : MonoBehaviour
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
         Nextdialogue();
     }
@@ -108,20 +108,25 @@ public class Day1_1 : MonoBehaviour
         {
             fade.Fade();
             Hidedialogue();
+            count = 0;
             SceneManager.LoadScene("Day2-1");
         }
     }
     public void Awake()
     {
         SaveData.DoLoadData = true;
+        SaveData.TempScene = "Day1-1";
+        count = SaveData.TempCount;
+        SaveData.Saves();
     }
 
     private void Start()
     {
         data = CSVReader.Read("Day1-1");
         Showdialogue();
+
         HealthControlScript.GetComponent<HealthControlScript>().hide_healthbar();
-}
+       }
     // Update is called once per frame
     void Update()
     {
@@ -130,6 +135,8 @@ public class Day1_1 : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 day1_1_JD();
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
         }
         else
