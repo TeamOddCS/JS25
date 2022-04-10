@@ -11,6 +11,7 @@ public class JinSang3_2 : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
+    public static int facenum = 0;
 
 
 
@@ -32,6 +33,7 @@ public class JinSang3_2 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
+        FaceChange();
         count++;
 
     }
@@ -47,6 +49,33 @@ public class JinSang3_2 : MonoBehaviour
         txt_name.gameObject.SetActive(false);
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
+    }
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("3_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("3_1_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("3_2_1"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("3_2_2"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("3_3_1"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("3_3_2"))
+        {
+            facenum = 6;
+        }
     }
     private void Start()
     {

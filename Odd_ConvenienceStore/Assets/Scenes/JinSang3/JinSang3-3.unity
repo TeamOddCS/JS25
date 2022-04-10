@@ -1085,6 +1085,7 @@ GameObject:
   - component: {fileID: 1309799551}
   - component: {fileID: 1309799549}
   - component: {fileID: 1309799547}
+  - component: {fileID: 1309799555}
   - component: {fileID: 1309799550}
   - component: {fileID: 1309799548}
   - component: {fileID: 1309799546}
@@ -1265,6 +1266,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1309799555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309799544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b8c247a4744df43be798343f6a7e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  js3_face:
+  - {fileID: 21300000, guid: 5e14ab13f6d7a244a881f4c2d40d1191, type: 3}
+  - {fileID: 21300000, guid: 9f11cbd7a5c7dcd45b73ea6623ee4a37, type: 3}
+  - {fileID: 21300000, guid: b183d9b1a835a1d418c50baf79d7a3a6, type: 3}
+  - {fileID: 21300000, guid: b7b942a5ed437154a909ebfa803912cc, type: 3}
+  - {fileID: 21300000, guid: d10f815f41a9edb49a79cddbfade4b20, type: 3}
+  - {fileID: 21300000, guid: 091585823f4a12342aeccc7328e9778b, type: 3}
+  js3: {fileID: 886451994}
 --- !u!1 &1404372896
 GameObject:
   m_ObjectHideFlags: 0
