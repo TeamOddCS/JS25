@@ -13,7 +13,7 @@ public class Day0 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
 
-    public GameObject HealthControlScript;
+    public GameObject GameController;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -42,7 +42,6 @@ public class Day0 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//초록색 (생명력 +) 
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
 
 
@@ -79,30 +78,20 @@ public class Day0 : MonoBehaviour
                     if (count == 14)
                     {
                         count += 4;
-                    }              
+                    }
                 }
                 else
                 {
                     fade.Fade();
                     Hidedialogue();
-<<<<<<< HEAD
-                    count = 0;
-=======
                     count = 1;
                     SceneManager.LoadScene("Day1-1");
->>>>>>> 1913882428d2b5db6c436620c1799b7c2fde1511
                 }
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }
-            if (count == 21)
-            {
-                SceneManager.LoadScene("Day1-1");
-            }
         }
         else
             Hidedialogue();
-      
-
     }
 }

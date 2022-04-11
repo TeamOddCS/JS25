@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Day1_3 : MonoBehaviour
 {
@@ -13,11 +12,6 @@ public class Day1_3 : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
-<<<<<<< HEAD
-    public GameObject HealthControlScript;
-
-=======
->>>>>>> 1913882428d2b5db6c436620c1799b7c2fde1511
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -46,12 +40,8 @@ public class Day1_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//초록색 (생명력 +) 
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
-    public void Awake()
-    {
-        SaveData.DoLoadData = true;
-    }
+
 
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {
@@ -102,11 +92,6 @@ public class Day1_3 : MonoBehaviour
                     {
                         count += 4;
                     }
-                    if(count == 81)
-                    {
-                        SceneManager.LoadScene("Day1-F");
-
-                    }
                 }
                 else
                 {
@@ -122,6 +107,5 @@ public class Day1_3 : MonoBehaviour
         }
         else
             Hidedialogue();
-        
     }
 }

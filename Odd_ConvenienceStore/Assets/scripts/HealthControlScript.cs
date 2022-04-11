@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class HealthControlScript : MonoBehaviour
-{
-    public GameObject heart, heart1, heart2, heart3, gameOver;
-    private static int health;
-    private static string JSName, nickname, reason;
-    
-
-    public void Start()
-    {
-       
-    }
-
-    public void hide_healthbar()
-    {
-        heart.gameObject.SetActive(false);
-        heart1.gameObject.SetActive(false);
-        heart2.gameObject.SetActive(false);
-        heart3.gameObject.SetActive(false);
-        gameOver.gameObject.SetActive(false);
-    }
-
-    public void health_decrease()
-    {
-=======
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -55,7 +25,6 @@ public class HealthControlScript : MonoBehaviour
 
     public void health_decrease()
     {
->>>>>>> 1913882428d2b5db6c436620c1799b7c2fde1511
         JSName = SaveData.JSName;
         Debug.Log(JSName);
         SaveData.Loads();
@@ -155,65 +124,6 @@ public class HealthControlScript : MonoBehaviour
                 Debug.Log("예외처리");
                 break;
         }
-<<<<<<< HEAD
-    }
-
-    public void Show_Health()
-    {
-        //SaveData.Loads();
-        //health = SaveData.health;
-        //Debug.Log(SaveData.health);
-
-        switch (health)
-        {
-            case 3:
-                heart.gameObject.SetActive(true);
-                heart1.gameObject.SetActive(true);
-                heart2.gameObject.SetActive(true);
-                heart3.gameObject.SetActive(true);
-                break;
-            case 2:
-                heart.gameObject.SetActive(true);
-                heart1.gameObject.SetActive(true);
-                heart2.gameObject.SetActive(true);
-                heart3.gameObject.SetActive(false);
-                break;
-            case 1:
-                heart.gameObject.SetActive(true);
-                heart1.gameObject.SetActive(true);
-                heart2.gameObject.SetActive(false);
-                heart3.gameObject.SetActive(false);
-                break;
-            case 0:
-                heart.gameObject.SetActive(true);
-                heart1.gameObject.SetActive(false);
-                heart2.gameObject.SetActive(false);
-                heart3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
-                GameOver();
-                Debug.Log(nickname + "(으)로 인한 극도의 스트레스로 " + reason);
-                Time.timeScale = 0;
-                break;
-        }
-    }
-
-    
- 
-    public void HealthReSet()
-    {
-        SaveData.Loads();
-        health = 3;
-        SaveData.health = health;
-        SaveData.Saves();
-    }
-
-    public void Awake()
-    {
-        SaveData.DoLoadData = true;
-        health = SaveData.health;
-        DontDestroyOnLoad(gameObject);
-    }
-=======
     }
 
     public void Show_Health()
@@ -298,5 +208,4 @@ public class HealthControlScript : MonoBehaviour
         health = SaveData.health;
         DontDestroyOnLoad(gameObject);
     }
->>>>>>> 1913882428d2b5db6c436620c1799b7c2fde1511
 }  //game control 에 넣고 그안에 스크립트에 하트 1 2 3 게임오버를 넣어줌 
