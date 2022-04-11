@@ -87,7 +87,7 @@ public class JSChoice : MonoBehaviour
         SaveData.JinSangvisit[1]++;
         SaveData.Saves();
 
-        if(SaveData.JinSangvisit[1] == 0)
+        if(SaveData.JinSangvisit[1] == 1)
             SceneManager.LoadScene("JinSang1_1");
     }
     public void JinSang2_()
@@ -95,11 +95,11 @@ public class JSChoice : MonoBehaviour
         SaveData.JinSangvisit[2]++;
         SaveData.Saves();
 
-        if (SaveData.JinSangvisit[2] == 0)
+        if (SaveData.JinSangvisit[2] == 1)
             SceneManager.LoadScene("JinSang2_1");
-        else if (SaveData.JinSangvisit[2] == 1)
-            SceneManager.LoadScene("JinSang2_2");
         else if (SaveData.JinSangvisit[2] == 2)
+            SceneManager.LoadScene("JinSang2_2");
+        else if (SaveData.JinSangvisit[2] == 3)
             SceneManager.LoadScene("JinSang2_3");
     }
     public void JinSang3_()
@@ -107,11 +107,11 @@ public class JSChoice : MonoBehaviour
         SaveData.JinSangvisit[3]++;
         SaveData.Saves();
 
-        if (SaveData.JinSangvisit[3] == 0)
+        if (SaveData.JinSangvisit[3] == 1)
             SceneManager.LoadScene("JinSang3_1");
-        else if (SaveData.JinSangvisit[3] == 1)
-            SceneManager.LoadScene("JinSang3_2");
         else if (SaveData.JinSangvisit[3] == 2)
+            SceneManager.LoadScene("JinSang3_2");
+        else if (SaveData.JinSangvisit[3] == 3)
             SceneManager.LoadScene("JinSang32_3");
     }
     public void JinSang4_()
@@ -119,13 +119,13 @@ public class JSChoice : MonoBehaviour
         SaveData.JinSangvisit[4]++;
         SaveData.Saves();
 
-        if (SaveData.JinSangvisit[4] == 0)
+        if (SaveData.JinSangvisit[4] == 1)
             SceneManager.LoadScene("JinSang4_1");
-        else if (SaveData.JinSangvisit[4] == 1)
-            SceneManager.LoadScene("JinSang4_2");
         else if (SaveData.JinSangvisit[4] == 2)
-            SceneManager.LoadScene("JinSang4_3");
+            SceneManager.LoadScene("JinSang4_2");
         else if (SaveData.JinSangvisit[4] == 3)
+            SceneManager.LoadScene("JinSang4_3");
+        else if (SaveData.JinSangvisit[4] == 4)
             SceneManager.LoadScene("JinSang4_4");
     }
     public void JinSang5_()
@@ -133,7 +133,7 @@ public class JSChoice : MonoBehaviour
         SaveData.JinSangvisit[5]++;
         SaveData.Saves();
 
-        if (SaveData.JinSangvisit[5] == 0)
+        if (SaveData.JinSangvisit[5] == 1)
             SceneManager.LoadScene("JinSang5_1");
     }
     public void JinSang6_()
@@ -141,9 +141,9 @@ public class JSChoice : MonoBehaviour
         SaveData.JinSangvisit[6]++;
         SaveData.Saves();
 
-        if (SaveData.JinSangvisit[6] == 0)
+        if (SaveData.JinSangvisit[6] == 1)
             SceneManager.LoadScene("JinSang6_1");
-        else if (SaveData.JinSangvisit[6] == 1)
+        else if (SaveData.JinSangvisit[6] == 2)
             SceneManager.LoadScene("JinSang6_2");
 
     }
@@ -152,9 +152,9 @@ public class JSChoice : MonoBehaviour
         SaveData.JinSangvisit[7]++;
         SaveData.Saves();
 
-        if (SaveData.JinSangvisit[7] == 0)
+        if (SaveData.JinSangvisit[7] == 1)
             SceneManager.LoadScene("JinSang7_1");
-        else if (SaveData.JinSangvisit[7] == 1)
+        else if (SaveData.JinSangvisit[7] == 2)
             SceneManager.LoadScene("JinSang7_2");
     }
 

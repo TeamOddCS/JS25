@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -56,6 +57,14 @@ public class Day1_F : MonoBehaviour
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
     }
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
+        SaveData.TempScene = "Day1-F";
+        count = SaveData.TempCount;
+        SaveData.Saves();
+    }
+
     private void Start()
     {
         data = CSVReader.Read("Day1-F");
@@ -80,12 +89,16 @@ public class Day1_F : MonoBehaviour
                 {
                     fade.Fade();
                     Hidedialogue();
+                    count = 1;
+                    SceneManager.LoadScene("Day2-1");
                 }
                 if(count == 13)
                 {
                     SceneManager.LoadScene("Day2-1");
                 }
 
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
         }
         else

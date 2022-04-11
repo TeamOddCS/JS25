@@ -85,7 +85,12 @@ public class Day0 : MonoBehaviour
                 {
                     fade.Fade();
                     Hidedialogue();
+<<<<<<< HEAD
                     count = 0;
+=======
+                    count = 1;
+                    SceneManager.LoadScene("Day1-1");
+>>>>>>> 1913882428d2b5db6c436620c1799b7c2fde1511
                 }
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
