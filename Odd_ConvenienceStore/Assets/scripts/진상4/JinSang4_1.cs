@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class JinSang4_1 : MonoBehaviour
@@ -79,6 +80,14 @@ public class JinSang4_1 : MonoBehaviour
             facenum = 6;
         }
     }
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
+        SaveData.TempScene = "JinSang4_1";
+        count = SaveData.TempCount;
+        SaveData.Saves();
+    }
+
     private void Start()
     {
         data = CSVReader.Read("Áø»ó4-1");
@@ -115,8 +124,11 @@ public class JinSang4_1 : MonoBehaviour
                 {
                     fade.Fade();
                     Hidedialogue();
+                    count = 1;
+                    SceneManager.LoadScene("Day1-3");
                 }
-
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
         }
         else
