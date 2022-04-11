@@ -84,8 +84,8 @@ public class Day0 : MonoBehaviour
                 {
                     fade.Fade();
                     Hidedialogue();
-                    count = 0;
-                    GameController.GetComponent<JSChoice>().D1_JSChoice();
+                    count = 1;
+                    SceneManager.LoadScene("Day1-1");
                 }
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();

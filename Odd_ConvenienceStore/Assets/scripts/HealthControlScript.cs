@@ -8,7 +8,7 @@ public class HealthControlScript : MonoBehaviour
     public GameObject heart1, heart2, heart3, gameOver;
     private static int health;
     private static string JSName, nickname, reason;
-    public Blink blink;
+    //public Blink blink;
 
     public void Start()
     {
@@ -162,7 +162,7 @@ public class HealthControlScript : MonoBehaviour
     }
 
     public void Update()
-    {
+    {/*
         if (Day1_1.count == 75)
         {
             StartCoroutine(BlinkGameObject(heart1, 5, 10));
@@ -174,9 +174,9 @@ public class HealthControlScript : MonoBehaviour
         if (Day1_1.count == 75)
         {
             StartCoroutine(BlinkGameObject(heart3, 5, 10));
-        } 
+        } */
     }
-    public IEnumerator BlinkGameObject(GameObject gameObject, int numBlinks, float seconds)
+    /*public IEnumerator BlinkGameObject(GameObject gameObject, int numBlinks, float seconds)
     {
         // In this method it is assumed that your game object has a SpriteRenderer component attached to it
         SpriteRenderer renderer = gameObject.GetComponent<SpriteRenderer>();
@@ -193,7 +193,7 @@ public class HealthControlScript : MonoBehaviour
         //make sure renderer is enabled when we exit
         renderer.enabled = true;
         //    animator.enabled = true; // enable animation again, if it was disabled before
-    }
+    }*/
     public void HealthReSet()
     {
         SaveData.Loads();
