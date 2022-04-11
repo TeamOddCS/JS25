@@ -19,9 +19,7 @@ public class SaveData : MonoBehaviour
     public static bool RemakeDataInHub = false;
     public static bool Check_Loads_Files = false;
 
-    public static int JinSang2visit = 0;
-    public static int JinSang4visit = 0;
-    public static int JinSang6visit = 0;
+    public static int[] JinSangvisit = new int[9];
     public static int health = 3;
     public static string JSName = " ";
 
@@ -37,9 +35,7 @@ public class SaveData : MonoBehaviour
     {
         public string name_; //닉네임
         public string level_; //난이도
-        public int JinSang2visit_; //진상 방문 횟수
-        public int JinSang4visit_;
-        public int JinSang6visit_;
+        public int[] JinSangvisit_; //진상 방문 횟수
         public int JinSang6Day1_; //진상6 첫 방문에서의 선택
         public string TempScene_; //현재 다이얼로그 위치
         public int TempCount_;
@@ -58,9 +54,7 @@ public class SaveData : MonoBehaviour
         //A->B
         data.name_ = Name;
         data.level_ = checkLevel;
-        data.JinSang2visit_ = JinSang2visit;
-        data.JinSang4visit_ = JinSang4visit;
-        data.JinSang6visit_ = JinSang6visit;
+        data.JinSangvisit_ = JinSangvisit;
         data.health_ = health;
         data.JSName_ = JSName;
         data.TempScene_ = TempScene;
@@ -87,9 +81,7 @@ public class SaveData : MonoBehaviour
                 //B--->A
                 Name = data.name_;
                 checkLevel = data.level_;
-                JinSang2visit = data.JinSang2visit_;
-                JinSang4visit = data.JinSang4visit_;
-                JinSang6visit = data.JinSang6visit_;
+                JinSangvisit = data.JinSangvisit_;
                 JinSang6Day1 = data.JinSang6Day1_;
                 health = data.health_;
                 JSName = data.JSName_;

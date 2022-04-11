@@ -1763,7 +1763,13 @@ MonoBehaviour:
   choicebtn2: {fileID: 503220928}
   txt_choice1: {fileID: 2016410608}
   txt_choice2: {fileID: 1262914977}
-  choice: []
+  choice:
+  - _choice: " \uB124, \uAC00\uC838\uC624\uC138\uC694."
+    _choice2: "\uC548\uB429\uB2C8\uB2E4."
+  - _choice: "\uC77C\uB2E8 \uBCD1 \uC218\uBD80\uD130\r \uC138\uBCF8\uB2E4."
+    _choice2: " 3000 \uC6D0\uC744 \uAC74\uB128\uB2E4."
+  - _choice: "\uC124\uB4DD\uD574\uBCF8\uB2E4. "
+    _choice2: "\uAD18\uC538 \uC8C4 \uCD94\uAC00"
 --- !u!114 &2042038219
 MonoBehaviour:
   m_ObjectHideFlags: 0
