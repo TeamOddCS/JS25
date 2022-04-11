@@ -13,6 +13,8 @@ public class Day0 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
 
+    public GameObject GameController;
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -76,13 +78,14 @@ public class Day0 : MonoBehaviour
                     if (count == 14)
                     {
                         count += 4;
-                    }              
+                    }
                 }
                 else
                 {
                     fade.Fade();
                     Hidedialogue();
                     count = 0;
+                    GameController.GetComponent<JSChoice>().D1_JSChoice();
                 }
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
