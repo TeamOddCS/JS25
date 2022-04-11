@@ -20,7 +20,7 @@ public class Day1_1 : MonoBehaviour
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        //count = 0;
+        count = 0;
         isDialogue = true;
         Nextdialogue();
     }
@@ -109,7 +109,7 @@ public class Day1_1 : MonoBehaviour
             fade.Fade();
             Hidedialogue();
             count = 0;
-            SceneManager.LoadScene("Day2-1");
+           
         }
     }
     public void Awake()
@@ -138,8 +138,14 @@ public class Day1_1 : MonoBehaviour
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }
+            if (count == 124)
+            {
+                SceneManager.LoadScene("Day1-3");
+            }
+
         }
         else
             Hidedialogue();
+        
     }
 }

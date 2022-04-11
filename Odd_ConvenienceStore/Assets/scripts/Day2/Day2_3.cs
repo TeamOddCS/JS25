@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Day2_3 : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Day2_3 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
 
-
+    public GameObject HealthControlScript;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -41,6 +42,10 @@ public class Day2_3 : MonoBehaviour
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         count++;
+    }
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
     }
 
 
@@ -88,6 +93,15 @@ public class Day2_3 : MonoBehaviour
         data = CSVReader.Read("Day2-3");
         Showdialogue();
     }
+
+    private void day2_3_HC()
+    {
+        if(count == 63)
+        {
+            SaveData.JSName = "JS6";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -96,9 +110,15 @@ public class Day2_3 : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 day2_3_JD();
+                day2_3_HC();
             }
+        }
+        if (count == 80)
+        {
+            SceneManager.LoadScene("Day2-F");
         }
         else
             Hidedialogue();
+       
     }
 }

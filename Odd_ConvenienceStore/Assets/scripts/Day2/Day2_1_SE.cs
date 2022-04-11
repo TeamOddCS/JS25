@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Day1_1_SE : MonoBehaviour
+public class Day2_1_SE : MonoBehaviour
 {
     public GameObject explainImg, right, left, finishBtn;
     public Text explainText;
@@ -60,7 +60,7 @@ public class Day1_1_SE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Day1_1.count == 76 && start == false)
+        if (Day1_1.count == 21 && start == false)
         {
             start = true;
             Day1_1.isDialogue = false;
@@ -68,7 +68,7 @@ public class Day1_1_SE : MonoBehaviour
             startScript();
         }
 
-        if(!start)
+        if (!start)
         {
             right.SetActive(false);
             left.SetActive(false);

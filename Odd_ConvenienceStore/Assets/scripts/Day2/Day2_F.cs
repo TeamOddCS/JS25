@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class Day2_F : MonoBehaviour
 {
     [SerializeField] private Text txt_name;// 이름 담는 객체 
@@ -82,5 +82,9 @@ public class Day2_F : MonoBehaviour
         }
         else
             Hidedialogue();
+        if (count == 20)
+        {
+            SceneManager.LoadScene("Day3-1");
+        }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Day2_1 : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Day2_1 : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
+    public GameObject HealthControlScript;
 
 
 
@@ -51,6 +53,10 @@ public class Day2_1 : MonoBehaviour
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
     }
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
+    }
     private void day2_1_JD()//첫번째 선택지를 골랐을 경우 선택지 대화를 다본후 다음 대화로 넘어가는 함수
     {
         if (count < data.Count)
@@ -70,30 +76,7 @@ public class Day2_1 : MonoBehaviour
             {
                 count +=  66 - 55;
             }
-            if (count == 60)
-            {
-                SaveData.health -= 1;
-            }
-            if (count == 97)
-            {
-                SaveData.health -= 1;
-            }
-            if (count == 141)
-            {
-                SaveData.health -= 1;
-            }
-            if (count == 163)
-            {
-                SaveData.health -= 1;
-            }
-            if (count == 90)
-            {
-                SaveData.health += 1;
-            }
-            if (count == 180)
-            {
-                SaveData.health -= 1;
-            }
+           
 
 
             if (count == 64)
@@ -171,6 +154,40 @@ public class Day2_1 : MonoBehaviour
             Hidedialogue();
         }
     }
+
+    private void day2_1_HC()
+    {
+        if(count == 61)
+        {
+            SaveData.JSName = " JS9";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 91)
+        {
+            SaveData.JSName = " JS9";
+            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
+        }
+        if (count == 98)
+        {
+            SaveData.JSName = " JS9";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 142)
+        {
+            SaveData.JSName = " JS9";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 164)
+        {
+            SaveData.JSName = " JS9";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 181)
+        {
+            SaveData.JSName = " JS9";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+    }
     private void Start()
     {
         data = CSVReader.Read("Day2-1");
@@ -184,9 +201,15 @@ public class Day2_1 : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 day2_1_JD();
+                day2_1_HC();
             }
         }
         else
             Hidedialogue();
+        if (count == 220)
+        {
+            SceneManager.LoadScene("Day2-3");
+        }
+        
     }
 }
