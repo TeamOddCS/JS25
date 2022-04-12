@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ public class Day7_F : MonoBehaviour
 {
     [SerializeField] private Text txt_name;// 이름 담는 객체 
     [SerializeField] private Text txt_dialogue; //대화내용 담는 객체
+
+    private string inputText;
     public static bool isDialogue = false;
     public static int count = 0;
     private List<Dictionary<string, object>> data;
@@ -28,10 +31,11 @@ public class Day7_F : MonoBehaviour
         txt_name.text = data[count]["Name"].ToString();
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
-        txt_dialogue.text = data[count]["Script"].ToString();
+        //txt_dialogue.text = data[count]["Script"].ToString();
+        inputText = data[count]["Script"].ToString();
+        StartCoroutine("typingText");
         count++;
     }
-
 
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {
@@ -56,6 +60,20 @@ public class Day7_F : MonoBehaviour
             Hidedialogue();
         }
     }
+
+    IEnumerator typingText()
+    {
+        char nowChar;
+        string showText = " ";
+        for (int i = 0; i < inputText.Length; i++)
+        {
+            nowChar = inputText[i];
+            showText = inputText.Substring(0, i);
+            txt_dialogue.text = showText + nowChar.ToString();
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
     private void Start()
     {
         data = CSVReader.Read("Day7-F");
