@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 878665690}
   - component: {fileID: 878665689}
   m_Layer: 5
-  m_Name: "\uBC84\uD2BC-\uC885"
+  m_Name: "\uBC84\uD2BC-\uC885\uB8CC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -517,7 +517,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1878233420}
         m_TargetAssemblyTypeName: TitleButton, Assembly-CSharp
-        m_MethodName: Goto_GameContinue
+        m_MethodName: Quit_Button
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
