@@ -35,6 +35,11 @@ public class TitleButton : MonoBehaviour
         IBM.SetActive(false);
     }
 
+    public void Quit_Button()
+    {
+        Application.Quit();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
