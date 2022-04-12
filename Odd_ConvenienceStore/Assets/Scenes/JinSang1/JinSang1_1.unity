@@ -152,7 +152,7 @@ RectTransform:
   m_GameObject: {fileID: 147109925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.8, z: 1}
   m_Children:
   - {fileID: 801479452}
   m_Father: {fileID: 2038453611}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0321160e6073ab349ae9db2682421e62, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6068d52bc4591bd42b74468d90ed1979, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 388826042}
   - component: {fileID: 388826045}
   - component: {fileID: 388826044}
+  - component: {fileID: 388826054}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -576,6 +577,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &388826054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388826041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1dead61085fe445a14ca7615041f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  js1_face:
+  - {fileID: 21300000, guid: b1a0fc791f815be429e7c8935e4b7927, type: 3}
+  - {fileID: 21300000, guid: ec48d9cfa64c8604ea9bc722b71a9628, type: 3}
+  - {fileID: 21300000, guid: cfaf398ef89a65d45850dae289abb9ed, type: 3}
+  - {fileID: 21300000, guid: 742032c211ca7204bbf01aafbd063aa7, type: 3}
+  - {fileID: 21300000, guid: ec3414c22aa110d4e8505cb1cfb7c468, type: 3}
+  - {fileID: 21300000, guid: 621d7fb6123557245a6b429cec44fd81, type: 3}
+  js1: {fileID: 2065783134}
 --- !u!1 &580153263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +1091,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 28de28bebc8ad7b42a1e79467bf97779, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f56164833def9343ac3305d53500c81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1271,7 +1292,7 @@ RectTransform:
   m_GameObject: {fileID: 1515227164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.8, z: 1}
   m_Children:
   - {fileID: 1519691118}
   m_Father: {fileID: 2038453611}
@@ -1279,8 +1300,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.969971, y: -633}
-  m_SizeDelta: {x: 1115.5, y: 285}
+  m_AnchoredPosition: {x: 0, y: -633}
+  m_SizeDelta: {x: 1110, y: 285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515227166
 MonoBehaviour:
@@ -1321,7 +1342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 42f4c5f2fc4974e4cab3af278b926a5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ff0c4482fd25b24faa6b2052b8ec2eb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1500,7 +1521,7 @@ Transform:
   m_GameObject: {fileID: 1723203616}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -6.95, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1}
   m_Children: []
   m_Father: {fileID: 592150793}
   m_RootOrder: 1
@@ -1545,7 +1566,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1ad94161cc77b2f4abc5bbbbecd5e06e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 95f626e7ceef1154ba79fdee56aa1c47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2091,6 +2112,11 @@ MonoBehaviour:
   heart2: {fileID: 300541676}
   heart3: {fileID: 1255511668}
   gameOver: {fileID: 580153263}
+  endingB: {fileID: 0}
+  canvas: {fileID: 0}
+  scriptB: {fileID: 0}
+  endingText: {fileID: 0}
+  lobbyText: {fileID: 0}
 --- !u!4 &2066610736
 Transform:
   m_ObjectHideFlags: 0
