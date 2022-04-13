@@ -12,6 +12,7 @@ public class JinSang4_2 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public static int facenum = 0;
+    public GameObject HealthControlScript;
 
 
 
@@ -82,7 +83,26 @@ public class JinSang4_2 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Áø»ó4-2");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
+    }
+    private void JinSang4_2_HC()
+    {
+        if(count == 10)
+        {
+            SaveData.JSName = "JS4";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 41)
+        {
+            SaveData.JSName = "JS4";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 63)
+        {
+            SaveData.JSName = "JS4";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
     }
     // Update is called once per frame
     void Update()
@@ -106,6 +126,7 @@ public class JinSang4_2 : MonoBehaviour
                     {
                         count += 8;
                     }
+                    JinSang4_2_HC();
                 }
                 else
                 {

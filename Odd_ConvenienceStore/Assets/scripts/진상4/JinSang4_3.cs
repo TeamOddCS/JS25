@@ -12,6 +12,7 @@ public class JinSang4_3 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public static int facenum = 0;
+    public GameObject HealthControlScript;
 
 
 
@@ -82,7 +83,15 @@ public class JinSang4_3 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Áø»ó4-3");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
+    }
+    private void JinSang4_3_HC()
+    {
+        if(count == 64)
+        {
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
     }
     // Update is called once per frame
     void Update()
@@ -109,6 +118,7 @@ public class JinSang4_3 : MonoBehaviour
                     fade.Fade();
                     Hidedialogue();
                 }
+                JinSang4_3_HC();
 
             }
         }

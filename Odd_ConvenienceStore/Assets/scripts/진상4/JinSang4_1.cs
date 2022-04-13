@@ -15,6 +15,7 @@ public class JinSang4_1 : MonoBehaviour
     public AudioClip touchclip;
     public AudioClip kbdclip;
     public static int facenum = 0;
+    public GameObject HealthControlScript;
 
 
 
@@ -94,10 +95,22 @@ public class JinSang4_1 : MonoBehaviour
         count = SaveData.TempCount;
         SaveData.Saves();
     }
+    private void JinSang4_1_HC()
+    {
+        if (count == 29)
+        {
+
+
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+
+
+    }
 
     private void Start()
     {
         data = CSVReader.Read("Áø»ó4-1");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
     // Update is called once per frame
@@ -126,6 +139,7 @@ public class JinSang4_1 : MonoBehaviour
                     {
                         count += 7;
                     }
+                    JinSang4_1_HC();
                 }
                 else
                 {
