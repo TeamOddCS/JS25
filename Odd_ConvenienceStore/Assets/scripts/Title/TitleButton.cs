@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TitleButton : MonoBehaviour
-{
+{   
     public GameObject IBM; //-> 처음부터 안누르고 이어하기 눌렀을 때 나오는 경고창
-
+    public AudioClip titleclip;
     public void Awake()
     {
         IBM.SetActive(false);
@@ -39,6 +39,12 @@ public class TitleButton : MonoBehaviour
     {
         Application.Quit();
     }
+
+    //public void BtnSound()
+    //{
+    //    SoundManager.instance.SFXPlay("title", titleclip);
+    //}
+
 
     // Start is called before the first frame update
     void Start()

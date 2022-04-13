@@ -12,6 +12,8 @@ public class JinSang4_1 : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
+    public AudioClip touchclip;
+    public AudioClip kbdclip;
     public static int facenum = 0;
 
 
@@ -35,6 +37,11 @@ public class JinSang4_1 : MonoBehaviour
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         FaceChange();
+        if (count > 0)
+        {
+            SoundManager.instance.SFXPlay("Touch", touchclip);
+            //SoundManager.instance.SFXPlay("Keyboard", kbdclip);
+        }
         count++;
 
     }
