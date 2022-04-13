@@ -15,7 +15,7 @@ public class JinSang6_1 : MonoBehaviour
     public AudioClip touchclip;
     public AudioClip kbdclip;
     public static int facenum = 0;
-
+    public GameObject HealthControlScript;
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -56,6 +56,13 @@ public class JinSang6_1 : MonoBehaviour
         txt_name.gameObject.SetActive(false);
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
+    }
+    private void JinSang6_1_HC()
+    {
+        if(count == 25)
+        {
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
     }
     private void FaceChange()
     {
@@ -102,6 +109,7 @@ public class JinSang6_1 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("진상6-1");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
 
@@ -123,6 +131,7 @@ public class JinSang6_1 : MonoBehaviour
                     {
                         count ++;
                     }
+                    JinSang6_1_HC();
                 }
                 else
                 {

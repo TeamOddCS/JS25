@@ -662,15 +662,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0659f18c00ec3f4a9a97ea16e10ec95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart1: {fileID: 0}
-  heart2: {fileID: 0}
-  heart3: {fileID: 0}
+  heart1: {fileID: 701463201}
+  heart2: {fileID: 486367489}
+  heart3: {fileID: 125406064}
   gameOver: {fileID: 0}
-  endingB: {fileID: 0}
-  canvas: {fileID: 0}
-  scriptB: {fileID: 0}
+  endingTextB: {fileID: 0}
+  canvas: {fileID: 2042038213}
+  oriGraphic: {fileID: 0}
+  failGraphic: {fileID: 0}
+  lobbyBtn: {fileID: 0}
   endingText: {fileID: 0}
   lobbyText: {fileID: 0}
+  Camera: {fileID: 0}
 --- !u!4 &526982603
 Transform:
   m_ObjectHideFlags: 0
@@ -1787,6 +1790,7 @@ MonoBehaviour:
   txt_dialogue: {fileID: 1340887882}
   txt_name: {fileID: 273571636}
   fade: {fileID: 2042038215}
+  HealthControlScript: {fileID: 526982601}
 --- !u!114 &2042038217
 MonoBehaviour:
   m_ObjectHideFlags: 0

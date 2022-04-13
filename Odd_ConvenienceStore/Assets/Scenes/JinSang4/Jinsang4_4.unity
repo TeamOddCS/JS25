@@ -819,6 +819,7 @@ MonoBehaviour:
   txt_dialogue: {fileID: 1752144261}
   txt_name: {fileID: 648245567}
   fade: {fileID: 552827417}
+  HealthControlScript: {fileID: 1765639566}
 --- !u!1 &648245566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,6 +1786,61 @@ RectTransform:
   m_AnchoredPosition: {x: 16, y: -800}
   m_SizeDelta: {x: 1000, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1765639566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765639568}
+  - component: {fileID: 1765639567}
+  m_Layer: 0
+  m_Name: GameControlScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1765639567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765639566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0659f18c00ec3f4a9a97ea16e10ec95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heart1: {fileID: 1964845854}
+  heart2: {fileID: 160487529}
+  heart3: {fileID: 676822916}
+  gameOver: {fileID: 0}
+  endingTextB: {fileID: 0}
+  canvas: {fileID: 552827415}
+  oriGraphic: {fileID: 0}
+  failGraphic: {fileID: 0}
+  lobbyBtn: {fileID: 0}
+  endingText: {fileID: 0}
+  lobbyText: {fileID: 0}
+  Camera: {fileID: 0}
+--- !u!4 &1765639568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765639566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1775509746
 GameObject:
   m_ObjectHideFlags: 0
