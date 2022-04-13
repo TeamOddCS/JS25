@@ -7,17 +7,21 @@ using UnityEngine.UI;
 public class HealthControlScript : MonoBehaviour
 {
     public GameObject heart1, heart2, heart3, gameOver;
-    public GameObject endingB, canvas, scriptB;
+    public GameObject endingTextB, canvas, oriGraphic, failGraphic, lobbyBtn;
     public Text endingText, lobbyText;
+    public Camera Camera;
     private static int health;
     private static string JSName, nickname, reason;
+    private Vector2 mousePos;
     //public Blink blink;
 
     public void Start()
     {
         endingText.enabled = false;
         lobbyText.gameObject.SetActive(false);
-        endingB.SetActive(false);
+        endingTextB.SetActive(false);
+        failGraphic.SetActive(false);
+        lobbyBtn.SetActive(false);
     }
 
     public void hide_healthbar()
@@ -168,13 +172,20 @@ public class HealthControlScript : MonoBehaviour
     public void showEnding()
     {
         canvas.SetActive(false);
-        scriptB.SetActive(false);
-        endingB.SetActive(true);
-        endingText.text = nickname + "(으)로 인한 극도의 스트레스로 " + reason;
+        oriGraphic.SetActive(false);
+        endingTextB.SetActive(true);
+        failGraphic.SetActive(true);
+        lobbyBtn.SetActive(true);
+        endingText.text = nickname + "(으)로 인한\n극도의 스트레스로\n" + reason;
         endingText.enabled = true;
         lobbyText.gameObject.SetActive(true);
         Debug.Log(nickname + "(으)로 인한 극도의 스트레스로 " + reason);
         //Time.timeScale = 0;
+    }
+
+    public void goToLobby()
+    {
+        SceneManager.LoadScene("Title");
     }
 
     public void Update()
