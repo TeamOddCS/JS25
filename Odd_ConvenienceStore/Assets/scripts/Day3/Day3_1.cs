@@ -113,6 +113,21 @@ public class Day3_1 : MonoBehaviour
     {
         if (count < data.Count)
         {
+            if (count == 2)
+            { //외상해드릴게요.
+                SaveData.JSName = "JS3";
+                HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+            }
+            if (count == 3)
+            { //외상해드릴게요.
+                SaveData.JSName = "JS3";
+                HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+            }
+            if (count == 4)
+            { //외상해드릴게요.
+                SaveData.JSName = "JS3";
+                HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+            }
             if (count == 65)
             { //외상해드릴게요.
                 SaveData.JSName = "JS3";

@@ -12,6 +12,9 @@ public class Day2_1 : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
+    public AudioClip touchclip;
+    public AudioClip kbdclip;
+    public static int facenum = 0;
     public GameObject HealthControlScript;
 
 
@@ -20,7 +23,7 @@ public class Day2_1 : MonoBehaviour
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
         Nextdialogue();
     }
@@ -34,6 +37,12 @@ public class Day2_1 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
+        FaceChange();
+        if (count > 0)
+        {
+            SoundManager.instance.SFXPlay("Touch", touchclip);
+            //SoundManager.instance.SFXPlay("Keyboard", kbdclip);
+        }
         count++;
     }
     public void TextColorChange()
@@ -56,6 +65,44 @@ public class Day2_1 : MonoBehaviour
     public void Awake()
     {
         SaveData.DoLoadData = true;
+        SaveData.TempScene = "Day2-1";
+        count = SaveData.TempCount;
+        SaveData.Saves();
+    }
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("9_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("9_1_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("9_1_3"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("9_1_4"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("9_2_1"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("9_2_2"))
+        {
+            facenum = 6;
+        }
+        if (data[count]["Face"].ToString().Equals("9_2_3"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("9_2_4"))
+        {
+            facenum = 8;
+        }
     }
     private void day2_1_JD()//첫번째 선택지를 골랐을 경우 선택지 대화를 다본후 다음 대화로 넘어가는 함수
     {
@@ -191,6 +238,7 @@ public class Day2_1 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Day2-1");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
     // Update is called once per frame
@@ -202,6 +250,8 @@ public class Day2_1 : MonoBehaviour
             {
                 day2_1_JD();
                 day2_1_HC();
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
         }
         else

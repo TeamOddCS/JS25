@@ -14,6 +14,7 @@ public class JinSang3_1 : MonoBehaviour
     public AudioClip touchclip;
     public AudioClip kbdclip;
     public static int facenum=0;
+    public GameObject HealthControlScript;
 
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
@@ -50,6 +51,7 @@ public class JinSang3_1 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//초록색 (생명력 +) 
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
 
 
@@ -86,9 +88,22 @@ public class JinSang3_1 : MonoBehaviour
             facenum = 6;
         }
     }
+    private void JinSang3_1_HC()
+    {
+        if(count == 21)
+        {
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+
+        }
+        if(count == 51)
+        {
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+    }
     private void Start()
     {
         data = CSVReader.Read("진상3-1");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
     // Update is called once per frame
@@ -117,6 +132,7 @@ public class JinSang3_1 : MonoBehaviour
                         fade.Fade();
                         Hidedialogue();
                     }
+                    JinSang3_1_HC();
                 }
                 else
                 {
