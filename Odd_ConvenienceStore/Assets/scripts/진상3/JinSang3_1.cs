@@ -12,7 +12,7 @@ public class JinSang3_1 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public AudioClip touchclip;
-    public AudioClip bellclip;
+    public AudioClip kbdclip;
     public static int facenum=0;
 
 
@@ -23,7 +23,7 @@ public class JinSang3_1 : MonoBehaviour
         count = 0;
         isDialogue = true;
         Nextdialogue();
-        SoundManager.instance.SFXPlay("Bell", bellclip);
+        
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -36,8 +36,11 @@ public class JinSang3_1 : MonoBehaviour
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         FaceChange();
-        if(count>0)
+        if (count > 0) 
+        { 
             SoundManager.instance.SFXPlay("Touch", touchclip);
+            //SoundManager.instance.SFXPlay("Keyboard", kbdclip);
+        }
         count++;
 
     }
