@@ -358,7 +358,7 @@ MonoBehaviour:
     _choice2: "\uC2DC\uCE58\uBBF8\uB97C \uB5C0\uB2E4."
   - _choice: "\uCCAD\uCD98\uC5D0 \uB300\uD55C \uC774\uC57C\uAE30"
     _choice2: "\uADC0\uCCAD\uC5D0 \uB300\uD55C \uC774\uC57C\uAE30"
-  - _choice: "\uD488\uC808\uC774\uB77C\uACE0 \uAC70\uC9D3\uB9D0 \uCE5C\uB2E4."
+  - _choice: "\uD488\uC808\uC774\uB77C\uACE0 \uAC70\uC9D3\uD55C\uB2E4."
     _choice2: "\uC9C1\uC811 \uAEBC\uB0B4\uC900\uB2E4."
   - _choice: "\uC0AC\uC2E4\uB300\uB85C \uB9D0\uD55C\uB2E4."
     _choice2: "\uB05D\uAC00\uC9C0 \uAC70\uC9D3\uB9D0 \uCE5C\uB2E4."
@@ -675,7 +675,7 @@ MonoBehaviour:
     _choice2: "\uC2DC\uCE58\uBBF8\uB97C \uB5C0\uB2E4."
   - _choice: "\uCCAD\uCD98\uC5D0 \uB300\uD55C \uC774\uC57C\uAE30"
     _choice2: "\uADC0\uCCAD\uC5D0 \uB300\uD55C \uC774\uC57C\uAE30"
-  - _choice: "\uD488\uC808\uC774\uB77C\uACE0 \uAC70\uC9D3\uB9D0 \uCE5C\uB2E4."
+  - _choice: "\uD488\uC808\uC774\uB77C\uACE0 \uAC70\uC9D3\uB9D0\uD55C\uB2E4."
     _choice2: "\uC9C1\uC811 \uAEBC\uB0B4\uC900\uB2E4."
   - _choice: "\uC0AC\uC2E4\uB300\uB85C \uB9D0\uD55C\uB2E4."
     _choice2: "\uB05D\uAC00\uC9C0 \uAC70\uC9D3\uB9D0 \uCE5C\uB2E4."
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 119837906}
+      - m_Target: {fileID: 193979004}
         m_TargetAssemblyTypeName: Day2_1_C, Assembly-CSharp
         m_MethodName: NextChoice1
         m_Mode: 1
@@ -1395,7 +1395,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c7729f883a66cfa4fba5be8c67231d7b, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2096,7 +2096,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c7729f883a66cfa4fba5be8c67231d7b, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 1
@@ -2258,7 +2258,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 119837906}
+      - m_Target: {fileID: 1067100255}
         m_TargetAssemblyTypeName: Day2_1_C, Assembly-CSharp
         m_MethodName: NextChoice2
         m_Mode: 1
@@ -2309,7 +2309,7 @@ MonoBehaviour:
     _choice2: "\uC2DC\uCE58\uBBF8\uB97C \uB5C0\uB2E4."
   - _choice: "\uCCAD\uCD98\uC5D0 \uB300\uD55C \uC774\uC57C\uAE30"
     _choice2: "\uADC0\uCCAD\uC5D0 \uB300\uD55C \uC774\uC57C\uAE30"
-  - _choice: "\uD488\uC808\uC774\uB77C\uACE0 \uAC70\uC9D3\uB9D0 \uCE5C\uB2E4."
+  - _choice: "\uD488\uC808\uC774\uB77C\uACE0 \uAC70\uC9D3\uB9D0\uB2E4."
     _choice2: "\uC9C1\uC811 \uAEBC\uB0B4\uC900\uB2E4."
   - _choice: "\uC0AC\uC2E4\uB300\uB85C \uB9D0\uD55C\uB2E4."
     _choice2: "\uB05D\uAC00\uC9C0 \uAC70\uC9D3\uB9D0 \uCE5C\uB2E4."
@@ -2497,7 +2497,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c7729f883a66cfa4fba5be8c67231d7b, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -3132,7 +3132,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c7729f883a66cfa4fba5be8c67231d7b, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 1
@@ -3804,7 +3804,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c7729f883a66cfa4fba5be8c67231d7b, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
