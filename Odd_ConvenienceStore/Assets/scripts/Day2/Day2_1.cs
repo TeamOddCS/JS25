@@ -204,12 +204,27 @@ public class Day2_1 : MonoBehaviour
 
     private void day2_1_HC()
     {
-        if(count == 61)
+        if (count == 3)
         {
             SaveData.JSName = " JS9";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
-        if (count == 91)
+        if (count == 4)
+        {
+            SaveData.JSName = " JS9";
+            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
+        }
+        if (count == 61)
+        {
+            SaveData.JSName = " JS9";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 77)
+        {
+            SaveData.JSName = " JS9";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 90)
         {
             SaveData.JSName = " JS9";
             HealthControlScript.GetComponent<HealthControlScript>().health_increase();

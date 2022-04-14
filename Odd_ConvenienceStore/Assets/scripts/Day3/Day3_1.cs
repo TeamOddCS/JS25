@@ -52,6 +52,9 @@ public class Day3_1 : MonoBehaviour
     public void Awake()
     {
         SaveData.DoLoadData = true;
+        SaveData.TempScene = "Day3-1";
+        count = SaveData.TempCount;
+        SaveData.Saves();
     }
 
     private void Start()
@@ -113,21 +116,19 @@ public class Day3_1 : MonoBehaviour
     {
         if (count < data.Count)
         {
-            if (count == 2)
-            { //외상해드릴게요.
-                SaveData.JSName = "JS3";
-                HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-            }
-            if (count == 3)
+            if (count == 5)
             { //외상해드릴게요.
                 SaveData.JSName = "JS3";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
             }
             if (count == 4)
-            { //외상해드릴게요.
+            {//진상3은 가벼운 발걸음으로 나간다.
                 SaveData.JSName = "JS3";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+
             }
+           
+
             if (count == 65)
             { //외상해드릴게요.
                 SaveData.JSName = "JS3";
@@ -169,6 +170,8 @@ public class Day3_1 : MonoBehaviour
             {
                 day3_1_JD();
                 day3_1_HC();
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             } 
         }
         else
