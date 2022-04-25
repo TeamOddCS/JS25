@@ -10,6 +10,7 @@ public class Day2_F : MonoBehaviour
     public static bool isDialogue = false;
     public static int count = 0;
     private List<Dictionary<string, object>> data;
+    public AudioClip touchclip;
     public FadeInOut fade;
 
 
@@ -31,6 +32,10 @@ public class Day2_F : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
+        if (count > 0)
+        {
+            SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
         count++;
     }
 

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 public class Day5_3 : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class Day5_3 : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
+    public AudioClip touchclip;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -29,7 +32,11 @@ public class Day5_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
-        txt_dialogue.text = data[count]["Script"].ToString();      
+        txt_dialogue.text = data[count]["Script"].ToString();
+        if (count > 0)
+        {
+            SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
         count++;
     }
     public void TextColorChange()
@@ -82,6 +89,7 @@ public class Day5_3 : MonoBehaviour
                 {
                     fade.Fade();
                     Hidedialogue();
+                    SceneManager.LoadScene("Day5-F");
                 }
             }
         }

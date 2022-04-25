@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Day4_F : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Day4_F : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
+    public AudioClip touchclip;
 
 
 
@@ -31,6 +33,10 @@ public class Day4_F : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
+        if (count > 0)
+        {
+            SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
         count++;
         Debug.Log(count);
     }
@@ -58,12 +64,14 @@ public class Day4_F : MonoBehaviour
             {
                 fade.Fade();
                 Hidedialogue();
+                SceneManager.LoadScene("Day5-1");
             }
         }
         else
         {
             fade.Fade();
             Hidedialogue();
+            SceneManager.LoadScene("Day5-1");
         }
     }
     private void Start()

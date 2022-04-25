@@ -12,6 +12,7 @@ public class JinSang1_1 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public static int facenum = 0;
+    public AudioClip touchclip;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -41,6 +42,10 @@ public class JinSang1_1 : MonoBehaviour
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         FaceChange();
+        if (count > 0)
+        {
+            SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
         count++;
     }
 

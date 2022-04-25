@@ -13,6 +13,7 @@ public class JinSang4_4 : MonoBehaviour
     public FadeInOut fade;
     public static int facenum = 0;
     public GameObject HealthControlScript;
+    public AudioClip touchclip;
 
 
 
@@ -35,6 +36,10 @@ public class JinSang4_4 : MonoBehaviour
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         FaceChange();
+        if (count > 0)
+        {
+            SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
         count++;
 
     }

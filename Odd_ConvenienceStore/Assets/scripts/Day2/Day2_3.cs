@@ -11,6 +11,7 @@ public class Day2_3 : MonoBehaviour
     public static bool isDialogue = false;
     public static int count = 0;
     private List<Dictionary<string, object>> data;
+    public AudioClip touchclip;
     public FadeInOut fade;
 
     public GameObject HealthControlScript;
@@ -41,6 +42,10 @@ public class Day2_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
+        if (count > 0)
+        {
+            SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
         count++;
     }
     public void Awake()

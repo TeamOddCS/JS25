@@ -12,6 +12,7 @@ public class JinSang3_3 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public static int facenum=0;
+    public AudioClip touchclip;
 
 
 
@@ -34,6 +35,10 @@ public class JinSang3_3 : MonoBehaviour
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         FaceChange();
+        if (count > 0)
+        {
+            SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
         count++;
 
     }
