@@ -22,6 +22,9 @@ public class SaveData : MonoBehaviour
     public static int[] JinSangvisit = new int[9];
     public static int health = 3;
     public static string JSName = " ";
+    public static int reGame;
+    public static string reGameStart;
+    public static int reGameChoice;
 
     public static int JinSang6Day1 = 0;
 
@@ -42,6 +45,9 @@ public class SaveData : MonoBehaviour
 
         public int health_;
         public string JSName_;
+        public int reGame_;
+        public string reGameStart_;
+        public int reGameChoice_;
     }
 
     public static void Saves()
@@ -57,6 +63,9 @@ public class SaveData : MonoBehaviour
         data.JinSangvisit_ = JinSangvisit;
         data.health_ = health;
         data.JSName_ = JSName;
+        data.reGame_ = reGame;
+        data.reGameStart_ = reGameStart;
+        data.reGameChoice_ = reGameChoice;
         data.TempScene_ = TempScene;
         data.TempCount_ = TempCount;
 
@@ -85,6 +94,9 @@ public class SaveData : MonoBehaviour
                 JinSang6Day1 = data.JinSang6Day1_;
                 health = data.health_;
                 JSName = data.JSName_;
+                reGame = data.reGame_;
+                reGameStart = data.reGameStart_;
+                reGameChoice = data.reGameChoice_;
                 TempScene = data.TempScene_;
                 TempCount = data.TempCount_;
             }

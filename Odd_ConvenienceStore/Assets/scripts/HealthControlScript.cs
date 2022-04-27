@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class HealthControlScript : MonoBehaviour
 {
     public GameObject heart1, heart2, heart3, gameOver;
-    public GameObject endingTextB, canvas, oriGraphic, failGraphic, lobbyBtn;
-    public Text endingText, lobbyText;
+    public GameObject endingTextB, canvas, oriGraphic, failGraphic, lobbyBtn, reGameBtn;
+    public Text endingText, lobbyText, reGameText;
     public Camera Camera;
     private static int health;
     private static string JSName, nickname, reason;
@@ -19,9 +19,11 @@ public class HealthControlScript : MonoBehaviour
     {
         endingText.enabled = false;
         lobbyText.gameObject.SetActive(false);
+        reGameText.gameObject.SetActive(false);
         endingTextB.SetActive(false);
         failGraphic.SetActive(false);
         lobbyBtn.SetActive(false);
+        reGameBtn.SetActive(false);
     }
 
     public void hide_healthbar()
@@ -176,9 +178,11 @@ public class HealthControlScript : MonoBehaviour
         endingTextB.SetActive(true);
         failGraphic.SetActive(true);
         lobbyBtn.SetActive(true);
+        reGameBtn.SetActive(true);
         endingText.text = nickname + "(으)로 인한\n극도의 스트레스로\n" + reason;
         endingText.enabled = true;
         lobbyText.gameObject.SetActive(true);
+        reGameText.gameObject.SetActive(true);
         Debug.Log(nickname + "(으)로 인한 극도의 스트레스로 " + reason);
         //Time.timeScale = 0;
     }
@@ -186,6 +190,20 @@ public class HealthControlScript : MonoBehaviour
     public void goToLobby()
     {
         SceneManager.LoadScene("Title");
+    }
+
+    public void reGame()
+    {
+        SaveData.Loads();
+        health = 1;
+        SaveData.health = health;
+        SaveData.Saves();
+        if (SaveData.reGameStart == "Day3-1")
+        {
+            Day3_1.count = SaveData.reGame;
+            Day3_1_C.count = SaveData.reGameChoice;
+        }
+        SceneManager.LoadScene(SaveData.reGameStart);
     }
 
     public void Update()

@@ -18,7 +18,7 @@ public class Day3_1 : MonoBehaviour
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
         //Nextdialogue();
     }
@@ -57,7 +57,7 @@ public class Day3_1 : MonoBehaviour
     {
         SaveData.DoLoadData = true;
         SaveData.TempScene = "Day3-1";
-        count = SaveData.TempCount;
+        //count = SaveData.TempCount;
         SaveData.Saves();
     }
 
