@@ -1678,8 +1678,10 @@ MonoBehaviour:
   oriGraphic: {fileID: 566818153}
   failGraphic: {fileID: 676190208}
   lobbyBtn: {fileID: 361459705}
+  reGameBtn: {fileID: 0}
   endingText: {fileID: 973128049}
   lobbyText: {fileID: 90379553}
+  reGameText: {fileID: 0}
   Camera: {fileID: 1319637010}
 --- !u!4 &884461569
 Transform:
