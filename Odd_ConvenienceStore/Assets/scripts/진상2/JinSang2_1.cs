@@ -98,7 +98,7 @@ public class JinSang2_1 : MonoBehaviour
                     fade.Fade();
                     Hidedialogue();
                     count = 1;
-                    SceneManager.LoadScene("Day1-3");
+                    //SceneManager.LoadScene(SaveData.TempScene);
                 }
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();

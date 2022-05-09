@@ -17,6 +17,7 @@ public class Day2_1 : MonoBehaviour
     public static int facenum = 0;
     public GameObject HealthControlScript;
 
+    public GameObject GameController;
 
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
@@ -199,6 +200,8 @@ public class Day2_1 : MonoBehaviour
         {
             fade.Fade();
             Hidedialogue();
+            count = 1;
+            GameController.GetComponent<JSChoice>().D2_JSChoice();
         }
     }
 

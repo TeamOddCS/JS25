@@ -331,6 +331,7 @@ MonoBehaviour:
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
   kbdclip: {fileID: 8300000, guid: 40f45f4377e5f7340aacef3e77c04a9e, type: 3}
   HealthControlScript: {fileID: 610089922}
+  GameController: {fileID: 610089922}
 --- !u!114 &119837906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1546,6 +1547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 610089924}
   - component: {fileID: 610089923}
+  - component: {fileID: 610089925}
   m_Layer: 0
   m_Name: GameControlScript
   m_TagString: Untagged
@@ -1574,8 +1576,10 @@ MonoBehaviour:
   oriGraphic: {fileID: 1484978720}
   failGraphic: {fileID: 498930003}
   lobbyBtn: {fileID: 638613396}
+  reGameBtn: {fileID: 0}
   endingText: {fileID: 442481729}
   lobbyText: {fileID: 1928403595}
+  reGameText: {fileID: 0}
   Camera: {fileID: 1253380992}
 --- !u!4 &610089924
 Transform:
@@ -1591,6 +1595,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &610089925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610089922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3671ce0ac680d2f428639f5bb9e52a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &620152715
 GameObject:
   m_ObjectHideFlags: 0
