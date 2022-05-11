@@ -62,6 +62,7 @@ public class JinSang2_1 : MonoBehaviour
     {
         SaveData.DoLoadData = true;
         SaveData.TempScene = "JinSang2_1";
+        Debug.Log(SaveData.LastScene);
         count = SaveData.TempCount;
         SaveData.Saves();
     }
@@ -98,7 +99,7 @@ public class JinSang2_1 : MonoBehaviour
                     fade.Fade();
                     Hidedialogue();
                     count = 1;
-                    //SceneManager.LoadScene(SaveData.TempScene);
+                    GameController.GetComponent<JSChoice>().Check_Day();
                 }
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();

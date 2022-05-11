@@ -16,6 +16,9 @@ public class JinSang6_1 : MonoBehaviour
     public AudioClip kbdclip;
     public static int facenum = 0;
     public GameObject HealthControlScript;
+
+    public GameObject GameController;
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -139,7 +142,7 @@ public class JinSang6_1 : MonoBehaviour
                     fade.Fade();
                     Hidedialogue();
                     count = 1;
-                    SceneManager.LoadScene("Day1-3");
+                    GameController.GetComponent<JSChoice>().Check_Day();
                 }
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class JSChoice : MonoBehaviour
 {
     private int random_num = 0;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +18,26 @@ public class JSChoice : MonoBehaviour
     {
         
     }
+    public void Check_Day()
+    {
+        if (SaveData.LastScene.Equals("D1"))
+            SceneManager.LoadScene("Day1-3");
+        if (SaveData.LastScene.Equals("D2"))
+            SceneManager.LoadScene("Day2-3");
+        if (SaveData.LastScene.Equals("D3"))
+            SceneManager.LoadScene("Day3-3");
+        if (SaveData.LastScene.Equals("D4"))
+            SceneManager.LoadScene("Day4-3");
+        if (SaveData.LastScene.Equals("D5"))
+            SceneManager.LoadScene("Day5-3");
+        if (SaveData.LastScene.Equals("D6"))
+            SceneManager.LoadScene("Day6-3");
+    }
 
     public void D1_JSChoice()
     {
+        SaveData.LastScene = "D1";
+        SaveData.Saves();
         random_num = Random.Range(0, 3);
         if (random_num == 0)
             JinSang2_();
@@ -32,6 +49,8 @@ public class JSChoice : MonoBehaviour
 
     public void D2_JSChoice()
     {
+        SaveData.LastScene = "D2";
+        SaveData.Saves();
         random_num = Random.Range(0, 4);
         if (random_num == 0)
             JinSang3_();
@@ -44,6 +63,8 @@ public class JSChoice : MonoBehaviour
     }
     public void D3_JSChoice()
     {
+        SaveData.LastScene = "D3";
+        SaveData.Saves();
         random_num = Random.Range(0, 4);
         if (random_num == 0)
             JinSang1_();
@@ -56,6 +77,8 @@ public class JSChoice : MonoBehaviour
     }
     public void D4_JSChoice()
     {
+        SaveData.LastScene = "D4";
+        SaveData.Saves();
         random_num = Random.Range(0, 2);
         if (random_num == 0)
             JinSang3_();
@@ -64,6 +87,8 @@ public class JSChoice : MonoBehaviour
     }
     public void D5_JSChoice()
     {
+        SaveData.LastScene = "D5";
+        SaveData.Saves();
         random_num = Random.Range(0, 3);
         if (random_num == 0)
             JinSang3_();
@@ -74,6 +99,8 @@ public class JSChoice : MonoBehaviour
     }
     public void D6_JSChoice()
     {
+        SaveData.LastScene = "D6";
+        SaveData.Saves();
         random_num = Random.Range(0, 3);
         if (random_num == 0)
             JinSang2_();
@@ -171,4 +198,6 @@ public class JSChoice : MonoBehaviour
         else if (SaveData.JinSangvisit[8] == 2)
             SceneManager.LoadScene("JinSang8_3");
     }*/
+
+    
 }

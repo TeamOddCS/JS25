@@ -17,7 +17,7 @@ public class JinSang4_1 : MonoBehaviour
     public static int facenum = 0;
     public GameObject HealthControlScript;
 
-
+    public GameObject GameController;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -93,6 +93,7 @@ public class JinSang4_1 : MonoBehaviour
     {
         SaveData.DoLoadData = true;
         SaveData.TempScene = "JinSang4_1";
+        Debug.Log(SaveData.LastScene);
         count = SaveData.TempCount;
         SaveData.Saves();
     }
@@ -100,8 +101,6 @@ public class JinSang4_1 : MonoBehaviour
     {
         if (count == 29)
         {
-
-
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
 
@@ -147,7 +146,7 @@ public class JinSang4_1 : MonoBehaviour
                     fade.Fade();
                     Hidedialogue();
                     count = 1;
-                    SceneManager.LoadScene("Day1-3");
+                    GameController.GetComponent<JSChoice>().Check_Day();
                 }
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();

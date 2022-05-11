@@ -31,6 +31,7 @@ public class SaveData : MonoBehaviour
     public static string TempScene = " ";
     public static int TempCount = 0;
 
+    public static string LastScene = " ";
     // Start is called before the first frame update
 
     [Serializable]
@@ -42,6 +43,7 @@ public class SaveData : MonoBehaviour
         public int JinSang6Day1_; //진상6 첫 방문에서의 선택
         public string TempScene_; //현재 다이얼로그 위치
         public int TempCount_;
+        public string LastScene_;
 
         public int health_;
         public string JSName_;
@@ -68,6 +70,7 @@ public class SaveData : MonoBehaviour
         data.reGameChoice_ = reGameChoice;
         data.TempScene_ = TempScene;
         data.TempCount_ = TempCount;
+        data.LastScene_ = LastScene;
 
         data.JinSang6Day1_ = JinSang6Day1;
 
@@ -99,6 +102,7 @@ public class SaveData : MonoBehaviour
                 reGameChoice = data.reGameChoice_;
                 TempScene = data.TempScene_;
                 TempCount = data.TempCount_;
+                LastScene = data.LastScene_;
             }
             Check_Loads_Files = true;
             file.Close();
