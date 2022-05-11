@@ -24,6 +24,12 @@ public class Day2_F_C : MonoBehaviour
         ChoiceOn();
         txt_choice1.text = choice[count]._choice;
         txt_choice2.text = choice[count]._choice2;
+
+        SaveData.Loads();
+        SaveData.reGame = Day2_F.count;
+        SaveData.reGameStart = "Day2-F";
+        SaveData.reGameChoice = count;
+        SaveData.Saves();
     }
     public void NextChoice1()
     {

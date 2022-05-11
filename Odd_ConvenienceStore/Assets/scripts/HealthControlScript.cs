@@ -198,10 +198,118 @@ public class HealthControlScript : MonoBehaviour
         health = 1;
         SaveData.health = health;
         SaveData.Saves();
+        if (SaveData.reGameStart == "Day0")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day0_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day1-1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day1_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day1-3")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day1_3_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day2-1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day2_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day2-3")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day2_3_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day2-F")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day2_F_C.count = SaveData.reGameChoice;
+        }
+
         if (SaveData.reGameStart == "Day3-1")
         {
-            Day3_1.count = SaveData.reGame;
+            SaveData.TempCount = SaveData.reGame - 1;
             Day3_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day3-3")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day3_3_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day3-F")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day3_F_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day4-1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day4_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day4-2")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day4_2_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day4-3")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day4_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day4-F")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day4_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day5-1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day5_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day5-3")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day5_3_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day6-1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day6_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day6-F")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day6_F_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day7-1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day7_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "Day7-F")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            Day7_F_C.count = SaveData.reGameChoice;
         }
         SceneManager.LoadScene(SaveData.reGameStart);
     }

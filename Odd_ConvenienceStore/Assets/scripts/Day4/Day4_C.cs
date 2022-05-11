@@ -18,12 +18,31 @@ public class Day4_C : MonoBehaviour
     [SerializeField] private Text txt_choice2;
 
     public static int count = 0;
+    private int chk;
     [SerializeField] private js4choice[] choice;
     public void ShowChoice()
     {   
         ChoiceOn();
         txt_choice1.text = choice[count]._choice;
         txt_choice2.text = choice[count]._choice2;
+
+        if(chk == 0)
+        {
+            SaveData.Loads();
+            SaveData.reGame = Day4_3.count;
+            SaveData.reGameStart = "Day4-3";
+            SaveData.reGameChoice = count;
+            SaveData.Saves();
+        }
+        
+        else if(chk == 1)
+        {
+            SaveData.Loads();
+            SaveData.reGame = Day4_F.count;
+            SaveData.reGameStart = "Day4-F";
+            SaveData.reGameChoice = count;
+            SaveData.Saves();
+        }
     }
     public void NextChoice1()
     {
@@ -62,43 +81,53 @@ public class Day4_C : MonoBehaviour
     {
         if (Day4_3.count == 5)//일반3 첫번째 AB선택지
         {
+            chk = 0;
             ShowChoice();
         }
         if (Day4_3.count == 19)//일반3 두번째 AB선택지
         {
+            chk = 0;
             ShowChoice();
         }
         if (Day4_3.count == 51)//일반5 첫번째 AB선택지
         {
+            chk = 0;
             ShowChoice();
         }
         if (Day4_3.count == 81)//진상2 첫번째 AB선택지
         {
+            chk = 0;
             ShowChoice();
         }
         if (Day4_3.count == 91)//진상2 두번째 AB선택지
         {
+            chk = 0;
             ShowChoice();
         }
         if (Day4_3.count == 107)//진상2 세번째 AB선택지
         {
+            chk = 0;
             ShowChoice();
         }
         if (Day4_3.count == 152)//진상8 첫번째 AB선택지
         {
+            chk = 0;
             ShowChoice();
         }
        
         if (Day4_3.count == 167)//진상8 두번째 AB선택지
         {
+            chk = 0;
             ShowChoice();
         }
         if (Day4_3.count == 174)//진상8 첫번째 CD선택지
         {
+            chk = 0;
             ShowChoice();
         }
         if (Day4_3.count == 203)//진상8 첫번째 EF선택지
         {
+            chk = 0;
             ShowChoice();
         }
     }
@@ -195,10 +224,12 @@ public class Day4_C : MonoBehaviour
     {
         if (Day4_F.count == 6)
         {
+            chk = 1;
             ShowChoice();
         }
         if (Day4_F.count ==12)
         {
+            chk = 1;
             ShowChoice();
         }
         
