@@ -11,14 +11,15 @@ public class Day4_1 : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
-    public AudioClip touchclip; 
-    
-    
+    public AudioClip touchclip;
+
+    public GameObject GameController;
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
         Nextdialogue();
     }
@@ -84,8 +85,18 @@ public class Day4_1 : MonoBehaviour
         {
             fade.Fade();
             Hidedialogue();
+            count = 1;
+            GameController.GetComponent<JSChoice>().D4_JSChoice();
         }
     }
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
+        SaveData.TempScene = "Day4-1";
+        count = SaveData.TempCount;
+        SaveData.Saves();
+    }
+
     private void Start()
     {
         data = CSVReader.Read("Day4-1");
@@ -98,7 +109,9 @@ public class Day4_1 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                day4_1_JD();  
+                day4_1_JD();
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
         }
         else
