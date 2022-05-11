@@ -104,7 +104,6 @@ public class JinSang4_1 : MonoBehaviour
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
 
-
     }
 
     private void Start()

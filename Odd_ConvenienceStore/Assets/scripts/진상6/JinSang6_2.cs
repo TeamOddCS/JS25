@@ -15,13 +15,15 @@ public class JinSang6_2 : MonoBehaviour
     public static int facenum = 0;
     public AudioClip touchclip;
 
+    public GameObject GameController;
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
-        //Nextdialogue();
+        Nextdialogue();
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -90,7 +92,13 @@ public class JinSang6_2 : MonoBehaviour
             facenum = 8;
         }
     }
-
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
+        SaveData.TempScene = "JinSang6_2";
+        count = SaveData.TempCount;
+        SaveData.Saves();
+    }
     private void Start()
     {
         SaveData.Loads();
@@ -145,7 +153,11 @@ public class JinSang6_2 : MonoBehaviour
                 {
                     fade.Fade();
                     Hidedialogue();
+                    count = 1;
+                    GameController.GetComponent<JSChoice>().Check_Day();
                 }
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
         }
         else

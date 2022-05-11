@@ -13,13 +13,15 @@ public class JinSang5_1 : MonoBehaviour
     public FadeInOut fade;
     public AudioClip touchclip;
 
+    public GameObject GameController;
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
-        //Nextdialogue();
+        Nextdialogue();
     }
 
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -52,6 +54,15 @@ public class JinSang5_1 : MonoBehaviour
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
     }
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
+        SaveData.TempScene = "JinSang5_1";
+        Debug.Log(SaveData.LastScene);
+        count = SaveData.TempCount;
+        SaveData.Saves();
+    }
+
     private void Start()
     {
         data = CSVReader.Read("진상5-1");
@@ -93,8 +104,11 @@ public class JinSang5_1 : MonoBehaviour
                 {
                     fade.Fade();
                     Hidedialogue();
+                    count = 1;
+                    GameController.GetComponent<JSChoice>().Check_Day();
                 }
-
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
         }
         else

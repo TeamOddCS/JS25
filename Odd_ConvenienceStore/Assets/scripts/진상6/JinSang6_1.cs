@@ -25,6 +25,7 @@ public class JinSang6_1 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
+        Nextdialogue();
     }
 
     public void Nextdialogue()//대화내용 넘기는 함수
