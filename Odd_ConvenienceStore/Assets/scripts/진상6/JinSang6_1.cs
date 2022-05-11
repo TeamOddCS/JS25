@@ -23,7 +23,7 @@ public class JinSang6_1 : MonoBehaviour
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
     }
 

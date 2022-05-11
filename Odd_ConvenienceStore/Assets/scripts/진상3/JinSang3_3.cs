@@ -14,13 +14,13 @@ public class JinSang3_3 : MonoBehaviour
     public static int facenum=0;
     public AudioClip touchclip;
 
-
+    public GameObject GameController;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
         Nextdialogue();
     }
@@ -84,6 +84,15 @@ public class JinSang3_3 : MonoBehaviour
             facenum = 6;
         }
     }
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
+        SaveData.TempScene = "JinSang3_3";
+        Debug.Log(SaveData.LastScene);
+        count = SaveData.TempCount;
+        SaveData.Saves();
+    }
+
     private void Start()
     {
         data = CSVReader.Read("진상3-3");
@@ -110,15 +119,16 @@ public class JinSang3_3 : MonoBehaviour
                         Hidedialogue();
                     }
 
-
-
                 }
                 else
                 {
                     fade.Fade();
                     Hidedialogue();
+                    count = 1;
+                    GameController.GetComponent<JSChoice>().Check_Day();
                 }
-
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
         }
         else
