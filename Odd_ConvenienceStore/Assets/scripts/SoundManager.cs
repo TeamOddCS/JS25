@@ -23,12 +23,12 @@ public class SoundManager : MonoBehaviour
 
     public void SFXPlay(string sfxName, AudioClip clip)
     {
-        /*GameObject go = new GameObject(sfxName + "Sound");
+        GameObject go = new GameObject(sfxName + "Sound");
         AudioSource audioSource = go.AddComponent<AudioSource>();
         audioSource.outputAudioMixerGroup = mixer.FindMatchingGroups("SFX")[0];
         audioSource.clip = clip;
         audioSource.Play();
-        Destroy(go, clip.length); */
+        Destroy(go, clip.length); 
     }
 
     public void SFXVolume(float val)
