@@ -16,7 +16,14 @@ public class OptionTrigger : MonoBehaviour
     {
         Time.timeScale = 1;
         option_page.SetActive(false);
-        Day3_3.isDialogue = true;
+        if (Day3_3_C.isChoice == true)
+        {
+            Day3_3.isDialogue = false;
+        }
+        else
+        { 
+            Day3_3.isDialogue = true; 
+        }
     }
 
 }

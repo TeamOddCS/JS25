@@ -16,7 +16,7 @@ public class Day3_3_C : MonoBehaviour
     [SerializeField] private Button choicebtn2;
     [SerializeField] private Text txt_choice1;
     [SerializeField] private Text txt_choice2;
-
+    public static bool isChoice = false;
 
     public static int count = 0;
     [SerializeField] private day3_3_c[] choice;
@@ -114,6 +114,7 @@ public class Day3_3_C : MonoBehaviour
 
     public void ChoiceOn()
     {
+        isChoice = true;
         Day3_3.isDialogue = false;
         choicebtn1.gameObject.SetActive(true);
         choicebtn2.gameObject.SetActive(true);
@@ -123,6 +124,7 @@ public class Day3_3_C : MonoBehaviour
 
     public void ChoiceOff()
     {
+        isChoice = false;
         Day3_3.isDialogue = true;
         choicebtn1.gameObject.SetActive(false);
         choicebtn2.gameObject.SetActive(false);
