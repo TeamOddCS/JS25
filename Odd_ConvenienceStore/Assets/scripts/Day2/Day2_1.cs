@@ -55,8 +55,6 @@ public class Day2_1 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
 
-
-
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {
         txt_name.gameObject.SetActive(false);
@@ -274,10 +272,5 @@ public class Day2_1 : MonoBehaviour
         }
         else
             Hidedialogue();
-        if (count == 220)
-        {
-            SceneManager.LoadScene("Day2-3");
-        }
-        
     }
 }
