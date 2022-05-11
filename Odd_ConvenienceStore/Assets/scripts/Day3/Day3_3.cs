@@ -26,9 +26,9 @@ public class Day3_3 : MonoBehaviour
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
-        //Nextdialogue();
+        Nextdialogue();
     }
 
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -58,6 +58,9 @@ public class Day3_3 : MonoBehaviour
     public void Awake()
     {
         SaveData.DoLoadData = true;
+        SaveData.TempScene = "Day3-3";
+        count = SaveData.TempCount;
+        SaveData.Saves();
     }
     private void Start()
     {
@@ -112,6 +115,7 @@ public class Day3_3 : MonoBehaviour
         {
             fade.Fade();
             Hidedialogue();
+            count = 1;
             SceneManager.LoadScene("Day3-F");
         }
     }
@@ -143,7 +147,10 @@ public class Day3_3 : MonoBehaviour
             {
                 day3_3_JD();
                 day3_3_HC();
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
+
         }
         else
             Hidedialogue();

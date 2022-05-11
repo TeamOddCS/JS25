@@ -21,7 +21,7 @@ public class Day4_3 : MonoBehaviour
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
         Nextdialogue();
     }
@@ -112,8 +112,16 @@ public class Day4_3 : MonoBehaviour
         {
             fade.Fade();
             Hidedialogue();
+            count = 1;
             SceneManager.LoadScene("Day4-F");
         }
+    }
+    public void Awake()
+    {
+        SaveData.DoLoadData = true;
+        SaveData.TempScene = "Day4-3";
+        count = SaveData.TempCount;
+        SaveData.Saves();
     }
     private void Start()
     {
@@ -128,7 +136,8 @@ public class Day4_3 : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 day4_3_JD();
-                
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
         }
         else

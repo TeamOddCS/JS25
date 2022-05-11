@@ -16,11 +16,13 @@ public class Day2_3 : MonoBehaviour
 
     public GameObject HealthControlScript;
 
+    public GameObject GameController;
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
-        count = 0;
+        //count = 0;
         isDialogue = true;
         Nextdialogue();
     }
@@ -51,6 +53,9 @@ public class Day2_3 : MonoBehaviour
     public void Awake()
     {
         SaveData.DoLoadData = true;
+        SaveData.TempScene = "Day2-3";
+        count = SaveData.TempCount;
+        SaveData.Saves();
     }
 
 
@@ -91,6 +96,7 @@ public class Day2_3 : MonoBehaviour
         {
             fade.Fade();
             Hidedialogue();
+            count = 1;
         }
     }
     private void Start()
@@ -116,6 +122,8 @@ public class Day2_3 : MonoBehaviour
             {
                 day2_3_JD();
                 day2_3_HC();
+                SaveData.TempCount = count - 1;
+                SaveData.Saves();
             }
         }
         if (count == 80)

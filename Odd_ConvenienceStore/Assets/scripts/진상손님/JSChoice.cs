@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class JSChoice : MonoBehaviour
 {
-    private int random_num = 0;
-    
+    private int random_num = -1;
+    private static int last_num = -1;
+    private static int check_D2 = 0;
+    private static int check_D3 = 0;
+    private static int check_D5 = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,13 +27,40 @@ public class JSChoice : MonoBehaviour
         if (SaveData.LastScene.Equals("D1"))
             SceneManager.LoadScene("Day1-3");
         if (SaveData.LastScene.Equals("D2"))
-            SceneManager.LoadScene("Day2-3");
+        {
+            if(check_D2 == 1)
+                SceneManager.LoadScene("Day2-3");
+            else
+            {
+                check_D2++;
+                //Debug.Log("check_D2 : " + check_D2);
+                D2_JSChoice();
+            }     
+        }     
         if (SaveData.LastScene.Equals("D3"))
-            SceneManager.LoadScene("Day3-3");
+        {
+            if(check_D3 == 1)
+                SceneManager.LoadScene("Day3-3");
+            else
+            {
+                check_D3++;
+                //Debug.Log("check_D3 : " + check_D3);
+                D3_JSChoice();
+            }
+        }
         if (SaveData.LastScene.Equals("D4"))
             SceneManager.LoadScene("Day4-3");
         if (SaveData.LastScene.Equals("D5"))
-            SceneManager.LoadScene("Day5-3");
+        {
+            if (check_D5 == 2)
+                SceneManager.LoadScene("Day5-3");
+            else
+            {
+                check_D5++;
+                //Debug.Log("check_D5 : " + check_D5);
+                D5_JSChoice();
+            }
+        }
         if (SaveData.LastScene.Equals("D6"))
             SceneManager.LoadScene("Day6-3");
     }
@@ -51,7 +82,12 @@ public class JSChoice : MonoBehaviour
     {
         SaveData.LastScene = "D2";
         SaveData.Saves();
-        random_num = Random.Range(0, 4);
+
+        while(last_num == random_num)
+            random_num = Random.Range(0, 4);
+        last_num = random_num;
+        //Debug.Log("L : " + last_num + "R : " + random_num);
+
         if (random_num == 0)
             JinSang3_();
         else if (random_num == 1)
@@ -60,12 +96,17 @@ public class JSChoice : MonoBehaviour
             JinSang7_();
         //else if (random_num == 3)
         //  JinSang8_();
+        else D2_JSChoice();
     }
     public void D3_JSChoice()
     {
         SaveData.LastScene = "D3";
         SaveData.Saves();
-        random_num = Random.Range(0, 4);
+
+        while (last_num == random_num)
+            random_num = Random.Range(0, 4);
+        last_num = random_num;
+
         if (random_num == 0)
             JinSang1_();
         else if (random_num == 1)
@@ -74,6 +115,7 @@ public class JSChoice : MonoBehaviour
             JinSang6_();
         //else if (random_num == 3)
         //  JinSang8_();
+        else D3_JSChoice();
     }
     public void D4_JSChoice()
     {
@@ -89,13 +131,18 @@ public class JSChoice : MonoBehaviour
     {
         SaveData.LastScene = "D5";
         SaveData.Saves();
-        random_num = Random.Range(0, 3);
+
+        while (last_num == random_num)
+            random_num = Random.Range(0, 3);
+        last_num = random_num;
+
         if (random_num == 0)
             JinSang3_();
         else if (random_num == 1)
             JinSang7_();
         //else if (random_num == 2)
             //JinSang8_();
+       else D5_JSChoice();
     }
     public void D6_JSChoice()
     {
