@@ -26,7 +26,7 @@ public class Day0_C : MonoBehaviour
         txt_choice2.text = choice[count]._choice2;
 
         SaveData.Loads();
-        SaveData.reGame = Day3_1.count;
+        SaveData.reGame = Day0.count;
         SaveData.reGameStart = "Day0";
         SaveData.reGameChoice = count;
         SaveData.Saves();
