@@ -353,6 +353,7 @@ MonoBehaviour:
   fade: {fileID: 204092614}
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
   HealthControlScript: {fileID: 1822585197}
+  GameController: {fileID: 1822585197}
 --- !u!114 &204092613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2936,6 +2937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1822585199}
   - component: {fileID: 1822585198}
+  - component: {fileID: 1822585200}
   m_Layer: 0
   m_Name: GameControlScript
   m_TagString: Untagged
@@ -2983,6 +2985,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1822585200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822585197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3671ce0ac680d2f428639f5bb9e52a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1887141471
 GameObject:
   m_ObjectHideFlags: 0

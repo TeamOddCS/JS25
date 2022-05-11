@@ -14,13 +14,15 @@ public class Day3_1 : MonoBehaviour
     public AudioClip touchclip;
     public GameObject HealthControlScript;
 
+    public GameObject GameController;
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        //Nextdialogue();
+        Nextdialogue();
     }
     public void TextColorChange()
     {
@@ -57,7 +59,7 @@ public class Day3_1 : MonoBehaviour
     {
         SaveData.DoLoadData = true;
         SaveData.TempScene = "Day3-1";
-        //count = SaveData.TempCount;
+        count = SaveData.TempCount;
         SaveData.Saves();
     }
 
@@ -113,6 +115,8 @@ public class Day3_1 : MonoBehaviour
         {
             fade.Fade();
             Hidedialogue();
+            count = 1;
+            GameController.GetComponent<JSChoice>().D3_JSChoice();
         }
     }
 
@@ -120,19 +124,6 @@ public class Day3_1 : MonoBehaviour
     {
         if (count < data.Count)
         {
-            if (count == 5)
-            { //외상해드릴게요.
-                SaveData.JSName = "JS3";
-                HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-            }
-            if (count == 4)
-            {//진상3은 가벼운 발걸음으로 나간다.
-                SaveData.JSName = "JS3";
-                HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-
-            }
-           
-
             if (count == 65)
             { //외상해드릴게요.
                 SaveData.JSName = "JS3";
