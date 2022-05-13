@@ -192,7 +192,7 @@ RectTransform:
   m_GameObject: {fileID: 15579113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1902849992}
   m_RootOrder: 0
@@ -1334,7 +1334,6 @@ GameObject:
   - component: {fileID: 1002333628}
   - component: {fileID: 1002333627}
   - component: {fileID: 1002333626}
-  - component: {fileID: 1002333625}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 2"
   m_TagString: Untagged
@@ -1362,25 +1361,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -913.8}
   m_SizeDelta: {x: 1110, y: 285}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1002333625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002333623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3990bb6fc49033942b6fb42e05e66989, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choicebtn1: {fileID: 1902849988}
-  choicebtn2: {fileID: 1002333626}
-  txt_choice1: {fileID: 15579114}
-  txt_choice2: {fileID: 1265502226}
-  choice:
-  - _choice: "\uC774\uBE68\uC5D0 \uC544\uBB34\uAC83\uB3C4 \uC548\uAF08\uC5B4\uC694"
-    _choice2: "\uC774\uBE68\uC5D0 \uACE0\uCDA7\uAC00\uB8E8 \uC788\uC5B4\uC694"
 --- !u!114 &1002333626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1831,7 +1811,7 @@ RectTransform:
   m_GameObject: {fileID: 1265502224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1002333624}
   m_RootOrder: 0
@@ -3222,7 +3202,6 @@ GameObject:
   - component: {fileID: 1902849991}
   - component: {fileID: 1902849990}
   - component: {fileID: 1902849988}
-  - component: {fileID: 1902849989}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 1"
   m_TagString: Untagged
@@ -3298,25 +3277,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1902849989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902849987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3990bb6fc49033942b6fb42e05e66989, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choicebtn1: {fileID: 1902849988}
-  choicebtn2: {fileID: 1002333626}
-  txt_choice1: {fileID: 15579114}
-  txt_choice2: {fileID: 1265502226}
-  choice:
-  - _choice: "\uC774\uBE68\uC5D0 \uC544\uBB34\uAC83\uB3C4 \uC548\uAF08\uC5B4\uC694"
-    _choice2: "\uC774\uBE68\uC5D0 \uACE0\uCDA7\uAC00\uB8E8 \uC788\uC5B4\uC694"
 --- !u!114 &1902849990
 MonoBehaviour:
   m_ObjectHideFlags: 0
