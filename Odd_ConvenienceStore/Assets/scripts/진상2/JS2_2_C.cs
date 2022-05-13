@@ -25,6 +25,12 @@ public class JS2_2_C : MonoBehaviour
         ChoiceOn();
         txt_choice1.text = choice[count]._choice;
         txt_choice2.text = choice[count]._choice2;
+
+        SaveData.Loads();
+        SaveData.reGame = JinSang2_2.count;
+        SaveData.reGameStart = "JinSang2_2";
+        SaveData.reGameChoice = count;
+        SaveData.Saves();
     }
 
     public void NextChoice1()

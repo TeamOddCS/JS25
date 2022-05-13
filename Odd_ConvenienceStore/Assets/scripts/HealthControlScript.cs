@@ -311,6 +311,73 @@ public class HealthControlScript : MonoBehaviour
             SaveData.TempCount = SaveData.reGame - 1;
             Day7_F_C.count = SaveData.reGameChoice;
         }
+
+        if (SaveData.reGameStart == "JinSang1_1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS1_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang2_1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS2_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang2_2")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS2_2_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang2_3")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS2_3_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang3_1" || SaveData.reGameStart == "JinSang3_2" || SaveData.reGameStart == "JinSang3_3")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS3_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang4_1" || SaveData.reGameStart == "JinSang4_2" || SaveData.reGameStart == "JinSang4_3" || SaveData.reGameStart == "JinSang4_4")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS4_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang5_1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS5_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang6_1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS6_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang6_2")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS6_2_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang7_1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS7_1_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang7_2")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS7_2_C.count = SaveData.reGameChoice;
+        }
+
         SceneManager.LoadScene(SaveData.reGameStart);
     }
 

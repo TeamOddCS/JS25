@@ -18,12 +18,49 @@ public class JS4_C : MonoBehaviour
     [SerializeField] private Text txt_choice2;
 
     public static int count = 0;
+    private int chk;
     [SerializeField] private js4choice[] choice;
     public void ShowChoice()
     {
         ChoiceOn();
         txt_choice1.text = choice[count]._choice;
         txt_choice2.text = choice[count]._choice2;
+
+        if(chk == 0)
+        {
+            SaveData.Loads();
+            SaveData.reGame = JinSang4_1.count;
+            SaveData.reGameStart = "JinSang4_1";
+            SaveData.reGameChoice = count;
+            SaveData.Saves();
+        }
+
+        else if(chk == 1)
+        {
+            SaveData.Loads();
+            SaveData.reGame = JinSang4_2.count;
+            SaveData.reGameStart = "JinSang4_2";
+            SaveData.reGameChoice = count;
+            SaveData.Saves();
+        }
+
+        else if(chk == 2)
+        {
+            SaveData.Loads();
+            SaveData.reGame = JinSang4_3.count;
+            SaveData.reGameStart = "JinSang4_3";
+            SaveData.reGameChoice = count;
+            SaveData.Saves();
+        }
+
+        else if(chk == 3)
+        {
+            SaveData.Loads();
+            SaveData.reGame = JinSang4_4.count;
+            SaveData.reGameStart = "JinSang4_4";
+            SaveData.reGameChoice = count;
+            SaveData.Saves();
+        }
     }
     public void NextChoice1()
     {
@@ -79,14 +116,17 @@ public class JS4_C : MonoBehaviour
     {
         if (JinSang4_1.count == 9)
         {
+            chk = 0;
             ShowChoice();
         }
         if (JinSang4_1.count == 19)
         {
+            chk = 0;
             ShowChoice();
         }
         if (JinSang4_1.count == 37)
         {
+            chk = 0;
             ShowChoice();
         }
     }
@@ -94,14 +134,17 @@ public class JS4_C : MonoBehaviour
     {
         if (JinSang4_2.count == 8)
         {
+            chk = 1;
             ShowChoice();
         }
         if (JinSang4_2.count == 17)
         {
+            chk = 1;
             ShowChoice();
         }
         if (JinSang4_2.count == 54)
         {
+            chk = 1;
             ShowChoice();
         }
     }
@@ -144,10 +187,12 @@ public class JS4_C : MonoBehaviour
     {
         if (JinSang4_3.count == 34)
         {
+            chk = 2;
             ShowChoice();
         }
         if (JinSang4_3.count == 47)
         {
+            chk = 2;
             ShowChoice();
         }
        
@@ -182,14 +227,17 @@ public class JS4_C : MonoBehaviour
     {
         if (JinSang4_4.count == 18)
         {
+            chk = 3;
             ShowChoice();
         }
         if (JinSang4_4.count == 33)
         {
+            chk = 3;
             ShowChoice();
         }
         if (JinSang4_4.count == 44)
         {
+            chk = 3;
             ShowChoice();
         }
 

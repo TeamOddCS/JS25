@@ -19,12 +19,40 @@ public class JS3_C : MonoBehaviour
     [SerializeField] private Text txt_choice2;
 
     public static int count = 0;
+    private int chk;
     [SerializeField] private js4choice[] choice;
     public void ShowChoice()
     {
         ChoiceOn();
         txt_choice1.text = choice[count]._choice;
         txt_choice2.text = choice[count]._choice2;
+
+        if(chk == 0)
+        {
+            SaveData.Loads();
+            SaveData.reGame = JinSang3_1.count;
+            SaveData.reGameStart = "JinSang3_1";
+            SaveData.reGameChoice = count;
+            SaveData.Saves();
+        }
+
+        else if(chk == 1)
+        {
+            SaveData.Loads();
+            SaveData.reGame = JinSang3_2.count;
+            SaveData.reGameStart = "JinSang3_2";
+            SaveData.reGameChoice = count;
+            SaveData.Saves();
+        }
+
+        else if(chk == 2)
+        {
+            SaveData.Loads();
+            SaveData.reGame = JinSang3_3.count;
+            SaveData.reGameStart = "JinSang3_3";
+            SaveData.reGameChoice = count;
+            SaveData.Saves();
+        }
     }
     public void NextChoice1()
     {
@@ -75,14 +103,17 @@ public class JS3_C : MonoBehaviour
     {
         if (JinSang3_1.count == 12)//AB선택지
         {
+            chk = 0;
             ShowChoice();
         }
         if (JinSang3_1.count == 19)//CD선택지
         {
+            chk = 0;
             ShowChoice();
         }
         if (JinSang3_1.count == 44)//EF선택지
         {
+            chk = 0;
             ShowChoice();
         }
     }
@@ -122,10 +153,12 @@ public class JS3_C : MonoBehaviour
     {
         if (JinSang3_2.count == 11)//AB선택지
         {
+            chk = 1;
             ShowChoice();
         }
         if (JinSang3_2.count == 20)//CD선택지
         {
+            chk = 1;
             ShowChoice();
         }
     }
@@ -156,10 +189,12 @@ public class JS3_C : MonoBehaviour
     {
         if (JinSang3_3.count == 11)//AB선택지
         {
+            chk = 2;
             ShowChoice();
         }
         if (JinSang3_3.count == 23)//CD선택지
         {
+            chk = 2;
             ShowChoice();
         }
     }

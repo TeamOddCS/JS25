@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class JinSang6Choice1
+public class JinSang6choice2
 {
     [TextArea]
     public string _choice;
     public string _choice2;
 }
 
-public class JinSang6C1 : MonoBehaviour
+public class JS6_2_C : MonoBehaviour
 {
     [SerializeField] private Button choicebtn1;
     [SerializeField] private Button choicebtn2;
@@ -19,50 +19,56 @@ public class JinSang6C1 : MonoBehaviour
     [SerializeField] private Text txt_choice2;
 
     public static int count = 0;
-    [SerializeField] private JinSang6Choice1[] choice;
+    [SerializeField] private JinSang6choice2[] choice;
     public void ShowChoice()
     {
         ChoiceOn();
         txt_choice1.text = choice[count]._choice;
         txt_choice2.text = choice[count]._choice2;
+
+        SaveData.Loads();
+        SaveData.reGame = JinSang6_2.count;
+        SaveData.reGameStart = "JinSang6_2";
+        SaveData.reGameChoice = count;
+        SaveData.Saves();
     }
     public void NextChoice1()
     {
         count++;
-        if (JinSang6_1.count == 7)
+        if (JinSang6_2.count == 6)
         {
-            JinSang6_1.count++;
+            JinSang6_2.count++;
         }
-
-        if (JinSang6_1.count == 15)
+        if (JinSang6_2.count == 20)
         {
-            SaveData.JinSang6Day1 = 2;
-            SaveData.Saves();
-            JinSang6_1.count++;
+            JinSang6_2.count++;
+        }
+        if (JinSang6_2.count == 26)
+        {
+            JinSang6_2.count++;
         }
         ChoiceOff();
     }
     public void NextChoice2()
     {
         count++;
-        if (JinSang6_1.count == 7)
+        if (JinSang6_2.count == 6)
         {
-            SaveData.JinSang6Day1 = 1;
-            SaveData.Saves();
-            JinSang6_1.count += 24 - 7;
+            JinSang6_2.count += 11 - 6;
         }
-
-        if (JinSang6_1.count == 15)
+        if (JinSang6_2.count == 20)
         {
-            SaveData.JinSang6Day1 = 1;
-            SaveData.Saves();
-            JinSang6_1.count += 22 - 15;
+            JinSang6_2.count += 44 - 20;
+        }
+        if (JinSang6_2.count == 26)
+        {
+            JinSang6_2.count += 37 - 26;
         }
         ChoiceOff();
     }
     public void ChoiceOn()
     {
-        JinSang6_1.isDialogue = false;
+        JinSang6_2.isDialogue = false;
         choicebtn1.gameObject.SetActive(true);
         choicebtn2.gameObject.SetActive(true);
         txt_choice1.gameObject.SetActive(true);
@@ -70,7 +76,7 @@ public class JinSang6C1 : MonoBehaviour
     }
     public void ChoiceOff()
     {
-        JinSang6_1.isDialogue = true;
+        JinSang6_2.isDialogue = true;
         choicebtn1.gameObject.SetActive(false);
         choicebtn2.gameObject.SetActive(false);
         txt_choice1.gameObject.SetActive(false);
@@ -78,11 +84,7 @@ public class JinSang6C1 : MonoBehaviour
     }
     public void CallChoice()
     {
-        if (JinSang6_1.count == 7)
-        {
-            ShowChoice();
-        }
-        if (JinSang6_1.count == 15)
+        if (JinSang6_2.count == 6 || JinSang6_2.count == 20 || JinSang6_2.count == 26)
         {
             ShowChoice();
         }
@@ -90,7 +92,6 @@ public class JinSang6C1 : MonoBehaviour
 
     private void Start()
     {
-        SaveData.Loads();
         ChoiceOff();
     }
     private void Update()
