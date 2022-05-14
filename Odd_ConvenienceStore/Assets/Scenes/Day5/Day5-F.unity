@@ -1240,7 +1240,6 @@ GameObject:
   - component: {fileID: 747171329}
   - component: {fileID: 747171328}
   - component: {fileID: 747171330}
-  - component: {fileID: 747171327}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 2"
   m_TagString: Untagged
@@ -1268,27 +1267,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -913.8}
   m_SizeDelta: {x: 1110, y: 285}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &747171327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747171325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e60ea0990d05db44a51c636bbe6b276, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choicebtn1: {fileID: 1033662762}
-  choicebtn2: {fileID: 747171330}
-  txt_choice1: {fileID: 2004689296}
-  txt_choice2: {fileID: 226611601}
-  choice:
-  - _choice: " \uB108 \uCE5C\uAD6C\uAC00 \uC654\uC5C8\uC5B4. "
-    _choice2: "\uC2F8\uC6C0\uC9F1 \uCDE8\uAC1D\uC774 \uC654\uC5C8\uC5B4."
-  - _choice: "\uC774\uBBF8 \uC54C\uB824\uC92C\uC5B4."
-    _choice2: "\uC65C \uC54C\uB824\uC8FC\uBA74 \uC548\uB3FC?"
 --- !u!114 &747171328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1371,7 +1349,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 747171327}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Day4_C, Assembly-CSharp
         m_MethodName: NextChoice2
         m_Mode: 1
@@ -1917,7 +1895,6 @@ GameObject:
   - component: {fileID: 1033662761}
   - component: {fileID: 1033662760}
   - component: {fileID: 1033662762}
-  - component: {fileID: 1033662759}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 1"
   m_TagString: Untagged
@@ -1945,27 +1922,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -633}
   m_SizeDelta: {x: 1110, y: 285}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1033662759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033662757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e60ea0990d05db44a51c636bbe6b276, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choicebtn1: {fileID: 1033662762}
-  choicebtn2: {fileID: 747171330}
-  txt_choice1: {fileID: 2004689296}
-  txt_choice2: {fileID: 226611601}
-  choice:
-  - _choice: " \uB108 \uCE5C\uAD6C\uAC00 \uC654\uC5C8\uC5B4. "
-    _choice2: "\uC2F8\uC6C0\uC9F1 \uCDE8\uAC1D\uC774 \uC654\uC5C8\uC5B4."
-  - _choice: "\uC774\uBBF8 \uC54C\uB824\uC92C\uC5B4."
-    _choice2: "\uC65C \uC54C\uB824\uC8FC\uBA74 \uC548\uB3FC?"
 --- !u!114 &1033662760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2048,7 +2004,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1033662759}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Day4_C, Assembly-CSharp
         m_MethodName: NextChoice1
         m_Mode: 1
@@ -3579,7 +3535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1571777873
 Transform:
   m_ObjectHideFlags: 0

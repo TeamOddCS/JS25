@@ -17,7 +17,7 @@ public class JS3_C : MonoBehaviour
     [SerializeField] private Button choicebtn2;
     [SerializeField] private Text txt_choice1;
     [SerializeField] private Text txt_choice2;
-
+    public static bool isChoice = false;
     public static int count = 0;
     private int chk;
     [SerializeField] private js4choice[] choice;
