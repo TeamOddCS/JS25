@@ -238,6 +238,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 796094508}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: c55a3ca9b51c6ae4aab7660ceec2e380, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &23356361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,10 +675,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 101673525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1a6f080cea57041af19ec24bf097af, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f5482675c7ac9b42a5b7d4d1be6c6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  option_page: {fileID: 0}
+  option_page: {fileID: 1280858075}
 --- !u!114 &101673528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,7 +724,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 101673527}
-        m_TargetAssemblyTypeName: OptionTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: Day2_F_OT, Assembly-CSharp
         m_MethodName: OptionOn
         m_Mode: 1
         m_Arguments:
@@ -2189,7 +2201,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 791909257}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: MusicToggle
         m_Mode: 0
@@ -2381,6 +2393,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24baff8a29c23c4ebf2834a0467e6c0, type: 3}
+--- !u!114 &791909257 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3845439143832301117, guid: a24baff8a29c23c4ebf2834a0467e6c0, type: 3}
+  m_PrefabInstance: {fileID: 791909256}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bca4a7f8a24e7d41b973207b88af2a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &796094507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2438,6 +2461,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39a9a64e5d5306c4b88781cb32d3d448, type: 3}
+--- !u!82 &796094508 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8576986120713940521, guid: 39a9a64e5d5306c4b88781cb32d3d448, type: 3}
+  m_PrefabInstance: {fileID: 796094507}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &886495493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,7 +2788,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1195875713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1a6f080cea57041af19ec24bf097af, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f5482675c7ac9b42a5b7d4d1be6c6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   option_page: {fileID: 1280858075}
@@ -2809,7 +2837,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1195875715}
-        m_TargetAssemblyTypeName: OptionTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: Day2_F_OT, Assembly-CSharp
         m_MethodName: OptionOff
         m_Mode: 1
         m_Arguments:
@@ -3983,7 +4011,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 791909257}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SFXVolume
         m_Mode: 0
@@ -4644,6 +4672,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 796094508}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: c55a3ca9b51c6ae4aab7660ceec2e380, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -720,10 +720,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 460257780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1a6f080cea57041af19ec24bf097af, type: 3}
+  m_Script: {fileID: 11500000, guid: 879cec96746a5cc42905dcfcf7498a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  option_page: {fileID: 0}
+  option_page: {fileID: 1312599099}
 --- !u!114 &460257783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,7 +769,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 460257782}
-        m_TargetAssemblyTypeName: OptionTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: JS2_1_OT, Assembly-CSharp
         m_MethodName: OptionOn
         m_Mode: 1
         m_Arguments:
@@ -1406,7 +1406,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1010090816}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: MusicToggle
         m_Mode: 0
@@ -1591,7 +1591,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1010090816}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SFXVolume
         m_Mode: 0
@@ -2479,6 +2479,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24baff8a29c23c4ebf2834a0467e6c0, type: 3}
+--- !u!114 &1010090816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3845439143832301117, guid: a24baff8a29c23c4ebf2834a0467e6c0, type: 3}
+  m_PrefabInstance: {fileID: 1010090815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bca4a7f8a24e7d41b973207b88af2a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1048812084
 GameObject:
   m_ObjectHideFlags: 0
@@ -2912,7 +2923,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1098285724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1a6f080cea57041af19ec24bf097af, type: 3}
+  m_Script: {fileID: 11500000, guid: 879cec96746a5cc42905dcfcf7498a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   option_page: {fileID: 1312599099}
@@ -2961,7 +2972,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1098285726}
-        m_TargetAssemblyTypeName: OptionTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: JS2_1_OT, Assembly-CSharp
         m_MethodName: OptionOff
         m_Mode: 1
         m_Arguments:

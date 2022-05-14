@@ -3765,7 +3765,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1969256745}
-        m_TargetAssemblyTypeName: OptionTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: Day3_3_OT, Assembly-CSharp
         m_MethodName: OptionOn
         m_Mode: 1
         m_Arguments:
@@ -3823,7 +3823,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1969256740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1a6f080cea57041af19ec24bf097af, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a2e21e2f516be14cbde5f2e5dfb42b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   option_page: {fileID: 1307071560}

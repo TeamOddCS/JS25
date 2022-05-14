@@ -255,6 +255,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24baff8a29c23c4ebf2834a0467e6c0, type: 3}
+--- !u!114 &48210254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3845439143832301117, guid: a24baff8a29c23c4ebf2834a0467e6c0, type: 3}
+  m_PrefabInstance: {fileID: 48210253}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bca4a7f8a24e7d41b973207b88af2a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &80713964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,7 +1858,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 48210254}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SFXVolume
         m_Mode: 0
@@ -2144,10 +2155,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 770862800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1a6f080cea57041af19ec24bf097af, type: 3}
+  m_Script: {fileID: 11500000, guid: b6bfcc620b82bf847ab60ce4c772cc17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  option_page: {fileID: 0}
+  option_page: {fileID: 1593801625}
 --- !u!114 &770862803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2193,7 +2204,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 770862802}
-        m_TargetAssemblyTypeName: OptionTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: Day5_1_OT, Assembly-CSharp
         m_MethodName: OptionOn
         m_Mode: 1
         m_Arguments:
@@ -3632,7 +3643,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1354197378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1a6f080cea57041af19ec24bf097af, type: 3}
+  m_Script: {fileID: 11500000, guid: b6bfcc620b82bf847ab60ce4c772cc17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   option_page: {fileID: 1593801625}
@@ -3681,7 +3692,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1354197380}
-        m_TargetAssemblyTypeName: OptionTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: Day5_1_OT, Assembly-CSharp
         m_MethodName: OptionOff
         m_Mode: 1
         m_Arguments:
@@ -4679,7 +4690,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 48210254}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: MusicToggle
         m_Mode: 0
