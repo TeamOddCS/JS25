@@ -62,39 +62,15 @@ public class Day4_2_C : MonoBehaviour
     }
     private void day4_2()
     {
-        if (Day4_2.count == 7)
-        {
-            ShowChoice();
-        }
-
-        if (Day4_2.count == 16)
-        {
-            ShowChoice();
-        }
+        
     }
     private void day4_2_1()
     {
-        if (Day4_2.count == 7)
-        {
-            Day4_2.count++;
-        }
-
-        if (Day4_2.count == 16)
-        {
-            Day4_2.count++;
-        }
+        
     }
     private void day4_2_2()
     {
-        if (Day4_2.count == 7)
-        {
-            Day4_2.count += 11 - 7;
-        }
-
-        if (Day4_2.count == 16)
-        {
-            Day4_2.count += 28 - 16;
-        }
+        
     }
 
     public void CallChoice()
