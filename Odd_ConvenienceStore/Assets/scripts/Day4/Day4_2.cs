@@ -60,15 +60,7 @@ public class Day4_2 : MonoBehaviour
         {
             Nextdialogue();
             
-            if (count == 11)
-            {
-                count += 16 - 11;
-            }
-
-            if (count == 28)
-            {
-                count += 36 - 28;
-            }
+            
         }
         else
         {

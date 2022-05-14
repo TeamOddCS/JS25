@@ -105,7 +105,16 @@ public class Day4_1 : MonoBehaviour
                 count += 64 - 50;
             }
 
-            if (count == 64)
+            if (count == 74)
+            {
+                count += 79 - 74;
+            }
+
+            if (count == 91)
+            {
+                count += 99 - 91;
+            }
+            if (count == 106)
             {
                 fade.Fade();
                 Hidedialogue();

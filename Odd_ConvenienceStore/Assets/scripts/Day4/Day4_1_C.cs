@@ -89,6 +89,18 @@ public class Day4_1_C : MonoBehaviour
             count = 4;
             ShowChoice();
         }
+
+        if (Day4_1.count == 70)
+        {
+            count = 5;
+            ShowChoice();
+        }
+
+        if (Day4_1.count == 79)
+        {
+            count = 6;
+            ShowChoice();
+        }
     }
     private void day4_1_1()
     {
@@ -113,6 +125,16 @@ public class Day4_1_C : MonoBehaviour
         }
 
         if (Day4_1.count == 53)
+        {
+            Day4_1.count++;
+        }
+
+        if (Day4_1.count == 70)
+        {
+            Day4_1.count++;
+        }
+
+        if (Day4_1.count == 79)
         {
             Day4_1.count++;
         }
@@ -142,6 +164,16 @@ public class Day4_1_C : MonoBehaviour
         if (Day4_1.count == 53)
         {
             Day4_1.count = 41;
+        }
+
+        if (Day4_1.count == 70)
+        {
+            Day4_1.count += 74 - 70;
+        }
+
+        if (Day4_1.count == 79)
+        {
+            Day4_1.count += 91 - 79;
         }
     }
 

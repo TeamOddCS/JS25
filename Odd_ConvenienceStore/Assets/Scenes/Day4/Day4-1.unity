@@ -2713,6 +2713,10 @@ MonoBehaviour:
     _choice2: "\uC0AC\uC2E4\uB300\uB85C \uB9D0\uC500\uB4DC\uB9B0\uB2E4."
   - _choice: "\uC548\uB429\uB2C8\uB2E4."
     _choice2: "\uC0C8 \uBCF4\uB8E8\uB97C \uB72F\uB294\uB2E4"
+  - _choice: "\uBB50 \uD544\uC694\uD558\uC138\uC694?"
+    _choice2: "\uAE30\uB2E4\uB9B0\uB2E4."
+  - _choice: "\uC5B4\uB5BB\uAC8C \uC0DD\uACBC\uB294\uB370\uC694?"
+    _choice2: "\uCC9C\uCC9C\uD788 \uBCF4\uC2DC\uACE0 \uB9D0\uC500 \uC8FC\uC138\uC694. "
 --- !u!114 &974919122
 MonoBehaviour:
   m_ObjectHideFlags: 0
