@@ -12,6 +12,7 @@ public class Day4_1 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public AudioClip touchclip;
+    public static int facenum = 0;
 
     public GameObject GameController;
 
@@ -32,6 +33,7 @@ public class Day4_1 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
+        FaceChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         if (count > 0)
         {
@@ -39,7 +41,35 @@ public class Day4_1 : MonoBehaviour
         }
         count++;
     }
-    
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("1_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("1_1_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("1_1_3"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("1_2_1"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("1_2_2"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("1_2_3"))
+        {
+            facenum = 6;
+        }
+
+
+    }
     public void TextColorChange()
     {
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#2782cc>");//파란색 "중요한부분"

@@ -2617,6 +2617,7 @@ GameObject:
   - component: {fileID: 996425003}
   - component: {fileID: 996424992}
   - component: {fileID: 996424991}
+  - component: {fileID: 996424993}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2653,6 +2654,26 @@ MonoBehaviour:
   fade: {fileID: 996424994}
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
   GameController: {fileID: 1911016728}
+--- !u!114 &996424993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996424990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed368fd5a58a5548a77b50a534329ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  js4_face:
+  - {fileID: 21300000, guid: c07eab59bdb98814a9ebd842caede3cc, type: 3}
+  - {fileID: 21300000, guid: 3a882b8b667cdcb4c9d247c0abe2fafb, type: 3}
+  - {fileID: 21300000, guid: 4a1493608e57cc244a107491433d4dce, type: 3}
+  - {fileID: 21300000, guid: 6122db10afe8a894a9689ed23ebde0c3, type: 3}
+  - {fileID: 21300000, guid: 95002bbd2873c4a428a0e29d96bff705, type: 3}
+  - {fileID: 21300000, guid: 9a8fa23fcfd8eb0429caa2401e32d546, type: 3}
+  js4: {fileID: 1454507399}
 --- !u!114 &996424994
 MonoBehaviour:
   m_ObjectHideFlags: 0

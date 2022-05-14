@@ -14,6 +14,7 @@ public class Day1_1 : MonoBehaviour
     public FadeInOut fade;
     public AudioClip touchclip;
     public int health = 0;
+    public static int facenum = 0;
 
     public GameObject GameController;
 
@@ -43,6 +44,7 @@ public class Day1_1 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
+        FaceChange();
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
@@ -116,6 +118,36 @@ public class Day1_1 : MonoBehaviour
             count = 1;
             GameController.GetComponent<JSChoice>().D1_JSChoice();
         }
+    }
+
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("1_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("1_1_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("1_1_3"))
+        {
+            facenum = 3;
+        }
+      
+        if (data[count]["Face"].ToString().Equals("1_2_1"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("1_2_2"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("1_2_3"))
+        {
+            facenum = 6;
+        }
+       
     }
     public void Awake()
     {

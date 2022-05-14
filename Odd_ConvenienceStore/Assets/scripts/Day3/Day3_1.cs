@@ -13,6 +13,7 @@ public class Day3_1 : MonoBehaviour
     public FadeInOut fade;
     public AudioClip touchclip;
     public GameObject HealthControlScript;
+    public static int facenum = 0;
 
     public GameObject GameController;
 
@@ -41,12 +42,71 @@ public class Day3_1 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
+        FaceChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
         count++;
+    }
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("3_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("3_1_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("3_2_1"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("3_2_2"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("3_3_1"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("3_3_2"))
+        {
+            facenum = 6;
+        }
+        
+
+    }
+    private void day2_1_HC()
+    {
+        if (count == 5)
+        {
+            SaveData.JSName = " JS3";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 70)
+        {
+            SaveData.JSName = " JS3";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 87)
+        {
+            SaveData.JSName = " JS3";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 134)
+        {
+            SaveData.JSName = " JS7";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 158)
+        {
+            SaveData.JSName = " JS7";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+
     }
 
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수

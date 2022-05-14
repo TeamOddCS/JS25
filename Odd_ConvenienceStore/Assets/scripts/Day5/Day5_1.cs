@@ -12,6 +12,7 @@ public class Day5_1 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public AudioClip touchclip;
+    public static int facenum = 0;
 
     public GameObject GameController;
 
@@ -29,6 +30,7 @@ public class Day5_1 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//초록색 (생명력 +) 
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
 
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -40,12 +42,42 @@ public class Day5_1 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
+        FaceChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
         count++;
+    }
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("4_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("4_1_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("4_2_1"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("4_2_2"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("4_3_1"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("4_3_2"))
+        {
+            facenum = 6;
+        }
+
+
     }
 
 

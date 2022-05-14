@@ -157,7 +157,7 @@ public class Day2_1_C : MonoBehaviour
         }
         if (Day2_1.count == 118)
         {
-            Day2_1.count += 111 - 118;
+            Day2_1.count += 127 - 118;
         }
         if (Day2_1.count == 136)
         {

@@ -102,6 +102,31 @@ public class Day2_1 : MonoBehaviour
         {
             facenum = 8;
         }
+         if (data[count]["Face"].ToString().Equals("1_1_1"))
+        {
+            facenum = 9;
+        }
+        if (data[count]["Face"].ToString().Equals("1_1_2"))
+        {
+            facenum = 10;
+        }
+        if (data[count]["Face"].ToString().Equals("1_1_3"))
+        {
+            facenum = 11;
+        }
+        if (data[count]["Face"].ToString().Equals("1_2_1"))
+        {
+            facenum = 12;
+        }
+        if (data[count]["Face"].ToString().Equals("1_2_2"))
+        {
+            facenum = 13;
+        }
+        if (data[count]["Face"].ToString().Equals("1_2_3"))
+        {
+            facenum = 14;
+        }
+       
     }
     private void day2_1_JD()//첫번째 선택지를 골랐을 경우 선택지 대화를 다본후 다음 대화로 넘어가는 함수
     {
@@ -205,30 +230,10 @@ public class Day2_1 : MonoBehaviour
 
     private void day2_1_HC()
     {
-        if (count == 3)
-        {
-            SaveData.JSName = " JS9";
-            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-        }
-        if (count == 4)
-        {
-            SaveData.JSName = " JS9";
-            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
-        }
-        if (count == 61)
-        {
-            SaveData.JSName = " JS9";
-            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-        }
         if (count == 77)
         {
             SaveData.JSName = " JS9";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-        }
-        if (count == 90)
-        {
-            SaveData.JSName = " JS9";
-            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
         }
         if (count == 98)
         {
@@ -242,14 +247,15 @@ public class Day2_1 : MonoBehaviour
         }
         if (count == 164)
         {
-            SaveData.JSName = " JS9";
+            SaveData.JSName = " JS1";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
         if (count == 181)
         {
-            SaveData.JSName = " JS9";
+            SaveData.JSName = " JS1";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
+       
     }
     private void Start()
     {

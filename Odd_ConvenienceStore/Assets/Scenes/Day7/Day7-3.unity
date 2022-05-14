@@ -2002,6 +2002,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a161f5f3e37de6948833b28162cc853a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choicebtn1: {fileID: 66386094}
+  choicebtn2: {fileID: 1286918611}
+  txt_choice1: {fileID: 651492594}
+  txt_choice2: {fileID: 1646743436}
+  choice:
+  - _choice: "\uC804\uD654\uBC88\uD638\uB97C \uC54C\uB824\uC900\uB2E4."
+    _choice2: "\uAC00\uB9CC\uD788 \uC788\uB294\uB2E4. "
+  - _choice: "\uAC70\uC808\uD55C\uB2E4. "
+    _choice2: "\uC218\uB77D\uD55C\uB2E4. "
+  - _choice: "\uC751\uC6D0\uD55C\uB2E4."
+    _choice2: "\uCDA9\uACE0\uD55C\uB2E4. "
+  - _choice: "\uCC1C\uC5D0\uB294 \uC5ED\uC2DC \uC18C\uC8FC\uC8E0. "
+    _choice2: "\uD654\uC774\uD2B8 \uC640\uC778\uC774\uC694."
+  - _choice: "\uC65C \uADF8\uB7EC\uC2DC\uC8E0?"
+    _choice2: "\uC5C6\uC2B5\uB2C8\uB2E4."
+  - _choice: "\uCD5C\uB300\uD55C \uD314\uC9C0 \uC54A\uACA0\uC2B5\uB2C8\uB2E4."
+    _choice2: "\uC6D0\uCE59\uC0C1 \uD314 \uC218 \uBC16\uC5D0 \uC5C6\uC5B4\uC694."
+  - _choice: "\uD654\uC7A5\uC2E4 \uD0A4\uB97C \uC900\uB2E4. "
+    _choice2: "\uD0A4\uB97C \uC8FC\uC9C0 \uC54A\uB294\uB2E4."
+  - _choice: "\uD734\uC9C0\uB97C \uC870\uAE08 \uB098\uB220\uC900\uB2E4."
+    _choice2: "\uD734\uC9C0\uB97C \uC8FC\uC9C0 \uC54A\uB294\uB2E4. "
+  - _choice: "\uB450\uB8E8\uB9C8\uB9AC \uD734\uC9C0\uB97C \uC900\uB2E4."
+    _choice2: "\uC695\uC744 \uC120\uBB3C\uD55C\uB2E4."
+  - _choice: "\uD658\uBD88 \uC548\uB429\uB2C8\uB2E4."
+    _choice2: "\uB3C8\uC73C\uB85C \uBC14\uAFD4 \uB4DC\uB9B4\uAC8C\uC694."
+  - _choice: "\uC0C8 \uAC83\uC774 \uC544\uB2C8\uC796\uC544\uC694."
+    _choice2: "\uC774\uBC88\uB9CC \uD574\uB4DC\uB9B4\uAC8C\uC694."
 --- !u!114 &742895504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,6 +2041,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667d046ece055bf458f9a4c5336a697a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txt_name: {fileID: 680265746}
+  txt_dialogue: {fileID: 642823796}
+  fade: {fileID: 742895496}
+  touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
+  kbdclip: {fileID: 8300000, guid: 40f45f4377e5f7340aacef3e77c04a9e, type: 3}
+  HealthControlScript: {fileID: 199500964}
+  GameController: {fileID: 199500964}
 --- !u!1 &768262150
 GameObject:
   m_ObjectHideFlags: 0
