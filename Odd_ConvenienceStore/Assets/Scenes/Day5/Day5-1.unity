@@ -2653,6 +2653,9 @@ MonoBehaviour:
   txt_name: {fileID: 626296923}
   fade: {fileID: 996424994}
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
+  ring: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
+  HealthControlScript: {fileID: 1911016728}
+  minus: {fileID: 8300000, guid: 82518d9391089f74a97897343d8e287e, type: 3}
   GameController: {fileID: 1911016728}
 --- !u!114 &996424993
 MonoBehaviour:

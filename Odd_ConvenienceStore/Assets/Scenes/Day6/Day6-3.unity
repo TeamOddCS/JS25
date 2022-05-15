@@ -1921,7 +1921,10 @@ MonoBehaviour:
   txt_dialogue: {fileID: 2041553801}
   fade: {fileID: 753595587}
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
-  GameController: {fileID: 0}
+  bell: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
+  GameController: {fileID: 662416540}
+  HealthControlScript: {fileID: 662416540}
+  minus: {fileID: 8300000, guid: 82518d9391089f74a97897343d8e287e, type: 3}
 --- !u!114 &753595586
 MonoBehaviour:
   m_ObjectHideFlags: 0

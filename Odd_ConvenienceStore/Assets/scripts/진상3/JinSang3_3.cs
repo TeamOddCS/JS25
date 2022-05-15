@@ -13,6 +13,7 @@ public class JinSang3_3 : MonoBehaviour
     public FadeInOut fade;
     public static int facenum=0;
     public AudioClip touchclip;
+    public AudioClip bell;
 
     public GameObject GameController;
 
@@ -39,6 +40,10 @@ public class JinSang3_3 : MonoBehaviour
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
+        if (count == 0)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }   
         count++;
 
     }
@@ -48,8 +53,9 @@ public class JinSang3_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//초록색 (생명력 +) 
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
-
+  
 
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {

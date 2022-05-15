@@ -401,7 +401,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt_name: {fileID: 253333205}
   txt_dialogue: {fileID: 433900783}
-  touchclip: {fileID: 0}
+  touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
+  ring: {fileID: 8300000, guid: 86e844a208288c3448506ee8ec43addc, type: 3}
   fade: {fileID: 81910543}
 --- !u!114 &81910542
 MonoBehaviour:

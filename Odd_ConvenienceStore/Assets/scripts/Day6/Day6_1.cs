@@ -12,8 +12,10 @@ public class Day6_1 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public AudioClip touchclip;
-
+    public AudioClip bell;
     public GameObject GameController;
+    public GameObject HealthControlScript;
+    public AudioClip minus;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -37,6 +39,10 @@ public class Day6_1 : MonoBehaviour
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
+        if(count == 0)
+        {
+            SoundManager.instance.SFXPlay("Ring", bell);
+        }
         count++;
     }
 
@@ -53,6 +59,29 @@ public class Day6_1 : MonoBehaviour
         txt_name.gameObject.SetActive(false);
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
+    }
+    private void day6_1_HC()
+    {
+
+        if (count == 27)
+        {
+           
+            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
+        }
+        if (count == 89)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS7";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 101)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS7";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+       
+
     }
     private void day6_1_JD()//첫번째 선택지를 골랐을 경우 선택지 대화를 다본후 다음 대화로 넘어가는 함수
     {
@@ -96,6 +125,7 @@ public class Day6_1 : MonoBehaviour
         Showdialogue();
     }
     // Update is called once per frame
+    
     void Update()
     {
         if (isDialogue)

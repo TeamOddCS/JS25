@@ -13,6 +13,9 @@ public class JinSang1_1 : MonoBehaviour
     public FadeInOut fade;
     public static int facenum = 0;
     public AudioClip touchclip;
+    public AudioClip bell;
+    public GameObject HealthControlScript;
+    public AudioClip minus;
 
     public GameObject GameController;
 
@@ -47,6 +50,10 @@ public class JinSang1_1 : MonoBehaviour
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
+        if(count == 0 )
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
         }
         count++;
     }
@@ -90,6 +97,18 @@ public class JinSang1_1 : MonoBehaviour
         SaveData.TempScene = "JinSang1_1";
         count = SaveData.TempCount;
         SaveData.Saves();
+    }
+    private void JinSang1_1_HC()
+    {
+        if (count == 50)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS1";
+
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+
+        }
+      
     }
 
     private void Start()

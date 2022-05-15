@@ -13,7 +13,9 @@ public class Day3_3 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public AudioClip touchclip;
+    public AudioClip bell;
     public GameObject HealthControlScript;
+    public AudioClip minus;
     public void TextColorChange()
     {
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#2782cc>");//파란색 "중요한부분"
@@ -44,6 +46,19 @@ public class Day3_3 : MonoBehaviour
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
+        if(count == 0)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+
+        }
+        if(count == 40)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 119)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
         }
         count++;
     }
@@ -124,15 +139,18 @@ public class Day3_3 : MonoBehaviour
     {
         if (count == 25)
         {//신경써주신 게 너무 감사해서요
+            SoundManager.instance.SFXPlay("Minus", minus);
             HealthControlScript.GetComponent<HealthControlScript>().health_increase();
         }
         if (count == 95)
         {//진상 5(남)는 바닥에 가래침을 뱉고서
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = "JS5";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
         if(count == 109)
         {//저도 제 돈에서 까는거에요..
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = "JS5";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }

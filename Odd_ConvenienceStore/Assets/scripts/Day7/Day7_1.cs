@@ -12,6 +12,9 @@ public class Day7_1 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public AudioClip touchclip;
+    public AudioClip bell;
+    public GameObject HealthControlScript;
+    public AudioClip minus;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -35,6 +38,18 @@ public class Day7_1 : MonoBehaviour
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
+        if(count == 0)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 8)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 53)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
         count++;
 
     }
@@ -44,6 +59,7 @@ public class Day7_1 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//초록색 (생명력 +) 
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
 
 
@@ -52,6 +68,29 @@ public class Day7_1 : MonoBehaviour
         txt_name.gameObject.SetActive(false);
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
+    }
+    private void day7_1_HC()
+    {
+        if (count == 28)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS8";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 71)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS2";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 93)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS2";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+       
+
     }
     public void Awake()
     {

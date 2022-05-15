@@ -16,7 +16,8 @@ public class JinSang4_1 : MonoBehaviour
     public AudioClip kbdclip;
     public static int facenum = 0;
     public GameObject HealthControlScript;
-
+    public AudioClip bell;
+    public AudioClip minus;
     public GameObject GameController;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
@@ -43,6 +44,10 @@ public class JinSang4_1 : MonoBehaviour
             SoundManager.instance.SFXPlay("Touch", touchclip);
             //SoundManager.instance.SFXPlay("Keyboard", kbdclip);
         }
+        if (count == 0)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
         count++;
 
     }
@@ -62,6 +67,7 @@ public class JinSang4_1 : MonoBehaviour
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
     }
+  
     private void FaceChange()
     {
         if (data[count]["Face"].ToString().Equals("4_1_1"))
@@ -101,6 +107,8 @@ public class JinSang4_1 : MonoBehaviour
     {
         if (count == 29)
         {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS4";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
 

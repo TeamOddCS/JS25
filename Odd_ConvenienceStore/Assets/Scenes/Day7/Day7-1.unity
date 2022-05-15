@@ -3341,6 +3341,9 @@ MonoBehaviour:
   txt_dialogue: {fileID: 967587419}
   fade: {fileID: 1463940507}
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
+  bell: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
+  HealthControlScript: {fileID: 86159186}
+  minus: {fileID: 8300000, guid: 82518d9391089f74a97897343d8e287e, type: 3}
 --- !u!114 &1463940512
 MonoBehaviour:
   m_ObjectHideFlags: 0

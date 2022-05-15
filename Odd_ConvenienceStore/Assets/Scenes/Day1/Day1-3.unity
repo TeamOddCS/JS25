@@ -2645,6 +2645,7 @@ MonoBehaviour:
   txt_name: {fileID: 1738771846}
   txt_dialogue: {fileID: 344553966}
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
+  bell: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
   fade: {fileID: 617581138}
 --- !u!114 &617581143
 MonoBehaviour:

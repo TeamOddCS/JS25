@@ -14,9 +14,10 @@ public class Day2_1 : MonoBehaviour
     public FadeInOut fade;
     public AudioClip touchclip;
     public AudioClip kbdclip;
+    public AudioClip bell;
     public static int facenum = 0;
     public GameObject HealthControlScript;
-
+    public AudioClip minus;
     public GameObject GameController;
 
 
@@ -43,6 +44,18 @@ public class Day2_1 : MonoBehaviour
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
             //SoundManager.instance.SFXPlay("Keyboard", kbdclip);
+        }
+        if (count == 0)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 33)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 152)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
         }
         count++;
     }
@@ -232,26 +245,31 @@ public class Day2_1 : MonoBehaviour
     {
         if (count == 77)
         {
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = " JS9";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
         if (count == 98)
         {
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = " JS9";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
         if (count == 142)
         {
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = " JS9";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
         if (count == 164)
         {
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = " JS1";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
         if (count == 181)
         {
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = " JS1";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }

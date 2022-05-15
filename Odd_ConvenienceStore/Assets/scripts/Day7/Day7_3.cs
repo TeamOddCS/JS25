@@ -14,9 +14,10 @@ public class Day7_3 : MonoBehaviour
     public FadeInOut fade;
     public AudioClip touchclip;
     public AudioClip kbdclip;
+    public AudioClip bell;
     public static int facenum = 0;
     public GameObject HealthControlScript;
-
+    public AudioClip minus;
     public GameObject GameController;
 
 
@@ -43,6 +44,26 @@ public class Day7_3 : MonoBehaviour
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
             //SoundManager.instance.SFXPlay("Keyboard", kbdclip);
+        }
+        if(count == 0)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 47)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 74)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 101)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 157)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
         }
         count++;
     }
@@ -181,21 +202,25 @@ public class Day7_3 : MonoBehaviour
        
         if (count == 100)
         {
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = " JS9";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
         if (count == 155)
         {
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = " JS4";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
         if (count == 202)
         {
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = " JS3";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
         if (count == 212)
         {
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = " JS3";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }

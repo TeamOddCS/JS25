@@ -14,9 +14,10 @@ public class JinSang4_3 : MonoBehaviour
     public static int facenum = 0;
     public GameObject HealthControlScript;
     public AudioClip touchclip;
-
+    public AudioClip bell;
     public GameObject GameController;
-
+    public AudioClip Pos;
+    public AudioClip minus;
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -40,8 +41,27 @@ public class JinSang4_3 : MonoBehaviour
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
+        if (count == 0)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if(count == 24)
+        {
+            SoundManager.instance.SFXPlay("Pos", Pos);
+        }
         count++;
 
+    }
+    private void JinSang4_3_HC()
+    {
+        if (count == 64)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS4";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+
+        }
+       
     }
     public void TextColorChange()
     {
@@ -49,6 +69,7 @@ public class JinSang4_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//초록색 (생명력 +) 
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
 
 
@@ -99,13 +120,7 @@ public class JinSang4_3 : MonoBehaviour
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
-    private void JinSang4_3_HC()
-    {
-        if(count == 64)
-        {
-            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-        }
-    }
+  
     // Update is called once per frame
     void Update()
     {

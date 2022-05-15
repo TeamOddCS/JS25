@@ -12,9 +12,10 @@ public class Day3_1 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public AudioClip touchclip;
+    public AudioClip bell;
     public GameObject HealthControlScript;
     public static int facenum = 0;
-
+    public AudioClip minus;
     public GameObject GameController;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
@@ -48,6 +49,19 @@ public class Day3_1 : MonoBehaviour
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
+        if(count == 0)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 14)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 119)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+
         count++;
     }
     private void FaceChange()
@@ -81,7 +95,8 @@ public class Day3_1 : MonoBehaviour
     }
     private void day2_1_HC()
     {
-        if (count == 5)
+      
+        if (count == 65)
         {
             SaveData.JSName = " JS3";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
@@ -186,11 +201,13 @@ public class Day3_1 : MonoBehaviour
         {
             if (count == 65)
             { //외상해드릴게요.
+                SoundManager.instance.SFXPlay("Minus", minus);
                 SaveData.JSName = "JS3";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
             }
             if (count == 70)
             {//진상3은 가벼운 발걸음으로 나간다.
+                SoundManager.instance.SFXPlay("Minus", minus);
                 SaveData.JSName = "JS3";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
 
@@ -198,18 +215,21 @@ public class Day3_1 : MonoBehaviour
 
             if (count == 87)
             {//진상 3은 매대에서 껌을 한웅큼 집어 바닥에 흩뿌린다.
+                SoundManager.instance.SFXPlay("Minus", minus);
                 SaveData.JSName = "JS3";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
             }
 
             if (count == 134)
             {//좀 못들은 걸로 꼽은..ㅋㅋ ㅆㅂ
+                SoundManager.instance.SFXPlay("Minus", minus);
                 SaveData.JSName = "JS7";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
             }
 
             if (count == 158)
             {//몰라. 직원분이 나한테 개지랄하잖어
+                SoundManager.instance.SFXPlay("Minus", minus);
                 SaveData.JSName = "JS7";
                 HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
             }

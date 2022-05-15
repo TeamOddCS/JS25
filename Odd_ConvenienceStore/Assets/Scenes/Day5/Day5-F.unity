@@ -1726,6 +1726,7 @@ MonoBehaviour:
   txt_name: {fileID: 1331423873}
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
   fade: {fileID: 966966855}
+  ring: {fileID: 8300000, guid: 86e844a208288c3448506ee8ec43addc, type: 3}
 --- !u!114 &966966860
 MonoBehaviour:
   m_ObjectHideFlags: 0

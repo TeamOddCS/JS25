@@ -12,6 +12,12 @@ public class Day4_1 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public AudioClip touchclip;
+    public AudioClip bell;
+    public GameObject HealthControlScript;
+    public AudioClip minus;
+
+ 
+
     public static int facenum = 0;
 
     public GameObject GameController;
@@ -39,6 +45,15 @@ public class Day4_1 : MonoBehaviour
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
+        if(count == 0 )
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if(count == 9)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+   
         count++;
     }
     private void FaceChange()
@@ -127,6 +142,35 @@ public class Day4_1 : MonoBehaviour
             count = 1;
             GameController.GetComponent<JSChoice>().D4_JSChoice();
         }
+    }
+    private void day4_1_HC()
+    {
+
+        if (count == 23)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS1";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 28)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS1";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 32)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS1";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 48)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS1";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+
     }
     public void Awake()
     {

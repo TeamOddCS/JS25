@@ -12,8 +12,10 @@ public class JinSang7_2 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public AudioClip touchclip;
-
+    public AudioClip bell;
     public GameObject GameController;
+    public GameObject HealthControlScript;
+    public AudioClip minus;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -46,6 +48,7 @@ public class JinSang7_2 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//초록색 (생명력 +) 
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
 
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
@@ -53,6 +56,24 @@ public class JinSang7_2 : MonoBehaviour
         txt_name.gameObject.SetActive(false);
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
+    }
+    private void JinSang7_2_HC()
+    {
+        if (count == 51)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS7";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+
+        }
+        if (count == 26)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS7";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+
+        }
+
     }
     public void Awake()
     {

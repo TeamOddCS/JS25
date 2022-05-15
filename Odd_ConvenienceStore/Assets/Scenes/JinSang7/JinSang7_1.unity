@@ -4127,6 +4127,8 @@ MonoBehaviour:
   txt_name: {fileID: 1286098548}
   fade: {fileID: 1834535968}
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
+  bell: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
+  pos: {fileID: 8300000, guid: 12468df55c3bd5447970ae14b310a130, type: 3}
   GameController: {fileID: 1768760252}
 --- !u!114 &1834535976
 MonoBehaviour:

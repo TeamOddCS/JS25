@@ -12,6 +12,7 @@ public class Day3_F : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
+    public AudioClip ring;
     public AudioClip touchclip;
     public static int test_who_is = 0;
 
@@ -42,6 +43,10 @@ public class Day3_F : MonoBehaviour
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
+        if(count == 0)
+        {
+            SoundManager.instance.SFXPlay("Ring", ring);
         }
         count++;
     }

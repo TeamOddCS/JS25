@@ -13,7 +13,7 @@ public class Day5_F : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public AudioClip touchclip;
     public FadeInOut fade;
-
+    public AudioClip ring;
 
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
@@ -36,6 +36,10 @@ public class Day5_F : MonoBehaviour
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
+        if(count == 0 )
+        {
+            SoundManager.instance.SFXPlay("Ring", ring);
         }
         count++;
 

@@ -12,7 +12,10 @@ public class Day5_1 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public FadeInOut fade;
     public AudioClip touchclip;
+    public AudioClip ring;
     public static int facenum = 0;
+    public GameObject HealthControlScript;
+    public AudioClip minus;
 
     public GameObject GameController;
 
@@ -48,6 +51,19 @@ public class Day5_1 : MonoBehaviour
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
+        if (count == 0)
+        {
+            SoundManager.instance.SFXPlay("Ring", ring);
+        }
+        if (count == 10)
+        {
+            SoundManager.instance.SFXPlay("Ring", ring);
+        }
+        if (count == 92)
+        {
+            SoundManager.instance.SFXPlay("Ring", ring);
+        }
+
         count++;
     }
     private void FaceChange()
@@ -77,6 +93,18 @@ public class Day5_1 : MonoBehaviour
             facenum = 6;
         }
 
+
+    }
+    private void day5_1_HC()
+    {
+
+        if (count == 172)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS5";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        
 
     }
 

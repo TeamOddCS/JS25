@@ -12,7 +12,9 @@ public class Day2_3 : MonoBehaviour
     public static int count = 0;
     private List<Dictionary<string, object>> data;
     public AudioClip touchclip;
+    public AudioClip bell;
     public FadeInOut fade;
+    public AudioClip minus;
 
     public GameObject HealthControlScript;
 
@@ -47,6 +49,18 @@ public class Day2_3 : MonoBehaviour
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
+        }
+        if (count == 0)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 29)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
+        }
+        if (count == 47)
+        {
+            SoundManager.instance.SFXPlay("Bell", bell);
         }
         count++;
     }
@@ -99,6 +113,8 @@ public class Day2_3 : MonoBehaviour
             count = 1;
         }
     }
+ 
+
     private void Start()
     {
         data = CSVReader.Read("Day2-3");
@@ -109,6 +125,7 @@ public class Day2_3 : MonoBehaviour
     {
         if(count == 63)
         {
+            SoundManager.instance.SFXPlay("Minus", minus);
             SaveData.JSName = "JS6";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }

@@ -2400,6 +2400,11 @@ MonoBehaviour:
   txt_dialogue: {fileID: 68345290}
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
   fade: {fileID: 974919117}
+  HealthControlScript: {fileID: 0}
+  bell: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
+  Pos: {fileID: 8300000, guid: 12468df55c3bd5447970ae14b310a130, type: 3}
+  hiccups: {fileID: 8300000, guid: 0911d372d4ddd8c408e178f475d41f66, type: 3}
+  minus: {fileID: 8300000, guid: 82518d9391089f74a97897343d8e287e, type: 3}
 --- !u!114 &974919120
 MonoBehaviour:
   m_ObjectHideFlags: 0
