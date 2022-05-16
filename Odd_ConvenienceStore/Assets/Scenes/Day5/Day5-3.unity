@@ -3836,6 +3836,8 @@ MonoBehaviour:
   fade: {fileID: 1789643382}
   bell: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
+  plus: {fileID: 8300000, guid: 24621a8cb5adc014aa627b017ea54ca4, type: 3}
+  HealthControlScript: {fileID: 1830715884}
 --- !u!114 &1789643386
 MonoBehaviour:
   m_ObjectHideFlags: 0

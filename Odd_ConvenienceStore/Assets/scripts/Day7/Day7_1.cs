@@ -85,7 +85,7 @@ public class Day7_1 : MonoBehaviour
         }
         if (count == 93)
         {
-            SoundManager.instance.SFXPlay("Minus", minus);
+            SoundManager.instance.SFXPlay("Minus", minus);  
             SaveData.JSName = " JS2";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }

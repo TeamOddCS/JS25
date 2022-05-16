@@ -16,6 +16,7 @@ public class Day3_3 : MonoBehaviour
     public AudioClip bell;
     public GameObject HealthControlScript;
     public AudioClip minus;
+    public AudioClip plus;
     public void TextColorChange()
     {
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#2782cc>");//파란색 "중요한부분"
@@ -60,6 +61,7 @@ public class Day3_3 : MonoBehaviour
         {
             SoundManager.instance.SFXPlay("Bell", bell);
         }
+       
         count++;
     }
 
@@ -139,7 +141,7 @@ public class Day3_3 : MonoBehaviour
     {
         if (count == 25)
         {//신경써주신 게 너무 감사해서요
-            SoundManager.instance.SFXPlay("Minus", minus);
+            SoundManager.instance.SFXPlay("Plus", plus);
             HealthControlScript.GetComponent<HealthControlScript>().health_increase();
         }
         if (count == 95)
@@ -154,6 +156,7 @@ public class Day3_3 : MonoBehaviour
             SaveData.JSName = "JS5";
             HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
         }
+      
     }
 
     // Update is called once per frame

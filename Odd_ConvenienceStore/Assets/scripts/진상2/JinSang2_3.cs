@@ -13,9 +13,10 @@ public class JinSang2_3 : MonoBehaviour
     public FadeInOut fade;
     public AudioClip touchclip;
     public AudioClip bell;
-    public GameObject HealthContorlScript;
+   
     public AudioClip minus;
     public GameObject GameController;
+    public GameObject HealthControlScript;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -62,15 +63,15 @@ public class JinSang2_3 : MonoBehaviour
         if (count == 27)
         {
             SoundManager.instance.SFXPlay("Minus", minus);
-            //SaveData.JSName = " JS2";
-            //HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+            SaveData.JSName = " JS2";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
 
         }
         if (count == 46)
         {
             SoundManager.instance.SFXPlay("Minus", minus);
-            //SaveData.JSName = " JS2";
-            //HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+            SaveData.JSName = " JS2";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
 
         }
       

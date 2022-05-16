@@ -16,6 +16,7 @@ public class Day6_1 : MonoBehaviour
     public GameObject GameController;
     public GameObject HealthControlScript;
     public AudioClip minus;
+    public AudioClip plus;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -62,10 +63,16 @@ public class Day6_1 : MonoBehaviour
     }
     private void day6_1_HC()
     {
+        if (count == 19)
+        {
+            SoundManager.instance.SFXPlay("Plus", plus);
+            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
+        }
 
         if (count == 27)
         {
-           
+            SoundManager.instance.SFXPlay("Plus", plus);
+
             HealthControlScript.GetComponent<HealthControlScript>().health_increase();
         }
         if (count == 89)
