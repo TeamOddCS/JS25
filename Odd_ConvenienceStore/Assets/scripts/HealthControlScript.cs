@@ -378,6 +378,18 @@ public class HealthControlScript : MonoBehaviour
             JS7_2_C.count = SaveData.reGameChoice;
         }
 
+        if (SaveData.reGameStart == "JinSang8_2")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS8_2_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang8_3")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS8_3_C.count = SaveData.reGameChoice;
+        }
+
         SceneManager.LoadScene(SaveData.reGameStart);
     }
 
