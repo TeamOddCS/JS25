@@ -166,12 +166,12 @@ public class HealthControlScript : MonoBehaviour
                 heart3.gameObject.SetActive(false);
                 gameOver.gameObject.SetActive(true);
                 GameOver();
-                Invoke("showEnding", 2.0f);
+                Invoke("ShowEnding", 0.1f);
                 break;
         }
     }
 
-    public void showEnding()
+    public void ShowEnding()
     {
         canvas.SetActive(false);
         oriGraphic.SetActive(false);
@@ -376,6 +376,12 @@ public class HealthControlScript : MonoBehaviour
         {
             SaveData.TempCount = SaveData.reGame - 1;
             JS7_2_C.count = SaveData.reGameChoice;
+        }
+
+        if (SaveData.reGameStart == "JinSang8_1")
+        {
+            SaveData.TempCount = SaveData.reGame - 1;
+            JS8_1_C.count = SaveData.reGameChoice;
         }
 
         if (SaveData.reGameStart == "JinSang8_2")
