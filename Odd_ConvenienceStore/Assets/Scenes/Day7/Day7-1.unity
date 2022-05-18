@@ -3595,7 +3595,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 86159187}
         m_TargetAssemblyTypeName: HealthControlScript, Assembly-CSharp
         m_MethodName: reGame
         m_Mode: 1
@@ -3985,7 +3985,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 86159187}
         m_TargetAssemblyTypeName: HealthControlScript, Assembly-CSharp
         m_MethodName: goToLobby
         m_Mode: 1
