@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 308495864}
         m_TargetAssemblyTypeName: HealthControlScript, Assembly-CSharp
         m_MethodName: reGame
         m_Mode: 1
@@ -2195,7 +2195,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 308495864}
         m_TargetAssemblyTypeName: HealthControlScript, Assembly-CSharp
         m_MethodName: goToLobby
         m_Mode: 1
@@ -3428,9 +3428,9 @@ MonoBehaviour:
   fade: {fileID: 1588689254}
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
   bell: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
-  HealthContorlScript: {fileID: 308495863}
   minus: {fileID: 8300000, guid: 82518d9391089f74a97897343d8e287e, type: 3}
   GameController: {fileID: 308495863}
+  HealthControlScript: {fileID: 0}
 --- !u!114 &1588689253
 MonoBehaviour:
   m_ObjectHideFlags: 0
