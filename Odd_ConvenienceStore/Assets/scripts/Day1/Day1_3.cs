@@ -15,6 +15,8 @@ public class Day1_3 : MonoBehaviour
     public AudioClip bell;
     public FadeInOut fade;
 
+    public GameObject HealthControlScript;
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -80,8 +82,30 @@ public class Day1_3 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Day1-3");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
+
+    private void day1_3_HC()
+    {
+        if (count < data.Count)
+        {
+            if (count == 68)
+            { //뭐?! 너 지금 뭐라그랬어
+                //SoundManager.instance.SFXPlay("Minus", minus);
+                SaveData.JSName = "JS5";
+                HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+            }
+
+            if (count == 77)
+            { //너… 두고 봐. 
+                //SoundManager.instance.SFXPlay("Minus", minus);
+                SaveData.JSName = "JS5";
+                HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -120,7 +144,7 @@ public class Day1_3 : MonoBehaviour
                     count = 1;
                     SceneManager.LoadScene("Day1-F");
                 }
-
+                day1_3_HC();
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }

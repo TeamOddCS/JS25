@@ -189,7 +189,13 @@ public class HealthControlScript : MonoBehaviour
 
     public void goToLobby()
     {
+        SaveData.Loads();
+        SaveData.TempCount = 0;
+        SaveData.TempScene = "Day0";
+        
+        SaveData.Saves();
         SceneManager.LoadScene("Title");
+
     }
 
     public void reGame()
@@ -198,6 +204,7 @@ public class HealthControlScript : MonoBehaviour
         health = 1;
         SaveData.health = health;
         SaveData.Saves();
+
         if (SaveData.reGameStart == "Day0")
         {
             SaveData.TempCount = SaveData.reGame - 1;
@@ -397,6 +404,7 @@ public class HealthControlScript : MonoBehaviour
         }
 
         SceneManager.LoadScene(SaveData.reGameStart);
+
     }
 
     public void Update()
