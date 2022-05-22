@@ -122,4 +122,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JinSang7/JinSang7_2.unity
     guid: 12a2226c2d3fff447aed2cf47b30be3a
+  - enabled: 1
+    path: Assets/Scenes/JinSang8/JinSang8_1.unity
+    guid: 6b10da3a61c6268408336f7731063402
+  - enabled: 1
+    path: Assets/Scenes/JinSang8/JinSang8_2.unity
+    guid: 64c7d5b4a8e065046a4d848e67baaa1e
+  - enabled: 1
+    path: Assets/Scenes/JinSang8/JinSang8_3.unity
+    guid: b52057b66c20e4045a92b4bb0382054e
   m_configObjects: {}
