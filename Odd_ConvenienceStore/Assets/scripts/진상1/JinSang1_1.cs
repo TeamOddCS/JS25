@@ -114,6 +114,7 @@ public class JinSang1_1 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Áø»ó1-1");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
     // Update is called once per frame
@@ -138,6 +139,7 @@ public class JinSang1_1 : MonoBehaviour
                     count = 1;
                     GameController.GetComponent<JSChoice>().Check_Day();
                 }
+                JinSang1_1_HC();
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }

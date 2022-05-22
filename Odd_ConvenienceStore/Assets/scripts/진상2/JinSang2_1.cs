@@ -92,6 +92,7 @@ public class JinSang2_1 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Áø»ó2-1");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
     public void Awake()
@@ -137,6 +138,7 @@ public class JinSang2_1 : MonoBehaviour
                     count = 1;
                     GameController.GetComponent<JSChoice>().Check_Day();
                 }
+                JinSang2_1_HC();
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }

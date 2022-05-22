@@ -3430,7 +3430,7 @@ MonoBehaviour:
   bell: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
   minus: {fileID: 8300000, guid: 82518d9391089f74a97897343d8e287e, type: 3}
   GameController: {fileID: 308495863}
-  HealthControlScript: {fileID: 0}
+  HealthControlScript: {fileID: 308495863}
 --- !u!114 &1588689253
 MonoBehaviour:
   m_ObjectHideFlags: 0
