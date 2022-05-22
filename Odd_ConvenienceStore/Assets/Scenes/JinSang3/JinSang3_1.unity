@@ -2806,7 +2806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heart1: {fileID: 881393844}
   heart2: {fileID: 1418957428}
-  heart3: {fileID: 1418957428}
+  heart3: {fileID: 1533382660}
   gameOver: {fileID: 1787465130}
   endingTextB: {fileID: 2063587031}
   canvas: {fileID: 711043414}
