@@ -86,7 +86,7 @@ public class JSChoice : MonoBehaviour
         while(last_num == random_num)
             random_num = Random.Range(0, 4);
         last_num = random_num;
-        //Debug.Log("L : " + last_num + "R : " + random_num);
+        Debug.Log("L : " + last_num + "R : " + random_num);
 
         if (random_num == 0)
             JinSang3_();

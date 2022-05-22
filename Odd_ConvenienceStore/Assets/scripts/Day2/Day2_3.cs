@@ -111,6 +111,7 @@ public class Day2_3 : MonoBehaviour
             fade.Fade();
             Hidedialogue();
             count = 1;
+            SceneManager.LoadScene("Day2-F");
         }
     }
  
@@ -118,6 +119,7 @@ public class Day2_3 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Day2-3");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
 
@@ -142,10 +144,6 @@ public class Day2_3 : MonoBehaviour
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }
-        }
-        if (count == 80)
-        {
-            SceneManager.LoadScene("Day2-F");
         }
         else
             Hidedialogue();
