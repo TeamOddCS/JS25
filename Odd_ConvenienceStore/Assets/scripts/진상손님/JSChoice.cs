@@ -28,12 +28,12 @@ public class JSChoice : MonoBehaviour
             SceneManager.LoadScene("Day1-3");
         if (SaveData.LastScene.Equals("D2"))
         {
-            if(check_D2 == 1)
+            Debug.Log("check_D2 : " + check_D2);
+            if (check_D2 == 1)
                 SceneManager.LoadScene("Day2-3");
             else
             {
                 check_D2++;
-                //Debug.Log("check_D2 : " + check_D2);
                 D2_JSChoice();
             }     
         }     
@@ -183,7 +183,7 @@ public class JSChoice : MonoBehaviour
         else if (SaveData.JinSangvisit[3] == 2)
             SceneManager.LoadScene("JinSang3_2");
         else if (SaveData.JinSangvisit[3] == 3)
-            SceneManager.LoadScene("JinSang32_3");
+            SceneManager.LoadScene("JinSang3_3");
     }
     public void JinSang4_()
     {
