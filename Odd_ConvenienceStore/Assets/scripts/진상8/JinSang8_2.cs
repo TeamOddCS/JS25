@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class JinSang8_2 : MonoBehaviour
 {
@@ -25,8 +26,10 @@ public class JinSang8_2 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
-
+        if (count == 0) //변경점
+        { 
+            Nextdialogue();
+        }
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -126,36 +129,41 @@ public class JinSang8_2 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
-                {
 
-                    Nextdialogue();
-                    if (count == 39)
-                    {
-                        count += 5;
-                    }
-                    if (count == 52)
-                    {
-                        fade.Fade();
-                        Hidedialogue();
-                    }
-                    if (count == 58)
-                    {
-                        fade.Fade();
-                        Hidedialogue();
-                    }
-                    JinSang8_2_HC();
-                }
-                else
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    GameController.GetComponent<JSChoice>().Check_Day();
+                    if (count < data.Count)
+                    {
+
+                        Nextdialogue();
+                        if (count == 39)
+                        {
+                            count += 5;
+                        }
+                        if (count == 52)
+                        {
+                            fade.Fade();
+                            Hidedialogue();
+                        }
+                        if (count == 58)
+                        {
+                            fade.Fade();
+                            Hidedialogue();
+                        }
+                        JinSang8_2_HC();
+                    }
+                    else
+                    {
+                        fade.Fade();
+                        Hidedialogue();
+                        count = 1;
+                        GameController.GetComponent<JSChoice>().Check_Day();
+                    }
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
                 }
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
             }
+          
         }
         else
             Hidedialogue();
