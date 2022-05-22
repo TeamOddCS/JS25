@@ -2707,7 +2707,7 @@ MonoBehaviour:
   GameController: {fileID: 135733974}
   HealthControlScript: {fileID: 135733974}
   minus: {fileID: 8300000, guid: 82518d9391089f74a97897343d8e287e, type: 3}
-  plus: {fileID: 0}
+  plus: {fileID: 8300000, guid: 24621a8cb5adc014aa627b017ea54ca4, type: 3}
 --- !u!114 &974919122
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -125,6 +125,7 @@ public class Day5_1 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Day5-1");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
     // Update is called once per frame
@@ -168,6 +169,7 @@ public class Day5_1 : MonoBehaviour
                     GameController.GetComponent<JSChoice>().D5_JSChoice();
                 }
 
+                day5_1_HC();
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }

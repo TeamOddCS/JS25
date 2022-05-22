@@ -129,6 +129,7 @@ public class Day6_1 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Day6-1");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
     // Update is called once per frame
@@ -140,6 +141,7 @@ public class Day6_1 : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 day6_1_JD();
+                day6_1_HC();
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }

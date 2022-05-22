@@ -75,6 +75,7 @@ public class Day5_3 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Day5-3");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
     private void day5_3_HC()
@@ -120,6 +121,7 @@ public class Day5_3 : MonoBehaviour
                     count = 1;
                     SceneManager.LoadScene("Day5-F");
                 }
+                day5_3_HC();
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }
