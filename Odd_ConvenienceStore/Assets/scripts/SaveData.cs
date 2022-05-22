@@ -32,6 +32,8 @@ public class SaveData : MonoBehaviour
     public static int TempCount = 0;
 
     public static string LastScene = " ";
+
+    public static bool retry = false;
     // Start is called before the first frame update
 
     [Serializable]

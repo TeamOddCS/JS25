@@ -14,6 +14,8 @@ public class TitleButton : MonoBehaviour
     public void Goto_GameStart()
     {
         SaveData.DoChangeData = true;
+        SaveData.retry = false;
+        SaveData.Saves();
         SceneManager.LoadScene("Day0");
     }
 
@@ -22,7 +24,7 @@ public class TitleButton : MonoBehaviour
 
         SaveData.Loads();
 
-        if (SaveData.Check_Loads_Files == false)
+        if (SaveData.Check_Loads_Files == false || SaveData.retry == true)
         {
            IBM.SetActive(true);
         }

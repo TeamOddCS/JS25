@@ -192,7 +192,7 @@ public class HealthControlScript : MonoBehaviour
         SaveData.Loads();
         SaveData.TempCount = 0;
         SaveData.TempScene = "Day0";
-        
+        SaveData.retry = true;
         SaveData.Saves();
         SceneManager.LoadScene("Title");
 
