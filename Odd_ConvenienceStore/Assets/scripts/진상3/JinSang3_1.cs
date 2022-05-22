@@ -136,17 +136,19 @@ public class JinSang3_1 : MonoBehaviour
                 {
                     
                     Nextdialogue();
-                    /*if (count == 27)
+                    if (count == 27)
                     {
-                        fade.Fade();
-                        Hidedialogue();
+                        count += 58 - 27;
                     }
                     if (count == 35)
                     {
-                        fade.Fade();
-                        Hidedialogue();
+                        count += 58 - 35;
                     }
                     if (count == 53)
+                    {
+                        count += 5;
+                    }
+                    /*if (count == 58)
                     {
                         fade.Fade();
                         Hidedialogue();

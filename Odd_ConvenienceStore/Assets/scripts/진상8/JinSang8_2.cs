@@ -142,14 +142,13 @@ public class JinSang8_2 : MonoBehaviour
                         }
                         if (count == 52)
                         {
-                            fade.Fade();
-                            Hidedialogue();
+                            count += 6;
                         }
-                        if (count == 58)
+                        /*if (count == 58)
                         {
                             fade.Fade();
                             Hidedialogue();
-                        }
+                        }*/
                         JinSang8_2_HC();
                     }
                     else
