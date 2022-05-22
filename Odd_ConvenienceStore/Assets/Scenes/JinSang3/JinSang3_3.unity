@@ -2946,6 +2946,7 @@ MonoBehaviour:
   touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
   bell: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
   GameController: {fileID: 348269029}
+  HealthControlScript: {fileID: 348269029}
 --- !u!114 &1309799548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3095,7 +3096,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b7b942a5ed437154a909ebfa803912cc, type: 3}
   - {fileID: 21300000, guid: d10f815f41a9edb49a79cddbfade4b20, type: 3}
   - {fileID: 21300000, guid: 091585823f4a12342aeccc7328e9778b, type: 3}
-  js3: {fileID: 0}
+  js3: {fileID: 1014285207}
 --- !u!1 &1313047615
 GameObject:
   m_ObjectHideFlags: 0

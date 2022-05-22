@@ -160,6 +160,7 @@ public class JinSang3_1 : MonoBehaviour
                     count = 1;
                     GameController.GetComponent<JSChoice>().Check_Day();
                 }
+                JinSang3_1_HC();
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }

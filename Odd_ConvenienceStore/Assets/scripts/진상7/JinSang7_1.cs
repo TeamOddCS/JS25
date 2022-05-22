@@ -15,6 +15,7 @@ public class JinSang7_1 : MonoBehaviour
     public AudioClip bell;
     public AudioClip pos;
 
+    public GameObject HealthControlScript;
     public GameObject GameController;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
@@ -76,9 +77,9 @@ public class JinSang7_1 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("진상7-1");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
-
 
     // Update is called once per frame
     void Update()

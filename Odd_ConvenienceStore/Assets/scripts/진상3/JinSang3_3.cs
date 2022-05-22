@@ -16,6 +16,7 @@ public class JinSang3_3 : MonoBehaviour
     public AudioClip bell;
 
     public GameObject GameController;
+    public GameObject HealthControlScript;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -102,8 +103,25 @@ public class JinSang3_3 : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("진상3-3");
+        HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
+    private void JinSang3_3_HC()
+    {
+
+        if (count == 12)
+        {
+            SaveData.JSName = " JS3";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+        if (count == 24)
+        {
+            SaveData.JSName = " JS3";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+ 
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -133,6 +151,7 @@ public class JinSang3_3 : MonoBehaviour
                     count = 1;
                     GameController.GetComponent<JSChoice>().Check_Day();
                 }
+                JinSang3_3_HC();
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }

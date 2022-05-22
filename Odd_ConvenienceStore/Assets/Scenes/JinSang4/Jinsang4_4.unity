@@ -1316,7 +1316,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6122db10afe8a894a9689ed23ebde0c3, type: 3}
   - {fileID: 21300000, guid: 95002bbd2873c4a428a0e29d96bff705, type: 3}
   - {fileID: 21300000, guid: 9a8fa23fcfd8eb0429caa2401e32d546, type: 3}
-  js4: {fileID: 0}
+  js4: {fileID: 622791364}
 --- !u!114 &552827419
 MonoBehaviour:
   m_ObjectHideFlags: 0

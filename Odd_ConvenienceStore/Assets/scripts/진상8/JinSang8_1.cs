@@ -94,22 +94,16 @@ public class JinSang8_1 : MonoBehaviour
             facenum = 6;
         }
     }
-    //private void JinSang3_1_HC()
-    //{
-    //    if (count == 21)
-    //    {
-    //        SoundManager.instance.SFXPlay("Minus", minus);
-    //        SaveData.JSName = " JS3";
-    //        HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+    private void JinSang8_1_HC()
+    {
+        if (count == 28)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS8";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+    }
 
-    //    }
-    //    if (count == 51)
-    //    {
-    //        SoundManager.instance.SFXPlay("Minus", minus);
-    //        SaveData.JSName = " JS3";
-    //        HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-    //    }
-    //}
     public void Awake()
     {
         SaveData.DoLoadData = true;
@@ -149,7 +143,7 @@ public class JinSang8_1 : MonoBehaviour
                         fade.Fade();
                         Hidedialogue();
                     }
-                    //JinSang3_1_HC();
+                    JinSang8_1_HC();
                 }
                 else
                 {

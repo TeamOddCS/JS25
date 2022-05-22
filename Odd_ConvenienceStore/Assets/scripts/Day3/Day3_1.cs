@@ -93,36 +93,6 @@ public class Day3_1 : MonoBehaviour
         
 
     }
-    private void day2_1_HC()
-    {
-      
-        if (count == 65)
-        {
-            SaveData.JSName = " JS3";
-            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-        }
-        if (count == 70)
-        {
-            SaveData.JSName = " JS3";
-            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-        }
-        if (count == 87)
-        {
-            SaveData.JSName = " JS3";
-            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-        }
-        if (count == 134)
-        {
-            SaveData.JSName = " JS7";
-            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-        }
-        if (count == 158)
-        {
-            SaveData.JSName = " JS7";
-            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-        }
-
-    }
 
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {

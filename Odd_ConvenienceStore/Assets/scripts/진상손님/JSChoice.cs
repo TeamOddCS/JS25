@@ -94,9 +94,8 @@ public class JSChoice : MonoBehaviour
             JinSang4_();
         else if (random_num == 2)
             JinSang7_();
-        //else if (random_num == 3)
-        //  JinSang8_();
-        else D2_JSChoice();
+        else if (random_num == 3)
+            JinSang8_();
     }
     public void D3_JSChoice()
     {
@@ -113,9 +112,8 @@ public class JSChoice : MonoBehaviour
             JinSang2_();
         else if (random_num == 2)
             JinSang6_();
-        //else if (random_num == 3)
-        //  JinSang8_();
-        else D3_JSChoice();
+        else if (random_num == 3)
+            JinSang8_();
     }
     public void D4_JSChoice()
     {
@@ -140,9 +138,8 @@ public class JSChoice : MonoBehaviour
             JinSang3_();
         else if (random_num == 1)
             JinSang7_();
-        //else if (random_num == 2)
-            //JinSang8_();
-       else D5_JSChoice();
+        else if (random_num == 2)
+            JinSang8_();
     }
     public void D6_JSChoice()
     {
@@ -232,8 +229,7 @@ public class JSChoice : MonoBehaviour
             SceneManager.LoadScene("JinSang7_2");
     }
 
-    //기획나오면 추가
-    /*public void JinSang8_()
+    public void JinSang8_()
     {
         SaveData.JinSangvisit[8]++;
         SaveData.Saves();
@@ -244,7 +240,7 @@ public class JSChoice : MonoBehaviour
             SceneManager.LoadScene("JinSang8_2");
         else if (SaveData.JinSangvisit[8] == 2)
             SceneManager.LoadScene("JinSang8_3");
-    }*/
+    }
 
     
 }

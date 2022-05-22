@@ -117,6 +117,16 @@ public class JinSang8_3 : MonoBehaviour
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
+    private void JinSang8_3_HC()
+    {
+        if (count == 47)
+        {
+            SoundManager.instance.SFXPlay("Minus", minus);
+            SaveData.JSName = " JS8";
+            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -153,6 +163,7 @@ public class JinSang8_3 : MonoBehaviour
                     count = 1;
                     GameController.GetComponent<JSChoice>().Check_Day();
                 }
+                JinSang8_3_HC();
                 SaveData.TempCount = count - 1;
                 SaveData.Saves();
             }
