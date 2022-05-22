@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class JSChoice : MonoBehaviour
 {
-    private int random_num = -1;
+    private static int random_num = -1;
     private static int last_num = -1;
     private static int check_D2 = 0;
     private static int check_D3 = 0;
@@ -85,9 +85,9 @@ public class JSChoice : MonoBehaviour
 
         while(last_num == random_num)
             random_num = Random.Range(0, 4);
-        last_num = random_num;
+        
         Debug.Log("L : " + last_num + "R : " + random_num);
-
+        last_num = random_num;
         if (random_num == 0)
             JinSang3_();
         else if (random_num == 1)
@@ -234,11 +234,11 @@ public class JSChoice : MonoBehaviour
         SaveData.JinSangvisit[8]++;
         SaveData.Saves();
 
-        if (SaveData.JinSangvisit[8] == 0)
+        if (SaveData.JinSangvisit[8] == 1)
             SceneManager.LoadScene("JinSang8_1");
-        else if (SaveData.JinSangvisit[8] == 1)
-            SceneManager.LoadScene("JinSang8_2");
         else if (SaveData.JinSangvisit[8] == 2)
+            SceneManager.LoadScene("JinSang8_2");
+        else if (SaveData.JinSangvisit[8] == 3)
             SceneManager.LoadScene("JinSang8_3");
     }
 

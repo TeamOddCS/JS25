@@ -136,7 +136,7 @@ public class JinSang3_1 : MonoBehaviour
                 {
                     
                     Nextdialogue();
-                    if (count == 27)
+                    /*if (count == 27)
                     {
                         fade.Fade();
                         Hidedialogue();
@@ -150,7 +150,7 @@ public class JinSang3_1 : MonoBehaviour
                     {
                         fade.Fade();
                         Hidedialogue();
-                    }
+                    }*/
                     JinSang3_1_HC();
                 }
                 else
