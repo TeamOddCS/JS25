@@ -15,7 +15,7 @@ public class JinSang8_2 : MonoBehaviour
     public AudioClip touchclip;
     //public AudioClip kbdclip;
     public static int facenum = 0;
-    public static int facenum2 = 0;
+    public static int facenum2 = 0;// 손님 그래픽 추가 테스트 코드
     public GameObject HealthControlScript;
     public AudioClip bell;
     public AudioClip minus;
@@ -103,11 +103,11 @@ public class JinSang8_2 : MonoBehaviour
         }
 
 
-        if (data[count]["Face2"].ToString().Equals("0"))
+        if (data[count]["Face2"].ToString().Equals("0"))// 손님 그래픽 추가 테스트 코드
         {
             facenum2 = 0;
         }
-        if (data[count]["Face2"].ToString().Equals("3_1_2"))
+        if (data[count]["Face2"].ToString().Equals("3_1_2"))// 손님 그래픽 추가 테스트 코드
         {
             facenum2 = 1;
         }
