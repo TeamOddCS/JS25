@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class JS8_2_OT : MonoBehaviour
 {
-    public GameObject option_page;
+    public GameObject option_page,js8_2;
 
     public void OptionOn()
     {
         Time.timeScale = 0;
         option_page.SetActive(true);
         JinSang8_2.isDialogue = false;
+        
     }
     public void OptionOff()
     {
@@ -22,7 +23,10 @@ public class JS8_2_OT : MonoBehaviour
         }
         else
         {
-            JinSang8_2.isDialogue = true;
+            //JinSang8_2.isDialogue = true;
+            //JinSang8_2.Showdialogue();
+            js8_2.GetComponent<JinSang8_2>().Showdialogue();//∫Ø∞Ê¡°
         }
+        
     }
 }

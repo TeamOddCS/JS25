@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class JinSang8_2 : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class JinSang8_2 : MonoBehaviour
     public AudioClip touchclip;
     //public AudioClip kbdclip;
     public static int facenum = 0;
+    public static int facenum2 = 0;
     public GameObject HealthControlScript;
     public AudioClip bell;
     public AudioClip minus;
@@ -25,8 +27,10 @@ public class JinSang8_2 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
-
+        if (count == 0) //변경점
+        { 
+            Nextdialogue();
+        }
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -69,6 +73,10 @@ public class JinSang8_2 : MonoBehaviour
     }
     private void FaceChange()
     {
+        if (data[count]["Face"].ToString().Equals("0"))
+        {
+            facenum = 0;
+        }
         if (data[count]["Face"].ToString().Equals("8_1_1"))
         {
             facenum = 1;
@@ -92,6 +100,16 @@ public class JinSang8_2 : MonoBehaviour
         if (data[count]["Face"].ToString().Equals("8_2_3"))
         {
             facenum = 6;
+        }
+
+
+        if (data[count]["Face2"].ToString().Equals("0"))
+        {
+            facenum2 = 0;
+        }
+        if (data[count]["Face2"].ToString().Equals("3_1_2"))
+        {
+            facenum2 = 1;
         }
     }
     private void JinSang8_2_HC()
@@ -126,36 +144,40 @@ public class JinSang8_2 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
-                {
 
-                    Nextdialogue();
-                    if (count == 39)
-                    {
-                        count += 5;
-                    }
-                    if (count == 52)
-                    {
-                        fade.Fade();
-                        Hidedialogue();
-                    }
-                    if (count == 58)
-                    {
-                        fade.Fade();
-                        Hidedialogue();
-                    }
-                    JinSang8_2_HC();
-                }
-                else
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    GameController.GetComponent<JSChoice>().Check_Day();
+                    if (count < data.Count)
+                    {
+
+                        Nextdialogue();
+                        if (count == 39)
+                        {
+                            count += 5;
+                        }
+                        if (count == 52)
+                        {
+                            count += 6;
+                        }
+                        /*if (count == 58)
+                        {
+                            fade.Fade();
+                            Hidedialogue();
+                        }*/
+                        JinSang8_2_HC();
+                    }
+                    else
+                    {
+                        fade.Fade();
+                        Hidedialogue();
+                        count = 1;
+                        GameController.GetComponent<JSChoice>().Check_Day();
+                    }
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
                 }
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
             }
+          
         }
         else
             Hidedialogue();
