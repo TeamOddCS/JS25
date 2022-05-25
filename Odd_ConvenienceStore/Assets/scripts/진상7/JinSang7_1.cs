@@ -14,6 +14,7 @@ public class JinSang7_1 : MonoBehaviour
     public AudioClip touchclip;
     public AudioClip bell;
     public AudioClip pos;
+    public static int facenum = 0;
 
     public GameObject HealthControlScript;
     public GameObject GameController;
@@ -50,6 +51,26 @@ public class JinSang7_1 : MonoBehaviour
             SoundManager.instance.SFXPlay("Pos", pos);
         }
         count++;
+    }
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("7_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("7_1_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("7_2_1"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("7_2_2"))
+        {
+            facenum = 4;
+        }
+       
     }
 
     public void TextColorChange()

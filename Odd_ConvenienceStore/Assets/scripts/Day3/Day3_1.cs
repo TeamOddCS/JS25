@@ -32,6 +32,7 @@ public class Day3_1 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//초록색 (생명력 +) 
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
 
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -169,6 +170,7 @@ public class Day3_1 : MonoBehaviour
     {
         if (count < data.Count)
         {
+          
             if (count == 65)
             { //외상해드릴게요.
                 SoundManager.instance.SFXPlay("Minus", minus);

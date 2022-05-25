@@ -15,6 +15,8 @@ public class JinSang5_1 : MonoBehaviour
     public AudioClip bell;
     public GameObject GameController;
     public GameObject HealthControlScript;
+    public static int facenum = 0;
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -43,6 +45,42 @@ public class JinSang5_1 : MonoBehaviour
             SoundManager.instance.SFXPlay("Bell", bell);
         }
         count++;
+    }
+
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("5_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("5_1_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("5_2_1"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("5_2_2"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("5_3_1"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("5_3_2"))
+        {
+            facenum = 6;
+        }
+        if (data[count]["Face"].ToString().Equals("5_4_1"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("5_4_2"))
+        {
+            facenum = 8;
+        }
     }
     public void TextColorChange()
     {

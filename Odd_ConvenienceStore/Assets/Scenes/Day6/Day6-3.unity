@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 102764112}
   - component: {fileID: 102764111}
   - component: {fileID: 102764113}
+  - component: {fileID: 102764114}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 2"
   m_TagString: Untagged
@@ -355,8 +356,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 753595584}
-        m_TargetAssemblyTypeName: Day6_1_C, Assembly-CSharp
+      - m_Target: {fileID: 102764114}
+        m_TargetAssemblyTypeName: Day6_3_C, Assembly-CSharp
         m_MethodName: NextChoice2
         m_Mode: 1
         m_Arguments:
@@ -379,6 +380,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &102764114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102764109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5efc634c6ee5847913e8030846c877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choicebtn1: {fileID: 162662404}
+  choicebtn2: {fileID: 102764113}
+  txt_choice1: {fileID: 737805357}
+  txt_choice2: {fileID: 2021596332}
+  choice:
+  - _choice: "\uB2E4\uC2DC \uBB3C\uC5B4\uBCF8\uB2E4."
+    _choice2: "\uD3C9\uC18C\uC5D0 \uC0AC\uAC04 \uB2F4\uBC30\uB97C \uB4DC\uB9B0\uB2E4. "
+  - _choice: "\uB9D0\uBCF4\uB8E8 \uACE8\uB4DC "
+    _choice2: "\uC544\uC774\uC2A4\uBD88\uD2B8 GT"
+  - _choice: "\uADF8 \uC74C\uB8CC \uC88B\uC544\uD558\uC2DC\uB098\uBD10\uC694."
+    _choice2: "\uD544\uC694\uD558\uC2E0 \uAC70 \uC544\uB2C8\uC5C8\uC5B4\uC694?"
+  - _choice: "\uAD00\uC2EC\uC774 \uC870\uAE08 \uC0DD\uAE30\uB124\uC694."
+    _choice2: "\uC544\uB1E8. \uAD00\uC2EC \uC5C6\uC5B4\uC694. "
+  - _choice: "\uB124, \uB9DE\uC544\uC694. "
+    _choice2: "\uC544\uB1E8, \uB9CE\uC774 \uBA40\uC5B4\uC694. "
+  - _choice: "\uC5EC\uAE30\uB294 \uC5B4\uCA4C\uB2E4 \uC624\uC168\uC5B4\uC694? "
+    _choice2: "\uB9C9\uCC28 \uB193\uCE60\uB77C, \uBE68\uB9AC \uAC00\uC138\uC694."
+  - _choice: "\uC57D\uC18D \uC2DC\uAC04 \uBA87 \uC2DC\uC5D0\uC694?"
+    _choice2: "\uAE40\uB2E8\uC9DD\uC774\uB791\uC740 \uC5F0\uB77D \uD588\uC5B4\uC694?"
+  - _choice: "\uCEE4\uD53C\uC5D0 \uAD00\uC2EC \uC788\uB294 \uD3B8 "
+    _choice2: "\uC81C \uAD00\uC2EC\uC0AC\uB294 \uC6B0\uB9AC\uC9D1 \uBF40\uC090 "
+  - _choice: "\uB2E8\uD638\uD558\uAC8C \uAC70\uC808\uD55C\uB2E4. "
+    _choice2: "\uD3F0 \uBC88\uD638\uB97C \uBC1B\uC544\uB454\uB2E4. "
+  - _choice: "\uB3D9\uC871\uD589\uC138\uB97C \uD558\uBA70 \uC778\uC0AC\uD55C\uB2E4. "
+    _choice2: "\uBB34\uC2DC\uD55C\uB2E4. "
+  - _choice: "\uAC00\uB9CC\uD788 \uC788\uB294\uB2E4."
+    _choice2: "\uD55C\uB9C8\uB514 \uD55C\uB2E4. "
 --- !u!1 &162662400
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +431,7 @@ GameObject:
   - component: {fileID: 162662403}
   - component: {fileID: 162662402}
   - component: {fileID: 162662404}
+  - component: {fileID: 162662405}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C0 \uBC84\uD2BC 1"
   m_TagString: Untagged
@@ -500,8 +541,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 753595584}
-        m_TargetAssemblyTypeName: Day6_1_C, Assembly-CSharp
+      - m_Target: {fileID: 162662405}
+        m_TargetAssemblyTypeName: Day6_3_C, Assembly-CSharp
         m_MethodName: NextChoice1
         m_Mode: 1
         m_Arguments:
@@ -524,6 +565,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &162662405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162662400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5efc634c6ee5847913e8030846c877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choicebtn1: {fileID: 162662404}
+  choicebtn2: {fileID: 102764113}
+  txt_choice1: {fileID: 737805357}
+  txt_choice2: {fileID: 2021596332}
+  choice:
+  - _choice: "\uB2E4\uC2DC \uBB3C\uC5B4\uBCF8\uB2E4."
+    _choice2: "\uD3C9\uC18C\uC5D0 \uC0AC\uAC04 \uB2F4\uBC30\uB97C \uB4DC\uB9B0\uB2E4. "
+  - _choice: "\uB9D0\uBCF4\uB8E8 \uACE8\uB4DC "
+    _choice2: "\uC544\uC774\uC2A4\uBD88\uD2B8 GT"
+  - _choice: "\uADF8 \uC74C\uB8CC \uC88B\uC544\uD558\uC2DC\uB098\uBD10\uC694."
+    _choice2: "\uD544\uC694\uD558\uC2E0 \uAC70 \uC544\uB2C8\uC5C8\uC5B4\uC694?"
+  - _choice: "\uAD00\uC2EC\uC774 \uC870\uAE08 \uC0DD\uAE30\uB124\uC694."
+    _choice2: "\uC544\uB1E8. \uAD00\uC2EC \uC5C6\uC5B4\uC694. "
+  - _choice: "\uB124, \uB9DE\uC544\uC694. "
+    _choice2: "\uC544\uB1E8, \uB9CE\uC774 \uBA40\uC5B4\uC694. "
+  - _choice: "\uC5EC\uAE30\uB294 \uC5B4\uCA4C\uB2E4 \uC624\uC168\uC5B4\uC694? "
+    _choice2: "\uB9C9\uCC28 \uB193\uCE60\uB77C, \uBE68\uB9AC \uAC00\uC138\uC694."
+  - _choice: "\uC57D\uC18D \uC2DC\uAC04 \uBA87 \uC2DC\uC5D0\uC694?"
+    _choice2: "\uAE40\uB2E8\uC9DD\uC774\uB791\uC740 \uC5F0\uB77D \uD588\uC5B4\uC694?"
+  - _choice: "\uCEE4\uD53C\uC5D0 \uAD00\uC2EC \uC788\uB294 \uD3B8 "
+    _choice2: "\uC81C \uAD00\uC2EC\uC0AC\uB294 \uC6B0\uB9AC\uC9D1 \uBF40\uC090 "
+  - _choice: "\uB2E8\uD638\uD558\uAC8C \uAC70\uC808\uD55C\uB2E4. "
+    _choice2: "\uD3F0 \uBC88\uD638\uB97C \uBC1B\uC544\uB454\uB2E4. "
+  - _choice: "\uB3D9\uC871\uD589\uC138\uB97C \uD558\uBA70 \uC778\uC0AC\uD55C\uB2E4. "
+    _choice2: "\uBB34\uC2DC\uD55C\uB2E4. "
+  - _choice: "\uAC00\uB9CC\uD788 \uC788\uB294\uB2E4."
+    _choice2: "\uD55C\uB9C8\uB514 \uD55C\uB2E4. "
 --- !u!1 &218387449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,6 +1953,7 @@ GameObject:
   - component: {fileID: 753595588}
   - component: {fileID: 753595587}
   - component: {fileID: 753595586}
+  - component: {fileID: 753595594}
   - component: {fileID: 753595585}
   - component: {fileID: 753595584}
   m_Layer: 5
@@ -1891,7 +1972,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 753595583}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66107bb82603704478a0c1dd6b08416d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c5efc634c6ee5847913e8030846c877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   choicebtn1: {fileID: 162662404}
@@ -1899,12 +1980,28 @@ MonoBehaviour:
   txt_choice1: {fileID: 737805357}
   txt_choice2: {fileID: 2021596332}
   choice:
-  - _choice: "\uC544\uB2C8\uC5D0\uC694 \uAD1C\uCC2E\uC2B5\uB2C8\uB2E4."
-    _choice2: "\uB4E0\uB4E0\uD55C \uB3C4\uC2DC\uB77D \uD558\uB098\uB9CC\u2026"
-  - _choice: "\uB2F9\uC7A5 \uC0AC\uACFC\uD558\uC138\uC694."
-    _choice2: "\uBB34\uC2DC\uD558\uC138\uC694, \uD560\uC544\uBC84\uC9C0."
-  - _choice: "\uAF30\uB300\uC796\uC544\uC694. \uC774\uD574\uD558\uC138\uC694."
-    _choice2: "\uADF8\uB798\uB3C4 \uB178\uC778 \uACF5\uACBD \uD574\uC57C\uC8E0."
+  - _choice: "\uB2E4\uC2DC \uBB3C\uC5B4\uBCF8\uB2E4."
+    _choice2: "\uD3C9\uC18C\uC5D0 \uC0AC\uAC04 \uB2F4\uBC30\uB97C \uB4DC\uB9B0\uB2E4. "
+  - _choice: "\uB9D0\uBCF4\uB8E8 \uACE8\uB4DC "
+    _choice2: "\uC544\uC774\uC2A4\uBD88\uD2B8 GT"
+  - _choice: "\uADF8 \uC74C\uB8CC \uC88B\uC544\uD558\uC2DC\uB098\uBD10\uC694."
+    _choice2: "\uD544\uC694\uD558\uC2E0 \uAC70 \uC544\uB2C8\uC5C8\uC5B4\uC694?"
+  - _choice: "\uAD00\uC2EC\uC774 \uC870\uAE08 \uC0DD\uAE30\uB124\uC694."
+    _choice2: "\uC544\uB1E8. \uAD00\uC2EC \uC5C6\uC5B4\uC694. "
+  - _choice: "\uB124, \uB9DE\uC544\uC694. "
+    _choice2: "\uC544\uB1E8, \uB9CE\uC774 \uBA40\uC5B4\uC694. "
+  - _choice: "\uC5EC\uAE30\uB294 \uC5B4\uCA4C\uB2E4 \uC624\uC168\uC5B4\uC694? "
+    _choice2: "\uB9C9\uCC28 \uB193\uCE60\uB77C, \uBE68\uB9AC \uAC00\uC138\uC694."
+  - _choice: "\uC57D\uC18D \uC2DC\uAC04 \uBA87 \uC2DC\uC5D0\uC694?"
+    _choice2: "\uAE40\uB2E8\uC9DD\uC774\uB791\uC740 \uC5F0\uB77D \uD588\uC5B4\uC694?"
+  - _choice: "\uCEE4\uD53C\uC5D0 \uAD00\uC2EC \uC788\uB294 \uD3B8 "
+    _choice2: "\uC81C \uAD00\uC2EC\uC0AC\uB294 \uC6B0\uB9AC\uC9D1 \uBF40\uC090 "
+  - _choice: "\uB2E8\uD638\uD558\uAC8C \uAC70\uC808\uD55C\uB2E4. "
+    _choice2: "\uD3F0 \uBC88\uD638\uB97C \uBC1B\uC544\uB454\uB2E4. "
+  - _choice: "\uB3D9\uC871\uD589\uC138\uB97C \uD558\uBA70 \uC778\uC0AC\uD55C\uB2E4. "
+    _choice2: "\uBB34\uC2DC\uD55C\uB2E4. "
+  - _choice: "\uAC00\uB9CC\uD788 \uC788\uB294\uB2E4."
+    _choice2: "\uD55C\uB9C8\uB514 \uD55C\uB2E4. "
 --- !u!114 &753595585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1914,18 +2011,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 753595583}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cff0fdc54a91504db041448e720ce8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 65b16548aa9fecd439c7286bceb91ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt_name: {fileID: 1062043167}
-  txt_dialogue: {fileID: 2041553801}
-  fade: {fileID: 753595587}
-  touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
-  bell: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
-  GameController: {fileID: 662416540}
-  HealthControlScript: {fileID: 662416540}
-  minus: {fileID: 8300000, guid: 82518d9391089f74a97897343d8e287e, type: 3}
-  plus: {fileID: 8300000, guid: 24621a8cb5adc014aa627b017ea54ca4, type: 3}
 --- !u!114 &753595586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2060,6 +2148,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &753595594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753595583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3fb0e00b68e80b419c5335ce5e85533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt_name: {fileID: 1062043167}
+  txt_dialogue: {fileID: 2041553801}
+  fade: {fileID: 753595587}
+  touchclip: {fileID: 8300000, guid: 728d630bcfc0c2748af6e74b60786aa1, type: 3}
+  bell: {fileID: 8300000, guid: 5666e6fd03f152e4291a88dde8ca974a, type: 3}
+  GameController: {fileID: 662416540}
+  HealthControlScript: {fileID: 662416540}
+  minus: {fileID: 8300000, guid: 82518d9391089f74a97897343d8e287e, type: 3}
+  plus: {fileID: 8300000, guid: 24621a8cb5adc014aa627b017ea54ca4, type: 3}
 --- !u!1001 &849946286
 PrefabInstance:
   m_ObjectHideFlags: 0

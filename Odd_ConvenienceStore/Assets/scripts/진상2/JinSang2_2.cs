@@ -16,6 +16,7 @@ public class JinSang2_2 : MonoBehaviour
     public GameObject HealthControlScript;
     public GameObject GameController;
     public AudioClip minus;
+    public static int facenum = 0;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -53,6 +54,34 @@ public class JinSang2_2 : MonoBehaviour
 
         }
        
+
+    }
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("2_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("2_1_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("2_2_1"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("2_2_2"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("2_3_1"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("2_3_2"))
+        {
+            facenum = 6;
+        }
 
     }
     public void Nextdialogue()//대화내용 넘기는 함수
