@@ -15,6 +15,7 @@ public class JinSang8_2 : MonoBehaviour
     public AudioClip touchclip;
     //public AudioClip kbdclip;
     public static int facenum = 0;
+    public static int facenum2 = 0;
     public GameObject HealthControlScript;
     public AudioClip bell;
     public AudioClip minus;
@@ -72,6 +73,10 @@ public class JinSang8_2 : MonoBehaviour
     }
     private void FaceChange()
     {
+        if (data[count]["Face"].ToString().Equals("0"))
+        {
+            facenum = 0;
+        }
         if (data[count]["Face"].ToString().Equals("8_1_1"))
         {
             facenum = 1;
@@ -95,6 +100,16 @@ public class JinSang8_2 : MonoBehaviour
         if (data[count]["Face"].ToString().Equals("8_2_3"))
         {
             facenum = 6;
+        }
+
+
+        if (data[count]["Face2"].ToString().Equals("0"))
+        {
+            facenum2 = 0;
+        }
+        if (data[count]["Face2"].ToString().Equals("3_1_2"))
+        {
+            facenum2 = 1;
         }
     }
     private void JinSang8_2_HC()
