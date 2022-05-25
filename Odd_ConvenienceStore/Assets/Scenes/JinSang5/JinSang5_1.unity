@@ -1167,7 +1167,7 @@ MonoBehaviour:
   txt_choice1: {fileID: 1038040249}
   txt_choice2: {fileID: 1107132847}
   choice:
-  - _choice: "\uC810\uC7A5\uB2D8\uAED8 \uC804\uD654\uD574\uBCF8\uB2E4.\t\t\t\t"
+  - _choice: "\uC810\uC7A5\uB2D8\uAED8 \uC804\uD654\uD574\uBCF8\uB2E4."
     _choice2: "\uBBFF\uACE0 \uBCF4\uB0B8\uB2E4."
   - _choice: "\uC6B0\uC120\uC740 \uBBFF\uACE0 \uBCF4\uB0B8\uB2E4."
     _choice2: "\uACC4\uC0B0\uC744 \uC694\uAD6C\uD55C\uB2E4."
@@ -2685,7 +2685,7 @@ MonoBehaviour:
   txt_choice1: {fileID: 1038040249}
   txt_choice2: {fileID: 1107132847}
   choice:
-  - _choice: "\uC810\uC7A5\uB2D8\uAED8 \uC804\uD654\uD574\uBCF8\uB2E4.\t\t\t\t"
+  - _choice: "\uC810\uC7A5\uB2D8\uAED8 \uC804\uD654\uD574\uBCF8\uB2E4."
     _choice2: "\uBBFF\uACE0 \uBCF4\uB0B8\uB2E4."
   - _choice: "\uC6B0\uC120\uC740 \uBBFF\uACE0 \uBCF4\uB0B8\uB2E4."
     _choice2: "\uACC4\uC0B0\uC744 \uC694\uAD6C\uD55C\uB2E4."
