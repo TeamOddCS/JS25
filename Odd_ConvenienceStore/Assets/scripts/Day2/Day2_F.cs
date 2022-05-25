@@ -33,6 +33,7 @@ public class Day2_F : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
+        TextColorChange();
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
@@ -42,6 +43,14 @@ public class Day2_F : MonoBehaviour
             SoundManager.instance.SFXPlay("ring", ring);
         }
         count++;
+    }
+    public void TextColorChange()
+    {
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#2782cc>");//파란색 "중요한부분"
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//초록색 (생명력 +) 
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// 바꿀 색깔이 끝났을때 쓰는 기호
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
 
 
