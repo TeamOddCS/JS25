@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -408,10 +408,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 181069677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5ce986a87fc297439d861f855624b9a, type: 3}
+  m_Script: {fileID: 11500000, guid: a105e617e908bf042a3c97d9ad567056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   option_page: {fileID: 1291955789}
+  js4_1: {fileID: 1283800385}
 --- !u!114 &181069680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,7 +458,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 181069679}
-        m_TargetAssemblyTypeName: JS4_2_OT, Assembly-CSharp
+        m_TargetAssemblyTypeName: JS4_1_OT, Assembly-CSharp
         m_MethodName: OptionOff
         m_Mode: 1
         m_Arguments:
@@ -1168,6 +1169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   option_page: {fileID: 1291955789}
+  js4_1: {fileID: 0}
 --- !u!114 &359131598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1712,7 +1714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

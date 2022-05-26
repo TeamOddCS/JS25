@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -23,7 +24,8 @@ public class Day6_F : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -102,7 +104,8 @@ public class Day6_F : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                day6_F_JD();
+                if (EventSystem.current.IsPointerOverGameObject() == false)
+                    day6_F_JD();
             }
         }
         else

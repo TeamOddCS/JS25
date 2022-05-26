@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class JinSang3_3 : MonoBehaviour
@@ -24,7 +25,8 @@ public class JinSang3_3 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -129,31 +131,34 @@ public class JinSang3_3 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    Nextdialogue();
-                    if (count == 17)
+                    if (count < data.Count)
                     {
-                        fade.Fade();
-                        Hidedialogue();
-                    }
-                    if (count == 29)
-                    {
-                        fade.Fade();
-                        Hidedialogue();
-                    }
+                        Nextdialogue();
+                        if (count == 17)
+                        {
+                            fade.Fade();
+                            Hidedialogue();
+                        }
+                        if (count == 29)
+                        {
+                            fade.Fade();
+                            Hidedialogue();
+                        }
 
+                    }
+                    else
+                    {
+                        fade.Fade();
+                        Hidedialogue();
+                        count = 1;
+                        GameController.GetComponent<JSChoice>().Check_Day();
+                    }
+                    JinSang3_3_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
                 }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    GameController.GetComponent<JSChoice>().Check_Day();
-                }
-                JinSang3_3_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
             }
         }
         else

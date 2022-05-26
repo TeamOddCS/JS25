@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -22,7 +23,8 @@ public class Day3_F : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         count = 0;
         isDialogue = true;
-        //Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
 
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -70,19 +72,23 @@ public class Day3_F : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    Nextdialogue();
-                    if (count == 13)
-                    {//아 뭐래 아니거든;;
-                        count += 6;
+                    if (count < data.Count)
+                    {
+                        Nextdialogue();
+                        if (count == 13)
+                        {//아 뭐래 아니거든;;
+                            count += 6;
+                        }
                     }
-                }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                    SceneManager.LoadScene("Day4-1");
+                    else
+                    {
+                        fade.Fade();
+                        Hidedialogue();
+                        SceneManager.LoadScene("Day4-1");
+                    }
+
                 }
             }
         }

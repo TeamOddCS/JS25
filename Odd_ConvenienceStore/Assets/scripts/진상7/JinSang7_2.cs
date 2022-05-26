@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class JinSang7_2 : MonoBehaviour
@@ -23,7 +24,8 @@ public class JinSang7_2 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
     private void FaceChange()
     {
@@ -117,28 +119,31 @@ public class JinSang7_2 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    Nextdialogue();
-                    if (count == 30)
+                    if (count < data.Count)
                     {
-                        count += 52 - 30;
+                        Nextdialogue();
+                        if (count == 30)
+                        {
+                            count += 52 - 30;
+                        }
+                        if (count == 47)
+                        {
+                            count += 51 - 47;
+                        }
                     }
-                    if (count == 47)
+                    else
                     {
-                        count += 51 - 47;
+                        fade.Fade();
+                        Hidedialogue();
+                        count = 1;
+                        GameController.GetComponent<JSChoice>().Check_Day();
                     }
+                    JinSang7_2_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
                 }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    GameController.GetComponent<JSChoice>().Check_Day();
-                }
-                JinSang7_2_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
             }
         }
         else

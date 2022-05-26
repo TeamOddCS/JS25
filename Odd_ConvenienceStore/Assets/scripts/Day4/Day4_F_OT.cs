@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Day4_F_OT : MonoBehaviour
 {
-    public GameObject option_page;
+    public GameObject option_page,day4_f;
 
     public void OptionOn()
     {
@@ -22,7 +22,7 @@ public class Day4_F_OT : MonoBehaviour
         }
         else
         {
-            Day4_F.isDialogue = true;
+           day4_f.GetComponent<Day4_F>().Showdialogue();
         }
     }
 }

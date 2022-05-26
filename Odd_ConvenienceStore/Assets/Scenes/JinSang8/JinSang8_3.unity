@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -444,10 +444,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 241565933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c801efa611002c44f8047f6378e52b45, type: 3}
+  m_Script: {fileID: 11500000, guid: a6c06e3de107bb547be57b1358df6fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   option_page: {fileID: 1054793151}
+  js8_3: {fileID: 948336454}
 --- !u!114 &241565936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +494,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 241565935}
-        m_TargetAssemblyTypeName: JS8_2_OT, Assembly-CSharp
+        m_TargetAssemblyTypeName: JS8_3_OT, Assembly-CSharp
         m_MethodName: OptionOff
         m_Mode: 1
         m_Arguments:
@@ -1815,7 +1816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4372,10 +4373,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2080326149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c801efa611002c44f8047f6378e52b45, type: 3}
+  m_Script: {fileID: 11500000, guid: a6c06e3de107bb547be57b1358df6fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   option_page: {fileID: 1054793151}
+  js8_3: {fileID: 0}
 --- !u!114 &2080326152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4421,7 +4423,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2080326151}
-        m_TargetAssemblyTypeName: JS8_2_OT, Assembly-CSharp
+        m_TargetAssemblyTypeName: JS8_3_OT, Assembly-CSharp
         m_MethodName: OptionOn
         m_Mode: 1
         m_Arguments:

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class JinSang5_1 : MonoBehaviour
@@ -23,7 +24,8 @@ public class JinSang5_1 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
 
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -138,41 +140,44 @@ public class JinSang5_1 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    Nextdialogue();
-                    if (count == 27)
+                    if (count < data.Count)
                     {
-                        fade.Fade();
-                        Hidedialogue();
-                    }
-                    if (count == 37)
-                    {
-                        fade.Fade();
-                        Hidedialogue();
-                    }
-                    if (count == 53)
-                    {
-                        fade.Fade();
-                        Hidedialogue();
-                    }
-                    if (count == 59)
-                    {
-                        fade.Fade();
-                        Hidedialogue();
-                    }
+                        Nextdialogue();
+                        if (count == 27)
+                        {
+                            fade.Fade();
+                            Hidedialogue();
+                        }
+                        if (count == 37)
+                        {
+                            fade.Fade();
+                            Hidedialogue();
+                        }
+                        if (count == 53)
+                        {
+                            fade.Fade();
+                            Hidedialogue();
+                        }
+                        if (count == 59)
+                        {
+                            fade.Fade();
+                            Hidedialogue();
+                        }
 
+                    }
+                    else
+                    {
+                        fade.Fade();
+                        Hidedialogue();
+                        count = 1;
+                        GameController.GetComponent<JSChoice>().Check_Day();
+                    }
+                    JinSang5_1_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
                 }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    GameController.GetComponent<JSChoice>().Check_Day();
-                }
-                JinSang5_1_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
             }
         }
         else

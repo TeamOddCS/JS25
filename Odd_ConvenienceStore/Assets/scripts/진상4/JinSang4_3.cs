@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class JinSang4_3 : MonoBehaviour
@@ -24,7 +25,8 @@ public class JinSang4_3 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -128,29 +130,32 @@ public class JinSang4_3 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    Nextdialogue();
-                    if (count == 40)
+                    if (count < data.Count)
                     {
-                        count += 4;
+                        Nextdialogue();
+                        if (count == 40)
+                        {
+                            count += 4;
+                        }
+                        if (count == 57)
+                        {
+                            count += 19;
+                        }
+
                     }
-                    if (count == 57)
+                    else
                     {
-                        count += 19;
+                        fade.Fade();
+                        Hidedialogue();
+                        count = 1;
+                        GameController.GetComponent<JSChoice>().Check_Day();
                     }
-                  
+                    JinSang4_3_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
                 }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    GameController.GetComponent<JSChoice>().Check_Day();
-                }
-                JinSang4_3_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
 
             }
         }

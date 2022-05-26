@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class JinSang8_1 : MonoBehaviour
@@ -25,7 +26,8 @@ public class JinSang8_1 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
 
     }
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -126,34 +128,37 @@ public class JinSang8_1 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
+                    if (count < data.Count)
+                    {
 
-                    Nextdialogue();
-                    if(count == 12)
-                    {
-                        count += 5;
+                        Nextdialogue();
+                        if (count == 12)
+                        {
+                            count += 5;
+                        }
+                        if (count == 27)
+                        {
+                            count += 3;
+                        }
+                        if (count == 37)
+                        {
+                            fade.Fade();
+                            Hidedialogue();
+                        }
+                        JinSang8_1_HC();
                     }
-                    if(count == 27)
-                    {
-                        count += 3;
-                    }
-                    if (count == 37)
+                    else
                     {
                         fade.Fade();
                         Hidedialogue();
+                        count = 1;
+                        GameController.GetComponent<JSChoice>().Check_Day();
                     }
-                    JinSang8_1_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
                 }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    GameController.GetComponent<JSChoice>().Check_Day();
-                }
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
             }
         }
         else

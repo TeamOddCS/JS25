@@ -2724,7 +2724,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1294657487}
-        m_TargetAssemblyTypeName: OptionTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: Day3_3_OT, Assembly-CSharp
         m_MethodName: OptionOff
         m_Mode: 1
         m_Arguments:
@@ -2782,10 +2782,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1294657482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1a6f080cea57041af19ec24bf097af, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a2e21e2f516be14cbde5f2e5dfb42b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   option_page: {fileID: 1307071560}
+  day3_3: {fileID: 931578095}
 --- !u!1 &1298439776 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2755646768932038533, guid: 9665248afaaf72044be5c5bf98c91351, type: 3}
@@ -3190,7 +3191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3830,6 +3831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   option_page: {fileID: 1307071560}
+  day3_3: {fileID: 0}
 --- !u!1 &2022179898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3862,7 +3864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

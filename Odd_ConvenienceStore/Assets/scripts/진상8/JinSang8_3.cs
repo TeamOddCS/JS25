@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class JinSang8_3 : MonoBehaviour
@@ -24,7 +25,8 @@ public class JinSang8_3 : MonoBehaviour
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
 
     }
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -134,38 +136,41 @@ public class JinSang8_3 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
+                    if (count < data.Count)
+                    {
 
-                    Nextdialogue();
-                    if(count == 29)
-                    {
-                        count += 30 - 29;
+                        Nextdialogue();
+                        if (count == 29)
+                        {
+                            count += 30 - 29;
+                        }
+                        if (count == 40)
+                        {
+                            count += 43 - 40;
+                        }
+                        if (count == 48)
+                        {
+                            SoundManager.instance.SFXPlay("Minus", minus);
+                            HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
+                        }
+                        if (count == 50)
+                        {
+                            count += 54 - 50;
+                        }
                     }
-                    if (count == 40)
+                    else
                     {
-                        count += 43 - 40;
+                        fade.Fade();
+                        Hidedialogue();
+                        count = 1;
+                        GameController.GetComponent<JSChoice>().Check_Day();
                     }
-                    if(count == 48)
-                    {
-                        SoundManager.instance.SFXPlay("Minus", minus);
-                        HealthControlScript.GetComponent<HealthControlScript>().health_decrease();
-                    }
-                    if (count == 50)
-                    {
-                        count += 54 - 50;
-                    }
+                    JinSang8_3_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
                 }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    GameController.GetComponent<JSChoice>().Check_Day();
-                }
-                JinSang8_3_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
             }
         }
         else

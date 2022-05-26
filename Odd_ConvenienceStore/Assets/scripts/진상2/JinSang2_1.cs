@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -25,7 +26,8 @@ public class JinSang2_1 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
 
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -140,36 +142,39 @@ public class JinSang2_1 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    Nextdialogue();
-                    if (count == 25)
-                    {// 제가뭘요
-                        count += 28;
+                    if (count < data.Count)
+                    {
+                        Nextdialogue();
+                        if (count == 25)
+                        {// 제가뭘요
+                            count += 28;
+                        }
+                        if (count == 32)
+                        { // 오해입니다.
+                            count += 21;
+                        }
+                        if (count == 46)
+                        { // 죄송합니다. 하지만
+                            count += 7;
+                        }
+                        if (count == 60)
+                        {// 죄송합니다.
+                            count += 2;
+                        }
                     }
-                    if (count == 32)
-                    { // 오해입니다.
-                        count += 21;
+                    else
+                    {
+                        fade.Fade();
+                        Hidedialogue();
+                        count = 1;
+                        GameController.GetComponent<JSChoice>().Check_Day();
                     }
-                    if(count == 46)
-                    { // 죄송합니다. 하지만
-                        count += 7;
-                    }
-                    if (count == 60)
-                    {// 죄송합니다.
-                        count += 2; 
-                    }
+                    JinSang2_1_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
                 }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    GameController.GetComponent<JSChoice>().Check_Day();
-                }
-                JinSang2_1_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
             }
         }
         else

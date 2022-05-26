@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class Day3_3 : MonoBehaviour
 {
@@ -31,7 +32,8 @@ public class Day3_3 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
 
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -166,10 +168,13 @@ public class Day3_3 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                day3_3_JD();
-                day3_3_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
+                if (EventSystem.current.IsPointerOverGameObject() == false)
+                {
+                    day3_3_JD();
+                    day3_3_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
+                }
             }
 
         }

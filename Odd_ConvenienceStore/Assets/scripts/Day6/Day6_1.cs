@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Day6_1 : MonoBehaviour 
@@ -24,7 +25,8 @@ public class Day6_1 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -141,10 +143,13 @@ public class Day6_1 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                day6_1_JD();
-                day6_1_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
+                if (EventSystem.current.IsPointerOverGameObject() == false)
+                {
+                    day6_1_JD();
+                    day6_1_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
+                }
             }
         }
         else

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Day5_1 : MonoBehaviour
@@ -25,7 +26,8 @@ public class Day5_1 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
     public void TextColorChange()
     {
@@ -135,43 +137,46 @@ public class Day5_1 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    Nextdialogue();
-                    if (count == 32)
-                    {// 그러면 저 밥사주세요 끝나고
-                        count += 8;
+                    if (count < data.Count)
+                    {
+                        Nextdialogue();
+                        if (count == 32)
+                        {// 그러면 저 밥사주세요 끝나고
+                            count += 8;
+                        }
+                        if (count == 52)
+                        {//섭섭해 하지 마세요. 끝나고
+                            count += 40;
+                        }
+                        if (count == 58)
+                        {// 그렇게까지 저를.. 끝나고
+                            count += 34;
+                        }
+                        if (count == 69)
+                            count += 6;
+                        if (count == 85)
+                            count += 7;
+                        if (count == 125)
+                            count += 5;
+                        if (count == 135)
+                            count += 34;
+                        if (count == 157)
+                            count += 15;
                     }
-                    if (count == 52)
-                    {//섭섭해 하지 마세요. 끝나고
-                        count += 40;
+                    else
+                    {
+                        fade.Fade();
+                        Hidedialogue();
+                        count = 1;
+                        GameController.GetComponent<JSChoice>().D5_JSChoice();
                     }
-                    if (count == 58)
-                    {// 그렇게까지 저를.. 끝나고
-                        count += 34;
-                    }
-                    if (count == 69)
-                        count += 6;
-                    if (count == 85)
-                        count += 7;
-                    if (count == 125)
-                        count += 5;
-                    if (count == 135)
-                        count += 34;
-                    if (count == 157)
-                        count += 15;
-                }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    GameController.GetComponent<JSChoice>().D5_JSChoice();
-                }
 
-                day5_1_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
+                    day5_1_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
+                }
             }
         }
         else

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JS3_2_OT : MonoBehaviour
 {
-    public GameObject option_page;
+    public GameObject option_page,js3_2;
 
     public void OptionOn()
     {
@@ -22,7 +22,7 @@ public class JS3_2_OT : MonoBehaviour
         }
         else
         {
-            JinSang3_2.isDialogue = true;
+            js3_2.GetComponent<JinSang3_2>().Showdialogue();
         }
     }
 }

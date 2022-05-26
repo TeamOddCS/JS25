@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class JinSang6_2 : MonoBehaviour
@@ -26,7 +27,8 @@ public class JinSang6_2 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -161,52 +163,55 @@ public class JinSang6_2 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    Nextdialogue();
-                    if (count == 11)
+                    if (count < data.Count)
                     {
-                        count += 58 - 11;
-                    }
-                    if (count == 12)
-                    {
-                        if (SaveData.JinSang6Day1 == 1)
+                        Nextdialogue();
+                        if (count == 11)
                         {
-                            Debug.Log("Data : 1");
+                            count += 58 - 11;
                         }
-                        else if (SaveData.JinSang6Day1 == 2)
+                        if (count == 12)
                         {
-                            Debug.Log("Data : 2");
-                            count += 48 - 12;
+                            if (SaveData.JinSang6Day1 == 1)
+                            {
+                                Debug.Log("Data : 1");
+                            }
+                            else if (SaveData.JinSang6Day1 == 2)
+                            {
+                                Debug.Log("Data : 2");
+                                count += 48 - 12;
+                            }
+                        }
+                        if (count == 37)
+                        {
+                            count += 58 - 37;
+                        }
+                        if (count == 44)
+                        {
+                            count += 58 - 44;
+                        }
+                        if (count == 46)
+                        {
+                            choiceF = true;
+                        }
+                        if (count == 48 && choiceF)
+                        {
+                            count += 58 - 48;
                         }
                     }
-                    if (count == 37)
+                    else
                     {
-                        count += 58 - 37;
+                        fade.Fade();
+                        Hidedialogue();
+                        count = 1;
+                        GameController.GetComponent<JSChoice>().Check_Day();
                     }
-                    if (count == 44)
-                    {
-                        count += 58 - 44;
-                    }
-                    if (count == 46)
-                    {
-                        choiceF = true;
-                    }
-                    if (count == 48 && choiceF)
-                    {
-                        count += 58 - 48;
-                    }
+                    JinSang6_2_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
                 }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    GameController.GetComponent<JSChoice>().Check_Day();
-                }
-                JinSang6_2_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
             }
         }
         else

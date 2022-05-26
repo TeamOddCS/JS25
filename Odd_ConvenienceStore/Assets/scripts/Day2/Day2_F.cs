@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+
 public class Day2_F : MonoBehaviour
 {
     [SerializeField] private Text txt_name;// 이름 담는 객체 
@@ -22,7 +24,8 @@ public class Day2_F : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -96,7 +99,10 @@ public class Day2_F : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                day2_F_JD();
+                if (EventSystem.current.IsPointerOverGameObject() == false)
+                {
+                    day2_F_JD();
+                }
             }
         }
         else

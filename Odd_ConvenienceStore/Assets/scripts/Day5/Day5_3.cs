@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -23,7 +24,8 @@ public class Day5_3 : MonoBehaviour
         txt_name.gameObject.SetActive(true);
         //count = 0;
         isDialogue = true;
-        Nextdialogue();
+        if(count==0)
+            Nextdialogue();
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -94,36 +96,39 @@ public class Day5_3 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (count < data.Count)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    Nextdialogue();
-                    if (count == 16)
+                    if (count < data.Count)
                     {
-                        count += 9;
+                        Nextdialogue();
+                        if (count == 16)
+                        {
+                            count += 9;
+                        }
+                        if (count == 45)
+                        {
+                            count += 11;
+                        }
+                        if (count == 66)
+                        {
+                            count += 7;
+                        }
+                        if (count == 85)
+                        {
+                            count += 3;
+                        }
                     }
-                    if (count == 45)
+                    else
                     {
-                        count += 11;
+                        fade.Fade();
+                        Hidedialogue();
+                        count = 1;
+                        SceneManager.LoadScene("Day5-F");
                     }
-                    if (count == 66)
-                    {
-                        count += 7;
-                    }
-                    if (count == 85)
-                    {
-                        count += 3;
-                    }
+                    day5_3_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
                 }
-                else
-                {
-                    fade.Fade();
-                    Hidedialogue();
-                    count = 1;
-                    SceneManager.LoadScene("Day5-F");
-                }
-                day5_3_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
             }
         }
         else
