@@ -87,35 +87,35 @@ public class JinSang2_2 : MonoBehaviour
         }
         if (data[count]["Face2"].ToString().Equals("9_1_1"))// 손님 그래픽 추가 테스트 코드
         {
-            facenum2 = 0;
+            facenum2 = 1;
         }
         if (data[count]["Face2"].ToString().Equals("9_1_2"))// 손님 그래픽 추가 테스트 코드
         {
-            facenum2 = 1;
+            facenum2 = 2;
         }
         if (data[count]["Face2"].ToString().Equals("9_1_3"))// 손님 그래픽 추가 테스트 코드
         {
-            facenum2 = 2;
+            facenum2 = 3;
         }
         if (data[count]["Face2"].ToString().Equals("9_1_4"))// 손님 그래픽 추가 테스트 코드
         {
-            facenum2 = 3;
+            facenum2 = 4;
         }
         if (data[count]["Face2"].ToString().Equals("9_2_1"))// 손님 그래픽 추가 테스트 코드
         {
-            facenum2 = 4;
+            facenum2 = 5;
         }
         if (data[count]["Face2"].ToString().Equals("9_2_2"))// 손님 그래픽 추가 테스트 코드
         {
-            facenum2 = 5;
+            facenum2 = 6;
         }
         if (data[count]["Face2"].ToString().Equals("9_2_3"))// 손님 그래픽 추가 테스트 코드
         {
-            facenum2 = 6;
+            facenum2 = 7;
         }
         if (data[count]["Face2"].ToString().Equals("9_2_4"))// 손님 그래픽 추가 테스트 코드
         {
-            facenum2 = 7;
+            facenum2 = 8;
         }
 
 
@@ -130,6 +130,7 @@ public class JinSang2_2 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
+        FaceChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         if (count > 0)
         {
