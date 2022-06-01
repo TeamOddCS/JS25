@@ -1955,6 +1955,7 @@ GameObject:
   - component: {fileID: 922811862}
   - component: {fileID: 922811865}
   - component: {fileID: 922811864}
+  - component: {fileID: 922811860}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2083,6 +2084,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &922811860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922811852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c95142f34ff96340961d351735c184a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  js2_face:
+  - {fileID: 21300000, guid: eec7ed0f4a3cebd4eb264559791090aa, type: 3}
+  - {fileID: 21300000, guid: 511f6c8b1e972f7488ef2c6ecd07e0db, type: 3}
+  - {fileID: 21300000, guid: 5984715a5dba96146b5dfa814e268d19, type: 3}
+  - {fileID: 21300000, guid: 475e976278539d74eaa348483ab28159, type: 3}
+  - {fileID: 21300000, guid: 8431ea9a0844312419a09f9ab14ae7f6, type: 3}
+  - {fileID: 21300000, guid: a50711520ca64724e95465f31f9cbac0, type: 3}
+  js2: {fileID: 1081991229}
 --- !u!114 &922811861
 MonoBehaviour:
   m_ObjectHideFlags: 0

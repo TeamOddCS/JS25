@@ -64,23 +64,23 @@ public class JinSang2_1 : MonoBehaviour
         {
             facenum = 1;
         }
-        if (data[count]["Face"].ToString().Equals("2_1_2"))
+        if (data[count]["Face"].ToString().Equals("2_1_3"))
         {
             facenum = 2;
         }
-        if (data[count]["Face"].ToString().Equals("2_2_1"))
+        if (data[count]["Face"].ToString().Equals("2_1_5"))
         {
             facenum = 3;
         }
-        if (data[count]["Face"].ToString().Equals("2_2_2"))
+        if (data[count]["Face"].ToString().Equals("2_2_1"))
         {
             facenum = 4;
         }
-        if (data[count]["Face"].ToString().Equals("2_3_1"))
+        if (data[count]["Face"].ToString().Equals("2_2_3"))
         {
             facenum = 5;
         }
-        if (data[count]["Face"].ToString().Equals("2_3_2"))
+        if (data[count]["Face"].ToString().Equals("2_2_5"))
         {
             facenum = 6;
         }

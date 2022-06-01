@@ -18,6 +18,7 @@ public class JinSang2_2 : MonoBehaviour
     public GameObject GameController;
     public AudioClip minus;
     public static int facenum = 0;
+    public static int facenum2 = 0;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -64,26 +65,59 @@ public class JinSang2_2 : MonoBehaviour
         {
             facenum = 1;
         }
-        if (data[count]["Face"].ToString().Equals("2_1_2"))
+        if (data[count]["Face"].ToString().Equals("2_1_3"))
         {
             facenum = 2;
         }
-        if (data[count]["Face"].ToString().Equals("2_2_1"))
+        if (data[count]["Face"].ToString().Equals("2_1_5"))
         {
             facenum = 3;
         }
-        if (data[count]["Face"].ToString().Equals("2_2_2"))
+        if (data[count]["Face"].ToString().Equals("2_2_1"))
         {
             facenum = 4;
         }
-        if (data[count]["Face"].ToString().Equals("2_3_1"))
+        if (data[count]["Face"].ToString().Equals("2_2_3"))
         {
             facenum = 5;
         }
-        if (data[count]["Face"].ToString().Equals("2_3_2"))
+        if (data[count]["Face"].ToString().Equals("2_2_5"))
         {
             facenum = 6;
         }
+        if (data[count]["Face2"].ToString().Equals("9_1_1"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 0;
+        }
+        if (data[count]["Face2"].ToString().Equals("9_1_2"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 1;
+        }
+        if (data[count]["Face2"].ToString().Equals("9_1_3"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 2;
+        }
+        if (data[count]["Face2"].ToString().Equals("9_1_4"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 3;
+        }
+        if (data[count]["Face2"].ToString().Equals("9_2_1"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 4;
+        }
+        if (data[count]["Face2"].ToString().Equals("9_2_2"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 5;
+        }
+        if (data[count]["Face2"].ToString().Equals("9_2_3"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 6;
+        }
+        if (data[count]["Face2"].ToString().Equals("9_2_4"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 7;
+        }
+
 
     }
     public void Nextdialogue()//대화내용 넘기는 함수
