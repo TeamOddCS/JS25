@@ -40,15 +40,15 @@ public class JinSang2_3 : MonoBehaviour
     }
     private void FaceChange()
     {
-        if (data[count]["Face"].ToString().Equals("2_1_1"))
+        if (data[count]["Face"].ToString().Equals("2_1_2"))
         {
             facenum = 1;
         }
-        if (data[count]["Face"].ToString().Equals("2_1_2"))
+        if (data[count]["Face"].ToString().Equals("2_1_4"))
         {
             facenum = 2;
         }
-        if (data[count]["Face"].ToString().Equals("2_2_1"))
+        if (data[count]["Face"].ToString().Equals("2_1_6"))
         {
             facenum = 3;
         }
@@ -56,11 +56,11 @@ public class JinSang2_3 : MonoBehaviour
         {
             facenum = 4;
         }
-        if (data[count]["Face"].ToString().Equals("2_3_1"))
+        if (data[count]["Face"].ToString().Equals("2_2_4"))
         {
             facenum = 5;
         }
-        if (data[count]["Face"].ToString().Equals("2_3_2"))
+        if (data[count]["Face"].ToString().Equals("2_2_6"))
         {
             facenum = 6;
         }
@@ -77,6 +77,7 @@ public class JinSang2_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
+        FaceChange();
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
