@@ -6,8 +6,7 @@ public class JS8_2_fc : MonoBehaviour
 {
     public Sprite[] js8_face;
     public GameObject js8;
-    public Sprite[] js_face;// 손님 그래픽 추가 테스트 코드
-    public GameObject js;// 손님 그래픽 추가 테스트 코드
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -37,22 +36,7 @@ public class JS8_2_fc : MonoBehaviour
         {
             js8.GetComponent<SpriteRenderer>().sprite = js8_face[4];
         }
-        else if (JinSang8_2.facenum == 5)
-        {
-            js8.GetComponent<SpriteRenderer>().sprite = js8_face[5];
-        }
-        else if (JinSang8_2.facenum == 6)
-        {
-            js8.GetComponent<SpriteRenderer>().sprite = js8_face[6];
-        }
-
-        if (JinSang8_2.facenum2 == 0)// 손님 그래픽 추가 테스트 코드
-        {
-            js.GetComponent<SpriteRenderer>().sprite = js_face[0];
-        }
-        if (JinSang8_2.facenum2 == 1)// 손님 그래픽 추가 테스트 코드
-        {
-            js.GetComponent<SpriteRenderer>().sprite = js_face[1];
-        }
+       
+      
     }
 }

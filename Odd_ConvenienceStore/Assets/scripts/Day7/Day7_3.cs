@@ -93,37 +93,85 @@ public class Day7_3 : MonoBehaviour
     }
     private void FaceChange()
     {
-        if (data[count]["Face"].ToString().Equals("7_1_1"))
+        if (data[count]["Face"].ToString().Equals("a6_1_1"))
         {
             facenum = 1;
         }
-        if (data[count]["Face"].ToString().Equals("7_1_2"))
+        if (data[count]["Face"].ToString().Equals("a6_1_2"))
         {
             facenum = 2;
         }
-        if (data[count]["Face"].ToString().Equals("7_1_3"))
+        if (data[count]["Face"].ToString().Equals("a6_1_7"))
         {
             facenum = 3;
         }
-        if (data[count]["Face"].ToString().Equals("7_1_4"))
+        if (data[count]["Face"].ToString().Equals("a2_1_1"))
         {
             facenum = 4;
         }
-        if (data[count]["Face"].ToString().Equals("7_2_1"))
+        if (data[count]["Face"].ToString().Equals("a2_1_2"))
         {
             facenum = 5;
         }
-        if (data[count]["Face"].ToString().Equals("7_2_2"))
+        if (data[count]["Face"].ToString().Equals("a2_1_3"))
         {
             facenum = 6;
         }
-        if (data[count]["Face"].ToString().Equals("7_2_3"))
+        if (data[count]["Face"].ToString().Equals("a2_1_4"))
         {
             facenum = 7;
         }
-        if (data[count]["Face"].ToString().Equals("7_2_4"))
+        if (data[count]["Face"].ToString().Equals("a1_1_1"))
         {
             facenum = 8;
+        }
+        if (data[count]["Face"].ToString().Equals("a1_1_3"))
+        {
+            facenum = 9;
+        }
+        if (data[count]["Face"].ToString().Equals("a1_1_5"))
+        {
+            facenum = 10;
+        }
+        if (data[count]["Face"].ToString().Equals("4_1_1"))
+        {
+            facenum = 11;
+        }
+        if (data[count]["Face"].ToString().Equals("4_1_2"))
+        {
+            facenum = 12;
+        }
+        if (data[count]["Face"].ToString().Equals("4_2_1"))
+        {
+            facenum = 13;
+        }
+        if (data[count]["Face"].ToString().Equals("4_2_2"))
+        {
+            facenum = 14;
+        }
+        if (data[count]["Face"].ToString().Equals("3_1_1"))
+        {
+            facenum = 15;
+        }
+        if (data[count]["Face"].ToString().Equals("3_1_2"))
+        {
+            facenum = 16;
+        }
+        if (data[count]["Face"].ToString().Equals("3_2_1"))
+        {
+            facenum = 17;
+        }
+        if (data[count]["Face"].ToString().Equals("3_2_2"))
+        {
+            facenum = 18;
+        }
+        if (data[count]["Face"].ToString().Equals("3_3_1"))
+        {
+            facenum = 19;
+        }
+        if (data[count]["Face"].ToString().Equals("3_3_2"))
+        {
+            facenum = 20;
         }
     }
     private void day7_3_JD()//첫번째 선택지를 골랐을 경우 선택지 대화를 다본후 다음 대화로 넘어가는 함수

@@ -15,8 +15,7 @@ public class Day4_1 : MonoBehaviour
     public AudioClip bell;
     public GameObject HealthControlScript;
     public AudioClip minus;
-
- 
+  
 
     public static int facenum = 0;
 
@@ -82,6 +81,19 @@ public class Day4_1 : MonoBehaviour
         {
             facenum = 6;
         }
+        if (data[count]["Face"].ToString().Equals("1111"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("2222"))
+        {
+            facenum = 8;
+        }
+        if (data[count]["Face"].ToString().Equals("3333"))
+        {
+            facenum = 9;
+        }
+
 
 
     }

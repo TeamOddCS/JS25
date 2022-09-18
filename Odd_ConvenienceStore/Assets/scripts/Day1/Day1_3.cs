@@ -15,6 +15,7 @@ public class Day1_3 : MonoBehaviour
     public AudioClip touchclip;
     public AudioClip bell;
     public FadeInOut fade;
+    public static int facenum = 0; 
 
     public GameObject HealthControlScript;
 
@@ -37,6 +38,7 @@ public class Day1_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
+        FaceChange();
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
@@ -67,6 +69,50 @@ public class Day1_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//주인공 독백 
     }
 
+    private void FaceChange()
+    {
+        if(data[count]["Face"].ToString().Equals("a5_1_1"))
+        {
+            facenum = 1; 
+        }
+        if (data[count]["Face"].ToString().Equals("a_1_3"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("a6"))
+        {
+            facenum = 3;
+        }
+
+        if (data[count]["Face"].ToString().Equals("a3"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("5_1_1"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("5_1_2"))
+        {
+            facenum = 6;
+        }
+        if (data[count]["Face"].ToString().Equals("5_2_1"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("5_2_2"))
+        {
+            facenum = 8;
+        }
+        if (data[count]["Face"].ToString().Equals("5_3_1"))
+        {
+            facenum = 9;
+        }
+        if (data[count]["Face"].ToString().Equals("5_3_2"))
+        {
+            facenum = 10;
+        }
+    }
 
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {

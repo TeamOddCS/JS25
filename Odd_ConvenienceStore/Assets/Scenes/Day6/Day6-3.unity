@@ -1957,6 +1957,7 @@ GameObject:
   - component: {fileID: 753595594}
   - component: {fileID: 753595585}
   - component: {fileID: 753595584}
+  - component: {fileID: 753595595}
   m_Layer: 5
   m_Name: 'Canvas '
   m_TagString: Untagged
@@ -2172,6 +2173,34 @@ MonoBehaviour:
   HealthControlScript: {fileID: 662416540}
   minus: {fileID: 8300000, guid: 82518d9391089f74a97897343d8e287e, type: 3}
   plus: {fileID: 8300000, guid: 24621a8cb5adc014aa627b017ea54ca4, type: 3}
+--- !u!114 &753595595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753595583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224f6ad21fef1ef4f8804d6b82eb0b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  js4_face:
+  - {fileID: 21300000, guid: fe7451e853da11c479b30f03178b19b4, type: 3}
+  - {fileID: 21300000, guid: fcde3f09a67acd347a88147987da9fb4, type: 3}
+  - {fileID: 21300000, guid: c03222355e1a9d74d8aa09f22af4f318, type: 3}
+  - {fileID: 21300000, guid: facaa6fbf12433b4eb76e16713bf545a, type: 3}
+  - {fileID: 21300000, guid: 048b70fc08ae2c4429b4b905649b6c46, type: 3}
+  - {fileID: 21300000, guid: 8370f90f384c63e48b58b1e7e56eb6c7, type: 3}
+  - {fileID: 21300000, guid: e217f016d24d75f409b29abe40479efe, type: 3}
+  - {fileID: 21300000, guid: 71f19bffc947e024b83eaa43d4658d1c, type: 3}
+  - {fileID: 21300000, guid: 587f7d3f2e3e3974a8ebb4544af79c92, type: 3}
+  - {fileID: 21300000, guid: dcc90a46946548d478aaa740349c4af7, type: 3}
+  - {fileID: 21300000, guid: 092c19a56d6992646b4eeaf88ecaa839, type: 3}
+  - {fileID: 21300000, guid: 5666830298f615c4daaefae797116884, type: 3}
+  - {fileID: 21300000, guid: 060007f5517720e48a230a1239a36b20, type: 3}
+  - {fileID: 21300000, guid: a0732364eb9ae9f4db8b12c86da9331d, type: 3}
+  js4: {fileID: 1171133932}
 --- !u!1001 &849946286
 PrefabInstance:
   m_ObjectHideFlags: 0

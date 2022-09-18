@@ -3764,6 +3764,7 @@ GameObject:
   - component: {fileID: 1789643383}
   - component: {fileID: 1789643382}
   - component: {fileID: 1789643381}
+  - component: {fileID: 1789643391}
   m_Layer: 5
   m_Name: 'Canvas '
   m_TagString: Untagged
@@ -3949,6 +3950,39 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1789643391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789643380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e31f9ae5b1a8e441be59ad8bcbacc0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  js4_face:
+  - {fileID: 21300000, guid: e217f016d24d75f409b29abe40479efe, type: 3}
+  - {fileID: 21300000, guid: 71f19bffc947e024b83eaa43d4658d1c, type: 3}
+  - {fileID: 21300000, guid: 587f7d3f2e3e3974a8ebb4544af79c92, type: 3}
+  - {fileID: 21300000, guid: 9835aaefe48e3f646ac0a2f4ada24df0, type: 3}
+  - {fileID: 21300000, guid: af2fb2715bf42304a93723c64def630d, type: 3}
+  - {fileID: 21300000, guid: 82aa2334f45acac4e987eda46c0a65ee, type: 3}
+  - {fileID: 21300000, guid: 687d9121735cfe042b909fc2e9a0e0c3, type: 3}
+  - {fileID: 21300000, guid: 15eda48692b90dd43bf11f9100c399ce, type: 3}
+  - {fileID: 21300000, guid: 8909b4249c848714b95c735c64f2aef6, type: 3}
+  - {fileID: 21300000, guid: 9665f56f63e7ba847ac0d1f83c505f97, type: 3}
+  - {fileID: 21300000, guid: 3be110ac812955e42b819a2d15521636, type: 3}
+  - {fileID: 21300000, guid: 89118de03467b7248929e6361d878199, type: 3}
+  - {fileID: 21300000, guid: b2353167003a9744282b48b327f1e4f7, type: 3}
+  - {fileID: 21300000, guid: db3fca18e9db7124f92b11111179b729, type: 3}
+  - {fileID: 21300000, guid: dcc90a46946548d478aaa740349c4af7, type: 3}
+  - {fileID: 21300000, guid: 092c19a56d6992646b4eeaf88ecaa839, type: 3}
+  - {fileID: 21300000, guid: 5666830298f615c4daaefae797116884, type: 3}
+  - {fileID: 21300000, guid: 060007f5517720e48a230a1239a36b20, type: 3}
+  - {fileID: 21300000, guid: a0732364eb9ae9f4db8b12c86da9331d, type: 3}
+  js4: {fileID: 82763985}
 --- !u!1 &1830715884
 GameObject:
   m_ObjectHideFlags: 0

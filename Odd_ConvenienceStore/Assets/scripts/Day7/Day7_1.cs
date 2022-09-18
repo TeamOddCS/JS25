@@ -16,7 +16,7 @@ public class Day7_1 : MonoBehaviour
     public AudioClip bell;
     public GameObject HealthControlScript;
     public AudioClip minus;
-
+    public static int facenum = 0;
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -53,7 +53,7 @@ public class Day7_1 : MonoBehaviour
             SoundManager.instance.SFXPlay("Bell", bell);
         }
         count++;
-
+        FaceChange();
     }
     public void TextColorChange()
     {
@@ -93,6 +93,50 @@ public class Day7_1 : MonoBehaviour
         }
        
 
+    }
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("111"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("222"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("333"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("8_1_1"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("8_1_3"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("8_1_b"))
+        {
+            facenum = 6;
+        }
+        if (data[count]["Face"].ToString().Equals("2_1_1"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("2_1_2"))
+        {
+            facenum = 8;
+        }
+        if (data[count]["Face"].ToString().Equals("2_2_1"))
+        {
+            facenum = 9;
+        }
+        if (data[count]["Face"].ToString().Equals("2_2_2"))
+        {
+            facenum = 10;
+        }
+       
     }
     public void Awake()
     {

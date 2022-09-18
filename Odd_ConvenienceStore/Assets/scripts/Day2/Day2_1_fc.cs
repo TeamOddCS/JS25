@@ -71,7 +71,18 @@ public class Day2_1_fc : MonoBehaviour
         {
             js4.GetComponent<SpriteRenderer>().sprite = js4_face[13];
         }
-
+        else if (Day2_1.facenum == 15)
+        {
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[14];
+        }
+        else if (Day2_1.facenum == 16)
+        {
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[15];
+        }
+        else if (Day2_1.facenum == 17)
+        {
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[16];
+        }
 
     }
 }

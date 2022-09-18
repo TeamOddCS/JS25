@@ -1886,6 +1886,7 @@ GameObject:
   - component: {fileID: 931578100}
   - component: {fileID: 931578099}
   - component: {fileID: 931578098}
+  - component: {fileID: 931578105}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2070,6 +2071,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &931578105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931578095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c7a308e2a4cba4595c1c96ef6e78e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  js4_face:
+  - {fileID: 21300000, guid: 463b19aff37691349be5bbd2b63d39e0, type: 3}
+  - {fileID: 21300000, guid: 9d16e2e3a0250314a86d1e14469f254d, type: 3}
+  - {fileID: 21300000, guid: 3f45f0eae5760cf488bf1d1178dc5f0d, type: 3}
+  - {fileID: 21300000, guid: d489ed4645ef8f1459ca235a074b6f9f, type: 3}
+  - {fileID: 21300000, guid: 8903033024124a74fba66a7389c22669, type: 3}
+  - {fileID: 21300000, guid: 0eb94f3b96abb184eaafa7c96a0c4423, type: 3}
+  - {fileID: 21300000, guid: 04cb1825c99309b4d95b5cb8ba586c47, type: 3}
+  - {fileID: 21300000, guid: bd11e9b151fc18444b4540df724690ae, type: 3}
+  - {fileID: 21300000, guid: 69a55341a007f944c9e6031b19907c8d, type: 3}
+  - {fileID: 21300000, guid: 36e5fa4f17157cb43969a593361a8e64, type: 3}
+  - {fileID: 21300000, guid: f0ee262fcc3923847ad5bf1363051f23, type: 3}
+  - {fileID: 21300000, guid: 3fa52634565e59d40bc41119345ce548, type: 3}
+  - {fileID: 21300000, guid: dcc90a46946548d478aaa740349c4af7, type: 3}
+  - {fileID: 21300000, guid: 092c19a56d6992646b4eeaf88ecaa839, type: 3}
+  - {fileID: 21300000, guid: 060007f5517720e48a230a1239a36b20, type: 3}
+  - {fileID: 21300000, guid: 38171603cdee7bc4bb474461b52aceca, type: 3}
+  js4: {fileID: 1730150327}
 --- !u!1 &932169859
 GameObject:
   m_ObjectHideFlags: 0
@@ -3238,6 +3269,11 @@ RectTransform:
   m_AnchoredPosition: {x: -140, y: -335}
   m_SizeDelta: {x: 650, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1730150327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2755646768143134420, guid: 9665248afaaf72044be5c5bf98c91351, type: 3}
+  m_PrefabInstance: {fileID: 2755646767943989733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1740883863
 GameObject:
   m_ObjectHideFlags: 0

@@ -163,7 +163,28 @@ public class Day1_1 : MonoBehaviour
         {
             facenum = 6;
         }
-       
+        if (data[count]["Face"].ToString().Equals("1"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("2"))
+        {
+            facenum = 8;
+        }
+        if (data[count]["Face"].ToString().Equals("3"))
+        {
+            facenum = 9;
+        }
+        if (data[count]["Face"].ToString().Equals("4"))
+        {
+            facenum = 10;
+        }
+        if (data[count]["Face"].ToString().Equals("0"))
+        {
+            facenum = 11;
+        }
+
+
     }
     public void Awake()
     {

@@ -86,15 +86,50 @@ public class Day5_1 : MonoBehaviour
         {
             facenum = 4;
         }
-        if (data[count]["Face"].ToString().Equals("4_3_1"))
+        if (data[count]["Face"].ToString().Equals("1111"))
         {
             facenum = 5;
         }
-        if (data[count]["Face"].ToString().Equals("4_3_2"))
+        if (data[count]["Face"].ToString().Equals("2222"))
         {
             facenum = 6;
         }
-
+        if (data[count]["Face"].ToString().Equals("3333"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("5_1_1"))
+        {
+            facenum = 8;
+        }
+        if (data[count]["Face"].ToString().Equals("5_1_2"))
+        {
+            facenum = 9;
+        }
+        if (data[count]["Face"].ToString().Equals("5_2_1"))
+        {
+            facenum = 10;
+        }
+        if (data[count]["Face"].ToString().Equals("5_2_2"))
+        {
+            facenum = 11;
+        }
+        if (data[count]["Face"].ToString().Equals("5_3_1"))
+        {
+            facenum = 12;
+        }
+        if (data[count]["Face"].ToString().Equals("5_3_2"))
+        {
+            facenum = 13;
+        }
+        if (data[count]["Face"].ToString().Equals("5_4_1"))
+        {
+            facenum = 14;
+        }
+        if (data[count]["Face"].ToString().Equals("5_4_2"))
+        {
+            facenum = 15;
+        }
 
     }
     private void day5_1_HC()

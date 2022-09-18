@@ -18,6 +18,7 @@ public class Day5_3 : MonoBehaviour
     public AudioClip touchclip;
     public AudioClip plus;
     public GameObject HealthControlScript;
+    public static int facenum = 0;
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -36,6 +37,7 @@ public class Day5_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
+        FaceChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         if (count > 0)
         {
@@ -80,7 +82,87 @@ public class Day5_3 : MonoBehaviour
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
-    private void day5_3_HC()
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("a4_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_3"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_4"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_5"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_6"))
+        {
+            facenum = 6;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_7"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_1_1b"))
+        {
+            facenum = 8;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_2b"))
+        {
+            facenum = 9;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_3b"))
+        {
+            facenum = 10;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_4b"))
+        {
+            facenum = 11;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_5b"))
+        {
+            facenum = 12;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_6b"))
+        {
+            facenum = 13;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_7b"))
+        {
+            facenum = 14;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_1"))
+        {
+            facenum = 15;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_2"))
+        {
+            facenum = 16;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_3"))
+        {
+            facenum = 17;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_4"))
+        {
+            facenum = 18;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_5"))
+        {
+            facenum = 19;
+        }
+    }
+
+        private void day5_3_HC()
     {
         if (count == 25)
         {

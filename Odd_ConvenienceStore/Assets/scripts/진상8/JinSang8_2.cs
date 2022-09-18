@@ -73,44 +73,29 @@ public class JinSang8_2 : MonoBehaviour
     }
     private void FaceChange()
     {
-        if (data[count]["Face"].ToString().Equals("0"))
+        if (data[count]["Face"].ToString().Equals("8_1_1"))
         {
             facenum = 0;
         }
-        if (data[count]["Face"].ToString().Equals("8_1_1"))
+        if (data[count]["Face"].ToString().Equals("8_2_1"))
         {
             facenum = 1;
         }
-        if (data[count]["Face"].ToString().Equals("8_1_2"))
+        if (data[count]["Face"].ToString().Equals("8_2_2"))
         {
             facenum = 2;
         }
-        if (data[count]["Face"].ToString().Equals("8_2_1"))
+        if (data[count]["Face"].ToString().Equals("8_2_2_a"))
         {
             facenum = 3;
         }
-        if (data[count]["Face"].ToString().Equals("8_2_2"))
+        if (data[count]["Face"].ToString().Equals("8_2_3"))
         {
             facenum = 4;
         }
-        if (data[count]["Face"].ToString().Equals("8_2_2_a"))
-        {
-            facenum = 5;
-        }
-        if (data[count]["Face"].ToString().Equals("8_2_3"))
-        {
-            facenum = 6;
-        }
+       
 
 
-        if (data[count]["Face2"].ToString().Equals("0"))// 손님 그래픽 추가 테스트 코드
-        {
-            facenum2 = 0;
-        }
-        if (data[count]["Face2"].ToString().Equals("3_1_2"))// 손님 그래픽 추가 테스트 코드
-        {
-            facenum2 = 1;
-        }
     }
     private void JinSang8_2_HC()
     {

@@ -2342,6 +2342,7 @@ GameObject:
   - component: {fileID: 974919118}
   - component: {fileID: 974919117}
   - component: {fileID: 974919116}
+  - component: {fileID: 974919126}
   m_Layer: 5
   m_Name: 'Canvas '
   m_TagString: Untagged
@@ -2541,6 +2542,49 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &974919126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974919115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a57dd21ddec404097ce7519d08871d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  js4_face:
+  - {fileID: 21300000, guid: facaa6fbf12433b4eb76e16713bf545a, type: 3}
+  - {fileID: 21300000, guid: 8370f90f384c63e48b58b1e7e56eb6c7, type: 3}
+  - {fileID: 21300000, guid: 6b0426810d5fc124ea7f9b121606fcf5, type: 3}
+  - {fileID: 21300000, guid: d29f74de230995c4ea4c8952b655d3b6, type: 3}
+  - {fileID: 21300000, guid: 5248e6ca4268b0b438c0f33d2e1b2927, type: 3}
+  - {fileID: 21300000, guid: fe7451e853da11c479b30f03178b19b4, type: 3}
+  - {fileID: 21300000, guid: 6bce7a1516f01594bb6402f4c6589458, type: 3}
+  - {fileID: 21300000, guid: 2644e8fae2598dd448e8cd51f8695093, type: 3}
+  - {fileID: 21300000, guid: 49ca6643fdb87494095784916c97380e, type: 3}
+  - {fileID: 21300000, guid: fcde3f09a67acd347a88147987da9fb4, type: 3}
+  - {fileID: 21300000, guid: 9e543eb0b101df74ebf0151e94afaef8, type: 3}
+  - {fileID: 21300000, guid: c654fc27b2beb794193c489be15e99fd, type: 3}
+  - {fileID: 21300000, guid: ef4d3ddb152f4d544b90ab303bd48d7b, type: 3}
+  - {fileID: 21300000, guid: 433c4f258f5fe8349a23628b74362307, type: 3}
+  - {fileID: 21300000, guid: f4ba5ff4bee883f4bb1e34ec9a36adea, type: 3}
+  - {fileID: 21300000, guid: 54ad43b44f3d94747a954eba679ddd1a, type: 3}
+  - {fileID: 21300000, guid: 354a9e51bdf01224c8cc0e8749ecb20c, type: 3}
+  - {fileID: 21300000, guid: 45b2ad1934a2ac249a51a4b0947bf7b7, type: 3}
+  - {fileID: 21300000, guid: 1f4452b589cde1044a9a9d427bee20c1, type: 3}
+  - {fileID: 21300000, guid: 660ab77680aca664abcb2317277087d3, type: 3}
+  - {fileID: 21300000, guid: 7a0779dbacc990a4ba309a7a028052ad, type: 3}
+  - {fileID: 21300000, guid: 92a477b64d868564eb88d9cc717f87b5, type: 3}
+  - {fileID: 21300000, guid: 2626aa16bf9160641a73db30335786d8, type: 3}
+  - {fileID: 21300000, guid: 4954a002511a98c4da2a7c304dcbe06c, type: 3}
+  - {fileID: 21300000, guid: 9b94b03719ad2264bb569a05d2b0d9bf, type: 3}
+  - {fileID: 21300000, guid: 03e83c49d621b3d479bd03b7c43d7cb4, type: 3}
+  - {fileID: 21300000, guid: 4e36489f1531b9d40bf1b0cb88711ab5, type: 3}
+  - {fileID: 21300000, guid: 0a1c20c765865b64197f41924fefd568, type: 3}
+  - {fileID: 21300000, guid: 64a98152590224d4b9bff292b7baa2bb, type: 3}
+  js4: {fileID: 920784696}
 --- !u!1 &975705791
 GameObject:
   m_ObjectHideFlags: 0

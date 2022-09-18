@@ -18,7 +18,8 @@ public class Day6_1 : MonoBehaviour
     public GameObject HealthControlScript;
     public AudioClip minus;
     public AudioClip plus;
-
+    public static int facenum = 0;
+    public static int facenum2 = 0;
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -47,6 +48,7 @@ public class Day6_1 : MonoBehaviour
             SoundManager.instance.SFXPlay("Ring", bell);
         }
         count++;
+        FaceChange();
     }
 
     public void TextColorChange()
@@ -121,6 +123,52 @@ public class Day6_1 : MonoBehaviour
             count = 1;
             GameController.GetComponent<JSChoice>().D6_JSChoice();
         }
+    }
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("111"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("222"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("333"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("7_1"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("7_2"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("0"))
+        {
+            facenum = 6;
+        }
+        if (data[count]["Face2"].ToString().Equals("9_1_1"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 1;
+        }
+        if (data[count]["Face2"].ToString().Equals("9_1_2"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 2;
+        }
+        if (data[count]["Face2"].ToString().Equals("9_1_3"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 3;
+        }
+        if (data[count]["Face2"].ToString().Equals("9_1_4"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 4;
+        }
+       
+
+
     }
     public void Awake()
     {

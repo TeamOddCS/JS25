@@ -141,7 +141,19 @@ public class Day2_1 : MonoBehaviour
         {
             facenum = 14;
         }
-       
+        if (data[count]["Face"].ToString().Equals("111"))
+        {
+            facenum = 15;
+        }
+        if (data[count]["Face"].ToString().Equals("222"))
+        {
+            facenum = 16;
+        }
+        if (data[count]["Face"].ToString().Equals("333"))
+        {
+            facenum = 17;
+        }
+
     }
     private void day2_1_JD()//첫번째 선택지를 골랐을 경우 선택지 대화를 다본후 다음 대화로 넘어가는 함수
     {

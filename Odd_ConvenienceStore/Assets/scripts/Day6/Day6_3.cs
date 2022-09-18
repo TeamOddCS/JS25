@@ -18,6 +18,7 @@ public class Day6_3 : MonoBehaviour
     public GameObject HealthControlScript;
     public AudioClip minus;
     public AudioClip plus;
+    public static int facenum = 0;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -27,6 +28,66 @@ public class Day6_3 : MonoBehaviour
         isDialogue = true;
         if(count==0)
             Nextdialogue();
+    }
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("a5_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("a5_1_5"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("a3_1_1"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("a3_1_2"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("a3_1_3"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("a3_1_4"))
+        {
+            facenum = 6;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_1_1"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_1_2"))
+        {
+            facenum = 8;
+        }
+        if (data[count]["Face"].ToString().Equals("a4_1_3"))
+        {
+            facenum = 9;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_1_1"))
+        {
+            facenum = 10;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_1_2"))
+        {
+            facenum = 11;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_1_3"))
+        {
+            facenum = 12;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_1_4"))
+        {
+            facenum = 13;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_1_5"))
+        {
+            facenum = 14;
+        }
+
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -55,6 +116,7 @@ public class Day6_3 : MonoBehaviour
             SoundManager.instance.SFXPlay("Ring", bell);
         }
         count++;
+        FaceChange();
     }
 
     public void TextColorChange()

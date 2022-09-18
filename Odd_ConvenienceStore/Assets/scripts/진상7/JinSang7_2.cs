@@ -18,6 +18,7 @@ public class JinSang7_2 : MonoBehaviour
     public GameObject HealthControlScript;
     public AudioClip minus;
     public static int facenum = 0;
+    public static int facenum2 = 0;
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -29,22 +30,31 @@ public class JinSang7_2 : MonoBehaviour
     }
     private void FaceChange()
     {
-        if (data[count]["Face"].ToString().Equals("7_1_1"))
+        if (data[count]["Face"].ToString().Equals("2_1_1"))
         {
             facenum = 1;
         }
-        if (data[count]["Face"].ToString().Equals("7_1_2"))
+        if (data[count]["Face"].ToString().Equals("2_1_3"))
         {
             facenum = 2;
         }
-        if (data[count]["Face"].ToString().Equals("7_2_1"))
+        if (data[count]["Face"].ToString().Equals("2_1_4"))
         {
             facenum = 3;
         }
-        if (data[count]["Face"].ToString().Equals("7_2_2"))
+        if (data[count]["Face2"].ToString().Equals("7_1"))// 손님 그래픽 추가 테스트 코드
         {
-            facenum = 4;
+            facenum2 = 1;
         }
+        if (data[count]["Face2"].ToString().Equals("7_3"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 2;
+        }
+        if (data[count]["Face2"].ToString().Equals("0"))// 손님 그래픽 추가 테스트 코드
+        {
+            facenum2 = 3;
+        }
+
 
     }
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -62,6 +72,7 @@ public class JinSang7_2 : MonoBehaviour
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
         count++;
+        FaceChange();
     }
 
     public void TextColorChange()

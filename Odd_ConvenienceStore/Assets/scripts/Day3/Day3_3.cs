@@ -18,6 +18,7 @@ public class Day3_3 : MonoBehaviour
     public GameObject HealthControlScript;
     public AudioClip minus;
     public AudioClip plus;
+    public static int facenum = 0;
     public void TextColorChange()
     {
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#2782cc>");//파란색 "중요한부분"
@@ -33,7 +34,7 @@ public class Day3_3 : MonoBehaviour
         //count = 0;
         isDialogue = true;
         if(count==0)
-            Nextdialogue();
+        Nextdialogue();
     }
 
     public void Nextdialogue()//대화내용 넘기는 함수
@@ -47,6 +48,7 @@ public class Day3_3 : MonoBehaviour
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         if (count > 0)
+        FaceChange();
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
@@ -66,7 +68,74 @@ public class Day3_3 : MonoBehaviour
        
         count++;
     }
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("a2_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("a2_1_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("a2_1_3"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("a2_1_4"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("5_1_1"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("5_1_2"))
+        {
+            facenum = 6;
+        }
+        if (data[count]["Face"].ToString().Equals("5_2_1"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("5_2_2"))
+        {
+            facenum = 8;
+        }
+        if (data[count]["Face"].ToString().Equals("5_3_1"))
+        {
+            facenum = 9;
+        }
+        if (data[count]["Face"].ToString().Equals("5_3_2"))
+        {
+            facenum = 10;
+        }
+        if (data[count]["Face"].ToString().Equals("5_4_1"))
+        {
+            facenum = 11;
+        }
+        if (data[count]["Face"].ToString().Equals("5_4_2"))
+        {
+            facenum = 12;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_1_1"))
+        {
+            facenum = 13;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_1_2"))
+        {
+            facenum = 14;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_1_4"))
+        {
+            facenum = 15;
+        }
+        if (data[count]["Face"].ToString().Equals("a7_1_5"))
+        {
+            facenum = 16;
+        }
 
+    }
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {
         txt_name.gameObject.SetActive(false);

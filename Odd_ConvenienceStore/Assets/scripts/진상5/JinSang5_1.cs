@@ -47,6 +47,7 @@ public class JinSang5_1 : MonoBehaviour
             SoundManager.instance.SFXPlay("Bell", bell);
         }
         count++;
+        FaceChange();
     }
 
     private void FaceChange()

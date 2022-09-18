@@ -93,7 +93,34 @@ public class Day3_1 : MonoBehaviour
         {
             facenum = 6;
         }
-        
+        if (data[count]["Face"].ToString().Equals("1111"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("2222"))
+        {
+            facenum = 8;
+        }
+        if (data[count]["Face"].ToString().Equals("3333"))
+        {
+            facenum = 9;
+        }
+        if (data[count]["Face"].ToString().Equals("7_1_1"))
+        {
+            facenum = 10;
+        }
+        if (data[count]["Face"].ToString().Equals("7_1_2"))
+        {
+            facenum = 11;
+        }
+        if (data[count]["Face"].ToString().Equals("7_2_1"))
+        {
+            facenum = 12;
+        }
+        if (data[count]["Face"].ToString().Equals("7_2_2"))
+        {
+            facenum = 13;
+        }
 
     }
 

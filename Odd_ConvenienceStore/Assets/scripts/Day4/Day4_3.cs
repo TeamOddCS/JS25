@@ -19,6 +19,7 @@ public class Day4_3 : MonoBehaviour
     public AudioClip Pos;
     public AudioClip hiccups;
     public AudioClip minus;
+    public static int facenum = 0;
 
 
 
@@ -41,6 +42,7 @@ public class Day4_3 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
         txt_dialogue.text = data[count]["Script"].ToString();
+        FaceChange();
         if (count > 0)
         {
             SoundManager.instance.SFXPlay("Touch", touchclip);
@@ -150,6 +152,128 @@ public class Day4_3 : MonoBehaviour
             count = 1;
             SceneManager.LoadScene("Day4-F");
         }
+    }
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("a3_1_1"))
+        {
+            facenum = 1;
+        }
+        if (data[count]["Face"].ToString().Equals("a3_2"))
+        {
+            facenum = 2;
+        }
+        if (data[count]["Face"].ToString().Equals("a3_3"))
+        {
+            facenum = 3;
+        }
+        if (data[count]["Face"].ToString().Equals("a3_6"))
+        {
+            facenum = 4;
+        }
+        if (data[count]["Face"].ToString().Equals("a3_7"))
+        {
+            facenum = 5;
+        }
+        if (data[count]["Face"].ToString().Equals("a5_1_1"))
+        {
+            facenum = 6;
+        }
+        if (data[count]["Face"].ToString().Equals("a5_1_2"))
+        {
+            facenum = 7;
+        }
+        if (data[count]["Face"].ToString().Equals("a5_1_3"))
+        {
+            facenum = 8;
+        }
+        if (data[count]["Face"].ToString().Equals("a5_1_4"))
+        {
+            facenum = 9;
+        }
+        if (data[count]["Face"].ToString().Equals("a5_1_5"))
+        {
+            facenum = 10;
+        }
+        if (data[count]["Face"].ToString().Equals("a5_1_6"))
+        {
+            facenum = 11;
+        }
+        if (data[count]["Face"].ToString().Equals("2_1_1"))
+        {
+            facenum = 12;
+        }
+        if (data[count]["Face"].ToString().Equals("2_1_2"))
+        {
+            facenum = 13;
+        }
+        if (data[count]["Face"].ToString().Equals("2_2_1"))
+        {
+            facenum = 14;
+        }
+        if (data[count]["Face"].ToString().Equals("2_2_2"))
+        {
+            facenum = 15;
+        }
+        if (data[count]["Face"].ToString().Equals("2_3_1"))
+        {
+            facenum = 16;
+        }
+        if (data[count]["Face"].ToString().Equals("2_3_2"))
+        {
+            facenum = 17;
+        }
+        if (data[count]["Face"].ToString().Equals("8_1_1"))
+        {
+            facenum = 18;
+        }
+        if (data[count]["Face"].ToString().Equals("8_1_2"))
+        {
+            facenum = 19;
+        }
+        if (data[count]["Face"].ToString().Equals("8_1_3"))
+        {
+            facenum = 20;
+        }
+        if (data[count]["Face"].ToString().Equals("8_2_1"))
+        {
+            facenum = 21;
+        }
+        if (data[count]["Face"].ToString().Equals("8_2_2"))
+        {
+            facenum = 22;
+        }
+        if (data[count]["Face"].ToString().Equals("8_2_3"))
+        {
+            facenum = 23;
+        }
+        if (data[count]["Face"].ToString().Equals("8_1_1a"))
+        {
+            facenum = 24;
+        }
+        if (data[count]["Face"].ToString().Equals("8_1_2a"))
+        {
+            facenum = 25;
+        }
+        if (data[count]["Face"].ToString().Equals("8_1_3a"))
+        {
+            facenum = 26;
+        }
+        if (data[count]["Face"].ToString().Equals("8_2_1a"))
+        {
+            facenum = 27;
+        }
+        if (data[count]["Face"].ToString().Equals("8_2_2a"))
+        {
+            facenum = 28;
+        }
+        if (data[count]["Face"].ToString().Equals("8_2_3a"))
+        {
+            facenum = 29;
+        }
+
+
+
     }
     private void day4_3_HC()
     {
