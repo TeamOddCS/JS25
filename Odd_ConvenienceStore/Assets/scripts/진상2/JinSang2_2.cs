@@ -130,6 +130,7 @@ public class JinSang2_2 : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("#", ",");
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         TextColorChange();
+        FaceChange();
         txt_dialogue.text = data[count]["Script"].ToString();
         if (count > 0)
         {
