@@ -26,7 +26,7 @@ public class TitleButton : MonoBehaviour
 
         if (SaveData.Check_Loads_Files == false || SaveData.retry == true)
         {
-           IBM.SetActive(true);
+           //IBM.SetActive(true);
         }
         else SceneManager.LoadScene(SaveData.TempScene);
         Debug.Log(SaveData.TempScene);

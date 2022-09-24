@@ -24,7 +24,7 @@ public class SaveData : MonoBehaviour
     public static string JSName = " ";
     public static int reGame;
     public static string reGameStart;
-    public static int reGameChoice;
+    public static int reGameChoice = 0;
 
     public static int JinSang6Day1 = 0;
 
