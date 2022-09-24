@@ -34,19 +34,19 @@ public class Day2_3_fc : MonoBehaviour
         {
             js4.GetComponent<SpriteRenderer>().sprite = js4_face[4];
         }
-        else if (Day2_1.facenum == 6)
+        else if (Day2_3.facenum == 6)
         {
             js4.GetComponent<SpriteRenderer>().sprite = js4_face[5];
         }
-        else if (Day2_1.facenum == 7)
+        else if (Day2_3.facenum == 7)
         {
             js4.GetComponent<SpriteRenderer>().sprite = js4_face[6];
         }
-        else if (Day2_1.facenum == 8)
+        else if (Day2_3.facenum == 8)
         {
             js4.GetComponent<SpriteRenderer>().sprite = js4_face[7];
         }
-        else if (Day2_1.facenum == 9)
+        else if (Day2_3.facenum == 9)
         {
             js4.GetComponent<SpriteRenderer>().sprite = js4_face[8];
         }

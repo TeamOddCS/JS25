@@ -15,6 +15,7 @@ public class Day4_F : MonoBehaviour
     public FadeInOut fade;
     public AudioClip ring;
     public AudioClip touchclip;
+    public static int facenum = 0;
 
 
 
@@ -26,6 +27,14 @@ public class Day4_F : MonoBehaviour
         isDialogue = true;
         if(count==0)
             Nextdialogue();
+    }
+    public void Facechange()
+    {
+        if (data[count]["Face"].ToString().Equals("0"))
+        {
+            facenum = 1;
+        }
+
     }
     public void Nextdialogue()//대화내용 넘기는 함수
     {
@@ -46,6 +55,7 @@ public class Day4_F : MonoBehaviour
         }
         count++;
         Debug.Log(count);
+        Facechange();
     }
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {

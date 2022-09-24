@@ -40,31 +40,31 @@ public class Day3_1_fc : MonoBehaviour
         }
         else if (Day3_1.facenum == 7)
         {
-            js4.GetComponent<SpriteRenderer>().sprite = js4_face[5];
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[6];
         }
         else if (Day3_1.facenum == 8)
         {
-            js4.GetComponent<SpriteRenderer>().sprite = js4_face[5];
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[7];
         }
         else if (Day3_1.facenum == 9)
         {
-            js4.GetComponent<SpriteRenderer>().sprite = js4_face[5];
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[8];
         }
         else if (Day3_1.facenum == 10)
         {
-            js4.GetComponent<SpriteRenderer>().sprite = js4_face[5];
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[9];
         }
         else if (Day3_1.facenum == 11)
         {
-            js4.GetComponent<SpriteRenderer>().sprite = js4_face[5];
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[10];
         }
         else if (Day3_1.facenum == 12)
         {
-            js4.GetComponent<SpriteRenderer>().sprite = js4_face[5];
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[11];
         }
         else if (Day3_1.facenum == 13)
         {
-            js4.GetComponent<SpriteRenderer>().sprite = js4_face[5];
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[12];
         }
 
 

@@ -15,6 +15,7 @@ public class Day6_F : MonoBehaviour
     public FadeInOut fade;
     public AudioClip ring;
     public AudioClip touchclip;
+    public static int facenum = 0;
 
 
 
@@ -45,9 +46,18 @@ public class Day6_F : MonoBehaviour
             SoundManager.instance.SFXPlay("ring", ring);
         }
         count++;
+        Facechange();
     }
 
 
+    public void Facechange()
+    {
+        if (data[count]["Face"].ToString().Equals("0"))
+        {
+            facenum = 1;
+        }
+
+    }
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {
         txt_name.gameObject.SetActive(false);

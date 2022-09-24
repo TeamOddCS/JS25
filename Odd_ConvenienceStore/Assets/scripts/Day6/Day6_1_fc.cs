@@ -46,15 +46,15 @@ public class Day6_1_fc : MonoBehaviour
         }
         if (Day6_1.facenum2 == 2)
         {
-            js.GetComponent<SpriteRenderer>().sprite = js_face[0];
+            js.GetComponent<SpriteRenderer>().sprite = js_face[1];
         }
         if (Day6_1.facenum2 == 3)
         {
-            js.GetComponent<SpriteRenderer>().sprite = js_face[0];
+            js.GetComponent<SpriteRenderer>().sprite = js_face[2];
         }
         if (Day6_1.facenum2 == 4)
         {
-            js.GetComponent<SpriteRenderer>().sprite = js_face[0];
+            js.GetComponent<SpriteRenderer>().sprite = js_face[3];
         }
 
 

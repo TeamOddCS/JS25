@@ -15,6 +15,7 @@ public class Day1_F : MonoBehaviour
     public AudioClip touchclip;
     public AudioClip ring;
     public FadeInOut fade;
+    public static int facenum = 0;
 
 
 
@@ -46,9 +47,18 @@ public class Day1_F : MonoBehaviour
             SoundManager.instance.SFXPlay("ring", ring);
         }
         count++;
+        FaceChange();
 
     }
-    public void TextColorChange()
+
+    private void FaceChange()
+    {
+        if (data[count]["Face"].ToString().Equals("0"))
+        {
+            facenum = 1;
+        }
+    }
+        public void TextColorChange()
     {
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#2782cc>");//파란색 "중요한부분"
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//빨간색 (생명력 -)

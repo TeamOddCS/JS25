@@ -56,6 +56,7 @@ public class CSDialogue : MonoBehaviour
         if (isDialogue)
         {
             if (Input.GetMouseButtonUp(0))
+                
             {
                 if (count < data.Count)
                 {

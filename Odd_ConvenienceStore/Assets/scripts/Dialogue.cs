@@ -51,6 +51,7 @@ public class Dialogue : MonoBehaviour
     {
         if (isDialogue)
         {
+            
             if (Input.GetMouseButtonUp(0))
             {
                 if (count < data.Count)

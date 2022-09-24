@@ -15,6 +15,7 @@ public class Day5_F : MonoBehaviour
     public AudioClip touchclip;
     public FadeInOut fade;
     public AudioClip ring;
+    public static int facenum = 0; 
 
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
@@ -44,9 +45,18 @@ public class Day5_F : MonoBehaviour
             SoundManager.instance.SFXPlay("Ring", ring);
         }
         count++;
+        Facechange();
 
     }
 
+    public void Facechange()
+    {
+        if (data[count]["Face"].ToString().Equals("0"))
+        {
+            facenum = 1;
+        }
+
+    }
 
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
     {

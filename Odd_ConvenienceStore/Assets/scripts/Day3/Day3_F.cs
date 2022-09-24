@@ -16,6 +16,7 @@ public class Day3_F : MonoBehaviour
     public AudioClip ring;
     public AudioClip touchclip;
     public static int test_who_is = 0;
+    public static int facenum = 0;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -51,6 +52,7 @@ public class Day3_F : MonoBehaviour
             SoundManager.instance.SFXPlay("Ring", ring);
         }
         count++;
+        Facechange();
     }
 
     private void Hidedialogue()//대화가 끝났으면 대화내용 숨기는 함수
@@ -64,7 +66,14 @@ public class Day3_F : MonoBehaviour
         data = CSVReader.Read("Day3-친구");
         Showdialogue();
     }
+    public void Facechange()
+    {
+        if (data[count]["Face"].ToString().Equals("0"))
+        {
+            facenum = 1;
+        }
 
+    }
     // Update is called once per frame
     void Update()
     {
