@@ -4093,6 +4093,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Graphics
       objectReference: {fileID: 0}
+    - target: {fileID: 2755646768143134423, guid: 9665248afaaf72044be5c5bf98c91351, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755646768143134423, guid: 9665248afaaf72044be5c5bf98c91351, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9665248afaaf72044be5c5bf98c91351, type: 3}
 --- !u!1 &2755646767943989734 stripped
