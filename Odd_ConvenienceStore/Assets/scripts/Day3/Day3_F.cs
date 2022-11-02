@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class Day3_F : MonoBehaviour
 {
-    [SerializeField] private Text txt_dialogue; //´ëÈ­³»¿ë ´ã´Â °´Ã¼
-    [SerializeField] private Text txt_name;// ÀÌ¸§ ´ã´Â °´Ã¼ 
+    [SerializeField] private Text txt_dialogue; //ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼
+    [SerializeField] private Text txt_name;// ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ 
     public static bool isDialogue = false;
     public static int count = 0;
     private List<Dictionary<string, object>> data;
@@ -17,8 +17,10 @@ public class Day3_F : MonoBehaviour
     public AudioClip touchclip;
     public static int test_who_is = 0;
     public static int facenum = 0;
+    Camera Camera;
+    
 
-    public void Showdialogue()// Ã³À½½ÃÀÛÇÒ¶§ ´Ù ÃÊ±âÈ­ÇÏ°í ´ëÈ­³»¿ëÀ» º¸¿©ÁÖ´Â ÇÔ¼ö
+    public void Showdialogue()// Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½ ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Ï°ï¿½ ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Ô¼ï¿½
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
@@ -28,7 +30,7 @@ public class Day3_F : MonoBehaviour
             Nextdialogue();
     }
 
-    public void Nextdialogue()//´ëÈ­³»¿ë ³Ñ±â´Â ÇÔ¼ö
+    public void Nextdialogue()//ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ±ï¿½ï¿½ ï¿½Ô¼ï¿½
     {
         Debug.Log(count);
         txt_dialogue.gameObject.SetActive(true);
@@ -38,10 +40,10 @@ public class Day3_F : MonoBehaviour
         data[count]["Script"] = data[count]["Script"].ToString().Replace("  ", "\n");
         txt_dialogue.text = data[count]["Script"].ToString();
 
-        //ÀÌ¹ÌÁö Test
-        if (data[count]["Name"].ToString().Equals("ÃÖ¾Ë¹Ù"))
+        //ï¿½Ì¹ï¿½ï¿½ï¿½ Test
+        if (data[count]["Name"].ToString().Equals("ï¿½Ö¾Ë¹ï¿½"))
             test_who_is = 0;
-        else if (data[count]["Name"].ToString().Equals("±è´ÜÂ¦"))
+        else if (data[count]["Name"].ToString().Equals("ï¿½ï¿½ï¿½Â¦"))
             test_who_is = 1;
         if (count > 0)
         {
@@ -55,7 +57,7 @@ public class Day3_F : MonoBehaviour
         Facechange();
     }
 
-    private void Hidedialogue()//´ëÈ­°¡ ³¡³µÀ¸¸é ´ëÈ­³»¿ë ¼û±â´Â ÇÔ¼ö
+    private void Hidedialogue()//ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     {
         txt_name.gameObject.SetActive(false);
         txt_dialogue.gameObject.SetActive(false);
@@ -63,7 +65,8 @@ public class Day3_F : MonoBehaviour
     }
     private void Start()
     {
-        data = CSVReader.Read("Day3-Ä£±¸");
+        data = CSVReader.Read("Day3-Ä£ï¿½ï¿½");
+        Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         Showdialogue();
     }
     public void Facechange()
@@ -81,13 +84,15 @@ public class Day3_F : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (EventSystem.current.IsPointerOverGameObject() == false)
+                Vector2 mousePos = Input.mousePosition;
+                mousePos = Camera.ScreenToWorldPoint(mousePos);
+                if (EventSystem.current.IsPointerOverGameObject() == false && mousePos.y < 0)
                 {
                     if (count < data.Count)
                     {
                         Nextdialogue();
                         if (count == 13)
-                        {//¾Æ ¹¹·¡ ¾Æ´Ï°Åµç;;
+                        {//ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï°Åµï¿½;;
                             count += 6;
                         }
                     }

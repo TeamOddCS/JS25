@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class JinSang2_2 : MonoBehaviour
 {
-    [SerializeField] private Text txt_dialogue; //´ëÈ­³»¿ë ´ã´Â °´Ã¼
-    [SerializeField] private Text txt_name;// ÀÌ¸§ ´ã´Â °´Ã¼ 
+    [SerializeField] private Text txt_dialogue; //ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼
+    [SerializeField] private Text txt_name;// ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ 
     public static bool isDialogue = false;
     public static int count = 0;
     private List<Dictionary<string, object>> data;
@@ -19,8 +19,9 @@ public class JinSang2_2 : MonoBehaviour
     public AudioClip minus;
     public static int facenum = 0;
     public static int facenum2 = 0;
+    Camera Camera;
 
-    public void Showdialogue()// Ã³À½½ÃÀÛÇÒ¶§ ´Ù ÃÊ±âÈ­ÇÏ°í ´ëÈ­³»¿ëÀ» º¸¿©ÁÖ´Â ÇÔ¼ö
+    public void Showdialogue()// Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½ ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Ï°ï¿½ ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Ô¼ï¿½
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
@@ -32,11 +33,11 @@ public class JinSang2_2 : MonoBehaviour
     }
     public void TextColorChange()
     {
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("¨Î", "<color=#2782cc>");//ÆÄ¶õ»ö "Áß¿äÇÑºÎºÐ"
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("¨Þ", "<color=#a83a22>");//»¡°£»ö (»ý¸í·Â -)
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("¨Ó", "<color=#13c216>");//ÃÊ·Ï»ö (»ý¸í·Â +) 
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("¨Ñ", "</color>");// ¹Ù²Ü »ö±òÀÌ ³¡³µÀ»¶§ ¾²´Â ±âÈ£
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("¨Í", "<color=#a8a3a2>");//ÁÖÀÎ°ø µ¶¹é 
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ï¿½ï¿½", "<color=#2782cc>");//ï¿½Ä¶ï¿½ï¿½ï¿½ "ï¿½ß¿ï¿½ï¿½ÑºÎºï¿½"
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ï¿½ï¿½", "<color=#a83a22>");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -)
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ï¿½ï¿½", "<color=#13c216>");//ï¿½Ê·Ï»ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ +) 
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ï¿½ï¿½", "</color>");// ï¿½Ù²ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ï¿½ï¿½", "<color=#a8a3a2>");//ï¿½ï¿½ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ 
     }
     private void JinSang2_2_HC()
     {
@@ -85,42 +86,42 @@ public class JinSang2_2 : MonoBehaviour
         {
             facenum = 6;
         }
-        if (data[count]["Face2"].ToString().Equals("9_1_1"))// ¼Õ´Ô ±×·¡ÇÈ Ãß°¡ Å×½ºÆ® ÄÚµå
+        if (data[count]["Face2"].ToString().Equals("9_1_1"))// ï¿½Õ´ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½×½ï¿½Æ® ï¿½Úµï¿½
         {
             facenum2 = 1;
         }
-        if (data[count]["Face2"].ToString().Equals("9_1_2"))// ¼Õ´Ô ±×·¡ÇÈ Ãß°¡ Å×½ºÆ® ÄÚµå
+        if (data[count]["Face2"].ToString().Equals("9_1_2"))// ï¿½Õ´ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½×½ï¿½Æ® ï¿½Úµï¿½
         {
             facenum2 = 2;
         }
-        if (data[count]["Face2"].ToString().Equals("9_1_3"))// ¼Õ´Ô ±×·¡ÇÈ Ãß°¡ Å×½ºÆ® ÄÚµå
+        if (data[count]["Face2"].ToString().Equals("9_1_3"))// ï¿½Õ´ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½×½ï¿½Æ® ï¿½Úµï¿½
         {
             facenum2 = 3;
         }
-        if (data[count]["Face2"].ToString().Equals("9_1_4"))// ¼Õ´Ô ±×·¡ÇÈ Ãß°¡ Å×½ºÆ® ÄÚµå
+        if (data[count]["Face2"].ToString().Equals("9_1_4"))// ï¿½Õ´ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½×½ï¿½Æ® ï¿½Úµï¿½
         {
             facenum2 = 4;
         }
-        if (data[count]["Face2"].ToString().Equals("9_2_1"))// ¼Õ´Ô ±×·¡ÇÈ Ãß°¡ Å×½ºÆ® ÄÚµå
+        if (data[count]["Face2"].ToString().Equals("9_2_1"))// ï¿½Õ´ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½×½ï¿½Æ® ï¿½Úµï¿½
         {
             facenum2 = 5;
         }
-        if (data[count]["Face2"].ToString().Equals("9_2_2"))// ¼Õ´Ô ±×·¡ÇÈ Ãß°¡ Å×½ºÆ® ÄÚµå
+        if (data[count]["Face2"].ToString().Equals("9_2_2"))// ï¿½Õ´ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½×½ï¿½Æ® ï¿½Úµï¿½
         {
             facenum2 = 6;
         }
-        if (data[count]["Face2"].ToString().Equals("9_2_3"))// ¼Õ´Ô ±×·¡ÇÈ Ãß°¡ Å×½ºÆ® ÄÚµå
+        if (data[count]["Face2"].ToString().Equals("9_2_3"))// ï¿½Õ´ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½×½ï¿½Æ® ï¿½Úµï¿½
         {
             facenum2 = 7;
         }
-        if (data[count]["Face2"].ToString().Equals("9_2_4"))// ¼Õ´Ô ±×·¡ÇÈ Ãß°¡ Å×½ºÆ® ÄÚµå
+        if (data[count]["Face2"].ToString().Equals("9_2_4"))// ï¿½Õ´ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½×½ï¿½Æ® ï¿½Úµï¿½
         {
             facenum2 = 8;
         }
 
 
     }
-    public void Nextdialogue()//´ëÈ­³»¿ë ³Ñ±â´Â ÇÔ¼ö
+    public void Nextdialogue()//ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ±ï¿½ï¿½ ï¿½Ô¼ï¿½
     {
 
         Debug.Log(count);
@@ -146,7 +147,7 @@ public class JinSang2_2 : MonoBehaviour
     }
 
 
-    private void Hidedialogue()//´ëÈ­°¡ ³¡³µÀ¸¸é ´ëÈ­³»¿ë ¼û±â´Â ÇÔ¼ö
+    private void Hidedialogue()//ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     {
         txt_name.gameObject.SetActive(false);
         txt_dialogue.gameObject.SetActive(false);
@@ -162,7 +163,8 @@ public class JinSang2_2 : MonoBehaviour
 
     private void Start()
     {
-        data = CSVReader.Read("Áø»ó2-2");
+        data = CSVReader.Read("ï¿½ï¿½ï¿½ï¿½2-2");
+        Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
@@ -173,7 +175,9 @@ public class JinSang2_2 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (EventSystem.current.IsPointerOverGameObject() == false)
+                Vector2 mousePos = Input.mousePosition;
+                mousePos = Camera.ScreenToWorldPoint(mousePos);
+                if (EventSystem.current.IsPointerOverGameObject() == false && mousePos.y < 0)
                 {
                     if (count < data.Count)
                     {

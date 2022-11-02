@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class JinSang2_3 : MonoBehaviour
 {
-    [SerializeField] private Text txt_dialogue; //´ëÈ­³»¿ë ´ã´Â °´Ã¼
-    [SerializeField] private Text txt_name;// ÀÌ¸§ ´ã´Â °´Ã¼ 
+    [SerializeField] private Text txt_dialogue; //ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼
+    [SerializeField] private Text txt_name;// ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ 
     public static bool isDialogue = false;
     public static int count = 0;
     private List<Dictionary<string, object>> data;
@@ -18,8 +18,9 @@ public class JinSang2_3 : MonoBehaviour
     public AudioClip minus;
     public GameObject GameController;
     public GameObject HealthControlScript;
+    Camera Camera;
 
-    public void Showdialogue()// Ã³À½½ÃÀÛÇÒ¶§ ´Ù ÃÊ±âÈ­ÇÏ°í ´ëÈ­³»¿ëÀ» º¸¿©ÁÖ´Â ÇÔ¼ö
+    public void Showdialogue()// Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½ ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Ï°ï¿½ ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Ô¼ï¿½
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
@@ -32,11 +33,11 @@ public class JinSang2_3 : MonoBehaviour
     }
     public void TextColorChange()
     {
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("¨Î", "<color=#2782cc>");//ÆÄ¶õ»ö "Áß¿äÇÑºÎºÐ"
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("¨Þ", "<color=#a83a22>");//»¡°£»ö (»ý¸í·Â -)
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("¨Ó", "<color=#13c216>");//ÃÊ·Ï»ö (»ý¸í·Â +) 
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("¨Ñ", "</color>");// ¹Ù²Ü »ö±òÀÌ ³¡³µÀ»¶§ ¾²´Â ±âÈ£
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("¨Í", "<color=#a8a3a2>");//ÁÖÀÎ°ø µ¶¹é 
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ï¿½ï¿½", "<color=#2782cc>");//ï¿½Ä¶ï¿½ï¿½ï¿½ "ï¿½ß¿ï¿½ï¿½ÑºÎºï¿½"
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ï¿½ï¿½", "<color=#a83a22>");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -)
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ï¿½ï¿½", "<color=#13c216>");//ï¿½Ê·Ï»ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ +) 
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ï¿½ï¿½", "</color>");// ï¿½Ù²ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ï¿½ï¿½", "<color=#a8a3a2>");//ï¿½ï¿½ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ 
     }
     private void FaceChange()
     {
@@ -66,7 +67,7 @@ public class JinSang2_3 : MonoBehaviour
         }
 
     }
-    public void Nextdialogue()//´ëÈ­³»¿ë ³Ñ±â´Â ÇÔ¼ö
+    public void Nextdialogue()//ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ±ï¿½ï¿½ ï¿½Ô¼ï¿½
     {
 
         Debug.Log(count);
@@ -108,7 +109,7 @@ public class JinSang2_3 : MonoBehaviour
       
 
     }
-    private void Hidedialogue()//´ëÈ­°¡ ³¡³µÀ¸¸é ´ëÈ­³»¿ë ¼û±â´Â ÇÔ¼ö
+    private void Hidedialogue()//ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
     {
         txt_name.gameObject.SetActive(false);
         txt_dialogue.gameObject.SetActive(false);
@@ -124,7 +125,8 @@ public class JinSang2_3 : MonoBehaviour
 
     private void Start()
     {
-        data = CSVReader.Read("Áø»ó2-3");
+        data = CSVReader.Read("ï¿½ï¿½ï¿½ï¿½2-3");
+        Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
     }
@@ -135,17 +137,19 @@ public class JinSang2_3 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (EventSystem.current.IsPointerOverGameObject() == false)
+                Vector2 mousePos = Input.mousePosition;
+                mousePos = Camera.ScreenToWorldPoint(mousePos);
+                if (EventSystem.current.IsPointerOverGameObject() == false && mousePos.y < 0)
                 {
                     if (count < data.Count)
                     {
                         Nextdialogue();
                         if (count == 23)
-                        {//»ç°úÇÑ´Ù.
+                        {//ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
                             count += 24;
                         }
                         if (count == 28)
-                        {// ³ª°¡¶ó°í ÇÑ´Ù.
+                        {// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
                             count += 19;
                         }
                         if (count == 40)
