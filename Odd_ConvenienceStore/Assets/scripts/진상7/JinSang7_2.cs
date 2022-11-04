@@ -151,7 +151,7 @@ public class JinSang7_2 : MonoBehaviour
                     }
                     else
                     {
-                        fade.Fade();
+                        
                         Hidedialogue();
                         count = 1;
                         GameController.GetComponent<JSChoice>().Check_Day();

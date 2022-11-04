@@ -57,14 +57,17 @@ public class Day5_1 : MonoBehaviour
         if (count == 0)
         {
             SoundManager.instance.SFXPlay("Ring", ring);
+            fade.Fade();
         }
         if (count == 10)
         {
             SoundManager.instance.SFXPlay("Ring", ring);
+            fade.Fade();
         }
         if (count == 92)
         {
             SoundManager.instance.SFXPlay("Ring", ring);
+            fade.Fade();
         }
 
         count++;
@@ -223,7 +226,7 @@ public class Day5_1 : MonoBehaviour
                     }
                     else
                     {
-                        fade.Fade();
+                        
                         Hidedialogue();
                         count = 1;
                         GameController.GetComponent<JSChoice>().D5_JSChoice();

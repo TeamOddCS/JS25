@@ -46,14 +46,17 @@ public class Day7_1 : MonoBehaviour
         if(count == 0)
         {
             SoundManager.instance.SFXPlay("Bell", bell);
+            fade.Fade();
         }
         if (count == 8)
         {
             SoundManager.instance.SFXPlay("Bell", bell);
+            fade.Fade();
         }
         if (count == 53)
         {
             SoundManager.instance.SFXPlay("Bell", bell);
+            fade.Fade();
         }
         count++;
         FaceChange();
@@ -207,7 +210,7 @@ public class Day7_1 : MonoBehaviour
                     }
                     else
                     {
-                        fade.Fade();
+                        
                         Hidedialogue();
                     }
                     day7_1_HC();

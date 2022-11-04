@@ -56,14 +56,17 @@ public class Day3_1 : MonoBehaviour
         if(count == 0)
         {
             SoundManager.instance.SFXPlay("Bell", bell);
+            fade.Fade();
         }
         if (count == 14)
         {
             SoundManager.instance.SFXPlay("Bell", bell);
+            fade.Fade();
         }
         if (count == 119)
         {
             SoundManager.instance.SFXPlay("Bell", bell);
+            fade.Fade();
         }
 
         count++;
@@ -190,7 +193,7 @@ public class Day3_1 : MonoBehaviour
         }
         else
         {
-            fade.Fade();
+            
             Hidedialogue();
             count = 1;
             GameController.GetComponent<JSChoice>().D3_JSChoice();

@@ -51,6 +51,7 @@ public class JinSang8_1 : MonoBehaviour
         if (count == 0)
         {
             SoundManager.instance.SFXPlay("Bell", bell);
+            fade.Fade();
         }
         count++;
 
@@ -149,14 +150,14 @@ public class JinSang8_1 : MonoBehaviour
                         }
                         if (count == 37)
                         {
-                            fade.Fade();
+                            
                             Hidedialogue();
                         }
                         JinSang8_1_HC();
                     }
                     else
                     {
-                        fade.Fade();
+                        
                         Hidedialogue();
                         count = 1;
                         GameController.GetComponent<JSChoice>().Check_Day();

@@ -108,14 +108,17 @@ public class Day6_3 : MonoBehaviour
         if (count == 0)
         {
             SoundManager.instance.SFXPlay("Ring", bell);
+            fade.Fade();
         }
         if (count == 25)
         {
             SoundManager.instance.SFXPlay("Ring", bell);
+            fade.Fade();
         }
         if (count == 168)
         {
             SoundManager.instance.SFXPlay("Ring", bell);
+            fade.Fade();
         }
         count++;
         FaceChange();

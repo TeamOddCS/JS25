@@ -49,6 +49,7 @@ public class Day6_1 : MonoBehaviour
         if(count == 0)
         {
             SoundManager.instance.SFXPlay("Ring", bell);
+            fade.Fade();
         }
         count++;
         FaceChange();
@@ -139,7 +140,7 @@ public class Day6_1 : MonoBehaviour
         }
         else
         {
-            fade.Fade();
+            
             Hidedialogue();
             count = 1;
             GameController.GetComponent<JSChoice>().D6_JSChoice();

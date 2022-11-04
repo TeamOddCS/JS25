@@ -47,16 +47,19 @@ public class Day1_3 : MonoBehaviour
         if (count == 0)
         {
             SoundManager.instance.SFXPlay("bell", bell);
+            fade.Fade();
         }
 
         if (count == 21)
         {
             SoundManager.instance.SFXPlay("bell", bell);
+            fade.Fade();
         }
       
         if (count == 43)
         {
             SoundManager.instance.SFXPlay("bell", bell);
+            fade.Fade();
         }
         count++;
 

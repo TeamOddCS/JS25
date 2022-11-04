@@ -55,8 +55,9 @@ public class Day1_1 : MonoBehaviour
             SoundManager.instance.SFXPlay("Touch", touchclip);
         }
         if(count == 23)
-            {
+        {
             SoundManager.instance.SFXPlay("bell", bell);
+            fade.Fade();
         }
         if (count == 66)
         {
@@ -65,6 +66,7 @@ public class Day1_1 : MonoBehaviour
         if (count == 80)
         {
             SoundManager.instance.SFXPlay("bell", bell);
+            fade.Fade();
         }
         count++;
     }
@@ -124,13 +126,13 @@ public class Day1_1 : MonoBehaviour
 
             if (count == 125)
             {
-                fade.Fade();
+                
                 Hidedialogue();
             }
         }
         else
         {
-            fade.Fade();
+            
             Hidedialogue();
             count = 1;
             GameController.GetComponent<JSChoice>().D1_JSChoice();
