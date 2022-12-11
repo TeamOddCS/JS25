@@ -79,11 +79,11 @@ public class JinSang7_2 : MonoBehaviour
 
     public void TextColorChange()
     {
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("��", "<color=#2782cc>");//�Ķ��� "�߿��Ѻκ�"
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("��", "<color=#a83a22>");//������ (������ -)
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("��", "<color=#13c216>");//�ʷϻ� (������ +) 
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("��", "</color>");// �ٲ� ������ �������� ���� ��ȣ
-        data[count]["Script"] = data[count]["Script"].ToString().Replace("��", "<color=#a8a3a2>");//���ΰ� ���� 
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#2782cc>");//�Ķ��� "�߿��Ѻκ�"
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓡ", "<color=#a83a22>");//������ (������ -)
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓖ", "<color=#13c216>");//�ʷϻ� (������ +) 
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓔ", "</color>");// �ٲ� ������ �������� ���� ��ȣ
+        data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓐ", "<color=#a8a3a2>");//���ΰ� ���� 
     }
 
     private void Hidedialogue()//��ȭ�� �������� ��ȭ���� ����� �Լ�
@@ -120,7 +120,7 @@ public class JinSang7_2 : MonoBehaviour
     private void Start()
     {
         SaveData.Loads();
-        data = CSVReader.Read("����7-2");
+        data = CSVReader.Read("진상7-2");
         Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
