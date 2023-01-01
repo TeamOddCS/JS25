@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class Day7_F : MonoBehaviour
 {
-    [SerializeField] private Text txt_name;// ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ 
-    [SerializeField] private Text txt_dialogue; //ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼
+    [SerializeField] private Text txt_name;// ÀÌ¸§ ´ã´Â °´Ã¼ 
+    [SerializeField] private Text txt_dialogue; //´ëÈ­³»¿ë ´ã´Â °´Ã¼
 
     private string inputText;
     public static bool isDialogue = false;
@@ -18,9 +18,8 @@ public class Day7_F : MonoBehaviour
     public AudioClip touchclip;
     public AudioClip ring;
     public static int facenum = 0;
-    Camera Camera;
 
-    public void Showdialogue()// Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½ ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Ï°ï¿½ ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Ô¼ï¿½
+    public void Showdialogue()// Ã³À½½ÃÀÛÇÒ¶§ ´Ù ÃÊ±âÈ­ÇÏ°í ´ëÈ­³»¿ëÀ» º¸¿©ÁÖ´Â ÇÔ¼ö
     {
         txt_dialogue.gameObject.SetActive(true);
         txt_name.gameObject.SetActive(true);
@@ -29,7 +28,7 @@ public class Day7_F : MonoBehaviour
         if(count==0)
             Nextdialogue();
     }
-    public void Nextdialogue()//ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ±ï¿½ï¿½ ï¿½Ô¼ï¿½
+    public void Nextdialogue()//´ëÈ­³»¿ë ³Ñ±â´Â ÇÔ¼ö
     {
         Debug.Log(count);
         txt_dialogue.gameObject.SetActive(true);
@@ -60,13 +59,13 @@ public class Day7_F : MonoBehaviour
 
     }
 
-    private void Hidedialogue()//ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
+    private void Hidedialogue()//´ëÈ­°¡ ³¡³µÀ¸¸é ´ëÈ­³»¿ë ¼û±â´Â ÇÔ¼ö
     {
         txt_name.gameObject.SetActive(false);
         txt_dialogue.gameObject.SetActive(false);
         isDialogue = false;
     }
-    private void day7_F_JD()//Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ ï¿½Ùºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ ï¿½Ñ¾î°¡ï¿½ï¿½ ï¿½Ô¼ï¿½
+    private void day7_F_JD()//Ã¹¹øÂ° ¼±ÅÃÁö¸¦ °ñ¶úÀ» °æ¿ì ¼±ÅÃÁö ´ëÈ­¸¦ ´Ùº»ÈÄ ´ÙÀ½ ´ëÈ­·Î ³Ñ¾î°¡´Â ÇÔ¼ö
     {
         if (count < data.Count)
         {
@@ -100,7 +99,6 @@ public class Day7_F : MonoBehaviour
     private void Start()
     {
         data = CSVReader.Read("Day7-F");
-        Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         Showdialogue();
     }
     // Update is called once per frame
@@ -110,9 +108,7 @@ public class Day7_F : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                Vector2 mousePos = Input.mousePosition;
-                mousePos = Camera.ScreenToWorldPoint(mousePos);
-                if (EventSystem.current.IsPointerOverGameObject() == false && mousePos.y < 0)
+                if (EventSystem.current.IsPointerOverGameObject() == false)
                     day7_F_JD();
             }
         }
