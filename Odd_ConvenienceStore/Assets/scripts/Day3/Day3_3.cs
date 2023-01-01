@@ -19,6 +19,8 @@ public class Day3_3 : MonoBehaviour
     public AudioClip minus;
     public AudioClip plus;
     public static int facenum = 0;
+    Camera Camera;
+
     public void TextColorChange()
     {
         data[count]["Script"] = data[count]["Script"].ToString().Replace("ⓑ", "<color=#2782cc>");//파란색 "중요한부분"
@@ -155,6 +157,7 @@ public class Day3_3 : MonoBehaviour
     }
     private void Start()
     {
+        Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         data = CSVReader.Read("Day3-3");
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
@@ -258,7 +261,9 @@ public class Day3_3 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (EventSystem.current.IsPointerOverGameObject() == false)
+                Vector2 mousePos = Input.mousePosition;
+                mousePos = Camera.ScreenToWorldPoint(mousePos);
+                if (EventSystem.current.IsPointerOverGameObject() == false && mousePos.y < 0)
                 {
                     day3_3_JD();
                     day3_3_HC();

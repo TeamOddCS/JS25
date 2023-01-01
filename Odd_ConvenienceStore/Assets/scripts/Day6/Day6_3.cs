@@ -19,6 +19,7 @@ public class Day6_3 : MonoBehaviour
     public AudioClip minus;
     public AudioClip plus;
     public static int facenum = 0;
+    Camera Camera;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -237,6 +238,7 @@ public class Day6_3 : MonoBehaviour
     }
     private void Start()
     {
+        Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         data = CSVReader.Read("Day6-3");
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
@@ -247,7 +249,9 @@ public class Day6_3 : MonoBehaviour
     {
         if (isDialogue)
         {
-            if (EventSystem.current.IsPointerOverGameObject() == false)
+            Vector2 mousePos = Input.mousePosition;
+            mousePos = Camera.ScreenToWorldPoint(mousePos);
+            if (EventSystem.current.IsPointerOverGameObject() == false && mousePos.y < 0)
             {
                 if (Input.GetMouseButtonUp(0))
                 {

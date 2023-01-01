@@ -20,6 +20,7 @@ public class JinSang4_1 : MonoBehaviour
     public AudioClip bell;
     public AudioClip minus;
     public GameObject GameController;
+    Camera Camera;
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
@@ -119,6 +120,7 @@ public class JinSang4_1 : MonoBehaviour
 
     private void Start()
     {
+        Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         data = CSVReader.Read("진상4-1");
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
@@ -130,7 +132,9 @@ public class JinSang4_1 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (EventSystem.current.IsPointerOverGameObject() == false)
+                Vector2 mousePos = Input.mousePosition;
+                mousePos = Camera.ScreenToWorldPoint(mousePos);
+                if (EventSystem.current.IsPointerOverGameObject() == false && mousePos.y < 0)
                 {
                     if (count < data.Count)
                     {

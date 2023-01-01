@@ -19,6 +19,8 @@ public class JinSang7_2 : MonoBehaviour
     public AudioClip minus;
     public static int facenum = 0;
     public static int facenum2 = 0;
+    Camera Camera;
+
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
     {
         txt_dialogue.gameObject.SetActive(true);
@@ -117,6 +119,7 @@ public class JinSang7_2 : MonoBehaviour
     }
     private void Start()
     {
+        Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         SaveData.Loads();
         data = CSVReader.Read("진상7-2");
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
@@ -130,7 +133,9 @@ public class JinSang7_2 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (EventSystem.current.IsPointerOverGameObject() == false)
+                Vector2 mousePos = Input.mousePosition;
+                mousePos = Camera.ScreenToWorldPoint(mousePos);
+                if (EventSystem.current.IsPointerOverGameObject() == false && mousePos.y < 0)
                 {
                     if (count < data.Count)
                     {

@@ -12,8 +12,7 @@ public class Day4_2 : MonoBehaviour
     private List<Dictionary<string, object>> data;
     public AudioClip touchclip;
     public FadeInOut fade;
- 
-    
+    Camera Camera;
     
     
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
@@ -71,6 +70,7 @@ public class Day4_2 : MonoBehaviour
     }
     private void Start()
     {
+        Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         data = CSVReader.Read("Day4-2");
         Showdialogue();
     }
@@ -81,7 +81,10 @@ public class Day4_2 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                day4_2_JD();  
+                Vector2 mousePos = Input.mousePosition;
+                mousePos = Camera.ScreenToWorldPoint(mousePos);
+                if (mousePos.y < 0)
+                    day4_2_JD();  
             }
         }
         else

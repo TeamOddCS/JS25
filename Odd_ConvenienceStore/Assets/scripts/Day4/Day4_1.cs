@@ -15,7 +15,7 @@ public class Day4_1 : MonoBehaviour
     public AudioClip bell;
     public GameObject HealthControlScript;
     public AudioClip minus;
-  
+    Camera Camera;
 
     public static int facenum = 0;
 
@@ -215,6 +215,7 @@ public class Day4_1 : MonoBehaviour
 
     private void Start()
     {
+        Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         data = CSVReader.Read("Day4-1");
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
@@ -226,10 +227,14 @@ public class Day4_1 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                day4_1_JD();
-                day4_1_HC();
-                SaveData.TempCount = count - 1;
-                SaveData.Saves();
+                Vector2 mousePos = Input.mousePosition;
+                mousePos = Camera.ScreenToWorldPoint(mousePos);
+                if (mousePos.y < 0) {
+                    day4_1_JD();
+                    day4_1_HC();
+                    SaveData.TempCount = count - 1;
+                    SaveData.Saves();
+                }
             }
         }
         else

@@ -20,7 +20,7 @@ public class Day4_3 : MonoBehaviour
     public AudioClip hiccups;
     public AudioClip minus;
     public static int facenum = 0;
-
+    Camera Camera;
 
 
     public void Showdialogue()// 처음시작할때 다 초기화하고 대화내용을 보여주는 함수
@@ -274,10 +274,8 @@ public class Day4_3 : MonoBehaviour
         {
             facenum = 29;
         }
-
-
-
     }
+
     private void day4_3_HC()
     {
 
@@ -312,6 +310,7 @@ public class Day4_3 : MonoBehaviour
     }
     private void Start()
     {
+        Camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         data = CSVReader.Read("Day4-3");
         HealthControlScript.GetComponent<HealthControlScript>().Show_Health();
         Showdialogue();
@@ -323,7 +322,9 @@ public class Day4_3 : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                if (EventSystem.current.IsPointerOverGameObject() == false)
+                Vector2 mousePos = Input.mousePosition;
+                mousePos = Camera.ScreenToWorldPoint(mousePos);
+                if (EventSystem.current.IsPointerOverGameObject() == false && mousePos.y < 0)
                 {
                     day4_3_JD();
                     day4_3_HC();
