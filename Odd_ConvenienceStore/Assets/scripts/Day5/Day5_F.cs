@@ -45,7 +45,7 @@ public class Day5_F : MonoBehaviour
             SoundManager.instance.SFXPlay("Ring", ring);
         }
         count++;
-        Facechange();
+        if (count != data.Count) Facechange();
 
     }
 
