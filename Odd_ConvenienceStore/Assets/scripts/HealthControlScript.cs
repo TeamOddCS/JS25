@@ -135,6 +135,7 @@ public class HealthControlScript : MonoBehaviour
                 Debug.Log("예외처리");
                 break;
         }
+        hide_healthbar();
     }
 
     public void Show_Health()

@@ -10,7 +10,7 @@ public class SaveData : MonoBehaviour
 {
     public static string Name = "test";
     public static string checkLevel = "난이도";
-    public static int count; //지문 위치 표시
+    //public static int count; //지문 위치 표시
 
     public static string DataPath = "/Userdata.dat";
 

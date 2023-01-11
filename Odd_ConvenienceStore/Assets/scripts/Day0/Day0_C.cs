@@ -90,6 +90,7 @@ public class Day0_C : MonoBehaviour
     }
     private void Start()
     {
+        count = 0;
         ChoiceOff();
     }
     private void Update()
