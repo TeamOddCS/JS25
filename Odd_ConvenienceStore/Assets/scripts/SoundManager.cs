@@ -55,7 +55,7 @@ public class SoundManager : MonoBehaviour
 
     public void SFXVolume(float val)
     {
-        mixer.SetFloat("SFXvolume", Mathf.Log10(val) * 20);
+        mixer.SetFloat("BGMvolume", Mathf.Log10(val) * 20);
     }
     public void MusicToggle(bool musicOn)
     {
