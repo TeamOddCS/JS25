@@ -40,19 +40,19 @@ public class Day1_3_fc : MonoBehaviour
         }
         else if (Day1_3.facenum == 7)
         {
-            js4.GetComponent<SpriteRenderer>().sprite = js4_face[8];
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[6];
         }
         else if (Day1_3.facenum == 8)
         {
-            js4.GetComponent<SpriteRenderer>().sprite = js4_face[9];
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[7];
         }
         else if (Day1_3.facenum == 9)
         {
-            js4.GetComponent<SpriteRenderer>().sprite = js4_face[10];
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[8];
         }
         else if (Day1_3.facenum == 10)
         {
-            js4.GetComponent<SpriteRenderer>().sprite = js4_face[11];
+            js4.GetComponent<SpriteRenderer>().sprite = js4_face[9];
         }
 
 
