@@ -186,6 +186,10 @@ public class Day1_1 : MonoBehaviour
         {
             facenum = 11;
         }
+        if (data[count]["Face"].ToString().Equals("6"))
+        {
+            facenum = 12;
+        }
 
 
     }

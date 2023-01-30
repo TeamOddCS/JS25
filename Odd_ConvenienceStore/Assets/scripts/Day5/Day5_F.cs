@@ -47,6 +47,7 @@ public class Day5_F : MonoBehaviour
         }
         count++;
         Facechange();
+        if (count != data.Count) Facechange();
 
     }
 

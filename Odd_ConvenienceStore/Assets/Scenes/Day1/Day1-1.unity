@@ -3970,7 +3970,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d8778362cab41154294fc0a6b101e30a, type: 3}
   - {fileID: 21300000, guid: 463b19aff37691349be5bbd2b63d39e0, type: 3}
   - {fileID: 21300000, guid: 9d16e2e3a0250314a86d1e14469f254d, type: 3}
-  - {fileID: 0}
   js4: {fileID: 555328007}
 --- !u!1 &1574911448
 GameObject:
