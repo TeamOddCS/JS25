@@ -72,24 +72,7 @@ public class Day6_1 : MonoBehaviour
     }
     private void day6_1_HC()
     {
-        if (count == 5)
-        {
-            SoundManager.instance.SFXPlay("Plus", minus);
-            SaveData.JSName = " JS9";
-            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
-        }
-        if (count == 6)
-        {
-            SoundManager.instance.SFXPlay("Plus", minus);
-            SaveData.JSName = " JS9";
-            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
-        }
-        if (count == 7)
-        {
-            SoundManager.instance.SFXPlay("Plus", minus);
-            SaveData.JSName = " JS9";
-            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
-        }
+     
         if (count == 19)
         {
             SoundManager.instance.SFXPlay("Plus", plus);

@@ -260,24 +260,7 @@ public class Day2_1 : MonoBehaviour
 
     private void day2_1_HC()
     {
-        if (count == 5)
-        {
-            SoundManager.instance.SFXPlay("Plus", minus);
-            SaveData.JSName = " JS9";
-            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
-        }
-        if (count == 6)
-        {
-            SoundManager.instance.SFXPlay("Plus", minus);
-            SaveData.JSName = " JS9";
-            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
-        }
-        if (count == 7)
-        {
-            SoundManager.instance.SFXPlay("Plus", minus);
-            SaveData.JSName = " JS9";
-            HealthControlScript.GetComponent<HealthControlScript>().health_increase();
-        }
+       
         if (count == 77)
         {
             SoundManager.instance.SFXPlay("Minus", minus);
