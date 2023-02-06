@@ -1,4 +1,4 @@
-<a href="">
+<a href="https://github.com/TeamOddCS/JS25">
     <img src="https://avatars.githubusercontent.com/u/97233034?s=200&v=4" align="right" height="90" />
 </a>
 
