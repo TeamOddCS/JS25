@@ -4,8 +4,7 @@
 
 
 # JS25 (편돌이 시뮬레이터)
-> 편돌이(편의점 아르바이트)가 되어서 진상 손님을 상대하는 게임
-
+> 편돌이(편의점 아르바이트)가 되어서 진상 손님을 상대하는 게임!
 <br>
 
 ## 📢 프로젝트 소개
@@ -17,6 +16,15 @@
 ## 💡 플레이 방식
 <details>
 <summary> #JS25 화면 보기 </summary>
+<div markdown="1">       
+
+
+![JS25_1](https://user-images.githubusercontent.com/86918962/230538112-b8a79318-e7dd-45e9-b3a7-91776ae6bf73.jpg)<br>
+![JS25_2](https://user-images.githubusercontent.com/86918962/230538232-edde097a-367f-436b-a16d-39b6cc373fc9.jpg)<br>
+![JS25_3](https://user-images.githubusercontent.com/86918962/230538264-9f6fd40b-5c1e-4bb0-be43-17a01eefe005.jpg)<br>
+![JS25_4](https://user-images.githubusercontent.com/86918962/230538274-4cbf95a2-fc06-4138-a8d7-c6c7b0347991.jpg)<br>
+![JS25_5](https://user-images.githubusercontent.com/86918962/230538287-21940c13-95f8-4c84-860b-c2f5befbfd3d.jpg)<br>
+</div>
 
 </details>
 주인공(플레이어)이 친구의 부탁으로 7일간 편의점 아르바이트를 하며 겪는 상황이다.<br>
